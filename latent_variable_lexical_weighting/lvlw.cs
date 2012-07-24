@@ -14,146 +14,19 @@ namespace lvlw
             var wa = Utils.Alignments(args[0], args[1], args[2]);
             Model m = new Model(wa, 1, r);
             m.Sweep(r);
-            m.Split(r);
-            for (int i = 1; i <= 5; ++i)
-                m.Sweep(r);
-            m.Write(args[3]);
-        }
-    }
-
-    public class R
-    {
-        Random m_r = new Random(1);
-        public double[] SampleDenseCategorical(int k)
-        {
-            double[] w = new double[k];
-            double sum = 0;
-            for (int i = 0; i < k; ++i)
-                sum += w[i] = m_r.NextDouble();
-            for (int i = 0; i < k; ++i)
-                w[i] /= sum;
-            return w;
-        }
-        public int SampleFromCategorical(double[] rgd)
-        {
-            double sum = 0;
-            for (int i = 0; i < rgd.Length; ++i)
-                sum += rgd[i];
-            double val = m_r.NextDouble() * sum;
-            for (int i = 0; i < rgd.Length - 1; ++i)
+            for (int s = 1; s <= 3; ++s)
             {
-                var x = rgd[i];
-                if (val <= x) return i;
-                val -= x;
-            }
-            return rgd.Length - 1;
-        }
-        public int Sample(int k)
-        {
-            return m_r.Next(0, k);
-        }
-        public double[] SampleDenseCategorical(Counter<int> c)
-        {
-            var dim = c.Keys.Max() + 1;
-            double[] rgd = new double[dim];
-            double sum = c.Values.Sum();
-            foreach (var p in c)
-                rgd[p.Key] = p.Value / sum;
-            return rgd;
-        }
-        public double[] SampleDenseCategorical(int[] c)
-        {
-            double[] rgd = new double[c.Length];
-            for (int i = 0; i < c.Length; ++i)
-                rgd[i] = c[i] + Uniform();
-            double sum = rgd.Sum();
-            for (int i = 0; i < c.Length; ++i)
-                rgd[i] /= sum;
-            return rgd;
-        }
-
-        public SparseCategorical SampleSparseCategorical(Counter<int> c)
-        {
-            var sc = new SparseCategorical();
-            double sum = c.Values.Sum();
-            foreach (var p in c)
-                sc.W[p.Key] = p.Value / sum;
-            return sc;
-        }
-
-        public double Uniform()
-        {
-            return m_r.NextDouble();
-        }
-    }
-
-    public class Vocab
-    {
-        public int this[string s]
-        {
-            get
-            {
-                int id;
-                if (m_map.TryGetValue(s, out id)) return id;
-                id = m_array.Count;
-                m_array.Add(s);
-                m_map[s] = id;
-                return id;
-            }
-        }
-
-        public string this[int id]
-        {
-            get
-            {
-                if (id < 0 || id >= m_array.Count)
-                    throw new Exception("out of range vocab id");
-                return m_array[id];
-            }
-        }
-
-        Dictionary<string, int> m_map = new Dictionary<string, int>();
-        List<string> m_array = new List<string>();
-    }
-
-    public class AutoInitDict<K, V> : Dictionary<K, V>
-    {
-        public AutoInitDict(Func<V> c)
-        {
-            creator = c;
-        }
-
-        Func<V> creator;
-
-        public new V this[K key]
-        {
-            get
-            {
-                V v;
-                if (!TryGetValue(key, out v))
+                m.Split(r);
+                for (int i = 1; i <= 15; ++i)
                 {
-                    this.Add(key, v = creator());
+                    m.Sweep(r);
+                    Console.Out.Write(".");
+                    Console.Out.Flush();
                 }
-                return v;
+                Console.Out.WriteLine();
+                m.DumpAssign();
             }
-        }
-    }
-
-    public class Counter<T> : Dictionary<T, int>
-    {
-        public int Inc(T t) { return Inc(t, 1); }
-        public int Dec(T t) { return Inc(t, -1); }
-        public int Inc(T t, int delta)
-        {
-            int val;
-            if (!TryGetValue(t, out val))
-                val = 0;
-            val += delta;
-            if (val == 0)
-                Remove(t);
-            else
-                this[t] = val;
-            return val;
+            m.Write(args[3]);
         }
     }
 
@@ -181,7 +54,7 @@ namespace lvlw
                 D.Add(doc);
             }
             SampleDists(r);
-            DumpAssign();
+            //DumpAssign();
 
         }
 
@@ -195,6 +68,13 @@ namespace lvlw
 
         private void Write(TextWriter sw)
         {
+            foreach (var d in D)
+            {
+                foreach (var pz in d.Theta)
+                    sw.Write("{0:0.000}\t", pz);
+                sw.WriteLine();
+            }
+            sw.WriteLine();
             for (int k = 0; k < K; ++k)
             {
                 sw.Write("{0}", k);
@@ -203,11 +83,14 @@ namespace lvlw
                 sw.WriteLine();
             }
             sw.WriteLine();
-            foreach (var p in Beta)
+            foreach (var g in Beta.GroupBy(x => x.Key.Item2).OrderBy(x => x.Key))
             {
-                sw.Write("{0}_{1}", F[p.Key.Item2], p.Key.Item1);
-                WriteDist(sw, p.Value, E);
-                sw.WriteLine();
+                foreach (var p in g.OrderBy(x => x.Key.Item1))
+                {
+                    sw.Write("{0}_{1}", F[p.Key.Item2], p.Key.Item1);
+                    WriteDist(sw, p.Value, E);
+                    sw.WriteLine();
+                }
             }
         }
 
@@ -221,6 +104,9 @@ namespace lvlw
         {
             foreach (var d in D)
             {
+                for (int i = 0; i < K; ++i)
+                    Console.Write("{0:0.000}\t", d.Theta[i]);
+                Console.WriteLine();
                 for (int i = 0; i < d.E.Count; ++i)
                     Console.WriteLine("{0,4}: {1,20} -> {2,20}", d.Z[i], F[d.F[i]], E[d.E[i]]);
                 Console.WriteLine("...");
@@ -261,24 +147,41 @@ namespace lvlw
             var cAlpha = new Counter<int>[K];
             for (int i = 0; i < K; ++i) cAlpha[i] = new Counter<int>();
             var cBeta = new AutoInitDict<Tuple<int, int>, Counter<int>>(() => new Counter<int>());
+            int count = 0;
             foreach (var d in D)
             {
-                int[] cTheta = new int[K];
+                double[] cTheta = new double[K];
+                for (int i = 0; i < K; ++i)
+                    cTheta[i] = 0.01;
                 for (int i = 0; i < d.E.Count; ++i)
                 {
                     ++cTheta[d.Z[i]];
                     cAlpha[d.Z[i]].Inc(d.F[i]);
                     cBeta[T(d.Z[i], d.F[i])].Inc(d.E[i]);
                 }
-                d.Theta = r.SampleDenseCategorical(cTheta);
+                /*
+                if (count == 0)
+                {
+                    Console.Write("theta\t");
+                    for (int i = 0; i < K; ++i)
+                        Console.Write("{0:0.000}\t",d.Theta[i]);
+                    Console.WriteLine();
+                    Console.Write("c\t");
+                    for (int i = 0; i < K; ++i)
+                        Console.Write("{0:0.000}\t",cTheta[i]);
+                    Console.WriteLine();
+                }
+                */
+                ++count;
+                d.Theta = r.SampleDirichlet(cTheta);
             }
             Alpha = new SparseCategorical[K];
             for (int k = 0; k < K; ++k)
-                Alpha[k] = r.SampleSparseCategorical(cAlpha[k]);
+                Alpha[k] = r.SampleSparseCategorical(cAlpha[k], 0.01, 1e-3);
             Beta = new Dictionary<Tuple<int,int>,SparseCategorical>();
             foreach (var p in cBeta)
-                Beta[p.Key] = r.SampleSparseCategorical(p.Value);
-            Write(Console.Out);
+                Beta[p.Key] = r.SampleSparseCategorical(p.Value, 0.01, 1e-3);
+            //Write(Console.Out);
         }
 
         public void SampleZ(R r)
@@ -300,12 +203,12 @@ namespace lvlw
                         {
                             density[k] = 0;
                         }
-                        density[k] += 0.1;
+                        density[k] += 0.0001;
                     }
                     d.Z[i] = r.SampleFromCategorical(density);
                 }
             }
-            DumpAssign();
+            //DumpAssign();
         }
 
         public static Tuple<int, int> T(int i1, int i2) { return new Tuple<int, int>(i1, i2); }
@@ -328,55 +231,6 @@ namespace lvlw
     {
         public Dictionary<int, double> W = new Dictionary<int, double>();
     }
-
-
-    public class Utils
-    {
-        public static IEnumerable<List<T>> Transpose<T>(params IEnumerable<T>[] e)
-        {
-            var le = new List<IEnumerator<T>>(e.Select(x => x.GetEnumerator()));
-            while (le.All(x => x.MoveNext()))
-                yield return new List<T>(le.Select(x => x.Current));
-        }
-
-        public static IEnumerable<WordAlignment> Alignments(string s, string t, string a)
-        {
-            foreach (var l in Transpose(GetLines(s), GetLines(t), GetLines(a)))
-            {
-                yield return new WordAlignment(l[0], l[1], l[2]);
-            }
-        }
-
-        public static IEnumerable<string> GetLines(string filename)
-        {
-            using (var sr = new StreamReader(filename))
-            {
-                string line;
-                while (null != (line = sr.ReadLine()))
-                    yield return line;
-            }
-        }
-    }
-
-    public class WordAlignment
-    {
-        public static Tuple<int, int> ParsePair(string s)
-        {
-            var x = s.Split('-');
-            return new Tuple<int, int>(int.Parse(x[0]), int.Parse(x[1]));
-        }
-        public WordAlignment(string s, string t, string a)
-        {
-            Parse(s, t, a);
-        }
-
-        private void Parse(string s, string t, string a)
-        {
-            S = new List<string>(s.Split(' '));
-            T = new List<string>(t.Split(' '));
-            A = new List<Tuple<int, int>>(a.Split(' ').Select(ParsePair));
-        }
-        public List<string> S, T;
-        public List<Tuple<int, int>> A;
-    }
 }
+
+// vim:sw=4:ts=4:et:ai:cindent

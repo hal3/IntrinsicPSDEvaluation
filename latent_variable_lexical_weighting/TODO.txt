@@ -1,0 +1,4 @@
+ - Maintain statistics during Z sweep instead of recalculating
+ - Make multithreaded
+ - Hierarchical smoothing
+ - Split reversion and backoff at prediction tune
