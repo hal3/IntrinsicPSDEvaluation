@@ -1,4 +1,7 @@
+DONE
  - Maintain statistics during Z sweep instead of recalculating
+
+TODO
  - Make multithreaded
  - Hierarchical smoothing
  - Split reversion and backoff at prediction tune

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.IO;
 
 namespace lvlw
@@ -83,6 +84,26 @@ namespace lvlw
                 sw.WriteLine();
             }
             sw.WriteLine();
+            Counter<int> cf = new Counter<int>();
+            Counter<int> cz = new Counter<int>();
+            foreach (var d in D)
+            {
+                foreach (var f in d.F)
+                    cf.Inc(f);
+                foreach (var z in d.Z)
+                    cz.Inc(z);
+            }
+            double epsilon = 1e-1;
+            for (int k = 0; k < K; ++k)
+            {
+                sw.Write("{0}", k);
+                var dist = new SparseCategorical();
+                foreach (var p in Alpha[k].W)
+                    dist.W[p.Key] = (p.Value * cz[k] + epsilon) / (cf[p.Key] + K * epsilon);
+                WriteDist(sw, dist, F);
+                sw.WriteLine();
+            }
+            sw.WriteLine();
             foreach (var g in Beta.GroupBy(x => x.Key.Item2).OrderBy(x => x.Key))
             {
                 foreach (var p in g.OrderBy(x => x.Key.Item1))
@@ -116,8 +137,9 @@ namespace lvlw
 
         public void Sweep(R r)
         {
-            SampleZ(r);
-            SampleDists(r);
+            //SampleZ(r);
+            //SampleDists(r);
+            SampleBoth(r);
         }
 
         public void Split(R r)
@@ -142,11 +164,173 @@ namespace lvlw
             SampleDists(r);
         }
 
+        public void SampleBoth(R r)
+        {
+            var cAlpha = new Counter<int>[K];
+            for (int i = 0; i < K; ++i) cAlpha[i] = new Counter<int>();
+            var cBeta = new AutoInitDict<Pair<int, int>, Counter<int>>(() => new Counter<int>());
+            double[] density = new double[K];
+            int[] counts = new int[K];
+            int count = 0;
+            foreach (var d in D)
+            {
+                var theta = d.Theta;
+                double[] cTheta = new double[K];
+                for (int i = 0; i < K; ++i)
+                    cTheta[i] = 0.01;
+                for (int i = 0; i < d.E.Count; ++i)
+                {
+                    Array.Copy(theta, density, K);
+                    for (int k = 0; k < K; ++k)
+                    {
+                        try
+                        {
+                            density[k] *= Alpha[k].W[d.F[i]] * Beta[T(k, d.F[i])].W[d.E[i]];
+                        }
+                        catch (Exception)
+                        {
+                            density[k] = 0;
+                        }
+                        density[k] += 0.0001;
+                    }
+                    var s = new AliasSampler(density);
+                    int f = d.F[i], e = d.E[i];
+                    for (int draws = 0; draws < 20; ++draws)
+                    {
+                        int z = s.Draw(r);
+                        ++counts[z];
+                        cAlpha[z].Inc(f);
+                        cBeta[T(z, f)].Inc(e);
+                        ++cTheta[z];
+                    }
+                    int max = -1, argmax = -1;
+                    for (int z = 0; z < K; ++z)
+                    {
+                        if (counts[z] > max) { max = counts[z]; argmax = z; }
+                        counts[z] = 0;
+                    }
+                    d.Z[i] = argmax;
+                }
+                ++count;
+                d.Theta = r.SampleDirichlet(cTheta);
+            }
+            Alpha = new SparseCategorical[K];
+            for (int k = 0; k < K; ++k)
+                Alpha[k] = r.SampleSparseCategorical(cAlpha[k], 0.01, 1e-3);
+            Beta = new Dictionary<Pair<int,int>,SparseCategorical>();
+            foreach (var p in cBeta)
+                Beta[p.Key] = r.SampleSparseCategorical(p.Value, 0.01, 1e-3);
+        }
+
+        public Thread RunInThread(Action a)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void AddTo<T>(Counter<T> result, Counter<T> toAdd)
+        {
+            foreach (var p in toAdd)
+                result.Inc(p.Key, p.Value);
+        }
+
+        public void AddTo<T, U>(AutoInitDict<T, Counter<U>> result, AutoInitDict<T, Counter<U>> toAdd)
+        {
+            foreach (var p in toAdd)
+                AddTo(result[p.Key], p.Value);
+        }
+
+        public void SampleBoth(R r, int threads)
+        {
+            var l = new List<Pair<Counter<int>[], AutoInitDict<Pair<int, int>, Counter<int>>>>();
+            var lt = new List<Thread>();
+            for (int i = 0; i < threads; ++i)
+            {
+                var rank = i;
+                lt.Add(RunInThread(() => {
+                            l.Add(SampleBoth(new R(), rank, threads));
+                            }));
+            }
+            for (int i = 0; i< threads; ++i)
+            {
+                lt[i].Join();
+            }
+            var cAlpha = l[0].Item1;
+            var cBeta = l[0].Item2;
+            for (int i = 1; i < threads; ++i)
+            {
+                for (int z = 0; z < K; ++z)
+                    AddTo(cAlpha[z], l[i].Item1[z]);
+                AddTo(cBeta, l[i].Item2);
+            }
+            Alpha = new SparseCategorical[K];
+            for (int k = 0; k < K; ++k)
+                Alpha[k] = r.SampleSparseCategorical(cAlpha[k], 0.01, 1e-3);
+            Beta = new Dictionary<Pair<int,int>,SparseCategorical>();
+            foreach (var p in cBeta)
+                Beta[p.Key] = r.SampleSparseCategorical(p.Value, 0.01, 1e-3);
+        }
+
+        public Pair<Counter<int>[], AutoInitDict<Pair<int, int>, Counter<int>>> SampleBoth(R r, int rank, int stride)
+        {
+            var cAlpha = new Counter<int>[K];
+            for (int i = 0; i < K; ++i) cAlpha[i] = new Counter<int>();
+            var cBeta = new AutoInitDict<Pair<int, int>, Counter<int>>(() => new Counter<int>());
+            double[] density = new double[K];
+            int[] counts = new int[K];
+            int count = 0;
+            int cur = 0;
+            foreach (var d in D)
+            {
+                ++cur;
+                if (cur % stride != rank) continue;
+                var theta = d.Theta;
+                double[] cTheta = new double[K];
+                for (int i = 0; i < K; ++i)
+                    cTheta[i] = 0.01;
+                for (int i = 0; i < d.E.Count; ++i)
+                {
+                    Array.Copy(theta, density, K);
+                    for (int k = 0; k < K; ++k)
+                    {
+                        try
+                        {
+                            density[k] *= Alpha[k].W[d.F[i]] * Beta[T(k, d.F[i])].W[d.E[i]];
+                        }
+                        catch (Exception)
+                        {
+                            density[k] = 0;
+                        }
+                        density[k] += 0.0001;
+                    }
+                    var s = new AliasSampler(density);
+                    int f = d.F[i], e = d.E[i];
+                    for (int draws = 0; draws < 20; ++draws)
+                    {
+                        int z = s.Draw(r);
+                        ++counts[z];
+                        cAlpha[z].Inc(f);
+                        cBeta[T(z, f)].Inc(e);
+                        ++cTheta[z];
+                    }
+                    int max = -1, argmax = -1;
+                    for (int z = 0; z < K; ++z)
+                    {
+                        if (counts[z] > max) { max = counts[z]; argmax = z; }
+                        counts[z] = 0;
+                    }
+                    d.Z[i] = argmax;
+                }
+                ++count;
+                d.Theta = r.SampleDirichlet(cTheta);
+            }
+            return new Pair<Counter<int>[], AutoInitDict<Pair<int, int>, Counter<int>>>(cAlpha, cBeta);
+        }
+
         public void SampleDists(R r)
         {
             var cAlpha = new Counter<int>[K];
             for (int i = 0; i < K; ++i) cAlpha[i] = new Counter<int>();
-            var cBeta = new AutoInitDict<Tuple<int, int>, Counter<int>>(() => new Counter<int>());
+            var cBeta = new AutoInitDict<Pair<int, int>, Counter<int>>(() => new Counter<int>());
             int count = 0;
             foreach (var d in D)
             {
@@ -155,30 +339,17 @@ namespace lvlw
                     cTheta[i] = 0.01;
                 for (int i = 0; i < d.E.Count; ++i)
                 {
-                    ++cTheta[d.Z[i]];
                     cAlpha[d.Z[i]].Inc(d.F[i]);
                     cBeta[T(d.Z[i], d.F[i])].Inc(d.E[i]);
+                    ++cTheta[d.Z[i]];
                 }
-                /*
-                if (count == 0)
-                {
-                    Console.Write("theta\t");
-                    for (int i = 0; i < K; ++i)
-                        Console.Write("{0:0.000}\t",d.Theta[i]);
-                    Console.WriteLine();
-                    Console.Write("c\t");
-                    for (int i = 0; i < K; ++i)
-                        Console.Write("{0:0.000}\t",cTheta[i]);
-                    Console.WriteLine();
-                }
-                */
                 ++count;
                 d.Theta = r.SampleDirichlet(cTheta);
             }
             Alpha = new SparseCategorical[K];
             for (int k = 0; k < K; ++k)
                 Alpha[k] = r.SampleSparseCategorical(cAlpha[k], 0.01, 1e-3);
-            Beta = new Dictionary<Tuple<int,int>,SparseCategorical>();
+            Beta = new Dictionary<Pair<int,int>,SparseCategorical>();
             foreach (var p in cBeta)
                 Beta[p.Key] = r.SampleSparseCategorical(p.Value, 0.01, 1e-3);
             //Write(Console.Out);
@@ -211,14 +382,14 @@ namespace lvlw
             //DumpAssign();
         }
 
-        public static Tuple<int, int> T(int i1, int i2) { return new Tuple<int, int>(i1, i2); }
+        public static Pair<int, int> T(int i1, int i2) { return new Pair<int, int>(i1, i2); }
 
         public Vocab E;
         public Vocab F;
         public int K;
         public List<Document> D;
         public SparseCategorical[] Alpha;
-        public Dictionary<Tuple<int, int>, SparseCategorical> Beta;
+        public Dictionary<Pair<int, int>, SparseCategorical> Beta;
     }
 
     public class Document
