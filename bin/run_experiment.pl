@@ -1,10 +1,11 @@
 #!/usr/bin/perl -w
 use strict;
 
-my $numFolds = 3;
+my $numFolds = 10;
 my $doBucketing = 0;
 my $experiment = 'exp';
 my $classifier = 'vw';
+my $showclassifier = 0;
 
 my $pruneMaxCount   = 20;   # keep at most 20 en translations for each fr word
 my $pruneMaxProbSum = 0.95; # AND keep at most 95% of the probability mass for p(en|fr)
@@ -27,8 +28,9 @@ where options includes:
   -nf #            number of folds for cross-validation [$numFolds]
   -exp str         experiment name (used for file prefix) [$experiment]
   -seen file       read seen pairs from file [$seenFName]
-  -srand #         seed random number generated with # [$srandNum]
+  -srand #         seed random number generated with # or X for prng [$srandNum]
   -classifier str  specify classifier to use [$classifier]
+  -showclassifier  show output from classifier
 
   -pruneMC #       keep at most # en translations for each fr word [$pruneMaxCount]
   -pruneMPS #      keep at most #% of the prob mass of p(en|fr) [$pruneMaxProbSum]
@@ -56,10 +58,13 @@ while (1) {
     elsif ($arg eq '-noprune')  { $pruneMaxCount = 100000; $pruneMaxProbSum = 100000; $pruneMinRelProb = -1; }
     elsif ($arg eq '-srand')    { $srandNum = shift or die "-srand needs an argument"; }
     elsif ($arg eq '-seen')     { $seenFName = shift or die "-seen needs an argument"; }
+    elsif ($arg eq '-classifier')  { $classifier = shift or die "-classifier needs an argument"; }
+    elsif ($arg eq '-showclassifier') { $showclassifier = 1; }
     else { die $USAGE; }
 }
 
-srand($srandNum);
+if ($srandNum eq 'X') { srand(); }
+else { srand($srandNum); }
 
 my $isXV = 0;
 if (scalar keys %xvDom == 0) {
@@ -145,11 +150,11 @@ if ($isXV) {
             $allData[$n]{'devfold'} = 0;
         }
     }
-    my $numFolds = 1;
+    $numFolds = 1;
 }
 
 
-my @fscores = ();
+my @aups = ();
 for (my $fold=0; $fold<$numFolds; $fold++) {
     print STDERR "===== FOLD " . ($fold+1) . " / $numFolds =====\n" if ($numFolds > 1);
 
@@ -183,9 +188,9 @@ for (my $fold=0; $fold<$numFolds; $fold++) {
     writeFile("classifiers/$experiment.test" , @test);
     `cat classifiers/$experiment.train classifiers/$experiment.dev > classifiers/$experiment.traindev`;
 
-    my $fscore;
+    my $aup;
     if ($classifier eq 'vw') {
-        $fscore = run_vw($fold,
+        $aup = run_vw($fold,
                          "classifiers/$experiment.train",    scalar @train,
                          "classifiers/$experiment.dev",      scalar @dev,
                          "classifiers/$experiment.traindev", scalar @train + scalar @dev,
@@ -194,16 +199,16 @@ for (my $fold=0; $fold<$numFolds; $fold++) {
     } else {
         die "unknown classifier '$classifier'";
     }
-    push @fscores, $fscore;
+    push @aups, $aup;
     print STDERR "\n";
 }
 
-my $avgFscore = 0;
-my $stdFscore = 0;
-foreach my $fscore (@fscores) { $avgFscore += $fscore; $stdFscore += $fscore*$fscore; }
-$avgFscore /= $numFolds;
-$stdFscore = sqrt($stdFscore / $numFolds - $avgFscore*$avgFscore);
-print "Average score $avgFscore (std $stdFscore)\n";
+my $avgAup = 0;
+my $stdAup = 0;
+foreach my $aup (@aups) { $avgAup += $aup; $stdAup += $aup*$aup; }
+$avgAup /= $numFolds;
+$stdAup = sqrt($stdAup / $numFolds - $avgAup*$avgAup);
+print "Average score $avgAup (std $stdAup)\n";
 
 
 sub run_vw {
@@ -215,31 +220,38 @@ sub run_vw {
     my $largeReg = 10 / $trN;
     my $stepReg = $largeReg / 3;
 
-    my $searchArgs = "--passes 20 --orsearch --l1 0. $largeReg +$stepReg --l2 0. $largeReg +$stepReg -d $trF";
+    my $searchArgs = "--passes 20 --orsearch --l1 0. $largeReg +$stepReg --l2 $stepReg $largeReg +$stepReg";
+    $searchArgs = "--passes 20";
 
     my $bestScore; my $bestPass; my $bestConfig;
-    my $cmd = "$VWX -d $trF --dev $deF --eval f --logistic $searchArgs";
+    my $cmd = "$VWX -d $trF --dev $deF --eval aup --logistic $searchArgs";
     print STDERR "Running: $cmd\n";
     open VWX, "$cmd 2>&1 |" or die;
     while (<VWX>) {
-        print STDERR ".";
-        if (/overall best loss \(.*\) ([^ ]+) pass ([0-9]+) with config (.+)/) {
+        print STDERR "." if not $showclassifier;
+        print STDERR "vwx>> $_" if $showclassifier;
+        chomp;
+        if (/overall best loss \(.*\) ([^ ]+) pass ([0-9]+)/) {
             $bestScore = 1-$1;
             $bestPass = $2+1;
-            $bestConfig = $3;
+            if (/with config (.+)/) {
+                $bestConfig = $1;
+            } else { $bestConfig = ''; }
         }
     }
     close VWX;
-    print STDERR " (dev score = $bestScore on pass $bestPass with config $bestConfig)\n";
-
     if (not defined $bestScore) { die "vwx didn't succeed"; }
+    print STDERR "\ndev  score = $bestScore on pass $bestPass with config $bestConfig\n";
+
 
     my $score;
-    $cmd = "$VWX -d $trdeF --dev $teF --eval f --logistic --passes $bestPass --noearlystop --readable classifiers/$experiment.fold=$fold.vwmodel --args $bestConfig";
+    $cmd = "$VWX -d $trF --dev $deF --eval aup --logistic --passes $bestPass --noearlystop --readable classifiers/$experiment.fold=$fold.vwmodel --args $bestConfig";
     print STDERR "Running: $cmd\n";
     open VWX, "$cmd 2>&1 |" or die;
     while (<VWX>) {
-        print STDERR ".";
+        print STDERR "." if not $showclassifier;
+        print STDERR "vwx>> $_" if $showclassifier;
+        chomp;
         if (/overall best loss \(.*\) ([^ ]+) pass/) {
             $score = 1-$1;
         }
@@ -248,7 +260,7 @@ sub run_vw {
 
     if (not defined $score) { die "vwx didn't succeed"; }
 
-    print STDERR " (test score = $score)\n";
+    print STDERR " \ntest score = $score\n";
     return $score;
 }
 
@@ -316,6 +328,7 @@ sub generateData {
     my %type = ();
     open LS, "find features/ -iname \"$dom.type.*\" |" or die $!;
     while (my $fname = <LS>) {
+        chomp $fname;
         $fname =~ /\/$dom\.type\.(.+)$/;
         my $user = $1;
         if (not defined $user) { print STDERR "skipping file $fname...\n"; next; }
