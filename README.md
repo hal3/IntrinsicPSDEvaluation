@@ -32,6 +32,16 @@ Once you've created your features, you can run:
 To see how well you're doing :).  If you run this with no arguments,
 it will tell you what you can specify.
 
+Probably you will want to run something like (a) or (b) below:
+
+(a) bin/run_experiment.pl -xv EMEA
+(b) bin/run_experiment.pl -tr EMEA -te Subs
+
+For (a), we'll only use EMEA data for both training and testing.  It
+will cross-validate on a WORD TYPE level.  I.e., you will never test
+on a word type that you actually saw at training.  For (b), we'll
+train on EMEA data and test on Subs data.  In this case, you *will*
+test on word types you saw at training.
 
 ===================
 

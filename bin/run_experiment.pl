@@ -1,14 +1,6 @@
 #!/usr/bin/perl -w
 use strict;
 
-my $USAGE = "usage: run_experiment.pl
-foo
-
-";
-
-my %trDom = ();
-my %teDom  = ();
-my %xvDom  = ();
 my $numFolds = 2;
 my $doBucketing = 0;
 my $experiment = 'exp';
@@ -17,11 +9,38 @@ my $pruneMaxCount   = 20;   # keep at most 20 en translations for each fr word
 my $pruneMaxProbSum = 0.95; # AND keep at most 95% of the probability mass for p(en|fr)
 my $pruneMinRelProb = 0.01; # AND remove english translations that are more than 100* worse than the best one
 
+my $USAGE = "usage: run_experiment.pl (dataspec) (options
+where dataspec includes:
+  -tr domain       train on data from domain (you can say -tr multiple times)
+  -te domain       test on data from domain (you can say -te multiple times)
+  -xv domain       cross-validate on domain (you can say -xv multiple times)
+you may not use tr/te and xv at the same time, and if you specify training data,
+you must also specify test data
+
+where options includes:
+  -nf #            number of folds for cross-validation [$numFolds]
+  -exp string      experiment name (used for file prefix) [$experiment]
+  -pruneMC #       keep at most # en translations for each fr word [$pruneMaxCount]
+  -pruneMPS #      keep at most #% of the prob mass of p(en|fr) [$pruneMaxProbSum]
+  -pruneMRL #      remove en trans with prob < #*most likely prob [$pruneMinRelProb]
+
+";
+
+my %trDom = ();
+my %teDom  = ();
+my %xvDom  = ();
+
 while (1) {
     my $arg = shift or last;
     if    ($arg eq '-tr') { $trDom{shift or die $USAGE} = 1; }
     elsif ($arg eq '-te') { $teDom{shift or die $USAGE} = 1; }
     elsif ($arg eq '-xv') { $xvDom{shift or die $USAGE} = 1; }
+    elsif ($arg eq '-nf') { $numFolds = shift or die $USAGE; }
+    elsif ($arg eq '-bucket') { $doBucketing = 1; }
+    elsif ($arg eq '-exp') { $experiment = shift or die $USAGE; }
+    elsif ($arg eq '-pruneMC' ) { $pruneMaxCount = shift or die $USAGE; }
+    elsif ($arg eq '-pruneMPS') { $pruneMaxProbSum = shift or die $USAGE; }
+    elsif ($arg eq '-pruneMRP') { $pruneMinRelProb = shift or die $USAGE; }
 }
 my $isXV = 0;
 if (scalar keys %xvDom == 0) {
@@ -135,8 +154,10 @@ for (my $fold=0; $fold<$numFolds; $fold++) {
 sub writeFile {
     my ($fname, @data) = @_;
     open O, "> $fname" or die $!;
+    my $Np = 0; my $Nn = 0;
     for (my $n=0; $n<@data; $n++) {
         print O $data[$n]{'label'};
+        if ($data[$n]{'label'} > 0) { $Np++; } else { $Nn++; }
         foreach my $f (keys %{$data[$n]}) {
             if ($f =~ /___/) {
                 if ($data[$n]{$f} == 0) { next; }
@@ -149,6 +170,8 @@ sub writeFile {
         print O "\n";
     }
     close O;
+    if ($Np == 0) { print STDERR "warning: generated data with no positive examples in $fname\n"; }
+    if ($Nn == 0) { print STDERR "warning: generated data with no positive examples in $fname\n"; }
 }
 
 sub generateData {
