@@ -13,7 +13,7 @@ foreach my $dom qw(EMEA Science Subs) {
 }
 
 my %inputs = (
-    'hansard32' => ''
+    'hansard32' => '/export/ws12/damt/builds/baselines/non-adapted/on-old/hansard32-sigtest-phrase-table.1.gz'
 #   ,'hansard'   => ''
     );
 
@@ -34,12 +34,12 @@ foreach my $outputName (keys %inputs) {
         my ($fr,$en,$scores,$alignment,$counts) = split / \|\|\| /, $_;
 
         if ($fr ne $this_fr) {
-            if ($this_fr ne '') {
+            if (($this_fr ne '') && (exists $w{$this_fr})) {
+                print STDERR ".";
                 foreach my $en (sort { $en{$b} <=> $en{$a} } keys %en) { print O $this_fr . "\t" . $en . "\t" . $en{$en} . "\n"; }
             }
             $this_fr = $fr;
             %en = ();
-            print STDERR ".";
         }
 
         if (exists $w{$fr}) {

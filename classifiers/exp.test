@@ -1,531 +1,1027 @@
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
-1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
-1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
--1 ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+1 | ___bias
+-1 | ___bias
+1 | ___bias
+-1 | ___bias
+1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+1 | ___bias
+-1 | ___bias
+-1 | ___bias
+1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+1 | ___bias
+1 | ___bias
+1 | ___bias
+-1 | ___bias
+1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+1 | ___bias
+1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+1 | ___bias
+-1 | ___bias
+-1 | ___bias
+1 | ___bias
+-1 | ___bias
+1 | ___bias
+-1 | ___bias
+1 | ___bias
+-1 | ___bias
+1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+1 | ___bias
+-1 | ___bias
+1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+1 | ___bias
+1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+1 | ___bias
+-1 | ___bias
+1 | ___bias
+-1 | ___bias
+-1 | ___bias
+1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+1 | ___bias
+-1 | ___bias
+-1 | ___bias
+1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+1 | ___bias
+1 | ___bias
+-1 | ___bias
+-1 | ___bias
+1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+1 | ___bias
+-1 | ___bias
+-1 | ___bias
+1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+1 | ___bias
+1 | ___bias
+-1 | ___bias
+-1 | ___bias
+1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+1 | ___bias
+1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+1 | ___bias
+1 | ___bias
+-1 | ___bias
+1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+1 | ___bias
+1 | ___bias
+1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+1 | ___bias
+-1 | ___bias
+1 | ___bias
+1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+1 | ___bias
+1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+1 | ___bias
+-1 | ___bias
+1 | ___bias
+-1 | ___bias
+1 | ___bias
+-1 | ___bias
+1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+1 | ___bias
+1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+1 | ___bias
+-1 | ___bias
+1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+1 | ___bias
+1 | ___bias
+1 | ___bias
+1 | ___bias
+-1 | ___bias
+1 | ___bias
+1 | ___bias
+1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+1 | ___bias
+1 | ___bias
+1 | ___bias
+-1 | ___bias
+-1 | ___bias
+1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+1 | ___bias
+-1 | ___bias
+-1 | ___bias
+1 | ___bias
+1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+1 | ___bias
+1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+1 | ___bias
+-1 | ___bias
+1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+1 | ___bias
+1 | ___bias
+-1 | ___bias
+-1 | ___bias
+1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+1 | ___bias
+-1 | ___bias
+-1 | ___bias
+1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+1 | ___bias
+-1 | ___bias
+1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+1 | ___bias
+1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+1 | ___bias
+-1 | ___bias
+-1 | ___bias
+1 | ___bias
+1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+1 | ___bias
+-1 | ___bias
+1 | ___bias
+1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+1 | ___bias
+-1 | ___bias
+-1 | ___bias
+1 | ___bias
+-1 | ___bias
+-1 | ___bias
+1 | ___bias
+-1 | ___bias
+1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+1 | ___bias
+-1 | ___bias
+-1 | ___bias
+1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+1 | ___bias
+-1 | ___bias
+-1 | ___bias
+-1 | ___bias
+1 | ___bias

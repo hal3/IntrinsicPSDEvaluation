@@ -1,18 +1,21 @@
 #!/usr/bin/perl -w
 use strict;
 
-my $numFolds = 2;
+my $numFolds = 3;
 my $doBucketing = 0;
 my $experiment = 'exp';
+my $classifier = 'vw';
 
 my $pruneMaxCount   = 20;   # keep at most 20 en translations for each fr word
 my $pruneMaxProbSum = 0.95; # AND keep at most 95% of the probability mass for p(en|fr)
 my $pruneMinRelProb = 0.01; # AND remove english translations that are more than 100* worse than the best one
+my $doPrune = 0;
 
 my $srandNum = 2780;
 my $seenFName = "source_data/seen.hansard32.gz";
 
-my $USAGE = "usage: run_experiment.pl (dataspec) (options
+my $USAGE = "usage: run_experiment.pl (dataspec) (options)
+
 where dataspec includes:
   -tr domain       train on data from domain (you can say -tr multiple times)
   -te domain       test on data from domain (you can say -te multiple times)
@@ -22,13 +25,15 @@ you must also specify test data
 
 where options includes:
   -nf #            number of folds for cross-validation [$numFolds]
-  -exp string      experiment name (used for file prefix) [$experiment]
+  -exp str         experiment name (used for file prefix) [$experiment]
+  -seen file       read seen pairs from file [$seenFName]
+  -srand #         seed random number generated with # [$srandNum]
+  -classifier str  specify classifier to use [$classifier]
+
   -pruneMC #       keep at most # en translations for each fr word [$pruneMaxCount]
   -pruneMPS #      keep at most #% of the prob mass of p(en|fr) [$pruneMaxProbSum]
   -pruneMRL #      remove en trans with prob < #*most likely prob [$pruneMinRelProb]
-  -noprune         turn off all pruning
-  -srand #         seed random number generated with # [$srandNum]
-  -seen file       read seen pairs from file [$seenFName]
+  -prune           turn on pruning (turned on by default if you specify any other -prune*)
 
 ";
 
@@ -38,18 +43,19 @@ my %xvDom  = ();
 
 while (1) {
     my $arg = shift or last;
-    if    ($arg eq '-tr') { $trDom{shift or die $USAGE} = 1; }
-    elsif ($arg eq '-te') { $teDom{shift or die $USAGE} = 1; }
-    elsif ($arg eq '-xv') { $xvDom{shift or die $USAGE} = 1; }
-    elsif ($arg eq '-nf') { $numFolds = shift or die $USAGE; }
+    if    ($arg eq '-tr') { $trDom{shift or die "-tr needs an argument"} = 1; }
+    elsif ($arg eq '-te') { $teDom{shift or die "-te needs an argument"} = 1; }
+    elsif ($arg eq '-xv') { $xvDom{shift or die "-xv needs an argument"} = 1; }
+    elsif ($arg eq '-nf') { $numFolds = shift or die "-nf needs an argument"; }
     elsif ($arg eq '-bucket') { $doBucketing = 1; }
-    elsif ($arg eq '-exp') { $experiment = shift or die $USAGE; }
-    elsif ($arg eq '-pruneMC' ) { $pruneMaxCount = shift or die $USAGE; }
-    elsif ($arg eq '-pruneMPS') { $pruneMaxProbSum = shift or die $USAGE; }
-    elsif ($arg eq '-pruneMRP') { $pruneMinRelProb = shift or die $USAGE; }
+    elsif ($arg eq '-exp') { $experiment = shift or die "-exp needs an argument"; }
+    elsif ($arg eq '-pruneMC' ) { $pruneMaxCount = shift or die "-pruneMC needs an argument"; $doPrune = 1; }
+    elsif ($arg eq '-pruneMPS') { $pruneMaxProbSum = shift or die "-pruneMPS needs an argument"; $doPrune = 1; }
+    elsif ($arg eq '-pruneMRP') { $pruneMinRelProb = shift or die "-pruneMRP needs an argument"; $doPrune = 1; }
+    elsif ($arg eq '-prune')    { $doPrune = 1; }
     elsif ($arg eq '-noprune')  { $pruneMaxCount = 100000; $pruneMaxProbSum = 100000; $pruneMinRelProb = -1; }
-    elsif ($arg eq '-srand')    { $srandNum = shift or die $USAGE; }
-    elsif ($arg eq '-seen')     { $seenFName = shift or die $USAGE; }
+    elsif ($arg eq '-srand')    { $srandNum = shift or die "-srand needs an argument"; }
+    elsif ($arg eq '-seen')     { $seenFName = shift or die "-seen needs an argument"; }
     else { die $USAGE; }
 }
 
@@ -127,43 +133,123 @@ if ($isXV) {
 
     for (my $n=0; $n<$N; $n++) {
         $allData[$n]{'testfold'} = $allPhrases{ $allData[$n]{'phrase'} };
+        $allData[$n]{'devfold' } = (1+$allPhrases{ $allData[$n]{'phrase'} }) % $numFolds;
     }
 } else {
     for (my $n=0; $n<$N; $n++) {
-        $allData[$n]{'testfold'} = (exists $teDom{  $allData[$n]{'domain'}  }) ? 0 : 1;
+        $allData[$n]{'testfold'} = 1;
+        $allData[$n]{'devfold' } = 1;
+        if (exists $teDom{ $allData[$n]{'domain'} }) {
+            $allData[$n]{'testfold'} = 0;
+        } elsif (rand() < 0.11111) {
+            $allData[$n]{'devfold'} = 0;
+        }
     }
     my $numFolds = 1;
 }
 
 
+my @fscores = ();
 for (my $fold=0; $fold<$numFolds; $fold++) {
+    print STDERR "===== FOLD " . ($fold+1) . " / $numFolds =====\n" if ($numFolds > 1);
+
     # training data is everything for which {'testfold'} != fold
     # test data is the rest
     my @train = ();
+    my @dev   = ();
     my @test  = ();
     for (my $n=0; $n<$N; $n++) {
         if ($allData[$n]{'testfold'} == $fold) { 
             %{$test[@test]} = %{$allData[$n]};
+        } elsif ($allData[$n]{'devfold'} == $fold) { 
+            %{$dev[@dev]} = %{$allData[$n]};
         } else {
             %{$train[@train]} = %{$allData[$n]};
         }
     }
     if (@train ==  0) { die "hit a fold with no training data: try reducing number of folds!"; }
-    if (@train == $N) { die "hit a fold with no test data: try reducing number of folds!"; }
+    if (@dev   ==  0) { die "hit a fold with no dev data: try reducing number of folds!"; }
+    if (@test  ==  0) { die "hit a fold with no test data: try reducing number of folds!"; }
 
     if ($doBucketing) {
         my %bucketInfo = makeBuckets(@train);
         @train = applyBuckets(\%bucketInfo, @train);
+        @dev   = applyBuckets(\%bucketInfo, @dev);
         @test  = applyBuckets(\%bucketInfo, @test);
     }
 
-    writeFile("classifiers/$experiment.train", @allData);
+    writeFile("classifiers/$experiment.train", @train);
+    writeFile("classifiers/$experiment.dev"  , @dev);
     writeFile("classifiers/$experiment.test" , @test);
+    `cat classifiers/$experiment.train classifiers/$experiment.dev > classifiers/$experiment.traindev`;
 
-    # train the classifiers and evaluate
+    my $fscore;
+    if ($classifier eq 'vw') {
+        $fscore = run_vw("classifiers/$experiment.train",    scalar @train,
+                       "classifiers/$experiment.dev",      scalar @dev,
+                       "classifiers/$experiment.traindev", scalar @train + scalar @dev,
+                       "classifiers/$experiment.test",     scalar @test
+                      );
+    } else {
+        die "unknown classifier '$classifier'";
+    }
+    push @fscores, $fscore;
+    print STDERR "\n";
 }
 
+my $avgFscore = 0;
+my $stdFscore = 0;
+foreach my $fscore (@fscores) { $avgFscore += $fscore; $stdFscore += $fscore*$fscore; }
+$avgFscore /= $numFolds;
+$stdFscore = sqrt($stdFscore / $numFolds - $avgFscore*$avgFscore);
+print "Average score $avgFscore (std $stdFscore)\n";
 
+
+sub run_vw {
+    my ($trF, $trN, $deF, $deN, $trdeF, $trdeN, $teF, $teN) = @_;
+
+    my $numPasses = 20;
+    my $VWX = 'vwx';
+    
+    my $largeReg = 10 / $trN;
+    my $stepReg = $largeReg / 3;
+
+    my $searchArgs = "--passes 20 --orsearch --l1 0. $largeReg +$stepReg --l2 0. $largeReg +$stepReg -d $trF";
+
+    my $bestScore; my $bestPass; my $bestConfig;
+    my $cmd = "$VWX -d $trF --dev $deF --eval f --logistic $searchArgs";
+    print STDERR "Running: $cmd\n";
+    open VWX, "$cmd 2>&1 |" or die;
+    while (<VWX>) {
+        print STDERR ".";
+        if (/overall best loss \(.*\) ([^ ]+) pass ([0-9]+) with config (.+)/) {
+            $bestScore = 1-$1;
+            $bestPass = $2+1;
+            $bestConfig = $3;
+        }
+    }
+    close VWX;
+    print STDERR " (dev score = $bestScore on pass $bestPass with config $bestConfig)\n";
+
+    if (not defined $bestScore) { die "vwx didn't succeed"; }
+
+    my $score;
+    $cmd = "$VWX -d $trdeF --dev $teF --eval f --logistic --passes $bestPass --noearlystop --args $bestConfig";
+    print STDERR "Running: $cmd\n";
+    open VWX, "$cmd 2>&1 |" or die;
+    while (<VWX>) {
+        print STDERR ".";
+        if (/overall best loss \(.*\) ([^ ]+) pass/) {
+            $score = 1-$1;
+        }
+    }
+    close VWX;
+
+    if (not defined $score) { die "vwx didn't succeed"; }
+
+    print STDERR " (test score = $score)\n";
+    return $score;
+}
 
 sub writeFile {
     my ($fname, @data) = @_;
@@ -184,6 +270,9 @@ sub writeFile {
         my $n = $perm[$nn];
         print O $data[$n]{'label'};
         if ($data[$n]{'label'} > 0) { $Np++; } else { $Nn++; }
+
+        if ($classifier eq 'vw') { print O ' |'; }
+
         foreach my $f (keys %{$data[$n]}) {
             if ($f =~ /___/) {
                 if ($data[$n]{$f} == 0) { next; }
@@ -197,7 +286,7 @@ sub writeFile {
     }
     close O;
     if ($Np == 0) { print STDERR "warning: generated data with no positive examples in $fname\n"; }
-    if ($Nn == 0) { print STDERR "warning: generated data with no positive examples in $fname\n"; }
+    if ($Nn == 0) { print STDERR "warning: generated data with no negative examples in $fname\n"; }
 }
 
 sub generateData {
@@ -310,6 +399,8 @@ sub readSeenList {
         }
     }
     close F;
+
+    if (not $doPrune) { return (%seenTmp); }
 
     my %seen = ();
     foreach my $fr (keys %seenTmp) {
