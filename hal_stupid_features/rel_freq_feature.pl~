@@ -1,0 +1,15 @@
+#!/usr/bin/perl -w
+use strict;
+
+my %types = ();
+foreach my $dom qw(EMEA Science Subs) {
+    open F, "source_data/$dom.psd" or die;
+    while (<F>) {
+        chomp;
+        my ($snt_id, $fr_start, $fr_end, $en_start, $en_end, $fr_phrase, $en_phrase) = split /\t/, $_;
+        $types{$fr_phrase}{$dom} = 1;
+    }
+    close F;
+
+    
+}

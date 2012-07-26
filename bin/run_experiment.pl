@@ -185,11 +185,12 @@ for (my $fold=0; $fold<$numFolds; $fold++) {
 
     my $fscore;
     if ($classifier eq 'vw') {
-        $fscore = run_vw("classifiers/$experiment.train",    scalar @train,
-                       "classifiers/$experiment.dev",      scalar @dev,
-                       "classifiers/$experiment.traindev", scalar @train + scalar @dev,
-                       "classifiers/$experiment.test",     scalar @test
-                      );
+        $fscore = run_vw($fold,
+                         "classifiers/$experiment.train",    scalar @train,
+                         "classifiers/$experiment.dev",      scalar @dev,
+                         "classifiers/$experiment.traindev", scalar @train + scalar @dev,
+                         "classifiers/$experiment.test",     scalar @test
+                        );
     } else {
         die "unknown classifier '$classifier'";
     }
@@ -206,7 +207,7 @@ print "Average score $avgFscore (std $stdFscore)\n";
 
 
 sub run_vw {
-    my ($trF, $trN, $deF, $deN, $trdeF, $trdeN, $teF, $teN) = @_;
+    my ($fold, $trF, $trN, $deF, $deN, $trdeF, $trdeN, $teF, $teN) = @_;
 
     my $numPasses = 20;
     my $VWX = 'vwx';
@@ -234,7 +235,7 @@ sub run_vw {
     if (not defined $bestScore) { die "vwx didn't succeed"; }
 
     my $score;
-    $cmd = "$VWX -d $trdeF --dev $teF --eval f --logistic --passes $bestPass --noearlystop --args $bestConfig";
+    $cmd = "$VWX -d $trdeF --dev $teF --eval f --logistic --passes $bestPass --noearlystop --readable classifiers/$experiment.fold=$fold.vwmodel --args $bestConfig";
     print STDERR "Running: $cmd\n";
     open VWX, "$cmd 2>&1 |" or die;
     while (<VWX>) {
@@ -315,17 +316,21 @@ sub generateData {
     my %type = ();
     open LS, "find features/ -iname \"$dom.type.*\" |" or die $!;
     while (my $fname = <LS>) {
-        $fname =~ /^$dom\.type\.(.+)$/;
+        $fname =~ /\/$dom\.type\.(.+)$/;
         my $user = $1;
+        if (not defined $user) { print STDERR "skipping file $fname...\n"; next; }
         
         print STDERR "Reading features from $fname\n";
         open F, $fname or die $!;
         while (<F>) {
             chomp;
-            my ($fr_phrase,@feats) = split;
-            foreach my $fval (@feats) {
-                my ($f,$val) = split_fval($fval);
-                $type{$fr_phrase}{$user . '___type_' . $f} = $val;
+            if (/^([^\t]+)\t(.+)$/) {
+                my $fr_phrase = $1;
+                my @feats = split /\s+/, $2;
+                foreach my $fval (@feats) {
+                    my ($f,$val) = split_fval($fval);
+                    $type{$fr_phrase}{$user . '___type_' . $f} = $val;
+                }
             }
         }
         close F;
