@@ -27,8 +27,20 @@ should be in VW format (string:value or just string if the value=1).
 
 Once you've created your features, you can run:
 
-  ./run_experiment.pl
+  bin/run_experiment.pl
 
 To see how well you're doing :).  If you run this with no arguments,
 it will tell you what you can specify.
+
+
+===================
+
+Notes from hal to himself:
+
+Right now the data is based on the test1 data per Marine's email,
+with data copied from the following locations:
+
+/export/ws12/damt/data/intrinsic_eval/gold_standard/EMEA-new.test1.filtered.psd
+/export/ws12/damt/data/pp/EMEA-new/test1.no-doc-boundary.normal.fr
+/export/ws12/damt/data/pp/EMEA-new/test1.no-doc-boundary.normal.en
 
