@@ -13,21 +13,28 @@ namespace lvlw
         {
             var r = new R();
             var wa = Utils.Alignments(args[0], args[1], args[2]);
+            var wa2 = Utils.Alignments(args[4], args[5], args[6]);
             Model m = new Model(wa, 1, r);
             m.Sweep(r);
-            for (int s = 1; s <= 3; ++s)
+            m.PrintLikelihood(wa);
+            m.PrintLikelihood(wa2);
+            m = new Model(wa, 4, r);
+            for (int s = 1; s <= 2; ++s)
             {
-                m.Split(r);
-                for (int i = 1; i <= 15; ++i)
+                if (s > 1) m.Split(r);
+                for (int i = 1; i <= 20; ++i)
                 {
                     m.Sweep(r);
-                    Console.Out.Write(".");
-                    Console.Out.Flush();
+                    Console.WriteLine(m.Changed[m.Changed.Count - 1]);
+                    m.PrintLikelihood(wa);
+                    m.PrintLikelihood(wa2);
                 }
                 Console.Out.WriteLine();
                 m.DumpAssign();
             }
             m.Write(args[3]);
+            foreach (double c in m.Changed)
+                Console.WriteLine(c);
         }
     }
 
@@ -54,6 +61,7 @@ namespace lvlw
                 }
                 D.Add(doc);
             }
+            Console.WriteLine("loaded {0} sentences", D.Count);
             SampleDists(r);
             //DumpAssign();
 
@@ -139,7 +147,10 @@ namespace lvlw
         {
             //SampleZ(r);
             //SampleDists(r);
-            SampleBoth(r);
+            //if (K < 4)
+                SampleBoth(r);
+            //else
+                //SampleBoth(r, 4);
         }
 
         public void Split(R r)
@@ -164,6 +175,54 @@ namespace lvlw
             SampleDists(r);
         }
 
+        public void PrintLikelihood(IEnumerable<WordAlignment> aligns)
+        {
+            double mixlogprob = 0;
+            double maxlogprob = 0;
+            double[] theta = new double[K];
+            foreach (var wa in aligns)
+            {
+                var l = new List<Pair<int, int>>();
+                foreach (var p in wa.A)
+                    l.Add(new Pair<int, int>(F[wa.S[p.Item1]], E[wa.T[p.Item2]]));
+                double sumTheta = 0;
+                for (int z = 0; z < K; ++z)
+                {
+                    theta[z] = 1;
+                    double prob = 0;
+                    foreach (var p in l)
+                        if (Alpha[z].W.TryGetValue(p.Item1, out prob))
+                            theta[z] *= prob;
+                        else
+                            theta[z] *= 0.0001;
+                    sumTheta += theta[z];
+                }
+                for (int z = 0; z < K; ++z) theta[z] /= sumTheta;
+                double mixture = 0;
+                double max = -1e100;
+                for (int z = 0; z < K; ++z)
+                {
+                    double prob = theta[z];
+                    foreach (var pair in l)
+                    {
+                        int f = pair.Item1, e = pair.Item2;
+                        SparseCategorical s;
+                        double p;
+                        if (!Beta.TryGetValue(T(z, f), out s) ||
+                            !s.W.TryGetValue(e, out p))
+                            prob *= 0.001;
+                        else
+                            prob *= p;
+                    }
+                    mixture += prob;
+                    if (prob > max) max = prob;
+                }
+                mixlogprob += Math.Log(mixture);
+                maxlogprob += Math.Log(max);
+            }
+            Console.WriteLine("max = {0:0.00}; mixture = {1:0.00}", maxlogprob, mixlogprob);
+        }
+
         public void SampleBoth(R r)
         {
             var cAlpha = new Counter<int>[K];
@@ -172,6 +231,8 @@ namespace lvlw
             double[] density = new double[K];
             int[] counts = new int[K];
             int count = 0;
+            int total = 0;
+            int changed = 0;
             foreach (var d in D)
             {
                 var theta = d.Theta;
@@ -193,9 +254,10 @@ namespace lvlw
                         }
                         density[k] += 0.0001;
                     }
+                    int oldZ = d.Z[i];
                     var s = new AliasSampler(density);
                     int f = d.F[i], e = d.E[i];
-                    for (int draws = 0; draws < 20; ++draws)
+                    for (int draws = 0; draws < 100; ++draws)
                     {
                         int z = s.Draw(r);
                         ++counts[z];
@@ -210,10 +272,14 @@ namespace lvlw
                         counts[z] = 0;
                     }
                     d.Z[i] = argmax;
+                    ++total;
+                    if (d.Z[i] != oldZ)
+                        ++changed;
                 }
                 ++count;
                 d.Theta = r.SampleDirichlet(cTheta);
             }
+            Changed.Add(changed / (double)total);
             Alpha = new SparseCategorical[K];
             for (int k = 0; k < K; ++k)
                 Alpha[k] = r.SampleSparseCategorical(cAlpha[k], 0.01, 1e-3);
@@ -222,9 +288,11 @@ namespace lvlw
                 Beta[p.Key] = r.SampleSparseCategorical(p.Value, 0.01, 1e-3);
         }
 
-        public Thread RunInThread(Action a)
+        public Thread RunInThread(ThreadStart a)
         {
-            throw new NotImplementedException();
+            Thread t = new Thread(a);
+            t.Start();
+            return t;
         }
 
         public void AddTo<T>(Counter<T> result, Counter<T> toAdd)
@@ -250,10 +318,8 @@ namespace lvlw
                             l.Add(SampleBoth(new R(), rank, threads));
                             }));
             }
-            for (int i = 0; i< threads; ++i)
-            {
-                lt[i].Join();
-            }
+            for (int i = 0; i< threads; ++i) lt[i].Join();
+
             var cAlpha = l[0].Item1;
             var cBeta = l[0].Item2;
             for (int i = 1; i < threads; ++i)
@@ -323,6 +389,7 @@ namespace lvlw
                 ++count;
                 d.Theta = r.SampleDirichlet(cTheta);
             }
+            //Console.WriteLine(count);
             return new Pair<Counter<int>[], AutoInitDict<Pair<int, int>, Counter<int>>>(cAlpha, cBeta);
         }
 
@@ -354,6 +421,8 @@ namespace lvlw
                 Beta[p.Key] = r.SampleSparseCategorical(p.Value, 0.01, 1e-3);
             //Write(Console.Out);
         }
+
+        public List<double> Changed = new List<double>();
 
         public void SampleZ(R r)
         {
