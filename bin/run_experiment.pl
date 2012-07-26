@@ -9,6 +9,9 @@ my $pruneMaxCount   = 20;   # keep at most 20 en translations for each fr word
 my $pruneMaxProbSum = 0.95; # AND keep at most 95% of the probability mass for p(en|fr)
 my $pruneMinRelProb = 0.01; # AND remove english translations that are more than 100* worse than the best one
 
+my $srandNum = 2780;
+my $seenFName = "source_data/seen.hansard32.gz";
+
 my $USAGE = "usage: run_experiment.pl (dataspec) (options
 where dataspec includes:
   -tr domain       train on data from domain (you can say -tr multiple times)
@@ -23,6 +26,9 @@ where options includes:
   -pruneMC #       keep at most # en translations for each fr word [$pruneMaxCount]
   -pruneMPS #      keep at most #% of the prob mass of p(en|fr) [$pruneMaxProbSum]
   -pruneMRL #      remove en trans with prob < #*most likely prob [$pruneMinRelProb]
+  -noprune         turn off all pruning
+  -srand #         seed random number generated with # [$srandNum]
+  -seen file       read seen pairs from file [$seenFName]
 
 ";
 
@@ -41,7 +47,14 @@ while (1) {
     elsif ($arg eq '-pruneMC' ) { $pruneMaxCount = shift or die $USAGE; }
     elsif ($arg eq '-pruneMPS') { $pruneMaxProbSum = shift or die $USAGE; }
     elsif ($arg eq '-pruneMRP') { $pruneMinRelProb = shift or die $USAGE; }
+    elsif ($arg eq '-noprune')  { $pruneMaxCount = 100000; $pruneMaxProbSum = 100000; $pruneMinRelProb = -1; }
+    elsif ($arg eq '-srand')    { $srandNum = shift or die $USAGE; }
+    elsif ($arg eq '-seen')     { $seenFName = shift or die $USAGE; }
+    else { die $USAGE; }
 }
+
+srand($srandNum);
+
 my $isXV = 0;
 if (scalar keys %xvDom == 0) {
     if (scalar keys %trDom == 0) { die $USAGE . "error: no training data!"; }
@@ -87,6 +100,7 @@ if (scalar keys %warnUnseen > 0) {
     print STDERR "warning: data included " . (scalar keys %warnUnseen) . " unseen french phrases: " . (join ' ', sort keys %warnUnseen) . "\n";
 }
 
+if ($N == 0) { die "did not read any data!"; }
 
 print STDERR "Read $N examples ($Np positive and $Nn negative, which is " . (int($Np/$N*1000)/10) . "% positive)\n";
 
@@ -154,8 +168,20 @@ for (my $fold=0; $fold<$numFolds; $fold++) {
 sub writeFile {
     my ($fname, @data) = @_;
     open O, "> $fname" or die $!;
-    my $Np = 0; my $Nn = 0;
+
+    my @perm = ();
+    for (my $n=0; $n<@data; $n++) { $perm[$n] = $n;}
     for (my $n=0; $n<@data; $n++) {
+        my $m = int($n + rand() * (@data - $n));
+        my $t = $perm[$n];
+        $perm[$n] = $perm[$m];
+        $perm[$m] = $t;
+    }
+
+
+    my $Np = 0; my $Nn = 0;
+    for (my $nn=0; $nn<@data; $nn++) {
+        my $n = $perm[$nn];
         print O $data[$n]{'label'};
         if ($data[$n]{'label'} > 0) { $Np++; } else { $Nn++; }
         foreach my $f (keys %{$data[$n]}) {
@@ -179,6 +205,7 @@ sub generateData {
 
     my @Y = (); my @W = ();
     open F, "source_data/$dom.psd" or die $!;
+    open O, "> source_data/$dom.psd.markedup" or die $!;
     while (<F>) {
         chomp;
         my ($snt_id, $fr_start, $fr_end, $en_start, $en_end, $fr_phrase, $en_phrase) = split /\t/, $_;
@@ -188,11 +215,13 @@ sub generateData {
         } else {
             $Y = (exists $seen{$fr_phrase}{$en_phrase}) ? -1 : 1;
         }
+        print O $Y . "\t" . $_ . "\n";
 
         push @W, $fr_phrase;
         push @Y, $Y;
     }
     close F;
+    close O;
     
     my %type = ();
     open LS, "find features/ -iname \"$dom.type.*\" |" or die $!;
@@ -271,7 +300,7 @@ sub split_fval {
 }
 
 sub readSeenList {
-    open F, "zcat source_data/seen.gz|" or die $!;
+    open F, "zcat $seenFName|" or die $!;
     my %seenTmp = ();
     while (<F>) {
         chomp;
@@ -290,12 +319,14 @@ sub readSeenList {
         foreach my $en (keys %{$seenTmp{$fr}}) { $seenTmp{$fr}{$en} /= $sum; }
 
         my @en = sort { $seenTmp{$fr}{$b} <=> $seenTmp{$fr}{$a} } keys %{$seenTmp{$fr}};
+        if (scalar @en == 0) { next; }
         my $topProb = $seenTmp{$fr}{$en[0]};
 
         $seen{$fr}{$en[0]} = 1;
         my $count = 1; my $psum = $topProb;
         while (($count < $pruneMaxCount) &&
-               ($psum  < $pruneMaxProbSum)) {
+               ($psum  < $pruneMaxProbSum) && 
+               ($count < @en)) {
             my $en = $en[$count];
             if ($seenTmp{$fr}{$en} / $topProb < $pruneMinRelProb) { last; }
             $seen{$fr}{$en} = 1;
@@ -305,4 +336,7 @@ sub readSeenList {
     }
 
     return (%seen);
+}
+
+sub makeBuckets {
 }
