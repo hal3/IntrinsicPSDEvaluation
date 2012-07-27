@@ -323,6 +323,11 @@ sub generateData {
         $fname =~ /\/$dom\.type\.(.+)$/;
         my $user = $1;
         if (not defined $user) { print STDERR "skipping file $fname...\n"; next; }
+        if (exists $ignoreFeatures{$user}) {
+            print STDERR "Skipping features from $fname\n";
+            next;
+        }
+
         
         print STDERR "Reading features from $fname\n";
         open F, $fname or die $!;
@@ -359,7 +364,7 @@ sub generateData {
     while (my $fname = <LS>) {
         $fname =~ /^$dom\.token\.(.+)$/;
         my $user = $1;
-        
+        if (not defined $user) { print STDERR "skipping file $fname...\n"; next; }
         if (exists $ignoreFeatures{$user}) {
             print STDERR "Skipping features from $fname\n";
             next;
