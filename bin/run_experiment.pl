@@ -8,6 +8,7 @@ my $classifier = 'vw';
 my $showclassifier = 0;
 my $evensplit = 1;
 my $regularize = 1;
+my %ignoreFeatures = ();
 
 my $pruneMaxCount   = 20;   # keep at most 20 en translations for each fr word
 my $pruneMaxProbSum = 0.95; # AND keep at most 95% of the probability mass for p(en|fr)
@@ -30,6 +31,7 @@ where options includes:
   -nf #            number of folds for cross-validation [$numFolds]
   -exp str         experiment name (used for file prefix) [$experiment]
   -seen file       read seen pairs from file [$seenFName]
+  -ignore str      ignore features named string (multiple allowed)
   -srand #         seed random number generated with # or X for prng [$srandNum]
   -classifier str  specify classifier to use [$classifier]
   -showclassifier  show output from classifier
@@ -62,6 +64,7 @@ while (1) {
     elsif ($arg eq '-noprune')  { $pruneMaxCount = 100000; $pruneMaxProbSum = 100000; $pruneMinRelProb = -1; }
     elsif ($arg eq '-srand')    { $srandNum = shift or die "-srand needs an argument"; }
     elsif ($arg eq '-seen')     { $seenFName = shift or die "-seen needs an argument"; }
+    elsif ($arg eq '-ignore')   { $ignoreFeatures{shift or die "-ignore needs an argument"} = 1; }
     elsif ($arg eq '-classifier')  { $classifier = shift or die "-classifier needs an argument"; }
     elsif ($arg eq '-showclassifier') { $showclassifier = 1; }
     elsif ($arg eq '-dontevensplit') { $evensplit = 0; }
@@ -357,6 +360,11 @@ sub generateData {
         $fname =~ /^$dom\.token\.(.+)$/;
         my $user = $1;
         
+        if (exists $ignoreFeatures{$user}) {
+            print STDERR "Skipping features from $fname\n";
+            next;
+        }
+
         my $n = 0;
         print STDERR "Reading features from $fname\n";
         open F, $fname or die $!;
