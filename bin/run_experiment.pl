@@ -1,11 +1,13 @@
 #!/usr/bin/perl -w
 use strict;
 
-my $numFolds = 10;
+my $numFolds = 4;
 my $doBucketing = 0;
 my $experiment = 'exp';
 my $classifier = 'vw';
 my $showclassifier = 0;
+my $evensplit = 1;
+my $regularize = 1;
 
 my $pruneMaxCount   = 20;   # keep at most 20 en translations for each fr word
 my $pruneMaxProbSum = 0.95; # AND keep at most 95% of the probability mass for p(en|fr)
@@ -31,6 +33,8 @@ where options includes:
   -srand #         seed random number generated with # or X for prng [$srandNum]
   -classifier str  specify classifier to use [$classifier]
   -showclassifier  show output from classifier
+  -dontevensplit   don't run the (hacky) thing for making even splits
+  -dontregularize  turn of (search for) regularization parameters
 
   -pruneMC #       keep at most # en translations for each fr word [$pruneMaxCount]
   -pruneMPS #      keep at most #% of the prob mass of p(en|fr) [$pruneMaxProbSum]
@@ -60,6 +64,8 @@ while (1) {
     elsif ($arg eq '-seen')     { $seenFName = shift or die "-seen needs an argument"; }
     elsif ($arg eq '-classifier')  { $classifier = shift or die "-classifier needs an argument"; }
     elsif ($arg eq '-showclassifier') { $showclassifier = 1; }
+    elsif ($arg eq '-dontevensplit') { $evensplit = 0; }
+    elsif ($arg eq '-dontregularize') { $regularize = 0; }
     else { die $USAGE; }
 }
 
@@ -116,29 +122,10 @@ if ($N == 0) { die "did not read any data!"; }
 print STDERR "Read $N examples ($Np positive and $Nn negative, which is " . (int($Np/$N*1000)/10) . "% positive)\n";
 
 if ($isXV) {
-    # assign data points to folds
-    my %allPhrases = ();
-    for (my $n=0; $n<$N; $n++) {
-        $allPhrases{  $allData[$n]{'phrase'}  } = -1;
-    }
-
-    my @allPhrases = keys %allPhrases;
-    my @fold = ();
-    for (my $i=0; $i<@allPhrases; $i++) {
-        $fold[$i] = $i % $numFolds;
-    }
-    for (my $i=0; $i<@allPhrases; $i++) {
-        my $j = int($i + rand() * (@allPhrases - $i));
-        my $t = $fold[$i];
-        $fold[$i] = $fold[$j];
-        $fold[$j] = $t;
-
-        $allPhrases{ $allPhrases[$i] } = $fold[$i];
-    }
-
-    for (my $n=0; $n<$N; $n++) {
-        $allData[$n]{'testfold'} = $allPhrases{ $allData[$n]{'phrase'} };
-        $allData[$n]{'devfold' } = (1+$allPhrases{ $allData[$n]{'phrase'} }) % $numFolds;
+    if ($evensplit) {
+        doEvenSplit();
+    } else {
+        doUnevenSplit();
     }
 } else {
     for (my $n=0; $n<$N; $n++) {
@@ -154,7 +141,7 @@ if ($isXV) {
 }
 
 
-my @aups = ();
+my @aucs = ();
 for (my $fold=0; $fold<$numFolds; $fold++) {
     print STDERR "===== FOLD " . ($fold+1) . " / $numFolds =====\n" if ($numFolds > 1);
 
@@ -188,9 +175,9 @@ for (my $fold=0; $fold<$numFolds; $fold++) {
     writeFile("classifiers/$experiment.test" , @test);
     `cat classifiers/$experiment.train classifiers/$experiment.dev > classifiers/$experiment.traindev`;
 
-    my $aup;
+    my $auc;
     if ($classifier eq 'vw') {
-        $aup = run_vw($fold,
+        $auc = run_vw($fold,
                          "classifiers/$experiment.train",    scalar @train,
                          "classifiers/$experiment.dev",      scalar @dev,
                          "classifiers/$experiment.traindev", scalar @train + scalar @dev,
@@ -199,32 +186,32 @@ for (my $fold=0; $fold<$numFolds; $fold++) {
     } else {
         die "unknown classifier '$classifier'";
     }
-    push @aups, $aup;
+    push @aucs, $auc;
     print STDERR "\n";
 }
 
-my $avgAup = 0;
-my $stdAup = 0;
-foreach my $aup (@aups) { $avgAup += $aup; $stdAup += $aup*$aup; }
-$avgAup /= $numFolds;
-$stdAup = sqrt($stdAup / $numFolds - $avgAup*$avgAup);
-print "Average score $avgAup (std $stdAup)\n";
+my $avgAuc = 0;
+my $stdAuc = 0;
+foreach my $auc (@aucs) { $avgAuc += $auc; $stdAuc += $auc*$auc; }
+$avgAuc /= $numFolds;
+$stdAuc = sqrt($stdAuc / $numFolds - $avgAuc*$avgAuc);
+print "Average score $avgAuc (std $stdAuc)\n";
 
 
 sub run_vw {
     my ($fold, $trF, $trN, $deF, $deN, $trdeF, $trdeN, $teF, $teN) = @_;
 
     my $numPasses = 20;
-    my $VWX = 'vwx';
+    my $VWX = 'bin/vwx';
     
     my $largeReg = 10 / $trN;
     my $stepReg = $largeReg / 3;
 
     my $searchArgs = "--passes 20 --orsearch --l1 0. $largeReg +$stepReg --l2 $stepReg $largeReg +$stepReg";
-    $searchArgs = "--passes 20";
+    if (! $regularize) { $searchArgs = "--passes 20"; }
 
     my $bestScore; my $bestPass; my $bestConfig;
-    my $cmd = "$VWX -d $trF --dev $deF --eval aup --logistic $searchArgs";
+    my $cmd = "$VWX -d $trF --dev $deF --eval auroc --logistic $searchArgs";
     print STDERR "Running: $cmd\n";
     open VWX, "$cmd 2>&1 |" or die;
     while (<VWX>) {
@@ -245,7 +232,7 @@ sub run_vw {
 
 
     my $score;
-    $cmd = "$VWX -d $trF --dev $deF --eval aup --logistic --passes $bestPass --noearlystop --readable classifiers/$experiment.fold=$fold.vwmodel --args $bestConfig";
+    $cmd = "$VWX -d $trdeF --dev $teF --eval auroc --logistic --passes $bestPass --noearlystop --readable classifiers/$experiment.fold=$fold.vwmodel --args $bestConfig";
     print STDERR "Running: $cmd\n";
     open VWX, "$cmd 2>&1 |" or die;
     while (<VWX>) {
@@ -300,6 +287,7 @@ sub writeFile {
     close O;
     if ($Np == 0) { print STDERR "warning: generated data with no positive examples in $fname\n"; }
     if ($Nn == 0) { print STDERR "warning: generated data with no negative examples in $fname\n"; }
+    print STDERR "$fname:\t$Np positive\t$Nn negative\t" . (int(1000*$Np/($Np+$Nn))/10) . "% positive\n";
 }
 
 sub generateData {
@@ -307,7 +295,7 @@ sub generateData {
 
     my @Y = (); my @W = ();
     open F, "source_data/$dom.psd" or die $!;
-    open O, "> source_data/$dom.psd.markedup" or die $!;
+#    open O, "> source_data/$dom.psd.markedup" or die $!;
     while (<F>) {
         chomp;
         my ($snt_id, $fr_start, $fr_end, $en_start, $en_end, $fr_phrase, $en_phrase) = split /\t/, $_;
@@ -317,13 +305,13 @@ sub generateData {
         } else {
             $Y = (exists $seen{$fr_phrase}{$en_phrase}) ? -1 : 1;
         }
-        print O $Y . "\t" . $_ . "\n";
+#        print O $Y . "\t" . $_ . "\n";
 
         push @W, $fr_phrase;
         push @Y, $Y;
     }
     close F;
-    close O;
+#    close O;
     
     my %type = ();
     open LS, "find features/ -iname \"$dom.type.*\" |" or die $!;
@@ -448,4 +436,240 @@ sub readSeenList {
 }
 
 sub makeBuckets {
+}
+
+
+sub log0 {
+    my ($v) = @_;
+    if ($v <= 0) { return 0; }
+    return log($v);
+}
+
+sub doEvenSplit {
+    # replace numfolds with a power of 2
+    my $oldNumFolds = $numFolds;
+    my $logNumFolds = int(log($numFolds) / log(2));
+    $numFolds = 2 ** $logNumFolds;
+    if ($numFolds != $oldNumFolds) {
+        print STDERR "warning: using $numFolds instead of $oldNumFolds (need a power of 2 for even splitting)\n";
+        #if ($numFolds < 3) { die "cannot have fewer than 3 folds!!!"; }
+    }
+
+    my %typeSize = ();
+    my %availableTypes = ();
+    for (my $n=0; $n<$N; $n++) {
+        my $type = $allData[$n]{'phrase'};
+        $typeSize{ $type }{N} += ( $allData[$n]{'label'} > 0 ) ? 0 : 1;
+        $typeSize{ $type }{P} += ( $allData[$n]{'label'} > 0 ) ? 1 : 0;
+        $typeSize{ $type }{A} += 1;
+        $availableTypes{ $type } = 1;
+    }
+
+    my %splitTree = doEvenSplit_rec(\%typeSize, $logNumFolds, \%availableTypes);
+    my %typeToFold = ();
+    doEvenSplit_assignFolds(\%splitTree, \%typeToFold, 0);
+
+    my %foldInfo = ();
+    for (my $n=0; $n<$N; $n++) {
+        my $type = $allData[$n]{'phrase'};
+        if (not defined $typeToFold{$type}) { die "type $type did not get a fold!"; }
+        my $f = $typeToFold{$type};
+        $allData[$n]{'devfold'}  = $f;
+        $allData[$n]{'testfold'} = ($f+1) % $numFolds;
+        $foldInfo{$f}{N} += ( $allData[$n]{'label'} > 0 ) ? 0 : 1;
+        $foldInfo{$f}{P} += ( $allData[$n]{'label'} > 0 ) ? 1 : 0;
+        $foldInfo{$f}{A} += 1;
+        $foldInfo{$f}{T}{$type} = 1;
+    }
+    foreach my $f (sort { $a <=> $b } keys %foldInfo) {
+        print STDERR "$f:\t" . (join "\t", ($foldInfo{$f}{A}, $foldInfo{$f}{N}/$foldInfo{$f}{A}, $foldInfo{$f}{P}/$foldInfo{$f}{A}, scalar keys %{$foldInfo{$f}{T}})) . "\n";
+    }
+}
+
+sub doEvenSplit_assignFolds {
+    my ($tree, $typeToFold, $curFold) = @_;
+    if (defined $tree->{TYPES}) {
+        foreach my $type (keys %{$tree->{TYPES}}) {
+            $typeToFold->{$type} = $curFold;
+        }
+        return $curFold+1;
+    }
+    $curFold = doEvenSplit_assignFolds(\%{$tree->{LEFT }}, $typeToFold, $curFold);
+    $curFold = doEvenSplit_assignFolds(\%{$tree->{RIGHT}}, $typeToFold, $curFold);
+    return $curFold;
+}
+
+sub doEvenSplit_rec {
+    my ($typeSize, $splitsToGo, $availableTypes) = @_;
+    my %this = ();
+    if (($splitsToGo <= 0) || (scalar keys %$availableTypes < 2)) {
+        %{$this{TYPES}} = %$availableTypes;
+        return (%this);
+    }
+
+=pod
+    my %side = ();
+    {
+        my ($t0) = sort { $typeSize->{$a}{A} <=> $typeSize->{$b}{A} } keys %$availableTypes;
+        delete $availableTypes->{$t0};
+        push @{$side{0}}, $t0;
+        @{$side{1}} = ();
+    }
+
+    while (scalar keys %$availableTypes > 0) {
+        my $bestScore = 0;
+        my $bestType  = '';
+        my $bestSide  = '';
+        foreach my $s (0, 1) {
+            foreach my $t (keys %$availableTypes) {
+                push @{$side{$s}}, $t;
+                my $score = evenSplitQuality($typeSize, \@{$side{0}}, \@{$side{1}});
+                if (($bestType eq '') || ($score > $bestScore)) {
+                    $bestScore = $score;
+                    $bestType  = $t;
+                    $bestSide  = $s;
+                }
+                pop @{$side{$s}};
+            }
+        }
+        print STDERR "bestScore = $bestScore, bestType = $bestType, bestSide = $bestSide\n";
+        push @{$side{$bestSide}}, $bestType;
+        delete $availableTypes->{$bestType};
+    }
+=cut
+
+
+    my @nextTypes = sort { $typeSize->{$a}{A} <=> $typeSize->{$b}{A} } keys %$availableTypes;
+    my %side = ();
+    @{$side{0}} = ();    @{$side{1}} = ();
+    {
+        my $t = pop @nextTypes;
+        push @{$side{0}}, $t;
+    }
+
+    while (scalar @nextTypes > 0) {
+        my $t = pop @nextTypes;
+        my $bestScore = 0;
+        my $bestSide  = '';
+        foreach my $s (0, 1) {
+            push @{$side{$s}}, $t;
+            my $score = evenSplitQuality($typeSize, \@{$side{0}}, \@{$side{1}});
+            if (($bestSide eq '') || ($score > $bestScore)) {
+                $bestScore = $score;
+                $bestSide  = $s;
+            }
+            pop @{$side{$s}};
+        }
+        #print STDERR "bestScore = $bestScore, bestSide = $bestSide\n";
+        push @{$side{$bestSide}}, $t;
+    }
+
+
+=pod
+    my %side = ();
+    {
+        my $t0 = popRandomKey($availableTypes);
+        push @{$side{0}}, $t0;
+        @{$side{1}} = ();
+    }
+
+    my $s = 1;
+    while (scalar keys %$availableTypes > 0) {
+        my $bestScore = 0;
+        my $bestType  = '';
+        foreach my $t (keys %$availableTypes) {
+            push @{$side{$s}}, $t;
+            my $score = evenSplitQuality($typeSize, \@{$side{0}}, \@{$side{1}});
+            if (($bestType eq '') || ($score > $bestScore)) {
+                $bestScore = $score;
+                $bestType  = $t;
+            }
+            pop @{$side{$s}};
+        }
+        print STDERR "bestScore = $bestScore, bestType = $bestType\n";
+        push @{$side{$s}}, $bestType;
+        delete $availableTypes->{$bestType};
+        $s = 1-$s;
+    }
+=cut
+
+    my %left = (); foreach my $x (@{$side{0}}) { $left{$x} = 1; }
+    my %right = (); foreach my $x (@{$side{1}}) { $right{$x} = 1; }
+    %{$this{LEFT}}  = doEvenSplit_rec($typeSize, $splitsToGo-1, \%left);
+    %{$this{RIGHT}} = doEvenSplit_rec($typeSize, $splitsToGo-1, \%right);
+    return (%this);
+}
+
+sub popRandomKey {
+    my ($h) = @_;
+    my @k = keys %$h;
+    if (@k == 0) { return undef; }
+    my $i = int(rand() * scalar @k);
+    delete $h->{$k[$i]};
+    return $k[$i];
+}
+
+sub evenSplitQuality {
+    my ($typeSize, $leftIDs, $rightIDs) = @_;
+
+    my %leftInfo = (N => 0, P => 0, A => 0);
+    foreach my $type (@$leftIDs) {
+        $leftInfo{N} += $typeSize->{$type}{N};
+        $leftInfo{P} += $typeSize->{$type}{P};
+        $leftInfo{A} += $typeSize->{$type}{A};
+    }
+    $leftInfo{N} /= $leftInfo{A} if $leftInfo{A} > 0;
+    $leftInfo{P} /= $leftInfo{A} if $leftInfo{A} > 0;
+
+    my %rightInfo = (N => 0, P => 0, A => 0);
+    foreach my $type (@$rightIDs) {
+        $rightInfo{N} += $typeSize->{$type}{N};
+        $rightInfo{P} += $typeSize->{$type}{P};
+        $rightInfo{A} += $typeSize->{$type}{A};
+    }
+    $rightInfo{N} /= $rightInfo{A} if $rightInfo{A} > 0;
+    $rightInfo{P} /= $rightInfo{A} if $rightInfo{A} > 0;
+
+    my $nAvg = ($leftInfo{N} + $rightInfo{N}) / 2;
+    my $pAvg = ($leftInfo{P} + $rightInfo{P}) / 2;
+
+    my $klLeft  = (($leftInfo{N} <= 0) ? 0 : ( $leftInfo{N} * log0( $leftInfo{N} / $nAvg ) )) +
+                  (($leftInfo{P} <= 0) ? 0 : ( $leftInfo{P} * log0( $leftInfo{P} / $pAvg ) ));
+    my $klRight = (($rightInfo{N} <= 0) ? 0 : ( $rightInfo{N} * log0( $rightInfo{N} / $nAvg ) )) +
+                  (($rightInfo{P} <= 0) ? 0 : ( $rightInfo{P} * log0( $rightInfo{P} / $pAvg ) ));
+
+    my $js = ( $klLeft + $klRight ) / 2;
+    my $sizeDiff = abs($leftInfo{A} - $rightInfo{A});
+
+#    print STDERR "> $nAvg $pAvg $klLeft $klRight | $leftInfo{N} $leftInfo{P} $rightInfo{N} $rightInfo{P} | " . 
+#        (join ' : ', ( $leftInfo{N}/($nAvg+0.0001) , $leftInfo{P} / ($pAvg+0.0001), $rightInfo{N} / ($nAvg+0.0001), $rightInfo{P} / ($pAvg+0.0001) ));
+#    print STDERR "\n> js = $js, sizeDiff = $sizeDiff -> " . (exp(-$sizeDiff / scalar keys %$typeSize)) . "\n";
+    return (-10*$js - ($sizeDiff / scalar keys %$typeSize)/10000);
+}
+
+sub doUnevenSplit {
+    # assign data points to folds
+    my %allPhrases = ();
+    for (my $n=0; $n<$N; $n++) {
+        $allPhrases{  $allData[$n]{'phrase'}  } = -1;
+    }
+
+    my @allPhrases = keys %allPhrases;
+    my @fold = ();
+    for (my $i=0; $i<@allPhrases; $i++) {
+        $fold[$i] = $i % $numFolds;
+    }
+    for (my $i=0; $i<@allPhrases; $i++) {
+        my $j = int($i + rand() * (@allPhrases - $i));
+        my $t = $fold[$i];
+        $fold[$i] = $fold[$j];
+        $fold[$j] = $t;
+
+        $allPhrases{ $allPhrases[$i] } = $fold[$i];
+    }
+
+    for (my $n=0; $n<$N; $n++) {
+        $allData[$n]{'testfold'} = $allPhrases{ $allData[$n]{'phrase'} };
+        $allData[$n]{'devfold' } = (1+$allPhrases{ $allData[$n]{'phrase'} }) % $numFolds;
+    }
 }
