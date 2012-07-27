@@ -1,0 +1,1 @@
+python jmTypeFeatures.py ~/damt/marginalSolver/jointCounts/Hansard.pairs.freq.c_pef_pfe_fr_en /home/hltcoe/airvine/damt/marginalSolver/emea-docpair.100.16.6/Iteration2/jointout ../source_data/EMEA.psd.frTypeVocab myout
