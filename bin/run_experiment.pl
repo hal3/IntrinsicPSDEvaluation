@@ -205,7 +205,7 @@ sub run_vw {
     my $VWX = 'bin/vwx';
     
     my $largeReg = 10 / $trN;
-    my $stepReg = $largeReg / 3;
+    my $stepReg = $largeReg / 5;
 
     my $searchArgs = "--passes 20 --orsearch --l1 0. $largeReg +$stepReg --l2 $stepReg $largeReg +$stepReg";
     if (! $regularize) { $searchArgs = "--passes 20"; }
