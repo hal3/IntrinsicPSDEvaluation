@@ -2,12 +2,13 @@
 use strict;
 
 my $numFolds = 4;
-my $doBucketing = 0;
+my $doBucketing = 1;
 my $experiment = 'exp';
 my $classifier = 'vw';
 my $showclassifier = 0;
 my $evensplit = 1;
 my $regularize = 1;
+my $maxBuckets = 10;
 my %ignoreFeatures = ();
 
 my $pruneMaxCount   = 20;   # keep at most 20 en translations for each fr word
@@ -29,12 +30,14 @@ you must also specify test data
 
 where options includes:
   -nf #            number of folds for cross-validation [$numFolds]
+  -maxbuckets #    make at most # buckets per feature [$maxBuckets]
   -exp str         experiment name (used for file prefix) [$experiment]
   -seen file       read seen pairs from file [$seenFName]
   -ignore str      ignore features named string (multiple allowed)
   -srand #         seed random number generated with # or X for prng [$srandNum]
   -classifier str  specify classifier to use [$classifier]
   -showclassifier  show output from classifier
+  -dontbucket      bucket features (make them all binary)
   -dontevensplit   don't run the (hacky) thing for making even splits
   -dontregularize  turn of (search for) regularization parameters
 
@@ -55,7 +58,8 @@ while (1) {
     elsif ($arg eq '-te') { $teDom{shift or die "-te needs an argument"} = 1; }
     elsif ($arg eq '-xv') { $xvDom{shift or die "-xv needs an argument"} = 1; }
     elsif ($arg eq '-nf') { $numFolds = shift or die "-nf needs an argument"; }
-    elsif ($arg eq '-bucket') { $doBucketing = 1; }
+    elsif ($arg eq '-dontbucket') { $doBucketing = 0; }
+    elsif ($arg eq '-maxbuckets') { $maxBuckets = shift or die "-maxbuckets needs an argument"; }
     elsif ($arg eq '-exp') { $experiment = shift or die "-exp needs an argument"; }
     elsif ($arg eq '-pruneMC' ) { $pruneMaxCount = shift or die "-pruneMC needs an argument"; $doPrune = 1; }
     elsif ($arg eq '-pruneMPS') { $pruneMaxProbSum = shift or die "-pruneMPS needs an argument"; $doPrune = 1; }
@@ -166,17 +170,29 @@ for (my $fold=0; $fold<$numFolds; $fold++) {
     if (@dev   ==  0) { die "hit a fold with no dev data: try reducing number of folds!"; }
     if (@test  ==  0) { die "hit a fold with no test data: try reducing number of folds!"; }
 
+    my @traindev = ();
+    foreach my $x (@train) { push @traindev, $x; }
+    foreach my $x (@dev  ) { push @traindev, $x; }
+
     if ($doBucketing) {
         my %bucketInfo = makeBuckets(@train);
-        @train = applyBuckets(\%bucketInfo, @train);
-        @dev   = applyBuckets(\%bucketInfo, @dev);
-        @test  = applyBuckets(\%bucketInfo, @test);
+        @train    = applyBuckets(\%bucketInfo, \@train);
+        @dev      = applyBuckets(\%bucketInfo, \@dev);
+        @traindev = applyBuckets(\%bucketInfo, \@traindev);
+        @test     = applyBuckets(\%bucketInfo, \@test);
+
+        open O, "> classifiers/$experiment.buckets" or die $!;
+        foreach my $f (sort keys %bucketInfo) {
+            print O $f . "\t" . (join "\t", sort { $a <=> $b } keys %{$bucketInfo{$f}}) . "\n";
+        }
+        close O;
+
     }
 
     writeFile("classifiers/$experiment.train", @train);
+    writeFile("classifiers/$experiment.traindev", @traindev);
     writeFile("classifiers/$experiment.dev"  , @dev);
     writeFile("classifiers/$experiment.test" , @test);
-    `cat classifiers/$experiment.train classifiers/$experiment.dev > classifiers/$experiment.traindev`;
 
     my $auc;
     if ($classifier eq 'vw') {
@@ -400,7 +416,7 @@ sub split_fval {
     my ($str) = @_;
     my $f = $str;
     my $v = 1;
-    if ($str =~ /^(.+):([0-9\.]+)$/) {
+    if ($str =~ /^(.+):(-?[0-9\.]+)$/) {
         $f = $1;
         $v = $2;
     }
@@ -448,7 +464,70 @@ sub readSeenList {
     return (%seen);
 }
 
+sub applyBuckets {
+    my ($bucketInfo, $data) = @_;
+
+    my @data_new = ();
+    for (my $n=0; $n<@$data; $n++) {
+        %{$data_new[$n]} = ();
+        foreach my $f (keys %{$data->[$n]}) {
+            if (not ($f =~ /___/)) { 
+                $data_new[$n]{$f} = $data->[$n]{$f};
+                next;
+            }
+            if (not defined $bucketInfo->{$f}) { 
+                print STDERR "warning: no bucket info for '$f' -- skipping\n";
+                next;
+            }
+            my $v = $data->[$n]{$f};
+            foreach my $vmin (keys %{$bucketInfo->{$f}}) {
+                if ($v >= $vmin) {
+                    $data_new[$n]{$f . '>=' . $vmin} = 1;
+                }
+            }
+        }
+    }
+
+
+    return (@data_new);
+}
+
 sub makeBuckets {
+    my (@data) = @_;
+    my %fvals = ();
+    for (my $n=0; $n<@data; $n++) {
+        foreach my $f (keys %{$data[$n]}) {
+            if (not ($f =~ /___/)) { next; }
+            $fvals{$f}{$data[$n]{$f}}++;
+        }
+    }
+    for (my $n=0; $n<@data; $n++) {
+        foreach my $f (keys %fvals) {
+            if (not defined $data[$n]{$f}) {
+                $fvals{$f}{0}++;
+            }
+        }
+    }
+
+    my %bucketInfo = ();
+    foreach my $f (keys %fvals) {
+        my @l = ();
+        foreach my $v (keys %{$fvals{$f}}) {
+            for (my $i=0; $i<$fvals{$f}{$v}; $i++) { push @l, $v; }
+        }
+        @l = sort @l;
+
+        my $i = 0;
+        my $step = (scalar @l) / $maxBuckets;
+        if ($step < 1) { $step = 1; }
+        while (int($i) < @l) {
+            my $v = $l[int($i)];
+            $bucketInfo{$f}{$v} = 1;
+            $i += $step;
+        }
+    }
+
+    return (%bucketInfo);
 }
 
 
