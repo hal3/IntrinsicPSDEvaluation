@@ -17,15 +17,10 @@ def getMaxEnWordFromJoint(frword,jointdist):
 #Given a french word and a joint distribution, return K en words with max p(en|fr) under joint
 def getMaxKEnWordFromJoint(frword,jointdist,k):
     correctEns=[]
-    for i in range(k):
-        correctEns.append(("",0))
     for en in jointdist.get(frword,[]):
         score=jointdist[frword][en][1] #get p_e_given_f
-        replaced=False
-        for i,epair in enumerate(correctEns):
-            if score>epair[1] and not replaced:
-                correctEns[i]=(en,score)
-                replaced=True
+        correctEns.append((en,score))
+    correctEns=sorted(correctEns, key=lambda word: word[1], reverse=True)[0:k]
     return correctEns
 
 def wordMatch(word1,word2):
@@ -86,9 +81,10 @@ for word in devtestvocab:
         outfile.write("a_maxChange:"+str(1)+" ")                
     top5learned=getMaxKEnWordFromJoint(word,learned,5)
     top5learned_words=[x[0] for x in top5learned]
+    top5learned_scores=[x[1] for x in top5learned]
     top5original=getMaxKEnWordFromJoint(word,original,5)
     top5original_words=[x[0] for x in top5original]
-    print top5learned_words, top5original_words
+    #print top5learned_words, top5original_words
     # Feature 3: % of top 5 translations in both learned and original
     if word in learned and word in original:
         overlap=0
@@ -96,6 +92,11 @@ for word in devtestvocab:
             if tword in top5learned_words:
                 overlap+=1
         outfile.write("a_top5overlap:"+str(overlap/5)+" ")
+        print ""
+        print "French:", word
+        print "Original top 5:", top5original_words
+        print "Learned top 5:", top5learned_words
+        print "Learned top 5 scores:", top5learned_scores
     else:
         outfile.write("a_top5overlap:"+str(0.0)+" ")        
     # Feature 4: % of top 2 translations in both learned and original
