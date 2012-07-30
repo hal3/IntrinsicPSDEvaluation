@@ -30,23 +30,23 @@ while (1) {
     my @P = (); my @Y = ();
     while (<>) {
         chomp;
-        my ($y,$p) = split;
+        my ($p,$y) = split;
         push @P, $p;
         push @Y, $y;
     }
-    my $area = compute_auroc(\@P, \@Y);
+    my $area = compute_auroc(0, \@P, \@Y);
     print $area . "\n";
 }
 
 
 sub compute_aupr {
-    my ($P, $Y) = @_;
+    my ($Ythresh, $P, $Y) = @_;
 
     my %p = ();
     my $T = 0;
     for (my $n=0; $n<@$P; $n++) {
         my $y = $Y->[$n]; my $p = $P->[$n];
-        $y = ($y > 0) ? 1 : 0;
+        $y = ($y > $Ythresh) ? 1 : 0;
         $p{$p}{$y} += 1;
         $p{$p}{1-$y} += 0;
         $T++ if $y;
@@ -86,13 +86,13 @@ sub compute_aupr {
 }
 
 sub compute_auroc {
-    my ($P, $Y) = @_;
+    my ($Ythresh, $P, $Y) = @_;
 
     my %p = ();
     my $numY = 0; my $numN = 0;
     for (my $n=0; $n<@$P; $n++) {
         my $y = $Y->[$n]; my $p = $P->[$n];
-        $y = ($y > 0) ? 1 : 0;
+        $y = ($y > $Ythresh) ? 1 : 0;
         $p{$p}{$y} += 1;
         $p{$p}{1-$y} += 0;
         $numY++ if $y;
