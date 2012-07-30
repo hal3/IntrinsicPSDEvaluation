@@ -1,0 +1,890 @@
+#!/usr/bin/perl -w
+use strict;
+use POSIX "waitpid","WNOHANG";
+
+$|++;
+
+sub printUsage {
+    print<<ENDUSAGE;
+usage: vwx -d DATA [options] (--args [vw options])
+  DATA           is vw-formatted data that you want to train on, optionally
+                 consisting of a 'DEV' section (ala megam).  you can leave out
+                 -d DATA to read from stdin
+
+options includes the following:
+
+  --out FILE       write the learned weights to FILE
+  --dev FILE       use FILE to provide DEV data (instead of a DEV section)
+  --pred FILE      store DEV prediction to FILE
+  --readable FILE  save a readable model to FILE
+  --passes ##      do ## passes of learning [10]
+  --logistic       use logistic loss instead of squared error
+  --permute        permute data before running vw
+  --noearlystop    do not use early stopping
+   -q              be quiet!
+  --qvw            tell vw to be quiet!
+  --vw PATH        use the vw executable described by PATH
+  --old FILE       adapt from 'old domain' data in FILE (multiple allowed)
+  --tmp PATH       use PATH as temporary directory
+  --parallel ##    run at most ## copies of vw at once
+  --eval METRIC    evaluate according to METRIC (loss|error|f|aupr|auroc)  [loss]
+  --keep_cache     stop us from removing DATA.cache for safety
+  --nonadaptive    do not do adaptive weight learning [adaptive]
+  --power_t ##     use ## as the power in learning rate [0.5]
+
+  --opt ARG        try vw both with and without ARG
+  --or A1 A2       try vw with A1 and then try with A2
+  --try ... ';'    search over vw parameters (in a set)
+  --search ...     search over vw parameters (with a loop)
+  --orsearch ...   search over a choice of vw parameters (with a loop)
+
+the main power of vwx is to try different settings of parameters to vw, which
+can be accomplished with --opt, --or, --search or a combination of them.
+
+  --search [argname] [min] [max] [step]
+    where argname is the argument you would like to search over (eg., --l1),
+    min is the initial value to try, max is the largest value to try, step is
+    either +## or *##, depending on if you want linear or logarithmic search
+
+  --try [argname] [v1] [v2] ... [vK] ';'
+    instead of searching with a loop, just try K specified values, terminated
+    with a semi-colon
+
+in some very rare cases (eg., l1 versus l2 regularization), you might want to
+combine --search and --or.  the only way to do this right now is to use:
+
+  --orsearch [argname1] [min1] [max1] [step1] [argname2] [min2] [max2] [step2]
+
+which will try the specified range of argname1 and then (separately) the
+specified range of argname2.
+
+ENDUSAGE
+return '';
+}
+
+my $MULTICLASS = '';
+my $REMOVECACHE = 1;
+my $EARLYSTOP = 1;
+my $EXACTADAPTIVE = 1;
+my $POWER_T = 0.5;
+my $PASSES = 10;
+my $TRAINFILE = '';
+my $DEVFILE = '';
+my $OUTPUTFILE = '';
+my $PREDFILE = '';
+my $TEMP = '';
+my $QUIET = 0;
+my $PERMUTE = 0;
+my $VW = '';
+my $EVAL = 'loss';
+my $LOSSFN = '';
+my $QUIETVW = 0;
+my $READABLE = '';
+my $PARALLEL = 0;
+my $ALLREDUCE = 0;
+my @BASEARGS = (); my @ORIGARGS = ();
+my @NOOPARGS = ();
+my @OLDDOMAINS = ();
+my %SEARCH = ();
+
+push @BASEARGS, "-k";
+
+my @implicitArgs = ();
+foreach my $a (@ARGV) {
+    my @a = split /\s+/, $a;
+    push @implicitArgs, @a;
+}
+my $hitArgs = 0;
+for (my $i=0; $i<@implicitArgs; $i++) {
+    my $tmp = $implicitArgs[$i];
+    if ($tmp eq '--args') { $hitArgs = 1; }
+    if (($tmp eq "--csoaa") || ($tmp eq "--oaa") || ($tmp eq "--wap") || ($tmp eq "--csoaa_ldf") || ($tmp eq "--wap_ldf")) { 
+        if ($MULTICLASS eq '') {
+            if (not $hitArgs) { push @NOOPARGS, $tmp; }
+            if ($i < @implicitArgs-1) {
+                my $tmpArg = $implicitArgs[$i+1];
+                if ($tmp =~ /ldf/) { $MULTICLASS = 'ldf'; } else { $MULTICLASS = 'simple'; }
+                if (not $hitArgs) { push @NOOPARGS, $tmpArg; }
+                $i++;
+            }
+        }
+     }
+}
+
+while (1) {
+    my $tmp = shift or last;
+    if (($tmp eq '--help') || ($tmp eq '-help') || ($tmp eq '-?') || ($tmp eq '-h')) { die printUsage(); }
+    elsif ($tmp eq '--keep_cache') { $REMOVECACHE = 0; }
+    elsif ($tmp eq '--nonadaptive') { $EXACTADAPTIVE = 0; }
+    elsif ($tmp eq '--noearlystop') { $EARLYSTOP = 0; }
+    elsif ($tmp eq '--passes') { $PASSES = shift or die printUsage(); }
+    elsif ($tmp eq '--power_t') { $POWER_T = shift or die printUsage(); }
+    elsif ($tmp eq '-d') { $TRAINFILE = shift or die printUsage(); }
+    elsif ($tmp eq '--out') { $OUTPUTFILE = shift or die printUsage(); }
+    elsif ($tmp eq '--dev') { $DEVFILE = shift or die printUsage(); }
+    elsif ($tmp eq '--pred') { $PREDFILE = shift or die printUsage(); }
+    elsif ($tmp eq '--permute') { $PERMUTE = 1; }
+    elsif ($tmp eq '--old') { push @OLDDOMAINS, shift or die printUsage(); }
+    elsif ($tmp eq '--vw') { $VW = shift or die printUsage(); }
+    elsif ($tmp eq '--tmp') { $TEMP = shift or die printUsage(); }
+    elsif ($tmp eq '--parallel') { $PARALLEL = shift or die printUsage(); }
+    elsif ($tmp eq '--allreduce') { $ALLREDUCE = shift or die printUsage(); }
+    elsif ($tmp eq '-q') { $QUIET = 1; }
+    elsif ($tmp eq '--qvw') { $QUIETVW = 1; }
+    elsif ($tmp eq '--eval') { $EVAL = shift or die printUsage(); }
+    elsif ($tmp eq '--readable') { $READABLE = shift or die printUsage(); }
+    elsif ($tmp eq '--logistic') { $LOSSFN = "--loss_function=logistic"; }
+    elsif ($tmp eq '--search') {
+        my $vwArg  = shift or die "usage: --search [argname] [min] [max] [*#|+#]";
+        my $minVal = shift or die "usage: --search [argname] [min] [max] [*#|+#]";
+        my $maxVal = shift or die "usage: --search [argname] [min] [max] [*#|+#]";
+        my $delta  = shift or die "usage: --search [argname] [min] [max] [*#|+#]";
+        $SEARCH{$vwArg}{MIN} = $minVal;
+        $SEARCH{$vwArg}{MAX} = $maxVal;
+        if ($delta =~ /^\+([0-9\.]+)$/) {
+            if ($1 <= 0) { die "don't be stupid."; }
+            $SEARCH{$vwArg}{PLUS} = $1;
+        } elsif ($delta =~ /^\*([0-9\.]+)$/) {
+            if ($1 <= 1) { die "don't be stupid."; }
+            $SEARCH{$vwArg}{TIMES} = $1;
+        } else { die "usage: --search [argname] [min] [max] [*#|+#]"; }
+    } elsif ($tmp eq '--orsearch') {
+        my $vwArg1  = shift or die "usage: --orsearch [argname1] [min1] [max1] [step1] [argname2] [min2] [max2] [step2]";
+        my $minVal1 = shift or die "usage: --orsearch [argname1] [min1] [max1] [step1] [argname2] [min2] [max2] [step2]";
+        my $maxVal1 = shift or die "usage: --orsearch [argname1] [min1] [max1] [step1] [argname2] [min2] [max2] [step2]";
+        my $delta1  = shift or die "usage: --orsearch [argname1] [min1] [max1] [step1] [argname2] [min2] [max2] [step2]";
+        my $vwArg2  = shift or die "usage: --orsearch [argname1] [min1] [max1] [step1] [argname2] [min2] [max2] [step2]";
+        my $minVal2 = shift or die "usage: --orsearch [argname1] [min1] [max1] [step1] [argname2] [min2] [max2] [step2]";
+        my $maxVal2 = shift or die "usage: --orsearch [argname1] [min1] [max1] [step1] [argname2] [min2] [max2] [step2]";
+        my $delta2  = shift or die "usage: --orsearch [argname1] [min1] [max1] [step1] [argname2] [min2] [max2] [step2]";
+        my $id = $vwArg1 . ' ___ORSEARCH___ ' . $vwArg2;
+        $SEARCH{$vwArg1}{MIN} = $minVal1;
+        $SEARCH{$vwArg1}{MAX} = $maxVal1;
+        if ($delta1 =~ /^\+([0-9\.]+)$/) {
+            if ($1 <= 0) { die "don't be stupid."; }
+            $SEARCH{$vwArg1}{PLUS} = $1;
+        } elsif ($delta1 =~ /^\*([0-9\.]+)$/) {
+            if ($1 <= 1) { die "don't be stupid."; }
+            $SEARCH{$vwArg1}{TIMES} = $1;
+        } else { die "usage: --orsearch [argname1] [min1] [max1] [step1] [argname2] [min2] [max2] [step2]"; }
+
+        $SEARCH{$vwArg1}{ORSEARCH} = $vwArg2;
+        $SEARCH{$vwArg1}{MIN2} = $minVal2;
+        $SEARCH{$vwArg1}{MAX2} = $maxVal2;
+        if ($delta2 =~ /^\+([0-9\.]+)$/) {
+            if ($1 <= 0) { die "don't be stupid."; }
+            $SEARCH{$vwArg1}{PLUS2} = $1;
+        } elsif ($delta2 =~ /^\*([0-9\.]+)$/) {
+            if ($1 <= 1) { die "don't be stupid."; }
+            $SEARCH{$vwArg1}{TIMES2} = $1;
+        } else { die "usage: --orsearch [argname1] [min1] [max1] [step1] [argname2] [min2] [max2] [step2]"; }
+    } elsif ($tmp eq '--try') {
+        my $vwArg  = shift or die "usage: --try [argname] [v1] ... ';'";
+        @{$SEARCH{$vwArg}{TRY}} = ();
+        while (1) {
+            my $tmp = shift or die "usage: --try [argname] [v1] ... ';'";
+            if (($tmp eq ';') || ($tmp eq '";"') || ($tmp eq "';'")) { last; }
+            push @{$SEARCH{$vwArg}{TRY}}, $tmp;
+        }
+    } elsif ($tmp eq '--opt') {
+        my $vwArg = shift or die "usage: --opt [argname]";
+        $SEARCH{$vwArg}{OPT} = 1;
+    } elsif ($tmp eq '--or') {
+        my $vwArg1 = shift or die "usage: --or [argname] [argname]";
+        my $vwArg2 = shift or die "usage: --or [argname] [argname]";
+        $SEARCH{$vwArg1 . ' ___OR___ ' . $vwArg2}{OR}[0] = $vwArg1;
+        $SEARCH{$vwArg1 . ' ___OR___ ' . $vwArg2}{OR}[1] = $vwArg2;
+    } elsif ($tmp eq '--args') {
+        while (1) {
+            my $tmp = shift or last;
+            push @BASEARGS, $tmp;
+            push @ORIGARGS, $tmp;
+        }
+        last;
+    } else { 
+        $TRAINFILE = $tmp;
+    }
+}
+
+my @runningPID = ();
+
+#if ($TRAINFILE eq '') { die "|| error: vwx: need a training file: -d <FILE>"; }
+#if ($DEVFILE   eq '') { die "|| error: vwx: need a development file: --dev <FILE>"; }
+
+if ($OUTPUTFILE eq '') { 
+    $OUTPUTFILE = $TRAINFILE . '.w';
+    $OUTPUTFILE =~ s/\.gz\.w$/.w.gz/;
+}
+if ($PREDFILE eq '') { 
+    if ($DEVFILE eq '') {
+        $PREDFILE = $TRAINFILE . '.dev-pred';
+        $PREDFILE =~ s/\.gz\.dev-pred$/.dev-pred.gz/;
+    } else {
+        $PREDFILE = $DEVFILE . '.pred';
+        $PREDFILE =~ s/\.gz\.pred$/.pred.gz/;
+    }
+}
+
+if ($TEMP eq '') {
+    if (defined $ENV{'TEMP'}) { $TEMP = $ENV{'TEMP'}; }
+    elsif (defined $ENV{'TMP'}) { $TEMP = $ENV{'TMP'}; }
+    elsif (defined $ENV{'TMPDIR'}) { $TEMP = $ENV{'TMPDIR'}; }
+    else { $TEMP = '/tmp'; }
+}
+if (not -d $TEMP) { die "|| error: vwx: cannot use temporary directory $TEMP: use --temp"; }
+
+if ($VW eq '') {
+    if (defined $ENV{'vw'}) { $VW = $ENV{'vw'}; }
+    elsif (-e './vw') { $VW = './vw'; }
+    elsif (defined $ENV{'PATH'}) {
+        my @paths = split /:/, $ENV{'PATH'};
+        foreach my $p (@paths) {
+            if (-e "$p/vw") { $VW = "$p/vw"; last; }
+            if (-e ($p."vw")) { $VW = $p."vw"; last; }
+        }
+    }
+}
+
+if (not -e $VW) { die "|| error: vwx: cannot find vw executable: put it in your path, set \$vw or use --vw"; }
+
+my $tmpDir = $TEMP . '/vwx_' . int(rand() * 1000000000);
+while (-e $tmpDir) { $tmpDir = $TEMP . '/vwx_' . int(rand() * 1000000000); }
+print STDERR "|| creating temporary directory: $tmpDir\n" if !$QUIET;
+`mkdir $tmpDir`;
+
+if (scalar @OLDDOMAINS > 0) {
+    open OT, "| gzip -9 > $tmpDir/originaltrain.gz" or cleanup() && die "|| error: cannot open $tmpDir/originaltrain.gz for writing";
+    foreach my $oldDomain (@OLDDOMAINS) {
+        my $domName = 'old';
+        if ($oldDomain =~ /^([^:]+):(.+)$/) {
+            $domName = $1;
+            $oldDomain = $2;
+        }
+
+        if ($oldDomain =~ /\.gz$/) { open OLD, "zcat $oldDomain|" or cleanup() && die "|| error: cannot open $oldDomain for reading"; }
+        else { open OLD, $oldDomain or cleanup() && die "|| error: cannot open $oldDomain for reading"; }
+        while (<OLD>) {
+            chomp;
+            if (/^\s*$/) { print OT $_ . "\n"; next; }
+            my ($label, @ns) = split /\|/, $_;
+            print OT $label;
+            my $first = 1;
+            foreach my $ns (@ns) {
+                if (not $first) { print OT ' '; }
+                $first = 0;
+                print OT '|';
+                my @feat = ();
+                if ($ns =~ /^\s+/) {
+                    @feat = split /\s+/, $ns;
+                } else {
+                    my $nsName = '';
+                    ($nsName, @feat) = split /\s+/, $ns;
+                    print OT $nsName;
+                }
+                foreach my $f (@feat) {
+                    print OT ' ' . $f . ' ' . $domName . '_' . $f;
+                }
+            }
+            print OT "\n";
+        }
+        close OLD;
+    }
+       
+    if (($TRAINFILE eq '') || ($TRAINFILE eq '-')) {
+        while (<>) { print OT $_; }
+    }
+    close OT;
+    $TRAINFILE = "$tmpDir/originaltrain.gz";
+} elsif (($TRAINFILE eq '') || ($TRAINFILE eq '-')) {
+    $TRAINFILE = "$tmpDir/originaltrain.gz";
+    open OT, "| gzip -9 > $TRAINFILE" or cleanup() && die "|| error: cannot open $TRAINFILE for writing";
+    while (<>) { print OT $_; }
+    close OT;
+}
+
+my $ORIGINALTRAINFILE = $TRAINFILE;
+if ($DEVFILE eq '') {   # grab dev section from train file
+    $TRAINFILE = "$tmpDir/train.gz";
+    $DEVFILE   = "$tmpDir/dev.gz";
+    if ($ORIGINALTRAINFILE =~ /.gz$/) { open F, "zcat $ORIGINALTRAINFILE|" or cleanup() && die "|| error: cannot open $ORIGINALTRAINFILE for reading"; }
+    else { open F, $ORIGINALTRAINFILE or cleanup() && die "|| error: cannot open $ORIGINALTRAINFILE for reading"; }
+    open OT, "| gzip -9 > $TRAINFILE" or cleanup() && die "|| error: cannot open $TRAINFILE for writing";
+    open OD, "| gzip -9 > $DEVFILE" or cleanup() && die "|| error: cannot open $DEVFILE for writing";
+    my $hitDev = 0;
+    while (<F>) {
+        if (/^DEV/) { $hitDev = 1; next; }
+        if (/^TEST/) { 
+            if ($hitDev) { last; }
+            else { 
+                print STDERR "|| warning: no DEV section in $ORIGINALTRAINFILE, using TEST as DEV\n";
+                $hitDev = 1;
+            }
+        }
+        if ($hitDev) { print OD $_; }
+        else { print OT $_; }
+    }
+    close F;
+    close OT;
+    close OD;
+    if (not $hitDev) {
+        cleanup();
+        die "|| error: if you don't specify --dev, then your training data must contain a DEV section!";
+    }
+}
+
+if ($PERMUTE) {
+    my $CMD = 'cat ' . $TRAINFILE;
+    if ($TRAINFILE =~ /\.gz$/) { $CMD = 'zcat ' . $TRAINFILE; }
+    my $NEWTRAINFILE = $tmpDir . '/permuted.gz';
+    $CMD .= '| sort -R | gzip -9 > ' . $NEWTRAINFILE;
+    print STDERR "|| permuting data via '$CMD'\n" if not $QUIET;
+    system $CMD;
+    if    ($? == -1)       { cleanup() && die "|| error: failed to execute: $!\n"; }
+    elsif ($? & 127)       { cleanup() && die ("|| error: sort with signal " . ($? & 127) . ", " . (($? & 128) ? 'with' : 'without') . " coredump\n"); }
+    elsif (($? >> 8) != 0) { cleanup() && die ("|| error: sort exited with value " . ($? >> 8) . "\n"); }
+    $TRAINFILE = $NEWTRAINFILE;
+}
+
+if ($REMOVECACHE) { `rm -f $TRAINFILE.cache`; }
+
+# set up vw command line
+if ($EXACTADAPTIVE) {
+    push @BASEARGS, '--exact_adaptive_norm';
+}
+if ($LOSSFN ne '') {
+    push @BASEARGS, $LOSSFN;
+}
+
+push @BASEARGS, '--power_t', $POWER_T;
+push @BASEARGS, '--passes', $PASSES;
+push @BASEARGS, '-d', $TRAINFILE;
+push @BASEARGS, '-c';
+
+#if ($EARLYSTOP) {
+    push @BASEARGS, '--save_per_pass';
+#}
+
+if ($QUIET || $QUIETVW) { push @BASEARGS, '--quiet'; }
+
+if (($PARALLEL > 1) && (not -e "$TRAINFILE.cache")) {
+    # create a cache file
+    print STDERR "|| creating cache file for parallel runs\n" if !$QUIET;
+    push @BASEARGS, '--noop', @NOOPARGS;
+    if (!$QUIET) {
+        print STDERR "|| running cmd: $VW " . (join ' ', @BASEARGS) . "\n";
+    }
+    system { $VW } $VW, @BASEARGS;
+    if    ($? == -1)       { cleanup() && die "|| error: failed to execute: $!\n"; }
+    elsif ($? & 127)       { cleanup() && die ("|| error: vw died with signal " . ($? & 127) . ", " . (($? & 128) ? 'with' : 'without') . " coredump\n"); }
+    elsif (($? >> 8) != 0) { cleanup() && die ("|| error: vw exited with value " . ($? >> 8) . "\n"); }
+    foreach my $arg (@NOOPARGS) { pop @BASEARGS; }
+    pop @BASEARGS;
+    print STDERR "|| done creating cache file\n" if !$QUIET;
+}
+
+my @Y = (); my $Ythresh = 0;
+if ($EVAL ne 'loss') {
+    if ($DEVFILE =~ /\.gz$/) { open DEVF, "zcat $DEVFILE |" or cleanup() && die "|| error: cannot open $DEVFILE for reading"; }
+    else { open DEVF, $DEVFILE or cleanup() && die "|| error: cannot open $DEVFILE for reading"; }
+    while (<DEVF>) {
+        chomp;
+        if (/^\s*$/) { push @Y, ""; next; }
+        if (/^shared/) { next; }
+        my ($y) = split /\|/, $_;
+        $y =~ s/\s+//g;
+        if ($MULTICLASS eq 'ldf') {
+            $y =~ s/^[^:]+://g;
+        } else {
+            $y =~ s/:.+$//g;
+        }
+        push @Y, $y;
+    }
+    close DEVF;
+    if ($MULTICLASS eq '') {
+        $Ythresh = guess_threshold(@Y);
+        print STDERR "|| Ythresh=$Ythresh\n";
+    }
+}
+
+my @search = sort keys %SEARCH;
+my @current = ();
+my @allOutput = ();
+runVWsearch('_', \@current, \@allOutput, @search);
+
+# wait for stragglers
+if ($PARALLEL > 1) {
+    foreach my $pid (@runningPID) {
+        waitpid($pid, 0);
+    }
+}
+
+my $bestPassLossOverall = 'Infinity';
+my $bestConfigOverall = '';
+my $bestPassOverall = 0;
+foreach my $searchId (@allOutput) {
+    if (not -e "$tmpDir/loss.$searchId") { next; }
+    open F, "$tmpDir/loss.$searchId" or next;
+    my $thisLoss = <F>; chomp $thisLoss;
+    my $thisArgs = <F>; chomp $thisArgs;
+    my $thisPass = <F>; chomp $thisPass;
+    close F;
+    if ($thisLoss < $bestPassLossOverall) {
+        $bestPassLossOverall = $thisLoss;
+        $bestConfigOverall = $thisArgs;
+        $bestPassOverall = $thisPass;
+
+        if ($PREDFILE ne '') {
+            `mv $tmpDir/bestPred.$searchId $tmpDir/bestPred`;
+        }
+        `mv $tmpDir/bestW.$searchId $tmpDir/bestW`;
+    }
+}
+    
+
+
+if ($PREDFILE ne '') {
+    `mv $tmpDir/bestPred $PREDFILE`;
+}
+if ($OUTPUTFILE ne '') {
+    `cp $tmpDir/bestW $OUTPUTFILE`;
+}
+
+
+print STDERR "|| overall best loss ($EVAL) $bestPassLossOverall pass $bestPassOverall";
+if (@search > 0) { print STDERR " with config $bestConfigOverall"; }
+print STDERR "\n";
+
+if ($READABLE ne '') {
+    print STDERR "|| generating readable model to $READABLE\n" if (not $QUIET);
+    my %allF = ();
+    if ($TRAINFILE =~ /\.gz$/) { open F, "zcat $TRAINFILE|" or cleanup() && die "|| error: cannot open $TRAINFILE for reading"; }
+    else { open F, $TRAINFILE or cleanup() && die "|| error: cannot open $TRAINFILE for reading"; }
+    while (<F>) {
+        chomp;
+        if (/^\s*$/) { next; }
+        my ($label, @ns) = split /\|/, $_;
+        foreach my $ns (@ns) {
+            my $name = '';
+            if ($ns =~ s/^([^\s]+)\s//) { $name = $1; }
+            my @feat = split /\s+/, $ns;
+            foreach my $f (@feat) {
+                $f =~ s/:.+$//;
+                $allF{$name}{$f} = 1;
+            }
+        }
+    }
+    close F;
+    open O, "> $tmpDir/big_example" or cleanup() && die "|| error: cannot open $tmpDir/big_example for writing";
+    foreach my $name (keys %allF) {
+        print O ' |' . $name;
+        foreach my $f (keys %{$allF{$name}}) {
+            print O ' ' . $f;
+        }
+    }
+    print O "\n";
+
+    open VW, "$VW -i $tmpDir/bestW -t -d $tmpDir/big_example --audit 2> /dev/null |" or cleanup() && die "|| error: cannot execute $VW";
+    $_ = <VW>;   # prediction
+    $_ = <VW>;
+    close VW;
+    if (not defined $_) { cleanup() && die "|| error: cannot generate readable model!"; }
+    if (not s/^\t//) { cleanup() && die "|| error: cannot generate readable model!"; }
+    my %f = ();
+    chomp;
+    my @finfo = split /\t+/, $_;
+    foreach my $finfo (@finfo) {
+        if ($finfo =~ /^Constant:([0-9]+):1:(.+)$/) {
+            $f{$2}{'Constant'} = $1;
+        } elsif ($finfo =~ /^([^\^]+)\^([^:]+):([0-9]+):1:(.+)$/) {
+            my $ns = $1; my $fstr = $2; my $fid = $3; my $w = $4;
+            $f{$w}{$ns . '::' . $fstr} = $fid;
+        } else { print STDERR "|| malformed feature '$finfo'\n"; }
+    }
+    open O, "> $READABLE" or cleanup() && die "|| error: cannot open $READABLE for writing";
+    foreach my $w (sort { $a <=> $b } keys %f) {
+        foreach my $str (sort keys %{$f{$w}}) {
+            print O $w . "\t" . $str . "\t" . $f{$w}{$str} . "\n";
+        }
+    }
+    close O;
+}    
+
+cleanup();
+
+sub runVWsearch {
+    my ($searchId, $current, $allIds, @searchArgs) = @_;
+    if (scalar @searchArgs == 0) {
+        push @$allIds, $searchId;
+        runInBackground(\&runVW, $searchId, $current);
+        return;
+    }
+    my $cur = pop @searchArgs;
+
+    if (defined $SEARCH{$cur}{TRY}) {
+        my @allV = @{$SEARCH{$cur}{TRY}};
+        for (my $i=0; $i<@allV; $i++) {
+            my $curV = $allV[$i];
+            if ($cur =~ /=$/) { push @$current, "$cur$curV"; }
+            else { push @$current, $cur, $curV; }
+            runVWsearch($searchId . chr(ord('a') + $i), $current, $allIds, @searchArgs);
+            pop @$current;
+            if (not $cur =~ /=$/) { pop @$current; }
+        }
+    } elsif (defined $SEARCH{$cur}{OPT}) {
+        runVWsearch($searchId . 'f', $current, $allIds, @searchArgs);
+        pushAll($current, $cur);
+        runVWsearch($searchId . 't', $current, $allIds, @searchArgs);
+        popAll($current, $cur);
+    } elsif (defined $SEARCH{$cur}{OR}) {
+        pushAll($current, $SEARCH{$cur}{OR}[0]);
+        runVWsearch($searchId . '0', $current, $allIds, @searchArgs);
+        popAll($current, $SEARCH{$cur}{OR}[0]);
+
+        pushAll($current, $SEARCH{$cur}{OR}[1]);
+        runVWsearch($searchId . '1', $current, $allIds, @searchArgs);
+        popAll($current, $SEARCH{$cur}{OR}[1]);
+    } else {
+        my $curV = $SEARCH{$cur}{MIN};
+        my $curMax = $SEARCH{$cur}{MAX};
+        my $curId = 0;
+        while ($curV < $curMax) {
+            if ($cur =~ /=$/) { push @$current, "$cur$curV"; }
+            else { push @$current, $cur, $curV; }
+            runVWsearch($searchId . chr(ord('a') + $curId), $current, $allIds, @searchArgs);
+            pop @$current;
+            if (not $cur =~ /=$/) { pop @$current; }
+            if (defined $SEARCH{$cur}{PLUS}) { $curV += $SEARCH{$cur}{PLUS};
+            } else {                           $curV *= $SEARCH{$cur}{TIMES}; }
+            $curId++;
+        }
+
+        if (defined $SEARCH{$cur}{ORSEARCH}) {
+            #print STDERR "$SEARCH{$cur}{ORSEARCH}: min=$SEARCH{$cur}{MIN2} max=$SEARCH{$cur}{MAX2} +=$SEARCH{$cur}{PLUS2} *=$SEARCH{$cur}{TIMES2}\n";
+            my $curF = $SEARCH{$cur}{ORSEARCH};
+            $curV = $SEARCH{$cur}{MIN2};
+            $curMax = $SEARCH{$cur}{MAX2};
+            while ($curV < $curMax) {
+                print STDERR "=== $curV ===\n";
+                if ($curF =~ /=$/) { push @$current, "$curF$curV"; }
+                else { push @$current, $curF, $curV; }
+                runVWsearch($searchId . chr(ord('a') + $curId), $current, $allIds, @searchArgs);
+                pop @$current;
+                if (not $curF =~ /=$/) { pop @$current; }
+                if (defined $SEARCH{$cur}{PLUS2}) { $curV += $SEARCH{$cur}{PLUS2};
+                } else {                            $curV *= $SEARCH{$cur}{TIMES2}; }
+                $curId++;
+            }
+        }
+    }
+}
+
+sub pushAll {
+    my ($list, $str) = @_;
+    my @str = split /\s+/, $str;
+    foreach my $x (@str) { push @$list, $x; }
+}
+
+sub popAll {
+    my ($list, $str) = @_;
+    my @str = split /\s+/, $str;
+    foreach my $x (@str) { pop @$list; }
+}
+
+
+sub runInBackground {
+    my ($function, @args) = @_;
+    if ($PARALLEL <= 1) {
+        $function->(@args);
+        return;
+    }
+    if (scalar @runningPID >= $PARALLEL) {
+        my $done = -1;
+        while ($done < 0) {
+            $done = waitpid(-1, 0);
+        }
+        my @newRunningPID = ();
+        foreach my $pid (@runningPID) {
+            if ($pid != $done) {
+                push @newRunningPID, $pid;
+            }
+        }
+        @runningPID = @newRunningPID;
+    }
+
+    my $pid = fork();
+    if (not defined $pid) { # fork failed -- just run
+        $function->(@args);
+        return;
+    }
+    if ($pid == 0) { # we're the child
+        $function->(@args);
+        exit(-1);
+    } else { # we're the parent
+        push @runningPID, $pid;
+    }
+}
+
+sub runVW {
+    my ($searchId, $newArgs) = @_;
+
+    my @VWARGS = ();
+    foreach my $a (@BASEARGS) { push @VWARGS, $a; }
+    foreach my $a (@$newArgs) { push @VWARGS, $a; }
+    push @VWARGS, '-f', "$tmpDir/w.$searchId.out";
+
+    if (!$QUIET) {
+        print STDERR "|| [$searchId] running cmd: $VW " . (join ' ', @VWARGS) . "\n";
+    }
+
+    system { $VW } $VW, @VWARGS;
+    if    ($? == -1)       { cleanup() && die "|| error: failed to execute: $!\n"; }
+    elsif ($? & 127)       { cleanup() && die ("|| error: vw died with signal " . ($? & 127) . ", " . (($? & 128) ? 'with' : 'without') . " coredump\n"); }
+    elsif (($? >> 8) != 0) { cleanup() && die ("|| error: vw exited with value " . ($? >> 8) . "\n"); }
+
+    my $minPass = $PASSES-1;
+    `cp $tmpDir/w.$searchId.out $tmpDir/w.$searchId.out.$minPass`;
+    if ($EARLYSTOP) { $minPass = 0; }
+
+#    print STDERR `ls $tmpDir/w.$searchId.out*`;
+
+    my $combinedArgs = (join ' ', @ORIGARGS) . ' ' . (join ' ', @NOOPARGS);
+    $combinedArgs =~ s/--l[12] [^ ]+//;
+
+    my $bestPassLoss = 'Infinity';
+    my $bestPassId = -1;
+    my @allPassLosses = ();
+    my $finalLoss = '';
+    for (my $pass=$minPass; $pass<$PASSES; $pass++) {
+        my $better = 0;
+        if (not -e "$tmpDir/w.$searchId.out.$pass") { next; }
+
+        my $loss = 'Infinity';
+        my $OUTPUTTYPE = ($MULTICLASS eq '') ? '-r' : '-p';
+        my $CMD = "$VW -i $tmpDir/w.$searchId.out.$pass -t -d $DEVFILE $OUTPUTTYPE $tmpDir/curPred.$searchId $combinedArgs";
+        print STDERR "|| executing: $CMD\n" if (not $QUIET);
+        if ($EVAL eq 'loss') {
+            open F, "$CMD 2>&1 |" or cleanup() && die "|| error: cannot execute $VW";
+            while (<F>) {
+                chomp;
+                if (/^average loss = (.+)$/) {
+                    $loss = $1;
+                    last;
+                }
+            }
+            close F;
+        } else {  # compute our own loss
+            open F, "$CMD 2>&1 |" or cleanup() && die "|| error: cannot execute $VW";
+            while (<F>) {}
+            close F;
+
+            my @P = ();
+            open F, "$tmpDir/curPred.$searchId" or cleanup() && die "|| error: cannot open $tmpDir/curPred.$searchId for reading";
+            while (<F>) { chomp; s/\.00+$//; push @P, $_; }
+            close F;
+
+            $loss = evaluate(@P);            
+        }
+        if ($loss < $bestPassLoss) {
+            $bestPassId = $pass;
+            $bestPassLoss = $loss;
+            $finalLoss = $loss;
+            $better = 1;
+
+            `cp $tmpDir/curPred.$searchId $tmpDir/bestPred.$searchId`;
+            `cp $tmpDir/w.$searchId.out.$pass $tmpDir/bestW.$searchId`;
+        }
+        push @allPassLosses, $loss;
+    }
+    if ($bestPassId < 0) {
+        cleanup();
+        die "|| error: training did not occur";
+    }
+    print STDERR "|| [$searchId] best loss ($EVAL) $bestPassLoss on pass $bestPassId (final loss $finalLoss)\n" if (not $QUIET);
+    print STDERR "|| [$searchId] all losses: " . (join ' ', @allPassLosses) . "\n" if (not $QUIET);
+    open OUT, "> $tmpDir/loss.$searchId" or cleanup() && die "|| error: cannot open $tmpDir/loss.$searchId for writing: $!";
+    print OUT $bestPassLoss . "\n" . (join ' ', @$newArgs) . "\n" . $bestPassId . "\n";
+    close OUT;
+}
+
+sub evaluate {
+    my @P = @_;
+    if (scalar @P != scalar @Y) { cleanup() && die "|| error: cannot evaluate: # truth = " . (scalar @Y) . ", # pred = " . (scalar @P); }
+
+    my $Pthresh = 0;
+    if ($MULTICLASS eq '') {
+        my $Pthresh = guess_threshold(@Y);
+    }
+
+    if ($EVAL eq 'error') {
+        my $error = 0; my $total = 0;
+        my $startLoc = 0;
+        if ($MULTICLASS eq 'ldf') { $startLoc = 1; }
+        for (my $i=$startLoc; $i<@P; $i++) {
+            my $p = $P[$i]; my $y = $Y[$i-$startLoc];
+            if ($MULTICLASS eq '') {
+                $error++ if (($p > $Pthresh) != ($y > $Ythresh));
+                $total++;
+            } elsif ($MULTICLASS eq 'simple') {
+                $error++ if ($p != $y);
+                $total++;
+            } elsif ($MULTICLASS eq 'ldf') {
+                if ($p =~ /^\s*$/) { next; }
+                if ($y =~ /^shared/) { next; }
+                if ($p != 0) {
+                    $error+=$y;
+                    $total++;
+                }
+            } else { die; }
+        }
+        return ($error / $total);
+    } elsif ($EVAL eq 'f') {
+        if ($MULTICLASS ne '') { 
+            cleanup();
+            die "|| error: cannot evaluate with f measure on multiclass problems";
+        }
+        my $T = 0; my $S = 0; my $I = 0;
+        for (my $i=0; $i<@P; $i++) {
+            if ($P[$i] > $Pthresh) { $S++; }
+            if ($Y[$i] > $Ythresh) {
+                $T++;
+                if ($P[$i] > $Pthresh) { $I++; }
+            }
+        }
+        my $Pre = ($I > 0) ? ($I / $S) : 0;
+        my $Rec = ($I > 0) ? ($I / $T) : 0;
+        my $Fsc = ($I > 0) ? (2 * $Pre * $Rec / ($Pre + $Rec)) : 0;
+        return (1 - $Fsc);
+    } elsif ($EVAL eq 'aupr') {
+        if ($MULTICLASS ne '') { 
+            cleanup();
+            die "|| error: cannot evaluate with aupr measure on multiclass problems";
+        }
+        return 1-compute_aupr($Ythresh, \@P, \@Y);
+    } elsif ($EVAL eq 'auroc') {
+        if ($MULTICLASS ne '') { 
+            cleanup();
+            die "|| error: cannot evaluate with auroc measure on multiclass problems";
+        }
+        return 1-compute_auroc($Ythresh, \@P, \@Y);
+    } else {
+        cleanup() && die "|| error: unknown evaluation '$EVAL', use 'loss' or 'error' or 'f'";
+    }
+}
+
+sub guess_threshold {
+    my @V = @_;
+    my $maxV = '-Infinity'; my $minV = 'Infinity';
+    foreach my $v (@V) {
+        if ($v < $minV) { $minV = $v; }
+        if ($v > $maxV) { $maxV = $v; }
+    }
+    if    (($minV <= -0.8) && ($maxV > 0.8)) { return 0; }
+    elsif (($minV <= -0.2) && ($maxV > 0.8)) { return 0.5; }
+    else {
+        print STDERR "|| warning: cannot guess threshold with v in [$minV,$maxV]; defaulting to 0\n";
+        return 0;
+    }
+}
+
+sub cleanup {
+    print STDERR "|| removing temporary directory: $tmpDir\n" if !$QUIET;
+    `rm -rf $tmpDir`;
+    return 1;
+}
+
+
+
+sub compute_aupr {
+    my ($Ythresh, $P, $Y) = @_;
+
+    my %p = ();
+    my $T = 0;
+    for (my $n=0; $n<@$P; $n++) {
+        my $y = $Y->[$n]; my $p = $P->[$n];
+        $y = ($y > $Ythresh) ? 1 : 0;
+        $p{$p}{$y} += 1;
+        $p{$p}{1-$y} += 0;
+        $T++ if $y;
+    }
+    
+    my %pre_at_rec = ();
+    my $S = 0; my $I = 0;        
+    foreach my $pval (sort { $b <=> $a } keys %p) {
+        foreach my $v (values %{$p{$pval}}) { $S += $v; }
+        $I += $p{$pval}{1};
+        my $pre = ($I > 0) ? ($I / $S) : 0;
+        my $rec = ($I > 0) ? ($I / $T) : 0;
+        if ((not defined $pre_at_rec{$rec}) || ($pre > $pre_at_rec{$rec})) {
+            $pre_at_rec{$rec} = $pre;
+        }
+    }
+
+    my $area = 0;
+    my $lastpre = 1;
+    my $lastrec = 0;
+    foreach my $rec (sort { $a <=> $b } keys %pre_at_rec) {
+        my $pre = $pre_at_rec{$rec};
+        my $width = $rec - $lastrec;
+        my $min_pre = ($pre < $lastpre) ? $pre : $lastpre;
+        my $max_pre = ($pre < $lastpre) ? $lastpre : $pre;
+        
+        # we have a box of size width*min_pre, and a triangle
+        # width*(max_pre-min_pre) of which we get half
+        if ($width > 0) {
+            $area += $width * $min_pre + $width * ($max_pre - $min_pre) / 2;
+        }
+        $lastpre = $pre;
+        $lastrec = $rec;
+    }
+
+    return $area;
+}
+
+sub compute_auroc {
+    my ($Ythresh, $P, $Y) = @_;
+
+    my %p = ();
+    my $numY = 0; my $numN = 0;
+    for (my $n=0; $n<@$P; $n++) {
+        my $y = $Y->[$n]; my $p = $P->[$n];
+        $y = ($y > $Ythresh) ? 1 : 0;
+        $p{$p}{$y} += 1;
+        $p{$p}{1-$y} += 0;
+        $numY++ if $y;
+        $numN++ if !$y;
+    }
+    
+    my %tpr_at_fpr = ();
+    my $predY = 0; my $predN = 0;
+    foreach my $pval (sort { $b <=> $a } keys %p) {
+        $predY += $p{$pval}{1};
+        $predN += $p{$pval}{0};
+
+        my $fpr = ($predN > 0) ? ($predN / $numN) : 0;
+        my $tpr = ($predY > 0) ? ($predY / $numY) : 0;
+
+        if ((not defined $tpr_at_fpr{$fpr}) || ($tpr > $tpr_at_fpr{$fpr})) {
+            $tpr_at_fpr{$fpr} = $tpr;
+        }
+    }
+
+    my $area = 0;
+    my $last_tpr = 0;
+    my $last_fpr = 0;
+    foreach my $fpr (sort { $a <=> $b } keys %tpr_at_fpr) {
+        my $tpr = $tpr_at_fpr{$fpr};
+        my $width = $fpr - $last_fpr;
+        my $min_tpr = ($tpr < $last_tpr) ? $tpr : $last_tpr;
+        my $max_tpr = ($tpr < $last_tpr) ? $last_tpr : $tpr;
+        
+        # we have a box of size width*min_tpr, and a triangle
+        # width*(max_tpr-min_tpr) of which we get half
+        if ($width > 0) {
+            $area += $width * $min_tpr + $width * ($max_tpr - $min_tpr) / 2;
+        }
+        $last_tpr = $tpr;
+        $last_fpr = $fpr;
+    }
+
+    return $area;
+}

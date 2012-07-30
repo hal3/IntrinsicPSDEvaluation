@@ -1,0 +1,1 @@
+qsub -cwd -l mem_free=8G,h_rt=6:00:00,h_vmem=8G -V runJMTypeFeats.sh

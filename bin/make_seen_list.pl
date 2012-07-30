@@ -13,8 +13,8 @@ foreach my $dom qw(EMEA Science Subs) {
 }
 
 my %inputs = (
-    'hansard32' => '/export/ws12/damt/builds/baselines/non-adapted/on-old/hansard32-sigtest-phrase-table.1.gz'
-#   ,'hansard'   => ''
+    #'hansard32' => '/export/ws12/damt/builds/baselines/non-adapted/on-old/hansard32-sigtest-phrase-table.1.gz',
+    'hansard'   => '/mnt/data/ws12/damt/experiments/fraser_PB_hansard_NEW_sigtest/model/phrase-table.2.gz'
     );
 
 foreach my $outputName (keys %inputs) {
