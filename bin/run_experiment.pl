@@ -142,21 +142,54 @@ if ($isXV) {
             $allData[$n]{'testfold'} = 0;
         } elsif (rand() < 0.11111) {
             $allData[$n]{'devfold'} = 0;
+            $allData[$n]{'testfold'} = 2;
         }
     }
     $numFolds = 1;
 }
 
+=pod
+my %foldSize = ();
+for (my $n=0; $n<$N; $n++) {
+    $foldSize{ $allData[$n]{'testfold'} }++;
+}
+=cut
 
 my @aucs = ();
 for (my $fold=0; $fold<$numFolds; $fold++) {
     print STDERR "===== FOLD " . ($fold+1) . " / $numFolds =====\n" if ($numFolds > 1);
 
-    # training data is everything for which {'testfold'} != fold
-    # test data is the rest
     my @train = ();
     my @dev   = ();
     my @test  = ();
+
+=pod
+    # test data is that for which testfold==fold
+    # for all fold' != fold, find the SMALLEST one and make that dev
+    # the rest is train
+
+    my $devFold = '';
+    foreach my $f (keys %foldSize) {
+        if ($f == $fold) { next; }
+        if (($devFold eq '') || ($foldSize{$f} < $foldSize{$devFold})) {
+            $devFold = $f;
+        }
+    }
+
+
+    for (my $n=0; $n<$N; $n++) {
+        if ($allData[$n]{'testfold'} == $fold) { 
+            %{$test[@test]} = %{$allData[$n]};
+        } elsif ($allData[$n]{'testfold'} == $devFold) {
+            %{$dev[@dev]} = %{$allData[$n]};
+        } else {
+            %{$train[@train]} = %{$allData[$n]};
+        }
+    }
+=cut
+
+    # training data is everything for which {'testfold'} != fold
+    # test data is the rest
     for (my $n=0; $n<$N; $n++) {
         if ($allData[$n]{'testfold'} == $fold) { 
             %{$test[@test]} = %{$allData[$n]};
@@ -166,6 +199,8 @@ for (my $fold=0; $fold<$numFolds; $fold++) {
             %{$train[@train]} = %{$allData[$n]};
         }
     }
+
+
     if (@train ==  0) { die "hit a fold with no training data: try reducing number of folds!"; }
     if (@dev   ==  0) { die "hit a fold with no dev data: try reducing number of folds!"; }
     if (@test  ==  0) { die "hit a fold with no test data: try reducing number of folds!"; }
@@ -197,11 +232,18 @@ for (my $fold=0; $fold<$numFolds; $fold++) {
     my $auc;
     if ($classifier eq 'vw') {
         $auc = run_vw($fold,
-                         "classifiers/$experiment.train",    scalar @train,
-                         "classifiers/$experiment.dev",      scalar @dev,
-                         "classifiers/$experiment.traindev", scalar @train + scalar @dev,
-                         "classifiers/$experiment.test",     scalar @test
-                        );
+                      "classifiers/$experiment.train",    scalar @train,
+                      "classifiers/$experiment.dev",      scalar @dev,
+                      "classifiers/$experiment.traindev", scalar @traindev,
+                      "classifiers/$experiment.test",     scalar @test
+                      );
+    } elsif ($classifier eq 'dt') {
+        $auc = run_dt($fold,
+                      "classifiers/$experiment.train",    scalar @train,
+                      "classifiers/$experiment.dev",      scalar @dev,
+                      "classifiers/$experiment.traindev", scalar @traindev,
+                      "classifiers/$experiment.test",     scalar @test
+                      );
     } else {
         die "unknown classifier '$classifier'";
     }
@@ -268,6 +310,76 @@ sub run_vw {
 
     print STDERR " \ntest score = $score\n";
     return $score;
+}
+
+sub run_dt {
+    my ($fold, $trF, $trN, $deF, $deN, $trdeF, $trdeN, $teF, $teN) = @_;
+
+    if (! $regularize) {
+        my $auc = get_dt_auc($trdeF, $teF, '-maxd 10');
+        print STDERR "test score = $auc\n";
+        return $auc;
+    }
+
+    my @numBag = (2, 4, 8);
+    my @numBoost = (1, 2, 4, 8);
+    my @numDepth = (1, 2, 3, 4, 5, 6, 8, 10);
+
+    my $bestAUC = get_dt_auc($trF, $deF, '');
+    my $bestSettings = '';
+    foreach my $depth (@numDepth) {
+        my $settings0 = '-maxd ' . $depth;
+
+        foreach my $bag (@numBag) {
+            my $settings = $settings0 . ' -bag ' . $bag;
+            my $auc = get_dt_auc($trF, $deF, $settings);
+            if ($auc > $bestAUC) {
+                $bestAUC = $auc;
+                $bestSettings = $settings;
+            }
+        }
+
+        foreach my $boost (@numBoost) {
+            my $settings = $settings0 . ' -boost ' . $boost;
+            my $auc = get_dt_auc($trF, $deF, $settings);
+            if ($auc > $bestAUC) {
+                $bestAUC = $auc;
+                $bestSettings = $settings;
+            }
+        }
+    }
+
+    print STDERR "\ndev  score = $bestAUC with config $bestSettings\n";
+
+    my $auc = get_dt_auc($trF, $teF, $bestSettings);
+    print STDERR "\ntest score = $auc\n";
+    return $auc;
+}
+
+sub get_dt_auc {
+    my ($trF, $teF, $settings) = @_;
+
+    my $cmd = "bin/FastDT $settings $trF > $trF.dt";
+    print STDERR "running: $cmd\n" if $showclassifier;
+    open F, "($cmd) 2>&1 |" or die $!;
+    while (<F>) {
+        print STDERR "." if not $showclassifier;
+        print STDERR "dt>>> $_" if $showclassifier;
+    }
+    close F;
+
+    $cmd = "bin/FastDT -load $trF.dt $teF > $teF.pred";
+    print STDERR "running: $cmd\n" if $showclassifier;
+    open F, "($cmd) 2>&1 |" or die $!;
+    while (<F>) {
+        print STDERR "." if not $showclassifier;
+        print STDERR "dt>>> $_" if $showclassifier;
+    }
+    close F;
+
+    my $auc = `paste $teF.pred $teF | bin/auc.pl`;
+    chomp $auc;
+    return $auc;
 }
 
 sub writeFile {
@@ -568,6 +680,7 @@ sub doEvenSplit {
         my $f = $typeToFold{$type};
         $allData[$n]{'devfold'}  = $f;
         $allData[$n]{'testfold'} = ($f+1) % $numFolds;
+#        $allData[$n]{'testfold'}  = $f;
         $foldInfo{$f}{N} += ( $allData[$n]{'label'} > 0 ) ? 0 : 1;
         $foldInfo{$f}{P} += ( $allData[$n]{'label'} > 0 ) ? 1 : 0;
         $foldInfo{$f}{A} += 1;
