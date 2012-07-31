@@ -1,0 +1,203 @@
+Length of keys: 71
+Length of original: 71
+Length of learned: 40
+
+French: cellulaire
+Original top 5: ['cellphone', 'cell', 'phone', 'cellular', 'phones']
+Learned top 5: ['cellphone', 'cellular', 'cells.', 'serum', 'ph']
+Learned top 5 scores: [0.130863385452, 0.129522919076, 0.0241664587506, 0.0163276053071, 0.0161959497287]
+
+French: charge
+Original top 5: ['workload', 'office', 'holders', 'charge', 'care']
+Learned top 5: ['charge', 'mouth', 'surgical', 'deficiency', 'inflammation']
+Learned top 5 scores: [0.121741806308, 0.0183866101125, 0.0164092547769, 0.0154339765463, 0.0151545007882]
+
+French: chute
+Original top 5: ['fall', 'drop', 'falling', 'down', 'decline']
+Learned top 5: ['norway', 'falls', 'highest', 'reactive', 'fifth']
+Learned top 5 scores: [0.0585013797364, 0.0571755068105, 0.0323382234859, 0.0309537602345, 0.0281428056384]
+
+French: classe
+Original top 5: ['class', 'middle', 'classroom', 'politicians', 'middle-class']
+Learned top 5: ['class', 'classes', 'olympic', 'administered', 'classified']
+Learned top 5 scores: [0.623562012844, 0.013671597076, 0.0108886944665, 0.0107885163142, 0.00781074530973]
+
+French: clé
+Original top 5: ['key', 'component', 'role', 'locked', 'player']
+Learned top 5: ['surgeons', 'forty', 'fetal', 'protocols', 'enabling']
+Learned top 5 scores: [0.0367110658991, 0.0322123734857, 0.0294464303913, 0.0270611339228, 0.0253203413607]
+
+French: comprimé
+Original top 5: ['tablet', 'compressed', 'pill', 'cut', 'pellet']
+Learned top 5: ['tablet', 'compressed', 'metformin', 'analogue', 'glucose']
+Learned top 5 scores: [0.169163499785, 0.103819031422, 0.0515163371466, 0.0207801533314, 0.0203931098914]
+
+French: conserver
+Original top 5: ['keep', 'maintain', 'retain', 'preserve', 'keeping']
+Learned top 5: ['retain', '1900', 'liquids', 'butter', 'observed']
+Learned top 5 scores: [0.864506955024, 0.0137203192657, 0.0103454649416, 0.007738878006, 0.00770091507727]
+
+French: couverture
+Original top 5: ['coverage', 'cover', 'catastrophic', 'blanket', 'hedge']
+Learned top 5: ['coverage', 'mansion', 'immunization', 'portfolio', 'stuck']
+Learned top 5 scores: [0.909359618154, 0.0109745617531, 0.00599907397678, 0.00572743781043, 0.00483672001454]
+
+French: croissance
+Original top 5: ['growth', 'growing', 'grow', 'increase', 'rate']
+Learned top 5: ['growth', 'whereas', 'mutations', 'owned', 'cells.']
+Learned top 5 scores: [0.896588592672, 0.00289900002356, 0.00256002802038, 0.00214522314619, 0.00198577520803]
+
+French: enceinte
+Original top 5: ['place', 'house', 'pregnant', 'chamber', 'here']
+Learned top 5: ['pregnant', 'mexican', 'aaa-level', 'saints', 'f.c.']
+Learned top 5 scores: [0.558834828396, 0.0237085075405, 0.0163683924693, 0.0154315927694, 0.0117689788818]
+
+French: espèces
+Original top 5: ['species', 'endangered', 'cash', 'invasive', 'wildlife']
+Learned top 5: ['species', 'endangered', 'genus', 'native', '1992']
+Learned top 5 scores: [0.600109556935, 0.131493404866, 0.0683376999277, 0.0100946281186, 0.00929343664401]
+
+French: exposition
+Original top 5: ['exposure', 'exhibition', 'exhibit', 'exposures', 'display']
+Learned top 5: ['exposure', 'bleeding', 'adverse', 'castle', 'antibodies']
+Learned top 5 scores: [0.639072161204, 0.00991435731032, 0.00979337179823, 0.00845096729394, 0.0073912520659]
+
+French: humain
+Original top 5: ['human', 'being', 'beings', 'humans', 'people']
+Learned top 5: ['humans', 'solid', 'intake', 'domain', 'hypertension']
+Learned top 5 scores: [0.0716231892558, 0.0257330558524, 0.0216635933827, 0.0213459918497, 0.0203265350824]
+
+French: informations
+Original top 5: ['information', 'news', 'misinformation', 'data', 'background']
+Learned top 5: ['estimated', 'serve', 'olympics', '\xe2\x80\x99', 'polish']
+Learned top 5 scores: [0.0198709442927, 0.0192005769617, 0.0187253776743, 0.0153039168474, 0.0152137105244]
+
+French: libre
+Original top 5: ['free', 'open', 'tax-free', 'freedom', 'available']
+Learned top 5: ['libre', 'advance', '"', 'album', 'usage']
+Learned top 5 scores: [0.0538874744742, 0.0381597980169, 0.0343131282504, 0.0217324520094, 0.0170896971598]
+
+French: lumière
+Original top 5: ['light', 'bottom', 'based', 'shed', 'highlight']
+Learned top 5: ['light', 'emission', 'lumi\xc3\xa8re', 'serves', 'lumiere']
+Learned top 5 scores: [0.747094084573, 0.00940754326217, 0.00900582015324, 0.00862978259159, 0.00859452355962]
+
+French: machine
+Original top 5: ['machine', 'machinery', 'machines', 'equipment', 'piece']
+Learned top 5: ['machine', 'mill', 'playstation', 'nitrous', 'ram']
+Learned top 5 scores: [0.660164751704, 0.0455456009784, 0.0264774452162, 0.0153785980026, 0.0137724308191]
+
+French: maison
+Original top 5: ['home', 'house', 'homes', 'houses', 'maison']
+Learned top 5: ['documentary', 'dublin', 'daughter', 'tank', 'finnish']
+Learned top 5 scores: [0.0386889011439, 0.0315398423223, 0.0212903550353, 0.0205170859823, 0.0204195360391]
+
+French: marche
+Original top 5: ['work', 'works', 'working', 'march', 'walk']
+Learned top 5: ['walking', 'march', 'embryo', 'pts', 'inability']
+Learned top 5 scores: [0.0378899784613, 0.0304206031933, 0.0243040265144, 0.0225920499756, 0.0217027001001]
+
+French: modèles
+Original top 5: ['models', 'model', 'role', 'modeling', 'patterns']
+Learned top 5: ['models', 'model', 'modeling', 'z', 'customer']
+Learned top 5 scores: [0.864809278543, 0.0115642555448, 0.00502803536873, 0.00445030760577, 0.00405952741851]
+
+French: moelle
+Original top 5: ['bone', 'spinal', 'marrow', 'core', 'cells']
+Learned top 5: ['marrow', 'bone', 'spinal', 'cord', 'helps']
+Learned top 5 scores: [0.189597944614, 0.111391190497, 0.0798919812227, 0.0416387992793, 0.0149083763805]
+
+French: organe
+Original top 5: ['body', 'organ', 'executive', 'regulator', 'independent']
+Learned top 5: ['organ', 'organs', 'organs.', 'donor', 'atomic']
+Learned top 5 scores: [0.218936912759, 0.0768335220789, 0.0656671437009, 0.0306912713543, 0.02246126359]
+
+French: patient
+Original top 5: ['patient', 'patients', 'individual', 'person', 'patience']
+Learned top 5: ['patient', 'failure', 'variety', 'rare', 'patients']
+Learned top 5 scores: [0.555396752302, 0.0222940518802, 0.0168828003953, 0.0131758203321, 0.0130355885725]
+
+French: petits
+Original top 5: ['small', 'smaller', 'craft', 'little', 'minor']
+Learned top 5: ['smaller', 'craft', 'christmas', 'southwest', 'coastal']
+Learned top 5 scores: [0.395259678647, 0.374747200303, 0.00895653733624, 0.0070943169518, 0.00534723428018]
+
+French: pierre
+Original top 5: ['pierre', 'cornerstone', 'stone', 'peter', 'rock']
+Learned top 5: ['pierre', 'iii', 'portugal', 'russia', 'springs']
+Learned top 5 scores: [0.954075428914, 0.0049217944069, 0.0015482634716, 0.00154826346697, 0.00118419183369]
+
+French: plateau
+Original top 5: ['continental', 'plateau', 'shelf', 'golan', 'scotian']
+Learned top 5: ['continental', 'plateau', 'south-western', 'silvaplana', 'plate']
+Learned top 5 scores: [0.476347616121, 0.132115610826, 0.0650220308845, 0.0315222872364, 0.0174863157983]
+
+French: poids
+Original top 5: ['weight', 'standard', 'weights', 'clout', 'checks']
+Learned top 5: ['weight', 'medal', 'silver', 'unknown', 'profile']
+Learned top 5 scores: [0.34447076235, 0.0389008601913, 0.0242261303209, 0.0237820559708, 0.0159768080623]
+
+French: pratique
+Original top 5: ['practice', 'practical', 'it', 'practices', 'practically']
+Learned top 5: ['practice', 'practical', '19th', 'inhabitants', 'physician']
+Learned top 5 scores: [0.649805587541, 0.251932704201, 0.00245585478658, 0.00228116236401, 0.0020038618316]
+
+French: pression
+Original top 5: ['pressure', 'lobby', 'push', 'pressures', 'lobbying']
+Learned top 5: ['pressure', 'depression', 'increases', 'enzyme', 'sound']
+Learned top 5 scores: [0.81536389203, 0.0117910266323, 0.00772812174226, 0.00656630075234, 0.00639495724066]
+
+French: réaction
+Original top 5: ['reaction', 'response', 'jets', 'feedback', 'respond']
+Learned top 5: ['reaction', 'reactions', 'reduction', 'function', 'greek']
+Learned top 5 scores: [0.626220248298, 0.0495634519802, 0.0178024849866, 0.017139719232, 0.00817855129791]
+
+French: récepteur
+Original top 5: ['receiver', 'receptor', 'receiving', 'translation', 'recipient']
+Learned top 5: ['receptor', 'receptors', 'receiver', 'bind', 'dysfunction']
+Learned top 5 scores: [0.393389605781, 0.121815914472, 0.0311305739915, 0.0220592027999, 0.0195868950228]
+
+French: rond
+Original top 5: ['circles', 'wrong', 'round', 'around', 'circular']
+Learned top 5: ['circles', 'teres', 'spanish', 'campo', 'cts']
+Learned top 5 scores: [0.488272662444, 0.193936662099, 0.0533411123411, 0.0228255119544, 0.0215534208378]
+
+French: sang
+Original top 5: ['blood', 'donor', 'services', 'sake', 'sample']
+Learned top 5: ['blood', 'bone', 'liver', 'factor', 'performed']
+Learned top 5 scores: [0.476770887929, 0.0276267474298, 0.0271066192938, 0.0181812004993, 0.0178663335981]
+
+French: source
+Original top 5: ['source', 'concern', 'sources', 'cause', 'root']
+Learned top 5: ['source', 'sources', 'males', 'african', 'charles']
+Learned top 5 scores: [0.658443150341, 0.0118729611863, 0.00918040994376, 0.00770363661379, 0.0059263502314]
+
+French: stade
+Original top 5: ['point', 'stage', 'time', 'stadium', 'where']
+Learned top 5: ['stadium', 'stage', 'ground', 'stade', 'stands']
+Learned top 5 scores: [0.295052890271, 0.0761914889713, 0.048216070082, 0.0440711871129, 0.0263432201461]
+
+French: surveillance
+Original top 5: ['oversight', 'surveillance', 'monitoring', 'supervision', 'monitor']
+Learned top 5: ['oversight', 'surveillance', 'monitoring', 'dosage', 'mood']
+Learned top 5 scores: [0.332259477646, 0.308997065367, 0.308919759669, 0.00166366881752, 0.00164145728503]
+
+French: tableaux
+Original top 5: ['tables', 'charts', 'ways', 'graphs', 'paintings']
+Learned top 5: ['tables', 'charts', 'cologne', 'touchdowns', 'portrays']
+Learned top 5 scores: [0.526239080393, 0.327212761527, 0.0311206679098, 0.00669027183921, 0.00565453139007]
+
+French: véhicule
+Original top 5: ['vehicle', 'motor', 'car', 'vehicles', 'driving']
+Learned top 5: ['vehicle', 'vehicles', 'truck', 'ram', 'ceased']
+Learned top 5 scores: [0.858576811539, 0.00968383579409, 0.00420434026887, 0.0040065918007, 0.0034442904588]
+
+French: virus
+Original top 5: ['virus', 'viruses', 'h1n1', 'influenza', 'hepatitis']
+Learned top 5: ['virus', 'viruses', 'h1n1', 'dna', 'approximately']
+Learned top 5 scores: [0.526344078703, 0.0884655918742, 0.0642734289469, 0.0111568381737, 0.0103376683627]
+
+French: visage
+Original top 5: ['face', 'faces', 'veiled', 'colors', 'facial']
+Learned top 5: ['closure', 'aging', 'recessive', 'rubber', 'image']
+Learned top 5 scores: [0.0404971372934, 0.0312825049959, 0.0291539810116, 0.0286826932034, 0.0272830230977]
