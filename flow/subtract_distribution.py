@@ -1,5 +1,8 @@
+#!/usr/bin/python
+
 from sys import *
 import networkx as nx
+import gzip
 
 def readCounts(fn):
     h = open(fn)
@@ -15,14 +18,18 @@ def readCounts(fn):
     return c
         
 def readDict(fn):
-    h = open(fn)
     p = {}
+    if fn.endswith(".gz"):
+        h = gzip.open(fn, "rb")
+    else:
+        h = open(fn)
     for line in h:
         l = line.split();
         if len(l) == 3:
             if not p.has_key(l[1]):
                 p[l[1]] = {}
             p[l[1]][l[2]] = float(l[0])
+    h.close()
     for f in p.iterkeys():
         s = 0.0
         for e in p[f].iterkeys():
@@ -85,6 +92,7 @@ def flowDifference(G, flowDict):
         if not G.node[src].has_key('outflow'):
             G.node[src]['outflow'] = 0
         for dst,flow in flowDict[src].iteritems():
+            if dst <= 4: continue
             if not G.node[dst].has_key('inflow'):
                 G.node[dst]['inflow'] = 0
             G.node[src]['outflow'] += flow
@@ -96,7 +104,28 @@ def flowDifference(G, flowDict):
             inflow = 0
             if G.node[f].has_key('outflow'): outflow = G.node[f]['outflow']
             if G.node[f].has_key('inflow'): inflow = G.node[f]['inflow']
-            diff = G[1][f]['capacity'] - outflow
-            print G.node[f]['name'], " : ", G[1][f]['capacity'], inflow, outflow
+            diff = outflow - G[1][f]['capacity']
+            print G.node[f]['name'], diff
 
-             
+if __name__ == "__main__":
+    ignoreConditionalProbabilities = False
+    startPos = 2
+    if argv[1] == "--ignorecp":
+        ignoreConditionalProbabilities = True
+        startPos = 3
+    pairsFile = argv[startPos-1]
+    print >>stderr, "reading pairs from ", pairsFile
+    p = readDict(pairsFile)
+    for i in range(startPos, len(argv)):
+        if argv[i] == "-":
+            for fname in stdin:
+                fname = fname.rstrip("\r\n")
+                print >>stderr, "reading document from ", fname
+                print "# ", fname
+                G,flowDict = processWiki(fname, p, ignoreConditionalProbabilities)
+                flowDifference(G, flowDict)
+        else:
+            print >>stderr, "reading document from ", argv[i]
+            print "# ", argv[i]
+            G,flowDict = processWiki(argv[i], p, ignoreConditionalProbabilities)
+            flowDifference(G, flowDict)
