@@ -2,18 +2,20 @@
 use strict;
 
 my %w = ();
-foreach my $dom qw(EMEA Science Subs) {
-    open F, "source_data/$dom.psd" or die "cannot open source_data/$dom.psd: $!";
+#foreach my $dom qw(EMEA Science Subs) {
+#    open F, "source_data/$dom.psd" or die "cannot open source_data/$dom.psd: $!";
+open F, "cat source_data/*.psd |" or die;
     while (<F>) {
         chomp;
         my ($snt_id, $fr_start, $fr_end, $en_start, $en_end, $fr_phrase, $en_phrase) = split /\t/, $_;
         %{$w{$fr_phrase}} = ();
     }
-    close F;
-}
+close F;
+#    close F;
+#}
 
 my %inputs = (
-    #'hansard32' => '/export/ws12/damt/builds/baselines/non-adapted/on-old/hansard32-sigtest-phrase-table.1.gz',
+    'hansard32' => '/export/ws12/damt/builds/baselines/non-adapted/on-old/hansard32-sigtest-phrase-table.1.gz',
     'hansard'   => '/mnt/data/ws12/damt/experiments/fraser_PB_hansard_NEW_sigtest/model/phrase-table.2.gz'
     );
 
@@ -43,13 +45,9 @@ foreach my $outputName (keys %inputs) {
         }
 
         if (exists $w{$fr}) {
-            if (not defined $w{$fr}{$en}) {
-                my ($phr_fe,$lex_fe,$phr_ef,$lex_ef) = split /\s+/, $scores;
-                my ($cnt_en, $cnt_fr) = split /\s+/, $counts;
-                $en{$en} = $phr_ef;
-                #print O $fr . "\t" . $en . "\n";
-                $w{$fr}{$en} = 1;
-            }
+            my ($phr_fe,$lex_fe,$phr_ef,$lex_ef) = split /\s+/, $scores;
+            my ($cnt_en, $cnt_fr) = split /\s+/, $counts;
+            $en{$en} += $phr_ef;
         }
     }
     if ($this_fr ne '') {

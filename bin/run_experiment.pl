@@ -1,7 +1,7 @@
 #!/usr/bin/perl -w
 use strict;
 
-my $numFolds = 4;
+my $numFolds = 8;
 my $doBucketing = 1;
 my $experiment = 'exp';
 my $classifier = 'vw';
@@ -10,6 +10,8 @@ my $evensplit = 1;
 my $regularize = 1;
 my $maxBuckets = 10;
 my %ignoreFeatures = ();
+my $maxTokPerType = 10;
+my $quiet = 0;
 
 my $pruneMaxCount   = 20;   # keep at most 20 en translations for each fr word
 my $pruneMaxProbSum = 0.95; # AND keep at most 95% of the probability mass for p(en|fr)
@@ -40,6 +42,8 @@ where options includes:
   -dontbucket      bucket features (make them all binary)
   -dontevensplit   don't run the (hacky) thing for making even splits
   -dontregularize  turn of (search for) regularization parameters
+  -maxtokpertype # only keep at most # tokens for each unique type [$maxTokPerType]
+  -q               be (sort of) quiet
 
   -pruneMC #       keep at most # en translations for each fr word [$pruneMaxCount]
   -pruneMPS #      keep at most #% of the prob mass of p(en|fr) [$pruneMaxProbSum]
@@ -61,6 +65,7 @@ while (1) {
     elsif ($arg eq '-dontbucket') { $doBucketing = 0; }
     elsif ($arg eq '-maxbuckets') { $maxBuckets = shift or die "-maxbuckets needs an argument"; }
     elsif ($arg eq '-exp') { $experiment = shift or die "-exp needs an argument"; }
+    elsif ($arg eq '-maxtokpertype') { $maxTokPerType = shift or die "-maxtokpertype needs an argument"; }
     elsif ($arg eq '-pruneMC' ) { $pruneMaxCount = shift or die "-pruneMC needs an argument"; $doPrune = 1; }
     elsif ($arg eq '-pruneMPS') { $pruneMaxProbSum = shift or die "-pruneMPS needs an argument"; $doPrune = 1; }
     elsif ($arg eq '-pruneMRP') { $pruneMinRelProb = shift or die "-pruneMRP needs an argument"; $doPrune = 1; }
@@ -73,6 +78,7 @@ while (1) {
     elsif ($arg eq '-showclassifier') { $showclassifier = 1; }
     elsif ($arg eq '-dontevensplit') { $evensplit = 0; }
     elsif ($arg eq '-dontregularize') { $regularize = 0; }
+    elsif ($arg eq '-q') { $quiet = 1; }
     else { die $USAGE; }
 }
 
@@ -104,6 +110,7 @@ if (not -d "classifiers") { die "cannot find classifiers directory"; }
 
 my %seen = readSeenList();
 my %warnUnseen = ();
+my %numTypes = ();
 
 my @allData = ();
 my $N = 0;  my $Np = 0; my $Nn = 0;
@@ -111,6 +118,7 @@ foreach my $dom (keys %allDom) {
     my @thisData = generateData($dom);
     for (my $i=0; $i<@thisData; $i++) {
         if ($thisData[$i]{'label'} eq '') { next; }
+
         %{$allData[$N]} = %{$thisData[$i]};
         $allData[$N]{'domain'} = $dom;
         if    ($allData[$N]{'label'} eq '') {}
@@ -121,12 +129,14 @@ foreach my $dom (keys %allDom) {
 }
 
 if (scalar keys %warnUnseen > 0) {
-    print STDERR "warning: data included " . (scalar keys %warnUnseen) . " unseen french phrases: " . (join ' ', sort keys %warnUnseen) . "\n";
+    print STDERR "warning: data included " . (scalar keys %warnUnseen) . " unseen french phrases";
+    print STDERR ': ' . (join ' ', sort keys %warnUnseen) if not $quiet;
+    print STDERR "\n";
 }
 
 if ($N == 0) { die "did not read any data!"; }
 
-print STDERR "Read $N examples ($Np positive and $Nn negative, which is " . (int($Np/$N*1000)/10) . "% positive)\n";
+print STDERR "Read $N examples ($Np positive and $Nn negative, which is " . (int($Np/$N*1000)/10) . "% positive)\n" if not $quiet;
 
 if ($isXV) {
     if ($evensplit) {
@@ -157,7 +167,7 @@ for (my $n=0; $n<$N; $n++) {
 
 my @aucs = ();
 for (my $fold=0; $fold<$numFolds; $fold++) {
-    print STDERR "===== FOLD " . ($fold+1) . " / $numFolds =====\n" if ($numFolds > 1);
+    print STDERR "===== FOLD " . ($fold+1) . " / $numFolds =====\n" if ($numFolds > 1) && (not $quiet);
 
     my @train = ();
     my @dev   = ();
@@ -230,7 +240,7 @@ for (my $fold=0; $fold<$numFolds; $fold++) {
     writeFile("classifiers/$experiment.test" , @test);
 
     my $auc;
-    if ($classifier eq 'vw') {
+    if (($classifier eq 'vw') || ($classifier eq 'bfgs')) {
         $auc = run_vw($fold,
                       "classifiers/$experiment.train",    scalar @train,
                       "classifiers/$experiment.dev",      scalar @dev,
@@ -248,7 +258,7 @@ for (my $fold=0; $fold<$numFolds; $fold++) {
         die "unknown classifier '$classifier'";
     }
     push @aucs, $auc;
-    print STDERR "\n";
+    print STDERR "\n" if not $quiet;
 }
 
 my $avgAuc = 0;
@@ -273,10 +283,11 @@ sub run_vw {
 
     my $bestScore; my $bestPass; my $bestConfig;
     my $cmd = "$VWX -d $trF --dev $deF --eval auroc --logistic $searchArgs";
-    print STDERR "Running: $cmd\n";
+    if ($classifier eq 'bfgs') { $cmd .= ' --args --bfgs'; }
+    print STDERR "Running: $cmd\n" if not $quiet;
     open VWX, "$cmd 2>&1 |" or die;
     while (<VWX>) {
-        print STDERR "." if not $showclassifier;
+        print STDERR "." if (not $showclassifier) && (not $quiet);
         print STDERR "vwx>> $_" if $showclassifier;
         chomp;
         if (/overall best loss \(.*\) ([^ ]+) pass ([0-9]+)/) {
@@ -289,15 +300,16 @@ sub run_vw {
     }
     close VWX;
     if (not defined $bestScore) { die "vwx didn't succeed"; }
-    print STDERR "\ndev  score = $bestScore on pass $bestPass with config $bestConfig\n";
+    print STDERR "\ndev  score = $bestScore on pass $bestPass with config $bestConfig\n" if not $quiet;
 
 
     my $score;
     $cmd = "$VWX -d $trdeF --dev $teF --eval auroc --logistic --passes $bestPass --noearlystop --readable classifiers/$experiment.fold=$fold.vwmodel --args $bestConfig";
-    print STDERR "Running: $cmd\n";
+    if ($classifier eq 'bfgs') { $cmd .= ' --bfgs'; }
+    print STDERR "Running: $cmd\n"  if not $quiet;
     open VWX, "$cmd 2>&1 |" or die;
     while (<VWX>) {
-        print STDERR "." if not $showclassifier;
+        print STDERR "." if (not $showclassifier) && (not $quiet);
         print STDERR "vwx>> $_" if $showclassifier;
         chomp;
         if (/overall best loss \(.*\) ([^ ]+) pass/) {
@@ -308,7 +320,8 @@ sub run_vw {
 
     if (not defined $score) { die "vwx didn't succeed"; }
 
-    print STDERR " \ntest score = $score\n";
+    print STDERR " \n"  if not $quiet;
+    print "fold $fold score = $score\n";
     return $score;
 }
 
@@ -402,7 +415,7 @@ sub writeFile {
         print O $data[$n]{'label'};
         if ($data[$n]{'label'} > 0) { $Np++; } else { $Nn++; }
 
-        if ($classifier eq 'vw') { print O ' |'; }
+        if (($classifier eq 'vw') || ($classifier eq 'bfgs'))  { print O ' |'; }
 
         foreach my $f (keys %{$data[$n]}) {
             if ($f =~ /___/) {
@@ -418,7 +431,7 @@ sub writeFile {
     close O;
     if ($Np == 0) { print STDERR "warning: generated data with no positive examples in $fname\n"; }
     if ($Nn == 0) { print STDERR "warning: generated data with no negative examples in $fname\n"; }
-    print STDERR "$fname:\t$Np positive\t$Nn negative\t" . (int(1000*$Np/($Np+$Nn))/10) . "% positive\n";
+#    print STDERR "$fname:\t$Np positive\t$Nn negative\t" . (int(1000*$Np/($Np+$Nn))/10) . "% positive\n";
 }
 
 sub generateData {
@@ -438,6 +451,9 @@ sub generateData {
         }
 #        print O $Y . "\t" . $_ . "\n";
 
+        if ((defined $numTypes{$fr_phrase}) && ($numTypes{$fr_phrase} >= $maxTokPerType)) { next; }
+        $numTypes{$fr_phrase}++;
+
         push @W, $fr_phrase;
         push @Y, $Y;
     }
@@ -445,19 +461,20 @@ sub generateData {
 #    close O;
     
     my %type = ();
-    open LS, "find features/ -iname \"$dom.type.*\" |" or die $!;
+    my $domReal = $dom; $domReal =~ s/-(old|big)//;
+    open LS, "find features/ -iname \"$domReal.type.*\" |" or die $!;
     while (my $fname = <LS>) {
         chomp $fname;
-        $fname =~ /\/$dom\.type\.(.+)$/;
+        $fname =~ /\/$domReal\.type\.(.+)$/;
         my $user = $1;
-        if (not defined $user) { print STDERR "skipping file $fname...\n"; next; }
+        if (not defined $user) { print STDERR "skipping file $fname...\n"  if not $quiet;; next; }
         if (exists $ignoreFeatures{$user}) {
-            print STDERR "Skipping features from $fname\n";
+            print STDERR "Skipping features from $fname\n" if not $quiet;
             next;
         }
 
         
-        print STDERR "Reading features from $fname\n";
+        print STDERR "Reading features from $fname\n" if not $quiet;
         open F, $fname or die $!;
         while (<F>) {
             chomp;
@@ -488,18 +505,18 @@ sub generateData {
         $F[$n]{'___bias'} = 1;
     }
 
-    open LS, "find features/ -iname \"$dom.token.*\" |" or die $!;
+    open LS, "find features/ -iname \"$domReal.token.*\" |" or die $!;
     while (my $fname = <LS>) {
-        $fname =~ /^$dom\.token\.(.+)$/;
+        $fname =~ /^$domReal\.token\.(.+)$/;
         my $user = $1;
-        if (not defined $user) { print STDERR "skipping file $fname...\n"; next; }
+        if (not defined $user) { print STDERR "skipping file $fname...\n" if not $quiet; next; }
         if (exists $ignoreFeatures{$user}) {
-            print STDERR "Skipping features from $fname\n";
+            print STDERR "Skipping features from $fname\n" if not $quiet;
             next;
         }
 
         my $n = 0;
-        print STDERR "Reading features from $fname\n";
+        print STDERR "Reading features from $fname\n" if not $quiet;
         open F, $fname or die $!;
         while (<F>) {
             chomp;
@@ -686,9 +703,9 @@ sub doEvenSplit {
         $foldInfo{$f}{A} += 1;
         $foldInfo{$f}{T}{$type} = 1;
     }
-    foreach my $f (sort { $a <=> $b } keys %foldInfo) {
-        print STDERR "$f:\t" . (join "\t", ($foldInfo{$f}{A}, $foldInfo{$f}{N}/$foldInfo{$f}{A}, $foldInfo{$f}{P}/$foldInfo{$f}{A}, scalar keys %{$foldInfo{$f}{T}})) . "\n";
-    }
+#    foreach my $f (sort { $a <=> $b } keys %foldInfo) {
+#        print STDERR "$f:\t" . (join "\t", ($foldInfo{$f}{A}, $foldInfo{$f}{N}/$foldInfo{$f}{A}, $foldInfo{$f}{P}/$foldInfo{$f}{A}, scalar keys %{$foldInfo{$f}{T}})) . "\n";
+#    }
 }
 
 sub doEvenSplit_assignFolds {
