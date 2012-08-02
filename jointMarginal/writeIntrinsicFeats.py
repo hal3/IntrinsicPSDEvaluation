@@ -31,7 +31,7 @@ def wordMatch(word1,word2):
     else:
         return False
 
-devtestvocab=[x.strip() for x in codecs.open("/home/hltcoe/airvine/damt/IntrinsicPSDEvaluation/source_data/EMEA.psd.frTypeVocab",'r').readlines()]
+devtestvocab=[x.strip() for x in codecs.open("/home/hltcoe/airvine/damt/temp.new",'r').readlines()]
 original_file=codecs.open("myout.original",'r').readlines()
 original={}
 for l in original_file:
