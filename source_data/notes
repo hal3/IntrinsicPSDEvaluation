@@ -1,0 +1,25 @@
+
+== RAW DATA ==
+
+cat /export/ws12/damt/data/pp/EMEA-new/test1.no-doc-boundary.normal.cleaned.en | gzip -9 > EMEA.en.gz
+cat /export/ws12/damt/data/pp/EMEA-new/test1.no-doc-boundary.normal.cleaned.fr | gzip -9 > EMEA.fr.gz
+cat /export/ws12/damt/data/pp/Science-new/test1.no-doc-boundary.normal.cleaned.fr | gzip -9 > Science.en.gz
+cat /export/ws12/damt/data/pp/Science-new/test1.no-doc-boundary.normal.cleaned.fr | gzip -9 > Science.fr.gz
+cat /export/ws12/damt/data/pp/Science-new/test1.no-doc-boundary.normal.cleaned.en | gzip -9 > Science.en.gz
+cat /export/ws12/damt/data/pp/Subs/test1.no-doc-boundary.normal.cleaned.en | gzip -9 > Subs.en.gz
+cat /export/ws12/damt/data/pp/Subs/test1.no-doc-boundary.normal.cleaned.fr | gzip -9 > Subs.fr.gz
+cat /export/ws12/damt/data/pp/news/test1.no-doc-boundary.normal.cleaned.en | gzip -9 > news.en.gz
+cat /export/ws12/damt/data/pp/news/test1.no-doc-boundary.normal.cleaned.fr | gzip -9 > news.fr.gz
+
+
+== PSD DATA ==
+
+cp /export/ws12/damt/data/intrinsic_eval/filtered_psd/EMEA-new.test1.filter.psd EMEA.psd
+cp /export/ws12/damt/data/intrinsic_eval/filtered_psd/Science-new.test1.filter.psd Science.psd
+cp /export/ws12/damt/data/intrinsic_eval/filtered_psd/Subs.test1.filter.psd Subs.psd
+# TODO: need news!
+
+== PREPARE DATA ==
+
+bin/make_seen_list.pl
+

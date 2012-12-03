@@ -16,7 +16,8 @@ close F;
 
 my %inputs = (
     'hansard32' => '/export/ws12/damt/builds/baselines/non-adapted/on-old/hansard32-sigtest-phrase-table.1.gz',
-    'hansard'   => '/mnt/data/ws12/damt/experiments/fraser_PB_hansard_NEW_sigtest/model/phrase-table.2.gz'
+    'hansard'   => '/export/a08/ws12/damt/experiments/v04c_PB_hansard_tune_science_EVERYTHING_RERUN/model/phrase-table.1.gz'
+#    'hansard'   => '/mnt/data/ws12/damt/experiments/fraser_PB_hansard_NEW_sigtest/model/phrase-table.2.gz'
     );
 
 foreach my $outputName (keys %inputs) {

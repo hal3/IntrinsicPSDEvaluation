@@ -273,7 +273,7 @@ sub run_vw {
     my ($fold, $trF, $trN, $deF, $deN, $trdeF, $trdeN, $teF, $teN) = @_;
 
     my $numPasses = 20;
-    my $VWX = 'bin/vwx';
+    my $VWX = 'bin/vwx --vw /export/ws12/damt/src/vowpal_wabbit/vowpalwabbit/vw';
     
     my $largeReg = 10 / $trN;
     my $stepReg = $largeReg / 5;
