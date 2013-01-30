@@ -1,0 +1,10 @@
+ 8004  cp /export/ws12/damt/data/intrinsic_eval/hal/EMEA-new.en.gz EMEA.en.gz
+ 8005  cp /export/ws12/damt/data/intrinsic_eval/hal/EMEA-new.fr.gz EMEA.fr.gz
+ 8006  cp /export/ws12/damt/data/intrinsic_eval/hal/EMEA-new.all.psd EMEA.psd
+ 8007  cp /export/ws12/damt/data/intrinsic_eval/hal/Science-new.en.gz Science.en.gz
+ 8008  cp /export/ws12/damt/data/intrinsic_eval/hal/Science-new.fr.gz Science.fr.gz
+ 8009  cp /export/ws12/damt/data/intrinsic_eval/hal/Science-new.all.psd Science.psd
+ 8010  cp /export/ws12/damt/data/intrinsic_eval/hal/Subs.[ef][nr].gz .
+ 8011  cp /export/ws12/damt/data/intrinsic_eval/hal/Subs.all.psd Subs.psd
+ 8012  cp /export/ws12/damt/data/intrinsic_eval/hal/news.[ef][nr].gz .
+ 8013  cp /export/ws12/damt/data/intrinsic_eval/hal/news.all.psd news.psd

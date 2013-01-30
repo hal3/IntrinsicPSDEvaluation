@@ -1,0 +1,4454 @@
+2	39	39	29	31	libre	to the free
+2	39	39	30	31	libre	the free
+2	39	39	31	31	libre	free
+11	39	39	28	28	champ	field
+13	7	7	7	7	champ	field
+17	22	22	15	15	champ	field
+29	1	1	1	1	premier	first
+29	1	1	1	2	premier	first one
+39	10	10	8	8	état	state
+47	11	11	9	9	modèles	models
+47	16	16	11	11	oeuvre	use
+50	22	22	21	22	échelle	fine scale
+50	22	22	21	23	échelle	fine scale of
+50	22	22	22	22	échelle	scale
+50	22	22	22	23	échelle	scale of
+52	3	3	4	4	pression	pressure
+59	15	15	15	15	système	system
+65	12	12	28	28	modèles	model
+80	9	9	8	8	modèles	models
+81	16	16	16	16	courant	current
+82	22	22	20	20	croissance	growth
+82	20	20	21	21	taux	rates
+82	26	26	24	24	formation	formation
+83	18	18	16	16	formation	formation
+86	20	20	11	11	lumière	light
+93	8	8	8	8	source	source
+94	1	1	1	1	taux	rate
+97	76	76	61	61	premier	first
+97	95	95	84	84	système	system
+101	22	22	17	17	système	system
+104	4	4	1	1	oeuvre	implement
+104	4	4	1	2	oeuvre	implement the
+104	9	9	2	3	service	the service
+104	9	9	3	3	service	service
+114	29	29	24	24	modèles	models
+120	8	8	7	7	problème	problem
+126	7	7	3	4	mesure	the measurement
+126	7	7	4	4	mesure	measurement
+135	3	3	1	1	premier	grosse-wulkenhaar
+139	23	23	17	17	champ	field
+141	7	7	8	8	mesure	measure
+142	18	18	13	13	état	state
+145	24	24	15	15	système	system
+145	24	24	15	16	système	system ,
+145	30	30	21	21	source	source
+145	30	30	21	22	source	source that
+148	15	15	19	19	champ	magnetic
+152	40	40	37	37	courant	current
+152	56	56	48	49	courant	a current
+152	56	56	49	49	courant	current
+158	65	65	52	52	libre	free
+158	70	70	59	59	formation	formation
+166	17	17	8	9	système	in routers
+166	17	17	9	9	système	routers
+168	16	16	8	9	charge	in charge
+168	16	16	9	9	charge	charge
+168	36	36	26	26	source	source
+168	36	36	26	27	source	source id
+171	8	8	7	7	premier	initial
+172	1	1	6	6	premier	initial
+174	18	18	17	17	pratique	practice
+175	3	3	3	3	problème	problem
+176	14	14	13	13	premières	first
+176	14	14	13	14	premières	first levels
+178	27	27	28	28	modèles	models
+179	26	26	25	25	modèles	models
+182	24	24	26	26	système	system
+185	6	6	7	7	problème	problem
+191	12	12	9	9	échelle	scale
+193	13	13	10	10	échelle	scale
+198	68	68	78	78	système	system
+201	13	13	10	10	cadre	context
+206	21	21	20	20	plan	shots
+208	10	10	8	8	solution	solution
+214	32	32	27	27	plan	plane
+214	32	32	27	28	plan	plane :
+216	1	1	1	1	problème	problem
+218	14	14	6	6	premier	first
+226	8	8	10	10	cadre	framework
+230	17	17	14	14	informations	information
+232	1	1	1	1	premier	first
+234	14	14	12	12	système	computer
+234	22	22	18	18	état	state
+239	12	12	9	10	solution	a solution
+239	12	12	10	10	solution	solution
+239	37	37	37	37	système	system
+274	6	6	8	8	problème	problem
+275	23	23	16	16	problème	problem
+278	11	11	7	7	système	systems
+278	11	11	7	8	système	systems (
+278	11	11	7	9	système	systems ( is
+278	11	11	7	10	système	systems ( is )
+282	13	13	7	7	système	system
+282	13	13	7	8	système	system &apos;s
+284	13	13	10	10	cadre	during
+324	28	28	24	24	droit	can
+332	14	14	15	15	modèles	patterns
+345	36	36	39	39	modèles	models
+351	15	15	16	16	système	system
+351	37	37	35	35	patient	patient
+353	10	10	8	8	modèles	models
+357	26	26	22	22	croissance	growing
+359	1	1	1	1	premier	first
+359	6	6	6	6	système	system
+360	28	28	25	25	pression	pressure
+361	12	12	7	7	système	system
+362	15	15	16	16	pression	pressure
+373	5	5	6	6	solution	solution
+373	8	8	10	10	système	system
+373	32	32	27	27	système	system
+374	20	20	21	21	système	system
+374	36	36	37	37	champ	field
+374	41	41	42	42	système	system
+382	31	31	31	31	système	system
+382	77	77	56	56	classe	class
+394	4	4	3	3	système	system
+398	17	17	15	15	vue	view
+403	21	21	25	25	informations	information
+413	13	13	13	13	réaction	reaction
+413	13	13	13	14	réaction	reaction ,
+415	15	15	14	14	état	state
+426	20	20	39	39	mesure	measurement
+427	49	49	43	43	pression	pressure
+435	24	24	18	19	grands	large scale
+440	6	6	3	3	cadre	part
+440	13	13	9	9	informations	information
+443	23	23	23	23	grands	major
+449	1	1	2	2	système	system
+450	29	29	21	21	système	system
+451	1	1	1	1	solution	solution
+451	39	39	29	29	système	system
+454	26	26	19	19	système	system
+472	7	7	4	4	modèles	models
+480	15	15	14	14	problème	problem
+484	15	15	20	20	solution	solution
+485	15	15	13	13	solution	solution
+489	25	25	23	23	lumière	light
+499	2	2	0	0	premier	first
+501	1	1	1	1	problème	problem
+506	1	1	2	2	problème	problem
+507	2	2	3	3	modèles	model
+507	13	13	9	9	système	system
+508	11	11	2	2	système	system
+508	23	23	12	12	état	state
+519	15	15	10	11	source	the source
+519	15	15	11	11	source	source
+522	13	13	14	14	taux	rates
+523	5	5	5	5	problème	question
+523	27	27	24	24	système	system
+530	15	15	22	22	lumière	light
+530	13	13	23	23	source	source
+530	13	13	23	24	source	source ,
+534	9	9	8	9	champ	the field
+534	9	9	9	9	champ	field
+536	41	41	35	35	régime	regime
+541	6	6	6	6	conserver	keeping
+541	24	24	24	24	attention	attention
+542	21	21	18	18	bureau	desktop
+553	22	22	19	19	attention	attention
+553	22	22	19	20	attention	attention on
+556	27	27	24	25	association	the association
+556	27	27	25	25	association	association
+557	40	40	33	33	conserver	keep
+557	47	47	42	42	attention	attention
+557	53	53	46	46	conserver	preserve
+560	10	10	11	11	formation	formation
+561	14	14	8	8	raison	because
+562	4	4	3	3	problème	problem
+562	11	11	6	7	premier	the first
+562	11	11	6	8	premier	the first place
+562	11	11	7	7	premier	first
+562	11	11	7	8	premier	first place
+566	7	7	4	4	formation	formation
+567	5	5	5	5	formation	formation
+567	19	19	23	24	source	heat source
+574	10	10	11	11	formation	formation
+575	8	8	8	8	formation	formation
+576	2	2	1	1	premier	first
+576	16	16	9	9	formation	formation
+576	28	28	19	19	formation	formation
+576	36	36	28	28	modèles	models
+577	8	8	6	6	matière	material
+578	13	13	11	11	cadre	context
+579	26	26	18	18	formation	formation
+580	18	18	16	16	formation	formation
+581	18	18	13	13	formation	formation
+593	27	27	27	27	champ	field
+597	9	9	9	9	service	service
+599	15	15	11	11	système	system
+616	7	7	4	4	cadre	on
+626	2	2	1	1	premier	first
+626	2	2	1	2	premier	first ,
+626	37	37	30	30	état	state
+639	2	2	2	2	premier	first
+639	2	2	2	3	premier	first one
+645	16	16	3	3	mesure	measure
+656	3	3	8	9	mesure	the measurement
+656	3	3	9	9	mesure	measurement
+656	14	14	23	23	pression	pressure
+660	46	46	40	40	pression	pressure
+663	7	7	5	5	problème	problem
+663	7	7	5	6	problème	problem ,
+674	5	5	4	5	informations	the information
+674	5	5	5	5	informations	information
+675	17	17	14	14	informations	information
+676	50	50	44	45	informations	of information
+676	50	50	45	45	informations	information
+677	57	57	36	36	informations	information
+677	64	64	45	45	informations	information
+677	69	69	48	48	échelle	across
+684	7	7	8	8	échelle	scale
+685	4	4	5	5	modèles	models
+693	14	14	10	10	modèles	models
+694	3	3	3	3	modèles	models
+695	13	13	14	14	modèles	models
+700	26	26	20	20	charge	load
+702	26	26	23	23	récepteur	receiver
+709	1	1	0	0	raison	because
+720	18	18	16	17	source	no source
+720	18	18	17	17	source	source
+721	1	1	1	1	rapport	reference
+721	4	4	4	4	état	state
+721	24	24	17	17	état	state
+726	30	30	31	31	système	system
+729	8	8	8	9	système	state system
+729	8	8	9	9	système	system
+730	6	6	10	10	solution	solution
+732	19	19	18	18	lumière	light
+733	4	4	5	5	vue	view
+737	4	4	5	5	vue	view
+741	26	26	23	23	formation	formation
+741	28	28	28	28	système	system
+741	28	28	28	29	système	system .
+741	48	48	45	45	modèles	models
+751	24	24	23	23	système	system
+751	24	24	23	24	système	system ,
+754	20	20	20	20	système	system
+755	14	14	9	9	modèles	models
+755	25	25	17	17	système	system
+759	16	16	18	18	système	system
+793	13	13	15	15	système	system
+797	25	25	14	15	récepteur	a receiver
+797	25	25	15	15	récepteur	receiver
+806	17	17	18	18	matière	matter
+823	40	40	30	30	pratique	practice
+837	11	11	8	8	informations	information
+837	15	15	10	10	rapport	report
+841	17	17	7	7	humain	human
+842	10	10	7	7	informations	information
+850	20	20	14	14	informations	information
+850	33	33	26	26	modèles	models
+855	3	3	11	11	système	system
+860	15	15	12	12	échelle	context
+860	15	15	12	13	échelle	context of
+874	21	21	23	23	matière	matter
+876	32	32	22	22	problème	problem
+876	39	39	28	28	problème	problem
+883	6	6	6	8	problème	makes the problem
+883	6	6	7	8	problème	the problem
+883	6	6	8	8	problème	problem
+883	50	50	53	54	cadre	framework via
+890	8	8	5	7	nature	such as flash-crowds
+890	8	8	5	8	nature	such as flash-crowds and
+890	8	8	6	7	nature	as flash-crowds
+890	8	8	6	8	nature	as flash-crowds and
+890	8	8	7	7	nature	flash-crowds
+890	8	8	7	8	nature	flash-crowds and
+899	8	8	8	8	état	state
+899	35	35	31	31	mesure	measure
+903	15	15	8	8	champ	field
+908	11	11	4	4	patient	patient
+909	5	5	3	3	clé	key
+909	5	5	3	4	clé	key system
+917	31	31	15	15	régime	dietary
+917	31	31	15	16	régime	dietary information
+924	26	26	12	12	régime	fractionation
+938	9	9	7	7	informations	information
+939	1	1	1	2	attention	other focus
+939	1	1	2	2	attention	focus
+941	19	19	15	15	nature	field
+945	33	33	20	20	climat	weather
+947	18	18	15	15	modèles	models
+948	11	11	7	7	modèles	models
+950	7	7	7	7	système	system
+952	18	18	12	12	solution	solution
+958	14	14	9	9	exposition	exposure
+967	8	8	10	10	modèles	models
+992	13	13	8	8	petits	small
+994	7	7	6	6	régime	diet
+994	31	31	24	24	espèces	species
+1004	16	16	9	9	pêche	fishing
+1005	22	22	17	17	pêche	fishing
+1007	34	34	25	25	pêche	fishing
+1008	14	14	10	10	espèces	species
+1008	31	31	22	22	modèles	models
+1020	10	10	5	5	taux	rate
+1022	3	3	0	0	petits	small
+1026	25	25	16	16	taux	rate
+1029	9	9	8	8	formation	formation
+1031	10	10	9	9	formation	formation
+1036	1	1	1	1	poids	weight
+1040	13	13	15	15	croissance	growth
+1049	19	19	25	25	formation	formation
+1058	27	27	27	27	famille	family
+1077	11	11	12	12	espèces	species
+1077	11	11	12	13	espèces	species ,
+1088	2	2	3	3	premières	first
+1100	43	43	35	35	stade	stage
+1103	43	43	32	32	pays	markets
+1106	18	18	4	4	modèles	models
+1106	18	18	4	5	modèles	models ,
+1107	30	30	22	22	modèles	models
+1109	4	4	4	4	modèles	models
+1109	36	36	29	29	nature	dynamics
+1114	3	3	0	0	champ	experimental
+1117	10	10	10	10	association	association
+1124	17	17	13	13	modèles	models
+1127	10	10	9	9	espèces	species
+1128	32	32	17	17	espèces	species
+1142	7	7	1	1	espèces	species
+1142	7	7	1	2	espèces	species ,
+1149	6	6	3	3	formation	formation
+1150	26	26	24	24	formation	formation
+1155	1	1	3	3	modèles	models
+1162	28	28	18	18	croissance	increasing
+1164	15	15	11	11	source	source
+1164	28	28	23	23	source	source
+1171	33	33	32	32	source	source
+1171	33	33	32	33	source	source ,
+1194	31	31	20	20	état	state
+1198	10	10	9	9	cadre	framework
+1205	21	21	15	15	attention	attention
+1209	4	4	1	1	taux	lowest
+1212	24	24	21	21	poids	weights
+1214	6	6	5	5	taux	rate
+1214	11	11	9	9	réaction	response
+1222	31	31	23	23	informations	information
+1227	49	49	31	31	famille	family
+1237	5	5	5	5	espèces	snakes
+1259	1	1	0	0	raison	owing
+1260	19	19	18	18	source	source
+1265	14	14	12	12	famille	family
+1266	28	28	18	18	rapport	relation
+1266	28	28	18	19	rapport	relation to
+1274	8	8	9	9	petits	offspring
+1274	22	22	20	20	premier	first
+1275	12	12	6	6	petits	offspring
+1276	4	4	3	3	classe	class
+1277	6	6	4	4	classe	class
+1277	23	23	21	21	lumière	light
+1277	23	23	21	22	lumière	light that
+1277	23	23	21	23	lumière	light that is
+1280	22	22	21	21	taux	rate
+1280	35	35	33	33	taux	rates
+1292	8	8	5	5	petits	small
+1293	35	35	23	23	lumière	light
+1299	4	4	6	6	famille	family
+1299	17	17	15	15	premier	first
+1301	10	10	9	9	espèces	species
+1302	9	9	6	6	mesure	able
+1303	33	33	21	21	espèces	species
+1303	33	33	21	22	espèces	species is
+1306	1	1	0	0	modèles	models
+1310	1	1	1	1	modèles	models
+1311	41	41	32	32	espèces	species
+1315	50	50	38	38	formation	formation
+1316	44	44	38	38	espèces	species
+1317	4	4	1	1	nature	nature
+1318	8	8	5	5	taux	rate
+1322	21	21	18	18	attention	attention
+1322	23	23	19	19	raison	because
+1324	32	32	26	26	croissance	growth
+1326	12	12	8	8	lumière	light
+1326	15	15	11	11	taux	rates
+1327	18	18	14	14	taux	rate
+1328	8	8	7	7	lumière	light
+1328	12	12	11	11	réaction	response
+1328	25	25	18	18	lumière	light
+1328	31	31	23	23	taux	rate
+1329	7	7	8	8	lumière	light
+1329	37	37	27	27	vue	visual
+1330	17	17	11	11	lumière	light
+1331	11	11	9	9	taux	rates
+1331	26	26	20	20	lumière	light
+1336	10	10	8	8	source	source
+1336	15	15	15	15	raison	due
+1336	15	15	15	16	raison	due to
+1336	18	18	22	22	taux	rates
+1356	1	1	0	0	croissance	growth
+1361	11	11	9	9	famille	family
+1361	11	11	9	10	famille	family ,
+1361	24	24	22	22	famille	family
+1361	34	34	30	30	premier	first
+1363	19	19	14	14	famille	family
+1363	19	19	14	15	famille	family has
+1364	20	20	17	17	famille	family
+1365	4	4	1	1	famille	family
+1366	12	12	7	7	lumière	insights
+1367	10	10	11	11	espèces	species
+1369	7	7	3	3	espèces	species
+1375	11	11	10	10	voie	pathways
+1375	11	11	10	11	voie	pathways in
+1376	39	39	28	28	clé	key
+1378	33	33	34	35	cellulaire	, cell
+1378	33	33	35	35	cellulaire	cell
+1380	30	30	23	23	premières	primary
+1385	24	24	17	17	espèces	species
+1387	3	3	2	2	humain	humans
+1387	23	23	19	19	famille	family
+1393	33	33	32	32	climat	conditions
+1397	19	19	15	15	m.	m.
+1397	16	16	18	18	espèces	species
+1430	27	27	20	20	sang	blood
+1437	22	22	18	18	modèles	models
+1437	25	25	21	21	espèces	species
+1440	16	16	17	17	réaction	response
+1451	9	9	5	5	espèces	species
+1452	12	12	5	5	espèces	species
+1463	17	17	14	14	clé	key
+1469	20	20	20	20	croissance	growth
+1473	21	21	17	18	source	the source
+1473	21	21	18	18	source	source
+1474	11	11	10	10	croissance	growth
+1477	20	20	11	11	source	source
+1490	7	7	3	3	courant	current
+1496	13	13	8	8	espèces	species
+1497	14	14	12	12	espèces	species
+1498	2	2	3	3	espèces	species
+1498	9	9	10	10	rapport	respect
+1502	1	1	2	2	charge	load
+1504	6	6	6	6	charge	load
+1506	21	21	16	16	mesure	as
+1513	31	31	18	18	lumière	light
+1526	5	5	3	3	raison	owing
+1529	27	27	28	28	croissance	growth
+1529	30	30	32	32	organe	organ
+1530	9	9	6	6	lumière	light
+1532	30	30	18	18	croissance	growth
+1532	28	28	19	19	taux	rates
+1537	1	1	1	1	examen	examinations
+1540	7	7	6	6	lumière	context
+1549	7	7	9	9	espèces	species
+1554	22	22	15	15	couverture	forest
+1556	24	24	21	21	échelle	level
+1557	42	42	30	30	espèces	species
+1559	4	4	2	2	espèces	species
+1560	6	6	5	6	premier	of first
+1560	6	6	6	6	premier	first
+1564	20	20	14	14	clé	key
+1570	53	53	33	34	croissance	the growing
+1570	53	53	34	34	croissance	growing
+1572	30	30	27	28	source	a source
+1572	30	30	28	28	source	source
+1575	15	15	10	10	premières	early
+1584	8	8	5	5	association	association
+1590	25	25	13	13	taux	reduced
+1594	19	19	14	14	champ	field
+1600	23	23	19	19	espèces	species
+1612	16	16	15	15	espèces	species
+1612	16	16	15	16	espèces	species ,
+1613	4	4	5	5	espèces	species
+1616	3	3	2	2	espèces	species
+1618	1	1	0	0	mesure	as
+1623	38	38	27	27	espèces	species
+1631	1	1	0	0	mesure	as
+1635	12	12	7	7	croissance	growth
+1635	12	12	7	8	croissance	growth is
+1635	28	28	18	18	croissance	growth
+1636	8	8	6	6	croissance	growth
+1637	8	8	6	6	informations	informative
+1638	35	35	24	24	croissance	growth
+1639	55	55	42	43	croissance	growth rate
+1640	30	30	26	26	stade	stage
+1641	1	1	1	1	espèces	species
+1641	6	6	5	5	croissance	growth
+1641	19	19	14	14	croissance	growth
+1657	43	43	38	38	exposition	exposure
+1667	5	5	6	6	espèces	species
+1667	12	12	12	12	espèces	species
+1668	26	26	19	19	espèces	species
+1673	3	3	1	1	espèces	species
+1680	13	13	7	7	solution	solution
+1680	25	25	20	20	solution	solution
+1682	19	19	19	19	stade	stage
+1695	14	14	10	10	sommet	apex
+1698	12	12	7	7	sommet	apex
+1703	27	27	16	16	grands	large
+1704	17	17	12	13	système	the system
+1704	17	17	13	13	système	system
+1708	19	19	19	19	système	system
+1712	9	9	11	11	espèces	species
+1727	1	1	0	0	exposition	exposure
+1728	2	2	2	2	cellulaire	cellular
+1744	7	7	6	6	modèles	model
+1745	2	2	2	2	modèles	model
+1754	29	29	19	19	grands	great
+1756	17	17	6	6	grands	great
+1758	28	28	21	21	conserver	conserving
+1773	4	4	3	3	solution	solution
+1781	12	12	10	10	formation	formation
+1783	12	12	10	10	champ	field
+1783	50	50	42	42	cadre	framework
+1784	2	2	15	15	lumière	light
+1790	10	10	9	9	espèces	species
+1791	27	27	25	25	croissance	growth
+1796	37	37	32	32	conserver	conserving
+1807	20	20	19	20	espèces	the species
+1807	20	20	20	20	espèces	species
+1810	52	52	38	39	nature	the wild
+1810	52	52	39	39	nature	wild
+1813	3	3	4	4	source	spring
+1814	3	3	4	4	source	spring
+1815	15	15	12	12	croissance	growth
+1816	1	1	0	0	croissance	growth
+1818	13	13	10	10	croissance	growth
+1821	6	6	2	2	espèces	species
+1821	12	12	8	8	espèces	species
+1821	27	27	21	21	espèces	species
+1822	11	11	10	10	espèces	species
+1828	15	15	12	12	espèces	species
+1830	22	22	19	19	poids	weight
+1834	36	36	29	29	croissance	growth
+1842	8	8	5	5	croissance	growth
+1843	66	66	35	35	croissance	growth
+1846	1	1	0	0	croissance	growth
+1850	3	3	3	3	stade	stage
+1851	1	1	1	1	taux	rate
+1857	57	57	41	41	pression	pressure
+1857	54	54	42	42	mesure	measurement
+1859	32	32	19	19	pression	pressure
+1873	27	27	20	20	couverture	cover
+1875	25	25	16	16	couverture	cover
+1879	9	9	6	6	champ	field
+1880	28	28	20	20	taux	rate
+1881	21	21	10	10	croissance	growth
+1881	19	19	11	11	taux	rates
+1888	7	7	6	6	système	system
+1888	29	29	22	22	réaction	reaction
+1888	29	29	22	23	réaction	reaction was
+1888	36	36	28	29	nature	in nature
+1888	36	36	29	29	nature	nature
+1892	30	30	23	23	nature	nature
+1893	13	13	6	6	charge	charge
+1893	16	16	9	9	nature	nature
+1893	29	29	18	19	charge	and charged
+1893	29	29	19	19	charge	charged
+1893	68	68	55	55	cadre	framework
+1896	30	30	21	21	charge	charge
+1896	37	37	28	28	charge	charge
+1900	13	13	8	8	pression	pressure
+1906	23	23	18	18	pression	pressure
+1914	21	21	24	24	régime	diet
+1930	9	9	4	4	petits	small
+1941	15	15	10	10	espèces	species
+1952	47	47	34	34	formation	formation
+1959	16	16	16	16	cadre	framework
+1962	70	70	57	57	lumière	light
+1963	1	1	1	1	taux	rate
+1963	1	1	1	2	taux	rate was
+1965	7	7	4	4	exposition	exposure
+1978	30	30	19	19	droit	right
+1981	17	17	5	6	réaction	was reacted
+1981	17	17	6	6	réaction	reacted
+1990	34	34	31	31	état	state
+1991	30	30	16	16	échelle	scale
+2000	29	29	22	22	état	state
+2002	15	15	11	11	réaction	reaction
+2006	31	31	14	14	formation	formation
+2006	33	33	17	17	espèces	species
+2022	8	8	5	5	croissance	growth
+2037	24	24	19	19	espèces	target
+2038	6	6	31	31	sang	blood
+2045	6	6	0	0	sang	blood
+2050	12	12	9	9	croissance	growth
+2060	1	1	2	2	modèles	models
+2063	30	30	26	26	voie	pathway
+2065	19	19	21	21	voie	pathway
+2066	10	10	5	5	classe	class
+2068	16	16	17	17	solution	solution
+2070	19	19	16	16	droit	straight
+2073	35	35	22	22	matière	matter
+2073	39	39	26	26	échelle	scale
+2079	6	6	4	4	espèces	aspen
+2082	19	19	12	12	terre	earth
+2084	14	14	12	12	cher	expensive
+2095	8	8	6	6	association	association
+2099	14	14	13	13	taux	rates
+2100	27	27	23	23	taux	rates
+2102	11	11	13	13	système	system
+2103	5	5	6	6	système	system
+2105	5	5	9	9	modèles	models
+2118	5	5	5	5	mesure	measure
+2120	18	18	15	15	espèces	species
+2121	2	2	2	2	espèces	species
+2123	2	2	2	2	espèces	species
+2135	9	9	8	8	clé	key
+2138	13	13	8	8	grands	large
+2138	22	22	16	16	raison	because
+2142	9	9	9	9	grands	large
+2158	33	33	28	28	taux	amount
+2158	33	33	28	29	taux	amount of
+2160	16	16	12	12	taux	detectable
+2161	28	28	14	14	cellulaire	cell
+2163	29	29	22	22	cellulaire	cellular
+2164	28	28	17	17	échelle	level
+2197	14	14	12	12	système	system
+2212	12	12	9	9	modèles	models
+2212	26	26	18	18	modèles	models
+2225	1	1	4	4	système	system
+2226	8	8	7	7	système	system
+2234	44	44	31	31	récepteur	receptor
+2234	44	44	31	32	récepteur	receptor ,
+2245	24	24	19	19	croissance	growth
+2246	19	19	18	18	croissance	growth
+2246	32	32	34	34	croissance	growth
+2248	26	26	27	27	m.	m.
+2254	2	2	3	3	état	state
+2258	22	22	16	16	espèces	species
+2259	49	49	37	37	libre	free
+2260	8	8	5	5	récepteur	either
+2262	34	34	26	26	récepteur	receptor
+2266	1	1	2	2	réaction	response
+2268	7	7	7	7	réaction	response
+2282	10	10	10	10	réaction	reaction
+2284	1	1	12	13	réaction	by reaction
+2284	1	1	13	13	réaction	reaction
+2285	25	25	14	14	pression	pressure
+2310	1	1	2	2	modèles	models
+2311	26	26	19	19	petits	small
+2314	9	9	6	6	espèces	species
+2317	34	34	18	18	taux	low
+2317	36	36	19	19	croissance	growth
+2318	13	13	10	10	informations	information
+2319	12	12	6	6	croissance	growth
+2319	24	24	11	11	grands	large
+2320	19	19	16	16	système	system
+2320	19	19	16	17	système	system ,
+2323	32	32	25	25	enceinte	chamber
+2324	15	15	8	8	récepteur	receptor
+2326	3	3	1	1	récepteur	receptor
+2328	2	2	1	1	cadre	part
+2329	17	17	12	12	croissance	growth
+2331	5	5	0	0	cellulaire	cell
+2332	28	28	17	17	cellulaire	cell
+2344	13	13	12	14	raison	this is due
+2344	13	13	13	14	raison	is due
+2344	13	13	14	14	raison	due
+2344	18	18	20	20	modèles	models
+2349	40	40	27	27	administration	administration
+2354	13	13	9	9	classe	class
+2355	28	28	18	18	échelle	scale
+2358	30	30	19	19	lumière	light
+2362	8	8	0	0	sang	blood
+2362	8	8	0	1	sang	blood was
+2372	1	1	1	1	espèces	species
+2373	9	9	6	7	clé	the key
+2373	9	9	7	7	clé	key
+2375	5	5	4	4	espèces	species
+2378	16	16	15	15	cellulaire	cell
+2380	34	34	25	25	espèces	species
+2382	17	17	18	18	espèces	species
+2395	25	25	20	20	croissance	growth
+2395	23	23	21	21	chambre	chamber
+2397	14	14	12	12	solution	solution
+2398	47	47	37	37	solution	solution
+2400	1	1	3	3	taux	rate
+2403	2	2	20	20	échelle	scale
+2408	5	5	1	1	espèces	species
+2408	22	22	14	14	espèces	species
+2410	15	15	9	9	espèces	species
+2413	31	31	20	20	formation	formation
+2417	5	5	7	7	cadre	framework
+2419	28	28	23	23	croissance	growth
+2419	37	37	31	31	taux	rates
+2425	7	7	7	7	nature	nature
+2425	15	15	15	15	matière	matter
+2425	15	15	15	16	matière	matter ,
+2441	44	44	37	37	pays	countries
+2441	44	44	37	38	pays	countries may
+2442	6	6	5	5	état	reported
+2442	22	22	18	18	surveillance	surveillance
+2446	20	20	19	20	pays	the country
+2446	20	20	20	20	pays	country
+2449	22	22	20	20	informations	information
+2449	26	26	23	23	surveillance	surveillance
+2462	37	37	31	31	système	system
+2463	9	9	4	4	taux	at
+2463	22	22	9	9	système	system
+2464	25	25	11	11	système	system
+2464	35	35	20	20	source	source
+2465	40	40	29	29	système	system
+2466	13	13	9	9	système	system
+2480	35	35	26	26	mesure	extent
+2481	21	21	13	13	régime	regimes
+2487	11	11	9	9	espèces	species
+2490	24	24	18	18	lumière	light
+2496	1	1	0	1	examen	we explore
+2496	1	1	1	1	examen	explore
+2502	1	1	1	1	modèles	models
+2502	1	1	1	2	modèles	models have
+2502	22	22	19	19	modèles	models
+2503	23	23	21	21	modèles	models
+2506	11	11	16	16	modèles	models
+2511	2	2	1	1	petits	small
+2517	18	18	13	13	petits	small
+2526	31	31	32	32	système	system
+2527	14	14	13	13	rapport	report
+2528	29	29	21	22	véhicule	errant vehicle
+2528	29	29	21	23	véhicule	errant vehicle ,
+2530	9	9	9	9	taux	rate
+2537	20	20	21	21	espèces	species
+2539	5	5	3	3	état	state
+2539	11	11	8	8	état	state
+2546	25	25	18	18	solution	solution
+2548	10	10	7	7	croissance	growth
+2548	23	23	21	21	croissance	growth
+2557	28	28	26	26	libre	free
+2562	19	19	18	18	état	state
+2562	31	31	30	30	rapport	ratio
+2562	50	50	43	43	état	state
+2562	57	57	50	50	rapport	respect
+2562	60	60	54	54	pression	pressure
+2563	11	11	12	12	pression	pressure
+2563	30	30	27	27	état	state
+2564	4	4	5	5	pression	pressure
+2564	4	4	5	6	pression	pressure to
+2566	17	17	14	15	taux	the rate
+2566	17	17	15	15	taux	rate
+2568	12	12	13	13	taux	rate
+2574	1	1	0	0	taux	rates
+2575	30	30	20	20	source	source
+2575	40	40	28	28	source	source
+2582	7	7	1	1	espèces	species
+2582	16	16	14	14	espèces	species
+2587	19	19	18	18	patient	patient
+2592	18	18	18	18	vue	view
+2592	18	18	18	19	vue	view and
+2603	11	11	9	9	croissance	growth
+2604	17	17	14	14	pression	pressure
+2618	27	27	25	25	espèces	species
+2619	18	18	10	10	classe	class
+2635	12	12	11	11	champ	field
+2636	2	2	3	3	champ	field
+2637	12	12	11	11	champ	field
+2638	30	30	29	29	mesure	measure
+2655	2	2	0	0	premier	first
+2668	12	12	12	12	système	system
+2669	13	13	10	10	pression	pressure
+2673	1	1	0	0	sang	blood
+2674	32	32	26	26	petits	small
+2679	5	5	5	5	sang	blood
+2679	7	7	9	9	source	source
+2679	28	28	22	22	sang	blood
+2689	4	4	5	5	nature	nature
+2699	16	16	11	11	rapport	ratio
+2700	18	18	16	16	rapport	ratio
+2703	11	11	11	11	système	system
+2703	11	11	11	12	système	system was
+2706	15	15	7	7	lumière	light
+2707	22	22	17	17	solution	solution
+2707	42	42	28	28	lumière	light
+2710	30	30	26	26	lumière	light
+2712	13	13	12	12	modèles	modeling
+2713	22	22	15	15	lumière	light
+2714	9	9	6	6	lumière	light
+2714	27	27	20	20	lumière	light
+2721	27	27	22	22	m.	m.
+2732	1	1	1	1	formation	formation
+2733	1	1	1	1	formation	formation
+2734	1	1	1	1	modèles	models
+2737	15	15	11	11	formation	formation
+2737	53	53	43	43	formation	formation
+2745	13	13	11	11	premier	first
+2745	24	24	21	21	espèces	species
+2745	24	24	21	22	espèces	species from
+2747	13	13	6	6	pression	pressure
+2748	1	1	1	1	administration	administration
+2748	32	32	26	26	pression	blood
+2750	7	7	7	7	mesure	extent
+2751	18	18	13	13	pression	pressure
+2752	7	7	7	7	pression	pressure
+2752	28	28	15	15	humain	human
+2753	14	14	12	12	mesure	extent
+2754	19	19	15	15	modèles	models
+2764	28	28	21	21	charge	loading
+2770	22	22	5	5	modèles	model
+2776	4	4	1	1	croissance	growing
+2777	4	4	4	4	espèces	species
+2785	27	27	17	17	premier	first
+2792	12	12	10	11	humain	the human
+2792	12	12	11	11	humain	human
+2793	2	2	4	4	humain	human
+2794	3	3	4	4	cellulaire	cell
+2795	8	8	10	10	récepteur	receptor
+2799	15	15	5	5	lumière	light
+2799	22	22	13	13	taux	rates
+2800	1	1	2	2	lumière	light
+2800	9	9	7	7	taux	higher
+2801	3	3	4	4	lumière	light
+2801	7	7	8	8	taux	rates
+2802	8	8	8	8	taux	rates
+2803	10	10	3	3	lumière	light
+2803	27	27	13	13	réaction	response
+2805	5	5	7	7	lumière	light
+2813	49	49	39	39	balance	balance
+2815	6	6	3	3	association	association
+2815	27	27	20	21	petits	young calves
+2816	4	4	4	4	association	association
+2816	7	7	6	6	petits	calves
+2817	3	3	1	1	petits	calves
+2817	3	3	1	2	petits	calves were
+2817	26	26	19	19	mesure	as
+2819	18	18	15	15	premières	first
+2828	21	21	16	16	système	system
+2834	9	9	7	7	espèces	species
+2835	10	10	9	9	espèces	species
+2837	2	2	2	2	système	system
+2850	4	4	3	3	espèces	species
+2853	37	37	27	27	mesure	extent
+2853	62	62	52	52	pêche	fishing
+2856	21	21	16	16	pêche	fishing
+2856	19	19	17	17	pression	pressure
+2857	26	26	16	16	pêche	fishing
+2864	80	80	55	55	service	service
+2865	14	14	13	13	taux	rates
+2866	1	1	3	3	modèles	models
+2869	1	1	0	0	modèles	models
+2869	15	15	11	11	modèles	models
+2870	1	1	0	0	modèles	models
+2870	14	14	9	10	modèles	models using
+2881	30	30	19	19	sang	blood
+2881	30	30	19	20	sang	blood and
+2881	30	30	19	21	sang	blood and hair
+2892	29	29	23	23	réaction	responses
+2899	20	20	19	19	réaction	response
+2909	24	24	18	18	croissance	growth
+2909	24	24	18	19	croissance	growth when
+2916	35	35	26	26	échelle	scale
+2929	10	10	8	8	rapport	ratio
+2933	6	6	6	7	rapport	the ratio
+2933	6	6	7	7	rapport	ratio
+2946	8	8	7	7	pratique	practice
+2946	8	8	7	8	pratique	practice a
+2948	17	17	14	14	petits	small
+2950	17	17	30	30	grands	large
+2950	24	24	34	35	source	in source
+2950	24	24	35	35	source	source
+2952	5	5	6	6	problème	problem
+2961	7	7	5	5	solution	solution
+2961	7	7	5	6	solution	solution --
+2963	10	10	7	7	raison	because
+2971	27	27	5	5	lumière	light
+2978	6	6	8	8	système	systems
+2978	6	6	8	9	système	systems ,
+2980	15	15	14	16	problème	our problem solving
+2980	15	15	15	16	problème	problem solving
+2982	6	6	5	6	problème	global problem
+2982	6	6	6	6	problème	problem
+2982	9	9	10	10	problème	problem
+3003	11	11	6	6	voie	way
+3004	16	16	10	10	mesure	able
+3008	1	1	6	6	nature	nature
+3008	21	21	26	26	modèles	models
+3008	21	21	26	27	modèles	models of
+3009	4	4	1	1	modèles	models
+3012	5	5	5	5	modèles	models
+3012	18	18	18	18	modèles	models
+3014	5	5	5	5	modèles	models
+3020	8	8	5	5	plateau	top
+3024	15	15	12	12	système	system
+3024	43	43	29	29	système	system
+3028	4	4	6	6	source	source
+3029	13	13	10	10	courant	current
+3029	22	22	16	16	source	source
+3030	5	5	4	5	source	a source
+3030	5	5	5	5	source	source
+3032	21	21	22	23	problème	this problem
+3032	21	21	22	24	problème	this problem must
+3032	21	21	23	23	problème	problem
+3032	21	21	23	24	problème	problem must
+3033	12	12	3	3	problème	problem
+3033	12	12	3	4	problème	problem in
+3033	12	12	3	5	problème	problem in a
+3036	4	4	3	3	formation	formation
+3036	14	14	14	14	champ	field
+3042	13	13	23	24	croissance	growth rate
+3042	13	13	23	25	croissance	growth rate and
+3043	40	40	40	40	modèles	model
+3048	21	21	13	13	pression	pressure
+3048	21	21	13	14	pression	pressure ,
+3048	21	21	13	15	pression	pressure , on
+3057	2	2	3	3	modèles	models
+3057	20	20	22	23	champ	mean field
+3057	20	20	23	23	champ	field
+3069	8	8	11	11	solution	way
+3072	82	82	69	69	poids	weighted
+3082	1	1	2	2	système	system
+3083	25	25	13	13	système	system
+3084	18	18	17	17	solution	solution
+3084	59	59	49	49	vue	order
+3086	16	16	11	11	modèles	models
+3086	35	35	31	32	système	the system
+3086	35	35	32	32	système	system
+3089	17	17	17	17	service	service
+3090	1	1	1	1	service	service
+3092	1	1	1	1	solution	solution
+3093	23	23	18	18	système	system
+3094	7	7	9	9	service	service
+3095	10	10	9	9	solution	solution
+3099	46	46	41	41	informations	information
+3102	10	10	8	9	rapport	and compare
+3102	10	10	8	10	rapport	and compare them
+3102	10	10	9	9	rapport	compare
+3102	10	10	9	10	rapport	compare them
+3107	31	31	22	22	grands	big
+3117	1	1	0	0	premier	first
+3117	1	1	0	1	premier	first ,
+3120	5	5	5	5	problème	mismatch
+3128	11	11	11	11	modèles	models
+3129	12	12	9	9	modèles	models
+3171	10	10	10	11	courant	is current
+3171	10	10	11	11	courant	current
+3172	1	1	1	1	mesure	measure
+3180	5	5	3	3	modèles	models
+3180	10	10	9	9	cadre	framework
+3180	10	10	9	10	cadre	framework that
+3181	1	1	0	0	premier	first
+3190	12	12	2	2	modèles	model
+3190	2	2	5	5	premier	first
+3195	13	13	10	10	courant	current
+3196	22	22	14	14	libre	free
+3198	5	5	3	3	courant	current
+3200	3	3	3	3	classe	class
+3204	17	17	15	15	affaires	business
+3206	7	7	4	4	service	service
+3206	15	15	15	15	solution	solution
+3211	9	9	7	7	problème	problem
+3212	10	10	7	7	problème	problem
+3213	31	31	22	22	mesure	which
+3216	9	9	5	5	service	service
+3222	24	24	24	24	service	service
+3223	34	34	28	28	service	service
+3224	4	4	3	3	problème	issue
+3228	4	4	3	3	problème	issue
+3228	33	33	28	28	système	system
+3230	12	12	11	11	système	system
+3236	62	62	52	52	couverture	coverage
+3238	18	18	18	18	couverture	coverage
+3238	18	18	18	19	couverture	coverage when
+3241	10	10	10	10	argent	silver
+3247	4	4	4	4	problème	problem
+3247	24	24	25	26	libre	mean free
+3247	24	24	26	26	libre	free
+3248	19	19	13	15	modèles	the standard models
+3248	19	19	14	15	modèles	standard models
+3249	23	23	25	25	courant	current
+3249	48	48	52	54	courant	mean transport current
+3249	48	48	53	54	courant	transport current
+3249	48	48	54	54	courant	current
+3255	23	23	26	26	problème	problem
+3264	14	14	12	12	problème	problem
+3266	25	25	24	24	problème	problem
+3267	15	15	14	14	modèles	models
+3267	26	26	25	25	modèles	models
+3272	1	1	1	1	cadre	framework
+3272	14	14	13	13	lumière	light
+3272	29	29	29	29	champ	field
+3277	10	10	10	11	champ	electromagnetic field
+3277	20	20	19	19	solution	solution
+3284	1	1	1	1	premier	first
+3284	16	16	14	14	réaction	reaction
+3286	2	2	2	2	cadre	context
+3290	1	1	2	2	système	system
+3291	5	5	7	7	mesure	measurement
+3292	12	12	13	13	mesure	measurement
+3293	6	6	6	6	premières	first
+3298	1	1	2	2	mesure	measurement
+3300	1	1	1	1	premier	first
+3309	37	37	33	33	association	association
+3310	27	27	20	20	modèles	models
+3313	40	40	37	38	cellulaire	a cell
+3313	40	40	38	38	cellulaire	cell
+3316	25	25	26	26	premier	former
+3318	28	28	13	13	parole	speech
+3320	4	4	23	23	modèles	models
+3330	6	6	5	6	modèles	on models
+3330	6	6	6	6	modèles	models
+3330	15	15	15	15	modèles	models
+3330	29	29	26	26	solution	solution
+3336	5	5	5	5	système	system
+3336	23	23	18	18	système	system
+3337	17	17	16	16	premier	first
+3337	37	37	30	31	champ	mean field
+3337	37	37	31	31	champ	field
+3346	8	8	8	8	mesure	measure
+3354	13	13	13	13	régime	regime
+3363	10	10	35	35	champ	field
+3375	18	18	7	7	cadre	our
+3380	33	33	36	36	régime	regime
+3382	4	4	3	3	état	state
+3382	59	59	53	53	état	state
+3383	10	10	7	7	état	state
+3395	9	9	8	8	problème	problem
+3397	10	10	8	8	problème	problem
+3399	20	20	18	18	solution	solution
+3406	17	17	4	4	lumière	light
+3413	6	6	4	4	classe	class
+3414	26	26	24	24	informations	information
+3425	6	6	7	7	croissance	growth
+3429	16	16	13	13	système	system
+3429	24	24	20	20	problème	problem
+3430	1	1	2	2	système	system
+3431	1	1	1	1	problème	problem
+3432	1	1	1	1	premier	first
+3433	8	8	5	5	oeuvre	complete
+3437	10	10	10	10	solution	solution
+3438	29	29	22	22	solution	solution
+3450	1	1	1	1	premier	first
+3455	1	1	0	0	raison	due
+3456	16	16	18	18	mesure	measurement
+3456	37	37	42	42	taux	rate
+3456	50	50	51	51	réaction	reaction
+3457	15	15	14	15	champ	oh field
+3457	15	15	15	15	champ	field
+3458	42	42	43	43	mesure	measurement
+3461	5	5	7	7	campagne	campaign
+3463	48	48	46	47	campagne	same campaign
+3463	48	48	47	47	campagne	campaign
+3464	1	1	1	1	nature	nature
+3464	3	3	5	5	espèces	species
+3465	8	8	4	4	informations	information
+3466	9	9	3	3	lumière	light
+3466	9	9	3	4	lumière	light is
+3473	15	15	14	14	courant	current
+3475	16	16	33	33	bureau	office
+3475	25	25	42	42	bureau	office
+3481	2	2	0	1	premier	our first
+3481	2	2	1	1	premier	first
+3490	24	24	21	21	échelle	scaling
+3493	16	16	15	15	rapport	respect
+3497	3	3	2	2	réaction	reaction
+3497	16	16	11	11	premier	first
+3497	17	17	13	13	état	state
+3500	14	14	8	8	mesure	measurements
+3500	14	14	8	9	mesure	measurements have
+3500	14	14	8	10	mesure	measurements have been
+3512	3	3	0	0	premier	first
+3512	3	3	0	1	premier	first ,
+3512	3	3	0	2	premier	first , i
+3524	28	28	19	19	rapport	regard
+3525	2	2	0	0	cadre	when
+3526	24	24	21	21	système	system
+3528	30	30	25	25	système	system
+3528	30	30	25	26	système	system is
+3530	41	41	23	23	solution	solution
+3531	1	1	2	2	système	system
+3533	27	27	25	25	rapport	respect
+3533	44	44	38	38	modèles	models
+3536	8	8	8	8	rapport	respect
+3537	3	3	2	2	premières	first
+3539	27	27	28	28	mesure	measurement
+3539	42	42	44	44	modèles	models
+3547	3	3	2	2	modèles	models
+3552	46	46	42	42	climat	climate
+3559	5	5	6	6	source	source
+3563	13	13	10	10	informations	information
+3574	1	1	2	2	pression	pressure
+3574	17	17	22	22	mesure	measurement
+3575	11	11	9	9	pression	pressure
+3575	17	17	12	12	mesure	measurement
+3576	3	3	3	3	pression	pressure
+3576	7	7	8	8	pression	pressure
+3579	1	1	2	2	pression	pressure
+3579	7	7	5	5	mesure	measurement
+3580	2	2	2	3	pression	a pressure
+3580	2	2	3	3	pression	pressure
+3582	3	3	4	4	pression	pressure
+3582	7	7	7	7	mesure	measurement
+3582	23	23	20	20	pression	pressure
+3586	36	36	34	34	système	system
+3587	7	7	7	7	système	system
+3587	16	16	16	16	source	source
+3589	15	15	16	16	campagne	campaign
+3591	17	17	13	13	solution	way
+3593	20	20	23	23	mesure	measure
+3595	1	1	1	1	premières	first
+3598	29	29	12	12	pression	pressure
+3600	8	8	6	6	rapport	ratio
+3600	21	21	13	13	pression	pressure
+3600	29	29	18	18	pression	pressure
+3601	11	11	8	8	pression	pressure
+3607	40	40	31	31	taux	rates
+3619	13	13	7	7	lumière	light
+3625	1	1	1	1	système	system
+3627	25	25	33	33	modèles	models
+3629	26	26	25	25	machine	machines
+3632	14	14	14	14	espèces	species
+3634	10	10	14	14	modèles	models
+3652	1	1	1	1	source	source
+3657	11	11	11	11	source	source
+3659	5	5	9	9	taux	rate
+3661	1	1	1	1	mesure	measurement
+3662	2	2	2	2	régime	regime
+3662	22	22	20	20	mesure	measurement
+3662	27	27	25	25	état	state
+3665	16	16	12	12	problème	problem
+3669	68	68	62	62	problème	problem
+3670	37	37	39	39	problème	problem
+3672	17	17	16	16	mesure	able
+3673	19	19	17	17	terre	earth
+3674	8	8	8	9	cadre	general frame
+3674	8	8	9	9	cadre	frame
+3676	24	24	16	16	régime	limits
+3676	44	44	33	33	système	systems
+3676	41	41	34	34	formation	formation
+3677	13	13	6	6	formation	formation
+3678	16	16	19	19	système	system
+3679	11	11	7	7	formation	formation
+3682	1	1	0	0	premier	first
+3688	17	17	18	18	lumière	light
+3689	46	46	34	34	lumière	light
+3693	63	63	62	62	modèles	modeling
+3694	47	47	38	38	mesure	measured
+3695	38	38	41	41	courant	current
+3697	31	31	24	24	problème	problem
+3700	28	28	19	19	état	state
+3702	51	51	48	48	modèles	models
+3705	23	23	21	21	classe	class
+3705	31	31	30	30	modèles	models
+3708	2	2	2	2	premier	first
+3733	21	21	13	13	mesure	measurement
+3735	5	5	3	3	premières	first
+3735	24	24	22	22	état	state
+3739	24	24	23	23	espèces	species
+3739	24	24	23	24	espèces	species ,
+3740	15	15	15	15	pression	pressure
+3743	23	23	27	27	système	system
+3745	1	1	1	1	mesure	measurement
+3746	58	58	59	59	système	system
+3753	21	21	27	27	échelle	scale
+3755	26	26	17	17	place	place
+3756	31	31	28	28	solution	solutions
+3757	22	22	21	21	problème	problem
+3759	22	22	20	20	raison	due
+3762	36	36	30	30	raison	due
+3762	36	36	30	31	raison	due to
+3774	1	1	0	0	informations	information
+3774	26	26	26	26	système	system
+3775	20	20	10	10	taux	rates
+3778	18	18	14	14	système	system
+3779	20	20	15	15	machine	machine
+3780	25	25	14	15	vue	, from
+3780	25	25	15	15	vue	from
+3784	14	14	19	19	état	state
+3798	24	24	19	19	source	source
+3805	1	1	2	2	pratique	practice
+3807	14	14	10	10	système	system
+3809	11	11	11	11	problème	problem
+3809	11	11	11	12	problème	problem to
+3817	10	10	9	9	vue	order
+3818	17	17	19	19	modèles	models
+3820	65	65	64	64	modèles	models
+3825	17	17	15	15	place	up
+3829	14	14	12	12	problème	problem
+3844	7	7	4	4	croissance	accretion
+3855	37	37	29	29	sang	blood
+3860	15	15	10	10	réaction	reaction
+3873	8	8	7	7	problème	problem
+3877	8	8	8	8	pêche	fishing
+3881	41	41	36	36	espèces	species
+3884	28	28	18	18	espèces	species
+3885	10	10	13	13	modèles	models
+3905	1	1	2	2	voie	route
+3906	28	28	24	24	nature	nature
+3909	27	27	23	24	premières	the first
+3909	27	27	24	24	premières	first
+3919	3	3	2	2	état	reports
+3920	5	5	4	4	rapport	ratio
+3920	5	5	4	5	rapport	ratio of
+3922	10	10	10	10	cher	cost
+3929	20	20	14	14	couverture	cover
+3929	20	20	14	15	couverture	cover ,
+3929	20	20	14	16	couverture	cover , while
+3930	28	28	16	16	lumière	light
+3931	3	3	0	0	lumière	light
+3932	8	8	4	4	lumière	light
+3969	34	34	24	24	pression	pressure
+3972	2	2	3	3	taux	rates
+3977	7	7	4	4	petits	small
+3980	54	54	35	35	mesure	as
+3996	33	33	27	28	espèces	plant species
+4005	19	19	15	15	espèces	species
+4007	3	3	2	2	espèces	species
+4013	20	20	17	19	formation	formation is studied
+4014	33	33	26	26	réaction	reaction
+4018	9	9	5	5	taux	rates
+4018	9	9	5	6	taux	rates ,
+4025	5	5	4	4	réaction	response
+4025	7	7	7	7	croissance	growth
+4027	1	1	1	1	réaction	response
+4029	12	12	11	11	croissance	growing
+4034	15	15	14	14	réaction	reaction
+4035	4	4	3	3	premier	first
+4035	29	29	22	22	voie	route
+4037	28	28	15	15	pression	pressure
+4042	15	15	13	13	classe	class
+4044	10	10	11	11	réaction	reaction
+4048	17	17	15	15	pression	blood
+4048	28	28	26	26	taux	levels
+4051	11	11	6	6	pression	blood
+4051	29	29	25	25	état	status
+4054	23	23	18	18	balance	balance
+4056	10	10	9	9	rapport	respect
+4068	4	4	3	3	informations	information
+4070	26	26	19	19	nature	nature
+4071	38	38	32	32	croissance	growth
+4072	8	8	8	8	système	system
+4072	19	19	17	17	système	system
+4077	20	20	15	15	état	state
+4077	23	23	19	19	système	system
+4078	2	2	2	2	problème	problem
+4079	45	45	41	41	état	state
+4079	57	57	52	52	solution	solution
+4080	31	31	23	23	état	state
+4081	1	1	0	0	premier	first
+4083	3	3	3	3	poids	weights
+4083	36	36	28	28	état	state
+4093	1	1	0	0	réaction	reaction
+4096	16	16	9	9	formation	form
+4104	14	14	6	7	taux	the elevated
+4104	14	14	7	7	taux	elevated
+4106	25	25	18	18	récepteur	receptor
+4108	19	19	17	17	taux	level
+4108	32	32	25	26	taux	the high
+4108	32	32	26	26	taux	high
+4109	10	10	9	9	taux	high
+4111	21	21	18	18	cadre	context
+4116	25	25	19	19	grands	large
+4120	1	1	0	0	petits	small
+4124	14	14	2	2	formation	formation
+4138	18	18	18	18	famille	family
+4143	10	10	10	10	état	state
+4145	15	15	15	15	raison	because
+4145	25	25	23	23	rapport	respect
+4155	20	20	14	14	humain	humans
+4155	24	24	18	18	modèles	models
+4157	31	31	27	27	croissance	growth
+4160	14	14	8	9	cellulaire	a cellular
+4160	14	14	9	9	cellulaire	cellular
+4162	21	21	20	20	croissance	growth
+4162	25	25	22	22	cellulaire	cell
+4163	4	4	3	3	modèles	models
+4163	21	21	12	12	stade	stage
+4166	3	3	1	1	croissance	growth
+4166	1	1	2	2	taux	rate
+4175	26	26	13	13	modèles	model
+4184	34	34	25	25	rapport	respect
+4185	35	35	22	22	mesure	as
+4190	9	9	6	6	petits	small
+4193	27	27	22	22	virus	viral
+4199	25	25	21	21	pression	pressure
+4203	17	17	10	11	petits	smaller birds
+4206	36	36	31	31	taux	rates
+4209	11	11	6	6	système	system
+4210	10	10	12	12	système	system
+4210	26	26	26	26	raison	due
+4210	44	44	41	41	réaction	reaction
+4211	8	8	35	35	système	system
+4212	19	19	15	15	taux	rates
+4212	30	30	25	25	croissance	growth
+4213	24	24	17	17	croissance	growth
+4214	14	14	12	12	taux	rate
+4215	14	14	12	12	taux	rate
+4216	7	7	6	6	taux	rate
+4217	45	45	36	36	croissance	growth
+4225	6	6	6	6	système	system
+4228	7	7	6	6	solution	solution
+4231	30	30	18	19	taux	a rate
+4231	30	30	19	19	taux	rate
+4233	4	4	6	6	croissance	growth
+4234	36	36	23	23	croissance	growth
+4236	47	47	35	35	réaction	response
+4253	46	46	22	22	croissance	growth
+4255	54	54	36	36	marche	walk
+4256	3	3	2	2	croissance	growth
+4258	9	9	6	6	croissance	growth
+4258	34	34	19	19	croissance	growth
+4269	24	24	14	14	taux	rates
+4274	12	12	14	14	nature	nature
+4275	8	8	7	7	espèces	species
+4275	40	40	31	31	cellulaire	cellular
+4289	36	36	24	24	place	space
+4290	22	22	12	12	formation	formation
+4296	16	16	11	11	espèces	species
+4297	3	3	1	1	espèces	species
+4298	14	14	9	9	espèces	species
+4302	25	25	19	19	récepteur	receptor
+4322	12	12	11	11	premier	first
+4322	12	12	11	12	premier	first of
+4322	12	12	11	13	premier	first of which
+4322	14	14	12	14	état	of which deals
+4322	14	14	13	14	état	which deals
+4322	14	14	14	14	état	deals
+4322	18	18	18	18	cellulaire	cell
+4335	10	10	6	6	mesure	measure
+4336	6	6	2	2	taux	rate
+4337	18	18	16	16	solution	solution
+4338	21	21	15	15	taux	rates
+4344	1	1	3	3	modèles	models
+4348	19	19	19	19	champ	field
+4366	4	4	5	5	espèces	species
+4367	4	4	4	4	espèces	species
+4367	4	4	4	5	espèces	species were
+4368	18	18	21	21	petits	small
+4377	23	23	16	16	espèces	species
+4378	12	12	7	7	espèces	species
+4378	21	21	10	10	espèces	species
+4380	17	17	13	13	espèces	species
+4381	11	11	10	10	espèces	species
+4381	11	11	10	11	espèces	species that
+4381	11	11	10	12	espèces	species that are
+4389	12	12	9	9	mesure	equipped
+4393	59	59	35	35	couverture	cover
+4393	59	59	35	36	couverture	cover ,
+4396	1	1	1	1	couverture	cover
+4402	19	19	15	15	exposition	exposure
+4403	15	15	11	11	exposition	exposure
+4406	3	3	4	4	exposition	exposure
+4407	7	7	8	8	exposition	exposure
+4408	9	9	7	7	organe	organ
+4411	12	12	9	9	système	system
+4411	21	21	13	13	organe	organ
+4412	26	26	21	21	système	system
+4414	5	5	6	6	système	system
+4420	1	1	1	1	réaction	reaction
+4425	12	12	1	1	formation	formation
+4426	15	15	9	9	formation	formation
+4439	24	24	21	21	système	system
+4441	36	36	34	34	système	system
+4441	70	70	59	59	charge	loading
+4446	19	19	17	17	espèces	species
+4446	19	19	17	18	espèces	species was
+4450	4	4	2	2	espèces	species
+4451	34	34	28	28	source	key
+4455	32	32	28	28	voie	pathway
+4463	35	35	28	28	lumière	light
+4465	10	10	7	7	croissance	growing
+4467	22	22	12	12	croissance	growth
+4468	18	18	10	10	croissance	growth
+4469	11	11	6	6	croissance	growth
+4469	25	25	16	16	petits	small
+4469	36	36	24	24	grands	large
+4483	28	28	22	22	système	system
+4484	13	13	10	10	taux	rates
+4487	16	16	14	14	espèces	species
+4489	1	1	6	6	administration	administration
+4491	19	19	14	14	rapport	ratio
+4500	14	14	13	13	espèces	genera
+4507	14	14	8	8	raison	because
+4510	30	30	13	13	espèces	species
+4518	13	13	5	5	espèces	species
+4519	1	1	1	1	espèces	species
+4521	24	24	21	21	premières	first
+4527	39	39	32	32	service	service
+4528	4	4	4	4	modèles	models
+4528	4	4	4	5	modèles	models for
+4535	36	36	27	27	pression	pressure
+4539	17	17	14	14	pression	pressure
+4539	19	19	16	17	taux	a rate
+4539	19	19	17	17	taux	rate
+4543	34	34	27	27	espèces	species
+4543	34	34	27	28	espèces	species in
+4544	20	20	15	15	couverture	cover
+4544	20	20	15	16	couverture	cover was
+4544	20	20	15	17	couverture	cover was made
+4556	7	7	5	5	croissance	growth
+4557	35	35	28	28	état	state
+4559	11	11	9	9	taux	rate
+4564	3	3	0	0	croissance	growth
+4564	19	19	18	18	espèces	species
+4565	21	21	18	18	croissance	growth
+4566	1	1	1	1	modèles	models
+4567	18	18	16	16	modèles	models
+4569	48	48	37	37	modèles	models
+4569	63	63	50	50	cadre	framework
+4577	14	14	21	21	système	system
+4582	3	3	1	1	modèles	models
+4582	3	3	1	2	modèles	models are
+4582	44	44	31	31	formation	formation
+4587	32	32	20	20	pression	pressure
+4590	1	1	2	2	modèles	models
+4592	34	34	23	23	couverture	cover
+4593	28	28	18	18	couverture	forest
+4606	15	15	17	17	association	association
+4635	4	4	1	1	source	spring
+4652	14	14	8	8	sang	blood
+4653	14	14	9	9	poids	mass
+4657	19	19	18	18	récepteur	receptor
+4660	13	13	3	3	libre	free
+4661	16	16	12	12	système	system
+4661	44	44	30	30	maison	home
+4664	6	6	1	1	formation	formation
+4665	2	2	1	1	clé	key
+4667	11	11	9	9	informations	information
+4668	19	19	17	17	espèces	species
+4674	7	7	5	5	administration	administered
+4687	25	25	15	16	croissance	early growth
+4687	25	25	16	16	croissance	growth
+4688	53	53	17	17	croissance	growth
+4688	53	53	17	18	croissance	growth ,
+4698	17	17	13	13	système	system
+4700	1	1	1	1	voie	route
+4702	24	24	43	43	mesure	measure
+4703	22	22	20	20	exposition	exposure
+4706	14	14	12	12	exposition	exposure
+4709	18	18	15	15	taux	rate
+4710	19	19	13	13	taux	rate
+4713	12	12	7	7	croissance	growth
+4713	35	35	26	26	champ	field
+4713	35	35	26	27	champ	field trials
+4715	22	22	16	16	croissance	growth
+4716	16	16	21	21	espèces	species
+4724	12	12	10	10	solution	solution
+4730	7	7	7	7	système	system
+4730	27	27	23	23	solution	solution
+4742	15	15	11	11	espèces	species
+4749	3	3	3	3	espèces	species
+4750	9	9	6	6	espèces	species
+4754	2	2	3	3	cadre	context
+4761	22	22	28	28	cadre	context
+4767	10	10	46	46	système	system
+4769	15	15	13	13	service	service
+4775	4	4	2	2	nature	nature
+4777	19	19	20	20	espèces	species
+4789	23	23	18	19	système	the system
+4789	23	23	19	19	système	system
+4793	44	44	30	30	modèles	models
+4797	56	56	50	50	espèces	species
+4801	9	9	12	12	espèces	species
+4803	14	14	15	15	espèces	species
+4804	25	25	27	27	espèces	species
+4806	12	12	5	5	taux	levels
+4809	11	11	8	8	taux	levels
+4815	6	6	7	7	rapport	it
+4817	4	4	7	7	modèles	models
+4820	22	22	19	19	courant	current
+4826	3	3	1	1	système	system
+4828	3	3	1	1	modèles	models
+4828	3	3	1	2	modèles	models are
+4835	1	1	1	1	réaction	response
+4837	5	5	6	6	champ	field
+4839	29	29	19	19	grands	large
+4840	27	27	18	18	classe	class
+4840	27	27	18	19	classe	class a
+4860	57	57	44	45	espèces	host species
+4860	57	57	45	45	espèces	species
+4878	28	28	14	14	espèces	species
+4881	10	10	10	10	espèces	species
+4893	7	7	6	6	cellulaire	cellular
+4903	8	8	8	8	taux	rates
+4904	21	21	18	18	source	source
+4905	3	3	0	0	exposition	exposure
+4905	8	8	6	6	taux	rates
+4906	1	1	0	0	exposition	exposure
+4910	8	8	11	11	climat	climate
+4911	3	3	0	0	espèces	species
+4911	12	12	13	13	grands	great
+4911	39	39	39	39	espèces	species
+4915	4	4	4	4	espèces	species
+4916	12	12	8	8	m.	m.
+4916	16	16	11	11	m.	m.
+4916	20	20	14	14	m.	m.
+4917	9	9	5	5	m.	m.
+4917	13	13	8	8	m.	m.
+4917	19	19	15	15	espèces	species
+4918	9	9	5	5	espèces	species
+4918	9	9	5	6	espèces	species further
+4918	29	29	20	20	espèces	species
+4918	58	58	43	43	m.	m.
+4918	64	64	49	49	espèces	species
+4919	20	20	14	14	m.	m.
+4919	37	37	30	30	espèces	species
+4925	15	15	14	14	organe	organ
+4925	43	43	32	32	raison	cause
+4928	39	39	31	31	espèces	species
+4929	51	51	41	41	modèles	model
+4933	19	19	11	11	état	state
+4939	31	31	22	22	pression	pressure
+4944	25	25	22	22	espèces	species
+4946	36	36	29	29	espèces	species
+4948	5	5	3	3	espèces	species
+4949	3	3	2	2	espèces	species
+4950	1	1	1	1	espèces	species
+4950	4	4	4	4	premières	first
+4975	13	13	1	1	informations	information
+4975	24	24	9	9	taux	rates
+4975	35	35	15	15	modèles	models
+4977	16	16	12	13	mesure	would result
+4977	16	16	12	14	mesure	would result in
+4977	16	16	13	13	mesure	result
+4977	16	16	13	14	mesure	result in
+4979	25	25	26	26	mesure	as
+4981	15	15	15	15	système	system
+5002	24	24	15	15	rapport	compared
+5003	1	1	3	3	pression	pressure
+5003	10	10	11	11	pression	pressure
+5005	1	1	1	1	administration	administration
+5005	26	26	18	18	poids	body
+5016	9	9	7	7	taux	rates
+5016	36	36	28	28	taux	rates
+5017	5	5	2	2	taux	rates
+5017	11	11	8	8	problème	issue
+5023	32	32	28	28	état	state
+5024	6	6	6	6	état	state
+5024	15	15	16	16	pression	pressure
+5025	8	8	8	8	famille	family
+5025	10	10	10	10	solution	solutions
+5025	16	16	16	16	état	state
+5026	12	12	11	11	état	state
+5027	38	38	29	29	pression	pressures
+5028	14	14	15	17	modèles	of the models
+5028	14	14	16	17	modèles	the models
+5028	14	14	17	17	modèles	models
+5034	6	6	2	2	sang	blood
+5039	7	7	4	4	espèces	species
+5040	1	1	1	1	espèces	taxa
+5041	32	32	28	29	premier	the first
+5041	32	32	29	29	premier	first
+5042	2	2	15	15	espèces	species
+5045	18	18	13	13	espèces	species
+5051	3	3	1	1	croissance	growth
+5051	1	1	2	2	taux	rate
+5054	27	27	21	21	croissance	growth
+5056	23	23	23	23	croissance	growth
+5057	23	23	14	14	croissance	growth
+5065	36	36	28	29	pêche	capture fisheries
+5067	5	5	2	2	petits	small
+5068	8	8	9	9	espèces	species
+5073	16	16	10	10	espèces	species
+5077	22	22	12	12	raison	because
+5078	7	7	3	3	conserver	conservation
+5078	7	7	3	4	conserver	conservation of
+5078	10	10	6	6	espèces	species
+5081	9	9	1	1	croissance	growth
+5081	7	7	2	2	modèles	models
+5082	6	6	2	2	croissance	growth
+5084	1	1	1	1	modèles	models
+5086	4	4	4	4	taux	rates
+5086	6	6	6	6	croissance	growth
+5090	33	33	29	29	système	system
+5092	23	23	19	19	rapport	respect
+5093	17	17	14	14	état	state
+5096	8	8	9	9	modèles	models
+5101	8	8	6	6	lumière	light
+5102	44	44	30	30	croissance	growth
+5106	19	19	11	11	champ	field
+5108	8	8	5	5	lumière	light
+5111	30	30	23	23	espèces	species
+5113	22	22	16	16	espèces	species
+5114	21	21	12	12	espèces	species
+5118	1	1	2	2	mesure	measure
+5127	20	20	18	18	système	system
+5135	22	22	21	21	espèces	species
+5135	36	36	29	29	croissance	growth
+5136	43	43	25	25	champ	field
+5146	22	22	12	12	espèces	species
+5148	18	18	15	15	espèces	species
+5149	8	8	7	7	espèces	species
+5149	31	31	21	21	espèces	species
+5150	7	7	7	7	espèces	species
+5152	16	16	11	11	croissance	growth
+5159	7	7	6	6	formation	formed
+5160	1	1	1	1	premier	first
+5167	4	4	1	1	nature	nature
+5172	17	17	11	11	croissance	growth
+5173	9	9	7	7	récepteur	receptor
+5173	13	13	10	10	cellulaire	cell
+5188	25	25	18	18	solution	solution
+5188	33	33	25	25	problème	problem
+5190	8	8	5	5	système	systems
+5191	34	34	27	27	croissance	growth
+5200	19	19	21	21	état	state
+5207	19	19	14	14	croissance	growth
+5212	35	35	26	26	grands	large
+5214	43	43	37	37	petits	small
+5217	13	13	9	9	croissance	growth
+5223	23	23	20	20	espèces	species
+5226	7	7	4	4	croissance	growth
+5226	10	10	8	8	espèces	species
+5227	11	11	5	5	croissance	growth
+5230	5	5	2	2	pratique	practical
+5230	4	4	5	5	vue	view
+5231	19	19	20	20	formation	formation
+5238	9	9	8	8	raison	due
+5238	9	9	8	9	raison	due to
+5238	9	9	8	10	raison	due to a
+5245	37	37	34	34	réaction	reaction
+5246	15	15	9	9	charge	charge
+5246	18	18	14	14	état	state
+5265	38	38	30	30	modèles	models
+5271	15	15	14	14	espèces	species
+5271	15	15	14	15	espèces	species ,
+5291	28	28	24	24	formation	formation
+5297	13	13	9	9	nature	nature
+5297	22	22	18	18	libre	free
+5298	2	2	3	3	espèces	species
+5300	10	10	6	6	surveillance	vigilance
+5302	24	24	23	23	taux	rate
+5303	20	20	17	17	petits	juveniles
+5303	20	20	17	18	petits	juveniles in
+5310	29	29	24	24	association	association
+5313	20	20	17	17	association	association
+5315	14	14	13	13	croissance	growth
+5315	28	28	23	23	lumière	light
+5316	16	16	13	13	couverture	forest
+5317	8	8	6	6	couverture	forest
+5319	1	1	1	1	croissance	growth
+5323	29	29	20	20	lumière	light
+5323	39	39	32	32	croissance	growth
+5328	13	13	14	14	association	association
+5337	15	15	12	12	croissance	growth
+5341	29	29	25	25	croissance	growth
+5342	7	7	5	5	grands	large
+5344	32	32	26	26	formation	generation
+5346	20	20	10	10	espèces	species
+5348	18	18	12	12	rapport	ratio
+5362	21	21	16	16	premier	first
+5368	14	14	12	12	conserver	conserve
+5371	1	1	1	1	taux	rate
+5373	47	47	39	39	réaction	reaction
+5374	11	11	9	9	réaction	reaction
+5378	7	7	4	4	réaction	reaction
+5379	39	39	34	34	réaction	reaction
+5381	8	8	9	9	réaction	reaction
+5381	25	25	22	22	formation	formation
+5389	15	15	15	15	climat	climate
+5392	28	28	20	20	système	system
+5398	10	10	9	9	surveillance	monitoring
+5401	12	12	26	26	famille	family
+5403	27	27	24	24	espèces	species
+5405	3	3	3	3	examen	examination
+5410	29	29	27	27	réaction	response
+5411	11	11	9	9	réaction	response
+5414	30	30	20	20	réaction	response
+5415	45	45	22	22	régime	regimen
+5416	14	14	14	14	système	system
+5419	15	15	9	9	réaction	reaction
+5419	26	26	18	18	formation	formation
+5425	22	22	19	19	croissance	growth
+5432	3	3	1	1	problème	concern
+5433	8	8	9	9	problème	issue
+5435	20	20	27	29	mesure	ever actually measuring
+5435	20	20	28	29	mesure	actually measuring
+5435	20	20	29	29	mesure	measuring
+5449	12	12	7	7	couverture	cover
+5452	4	4	2	2	couverture	cover
+5452	17	17	11	11	premières	first
+5464	1	1	1	1	rapport	ratio
+5464	38	38	31	31	rapport	ratio
+5474	30	30	26	26	système	system
+5475	8	8	8	8	règle	rule
+5477	25	25	16	16	modèles	models
+5481	1	1	3	3	modèles	models
+5481	1	1	3	4	modèles	models that
+5484	9	9	10	10	modèles	models
+5484	9	9	10	11	modèles	models that
+5485	6	6	4	4	modèles	models
+5489	8	8	14	15	source	major source
+5490	1	1	1	1	formation	formation
+5491	29	29	22	22	source	source
+5528	11	11	7	7	croissance	growth
+5529	7	7	3	3	croissance	growth
+5530	5	5	2	2	croissance	growth
+5533	12	12	9	9	croissance	growth
+5537	19	19	15	15	modèles	models
+5540	1	1	0	0	surveillance	monitoring
+5555	26	26	21	21	échelle	scale
+5559	8	8	6	6	mesure	measurement
+5562	75	75	68	68	croissance	growth
+5564	14	14	10	10	croissance	growth
+5564	12	12	11	11	modèles	models
+5574	10	10	9	9	famille	family
+5575	39	39	29	29	espèces	species
+5575	50	50	35	35	espèces	species
+5575	57	57	41	41	famille	family
+5578	3	3	6	6	croissance	growth
+5578	22	22	17	17	croissance	growth
+5579	7	7	8	8	croissance	growth
+5582	13	13	5	5	croissance	growth
+5587	4	4	1	1	examen	examined
+5590	4	4	5	5	pression	pressure
+5591	2	2	1	1	cadre	part
+5594	1	1	2	2	nature	nature
+5598	12	12	9	9	modèles	models
+5600	20	20	14	14	solution	solution
+5617	13	13	9	9	réaction	response
+5618	48	48	36	36	marche	walking
+5620	7	7	7	7	espèces	species
+5627	3	3	1	1	réaction	response
+5628	14	14	13	13	informations	information
+5628	14	14	13	14	informations	information and
+5632	12	12	10	10	matière	related
+5634	7	7	6	6	croissance	increasing
+5635	14	14	9	9	taux	rate
+5637	23	23	18	18	taux	rates
+5639	1	1	2	2	taux	rate
+5640	22	22	17	17	enceinte	pregnant
+5640	44	44	38	38	taux	rates
+5642	25	25	17	17	pêche	fishing
+5644	14	14	13	13	espèces	species
+5646	11	11	12	12	formation	formation
+5647	8	8	3	3	formation	formation
+5651	21	21	20	20	voie	pathway
+5652	6	6	5	5	charge	charge
+5654	5	5	5	5	réaction	reaction
+5655	61	61	39	39	surveillance	monitoring
+5659	28	28	20	22	surveillance	use in monitoring
+5659	28	28	21	22	surveillance	in monitoring
+5659	28	28	22	22	surveillance	monitoring
+5661	26	26	19	19	raison	due
+5662	11	11	10	10	espèces	species
+5662	34	34	23	25	réaction	either no reaction
+5662	34	34	24	25	réaction	no reaction
+5662	34	34	25	25	réaction	reaction
+5663	21	21	15	15	réaction	reaction
+5666	44	44	29	29	croissance	growth
+5667	10	10	11	11	croissance	growth
+5667	10	10	11	12	croissance	growth ,
+5668	13	13	7	7	croissance	growth
+5669	1	1	0	0	couverture	forest
+5671	13	13	11	11	vue	for
+5680	10	10	3	3	cellulaire	cell
+5693	29	29	21	21	réaction	response
+5695	44	44	27	27	petits	kids
+5698	1	1	2	2	nature	nature
+5703	19	19	21	21	modèles	models
+5715	5	5	4	4	petits	small
+5717	16	16	40	40	croissance	growth
+5717	16	16	40	41	croissance	growth ,
+5718	11	11	8	8	charge	load
+5719	19	19	15	15	taux	rate
+5720	19	19	22	22	humain	human
+5721	37	37	30	30	espèces	species
+5722	4	4	5	5	croissance	growth
+5728	31	31	20	20	modèles	models
+5731	1	1	1	1	modèles	models
+5731	8	8	4	4	croissance	growth
+5731	23	23	14	14	espèces	species
+5733	26	26	20	20	espèces	species
+5739	22	22	19	19	garde	warn
+5750	1	1	1	1	formation	formation
+5756	17	17	12	12	pêche	fishery
+5756	35	35	25	26	pêche	the fishing
+5756	35	35	26	26	pêche	fishing
+5756	45	45	32	32	pêche	fishery
+5757	17	17	13	13	pêche	fishery
+5760	58	58	38	38	modèles	models
+5761	3	3	1	1	champ	field
+5764	7	7	4	4	croissance	growth
+5766	29	29	13	13	espèces	species
+5766	31	31	15	15	grands	large
+5767	37	37	27	27	grands	large
+5771	51	51	43	43	espèces	species
+5771	51	51	43	44	espèces	species were
+5772	24	24	19	19	pression	pressure
+5775	8	8	3	3	espèces	species
+5778	29	29	14	14	espèces	species
+5795	48	48	35	35	état	state
+5797	44	44	28	28	rapport	respect
+5810	13	13	11	12	solution	the solution
+5810	13	13	12	12	solution	solution
+5810	25	25	20	20	libre	free
+5812	2	2	2	2	réaction	reaction
+5818	8	8	14	14	croissance	growth
+5833	24	24	20	20	croissance	growth
+5837	51	51	41	41	patient	patient
+5849	4	4	4	4	place	place
+5849	10	10	10	10	cadre	framework
+5851	8	8	6	6	nature	nature
+5856	11	11	9	9	classe	class
+5861	2	2	2	2	premier	first
+5862	13	13	10	10	source	source
+5863	10	10	9	9	famille	family
+5866	13	13	12	12	famille	family
+5871	9	9	10	10	solution	solution
+5874	2	2	1	1	source	source
+5876	8	8	9	9	cadre	framework
+5883	12	12	7	7	premier	first
+5883	12	12	7	8	premier	first ,
+5884	19	19	18	18	problème	problem
+5885	12	12	12	13	problème	is addressed
+5885	12	12	12	14	problème	is addressed for
+5885	12	12	12	15	problème	is addressed for the
+5885	12	12	12	16	problème	is addressed for the case
+5885	12	12	13	13	problème	addressed
+5885	12	12	13	14	problème	addressed for
+5885	12	12	13	15	problème	addressed for the
+5885	12	12	13	16	problème	addressed for the case
+5889	12	12	13	13	système	system
+5890	16	16	11	11	solution	solution
+5890	30	30	24	24	état	state
+5894	9	9	8	8	problème	problem
+5894	9	9	8	9	problème	problem in
+5902	4	4	2	2	association	associating
+5908	13	13	15	16	système	the system
+5908	13	13	16	16	système	system
+5910	18	18	20	20	champ	field
+5911	15	15	8	8	champ	field
+5912	1	1	1	1	premier	first
+5918	17	17	13	13	solution	solution
+5918	20	20	16	16	problème	problem
+5918	25	25	21	21	solution	solution
+5918	28	28	25	25	problème	problem
+5919	19	19	13	13	solution	solution
+5920	10	10	10	10	cadre	setting
+5921	21	21	17	17	système	system
+5930	10	10	9	10	charge	this load
+5930	10	10	10	10	charge	load
+5930	19	19	20	20	oeuvre	install
+5930	28	28	32	32	modèles	models
+5932	4	4	4	4	modèles	models
+5932	4	4	4	5	modèles	models ,
+5934	17	17	17	17	modèles	models
+5935	1	1	1	1	premier	first
+5935	1	1	1	2	premier	first one
+5937	20	20	25	25	charge	load
+5939	16	16	15	17	champ	the mean field
+5939	16	16	16	17	champ	mean field
+5939	16	16	17	17	champ	field
+5939	35	35	35	35	pratique	practical
+5942	2	2	2	2	cadre	scope
+5952	18	18	15	15	modèles	models
+5953	1	1	1	1	modèles	models
+5964	34	34	26	26	solution	solution
+5974	4	4	5	5	vue	view
+5976	4	4	5	5	vue	view
+5990	2	2	1	2	premier	the first
+5990	2	2	2	2	premier	first
+5993	2	2	2	2	cadre	frame
+6003	26	26	25	25	système	systems
+6005	4	4	5	5	solution	solution
+6007	3	3	1	1	espèces	species
+6007	14	14	11	11	échelle	scale
+6007	18	18	14	14	système	system
+6008	4	4	4	4	système	system
+6009	4	4	4	4	solution	solution
+6009	4	4	4	5	solution	solution of
+6009	4	4	4	6	solution	solution of this
+6009	6	6	5	7	problème	of this problem
+6009	6	6	6	7	problème	this problem
+6009	6	6	7	7	problème	problem
+6019	5	5	6	6	chute	falls
+6021	8	8	8	8	nature	nature
+6022	24	24	27	27	solution	solution
+6022	24	24	27	28	solution	solution to
+6022	34	34	36	36	solution	solution
+6027	14	14	9	9	solution	solution
+6040	4	4	5	5	problème	reachability
+6049	4	4	5	5	problème	problem
+6049	31	31	31	31	problème	problem
+6053	10	10	10	10	patient	patient
+6055	16	16	14	14	patient	patient
+6058	11	11	12	12	patient	patient
+6060	20	20	15	16	patient	the patient
+6060	20	20	16	16	patient	patient
+6061	6	6	5	5	patient	patient
+6061	6	6	5	6	patient	patient with
+6065	6	6	5	5	mesure	measuring
+6068	23	23	16	16	mesure	measuring
+6071	25	25	24	24	modèles	models
+6082	4	4	4	4	système	system
+6091	48	48	46	46	problème	problem
+6092	9	9	7	8	classe	the class
+6092	9	9	8	8	classe	class
+6107	32	32	28	28	champ	field
+6116	3	3	5	5	modèles	models
+6116	3	3	5	6	modèles	models ,
+6116	16	16	21	21	cadre	framework
+6123	6	6	6	6	cadre	framework
+6124	10	10	10	10	modèles	models
+6125	1	1	1	1	modèles	models
+6132	4	4	4	4	modèles	models
+6146	21	21	20	20	solution	solution
+6147	2	2	2	2	premières	first
+6157	17	17	18	18	solution	solution
+6157	24	24	25	25	solution	solution
+6157	27	27	29	29	problème	problem
+6160	16	16	15	15	classe	class
+6165	31	31	25	25	système	system
+6166	17	17	14	14	système	system
+6168	1	1	0	1	premier	our first
+6168	1	1	1	1	premier	first
+6171	4	4	3	3	modèles	models
+6172	4	4	2	4	problème	with different problems
+6172	4	4	2	5	problème	with different problems ,
+6172	4	4	3	4	problème	different problems
+6172	4	4	3	5	problème	different problems ,
+6172	4	4	4	4	problème	problems
+6172	4	4	4	5	problème	problems ,
+6173	4	4	2	2	problème	issue
+6175	1	1	1	1	premier	first
+6185	22	22	19	19	champ	field
+6186	14	14	16	16	vue	view
+6187	25	25	16	17	charge	gate charge
+6187	25	25	17	17	charge	charge
+6198	6	6	7	7	vue	view
+6198	25	25	22	22	cadre	framework
+6199	25	25	23	23	système	system
+6202	13	13	12	12	classe	class
+6202	29	29	26	26	classe	class
+6204	1	1	3	3	système	system
+6212	4	4	5	5	classe	class
+6212	6	6	9	10	modèles	&apos; models
+6212	6	6	10	10	modèles	models
+6217	1	1	2	2	modèles	models
+6223	20	20	21	21	modèles	models
+6223	27	27	26	26	classe	class
+6226	35	35	32	32	régime	regime
+6228	3	3	3	3	modèles	models
+6232	4	4	3	3	pratique	practical
+6232	31	31	28	28	modèles	models
+6233	1	1	1	1	modèles	models
+6236	1	1	1	1	modèles	models
+6238	15	15	13	13	système	system
+6240	13	13	28	28	modèles	models
+6242	15	15	20	20	modèles	models
+6246	28	28	20	20	modèles	models
+6246	30	30	22	23	système	the system
+6246	30	30	23	23	système	system
+6248	1	1	1	1	vue	order
+6253	31	31	23	23	courant	current
+6259	23	23	19	19	modèles	models
+6260	4	4	6	6	solution	solution
+6262	1	1	1	1	solution	solution
+6262	18	18	20	20	modèles	models
+6268	7	7	9	9	système	system
+6269	12	12	10	10	modèles	model
+6296	1	1	2	2	cadre	framework
+6300	1	1	2	2	mesure	measure
+6305	12	12	9	9	cellulaire	cellular
+6309	1	1	1	1	vue	order
+6309	7	7	7	7	informations	information
+6310	12	12	10	10	cellulaire	cellular
+6319	34	34	31	31	système	systems
+6319	34	34	31	32	système	systems as
+6319	34	34	31	33	système	systems as well
+6319	34	34	31	34	système	systems as well as
+6323	26	26	26	26	système	system
+6325	44	44	32	32	problème	problem
+6325	58	58	48	48	problème	problem
+6334	2	2	0	1	premier	we first
+6334	2	2	1	1	premier	first
+6335	31	31	31	31	attention	attention
+6336	19	19	17	17	attention	attention
+6343	10	10	10	10	problème	problem
+6343	19	19	13	13	service	service
+6344	2	2	0	0	premier	first
+6350	4	4	4	4	surveillance	monitoring
+6351	27	27	20	22	machine	in these machines
+6351	27	27	21	22	machine	these machines
+6351	27	27	22	22	machine	machines
+6353	18	18	17	17	machine	machine
+6354	18	18	4	4	rapport	according
+6355	12	12	15	15	machine	machine
+6355	12	12	15	16	machine	machine .
+6355	12	12	15	17	machine	machine . this
+6355	12	12	15	18	machine	machine . this one
+6355	12	12	15	19	machine	machine . this one was
+6360	10	10	12	12	charge	charge
+6360	20	20	18	18	champ	field
+6360	20	20	18	19	champ	field between
+6361	17	17	17	17	champ	field
+6361	23	23	19	19	charge	charge
+6362	28	28	22	22	charge	charge
+6370	2	2	0	1	premier	we first
+6370	2	2	1	1	premier	first
+6376	3	3	5	5	système	system
+6376	42	42	34	35	organe	, organs
+6376	42	42	34	36	organe	, organs ,
+6376	42	42	35	35	organe	organs
+6376	42	42	35	36	organe	organs ,
+6379	15	15	11	11	patient	patient
+6380	3	3	4	4	surveillance	monitoring
+6382	16	16	11	11	état	state
+6386	5	5	9	9	modèles	models
+6389	7	7	11	11	cadre	framework
+6390	1	1	1	2	premier	the first
+6390	1	1	2	2	premier	first
+6391	7	7	4	4	modèles	models
+6391	7	7	4	5	modèles	models can
+6391	7	7	4	6	modèles	models can be
+6396	5	5	9	9	système	system
+6402	13	13	13	13	formation	formation
+6403	3	3	5	5	modèles	models
+6404	24	24	21	21	modèles	models
+6405	9	9	9	9	système	system
+6407	6	6	7	7	modèles	model
+6410	4	4	2	2	premier	first
+6410	73	73	49	49	humain	human
+6411	26	26	17	18	modèles	resulting models
+6428	3	3	1	1	premier	first
+6428	3	3	1	2	premier	first show
+6429	5	5	6	6	premières	first
+6432	8	8	8	8	premières	first
+6432	8	8	8	9	premières	first that
+6433	5	5	5	5	premières	first
+6434	9	9	9	9	état	state
+6435	16	16	16	16	système	system
+6435	16	16	16	17	système	system in
+6442	27	27	27	27	exposition	exposure
+6445	13	13	9	9	croissance	growth
+6447	2	2	2	2	cadre	frame
+6447	56	56	42	42	lumière	light
+6451	11	11	13	13	problème	problem
+6452	7	7	7	7	problème	problem
+6452	12	12	10	10	grands	large
+6459	8	8	7	7	grands	large
+6460	25	25	20	20	système	system
+6463	21	21	19	19	rapport	respect
+6464	19	19	20	20	modèles	models
+6468	14	14	14	14	modèles	models
+6472	5	5	7	7	problème	problem
+6475	2	2	2	2	premier	first
+6488	15	15	10	10	système	system
+6488	26	26	17	17	état	state
+6488	26	26	17	18	état	state (
+6489	8	8	12	12	problème	problem
+6490	3	3	5	5	vue	view
+6493	35	35	30	30	modèles	models
+6498	18	18	21	21	modèles	models
+6499	2	2	1	1	attention	attention
+6500	12	12	10	10	modèles	model
+6503	1	1	1	1	problème	problem
+6505	1	1	0	0	premier	first
+6506	6	6	5	5	modèles	models
+6510	15	15	16	17	cadre	specific area
+6510	15	15	17	17	cadre	area
+6517	36	36	35	35	cadre	framework
+6520	19	19	17	17	modèles	models
+6522	2	2	2	2	cadre	frame
+6523	8	8	3	3	premier	first
+6525	2	2	1	1	premier	begin
+6525	2	2	1	2	premier	begin with
+6532	5	5	3	3	véhicule	vehicle
+6533	25	25	14	14	formation	necessary
+6535	11	11	8	8	oeuvre	deploy
+6541	40	40	26	26	modèles	models
+6542	3	3	5	5	système	system
+6543	27	27	41	42	modèles	the models
+6543	27	27	42	42	modèles	models
+6559	7	7	8	8	modèles	models
+6560	12	12	29	29	modèles	models
+6564	16	16	12	12	modèles	models
+6572	33	33	27	27	échelle	scale
+6572	33	33	27	28	échelle	scale resolution
+6578	32	32	36	36	modèles	models
+6583	2	2	1	2	premier	the first
+6583	2	2	2	2	premier	first
+6583	40	40	34	34	champ	field
+6586	24	24	16	16	champ	field
+6598	2	2	2	2	premières	first
+6600	14	14	15	15	état	state
+6600	14	14	15	16	état	state is
+6605	10	10	10	10	problème	problem
+6609	36	36	30	31	premier	the first
+6609	36	36	30	32	premier	the first cancer
+6609	36	36	31	31	premier	first
+6609	36	36	31	32	premier	first cancer
+6610	5	5	5	5	cadre	framework
+6613	27	27	21	21	taux	rate
+6614	2	2	3	3	cadre	context
+6615	14	14	12	12	visage	face
+6616	21	21	18	18	humain	human
+6616	20	20	19	19	visage	face
+6617	11	11	10	10	visage	face
+6617	11	11	10	11	visage	face ,
+6621	39	39	23	23	modèles	models
+6621	39	39	23	24	modèles	models that
+6621	43	43	27	27	système	system
+6622	16	16	13	13	modèles	modeling
+6624	11	11	8	8	modèles	models
+6624	20	20	16	17	système	main system
+6624	20	20	17	17	système	system
+6625	10	10	12	12	système	system
+6627	7	7	8	8	modèles	models
+6627	7	7	8	9	modèles	models .
+6627	7	7	8	10	modèles	models . this
+6627	21	21	21	21	modèles	models
+6627	30	30	23	23	humain	human
+6630	1	1	0	0	modèles	models
+6631	24	24	17	17	attention	attention
+6631	29	29	23	23	informations	information
+6631	49	49	37	37	humain	human
+6631	49	49	37	38	humain	human vision
+6632	8	8	9	9	mesure	measure
+6637	28	28	23	23	famille	family
+6643	41	41	38	38	échelle	scalable
+6644	31	31	32	32	échelle	scale
+6645	8	8	8	8	problème	problem
+6646	28	28	25	25	cellulaire	cellular
+6647	10	10	8	8	problème	issue
+6648	2	2	1	1	clé	key
+6653	1	1	1	1	cadre	designed
+6653	14	14	6	6	modèles	models
+6653	26	26	17	17	modèles	models
+6655	35	35	25	25	cadre	framework
+6661	4	4	1	1	problème	address
+6661	27	27	21	22	solution	the solutions
+6661	27	27	22	22	solution	solutions
+6679	12	12	11	11	mesure	measure
+6681	20	20	18	18	échelle	level
+6682	23	23	18	18	mesure	measuring
+6685	2	2	2	2	échelle	level
+6687	2	2	2	2	échelle	scale
+6687	8	8	8	8	mesure	measurement
+6693	21	21	22	22	solution	solution
+6696	55	55	56	56	machine	machine
+6696	55	55	56	57	machine	machine is
+6698	69	69	64	64	informations	information
+6702	4	4	5	5	cadre	framework
+6702	18	18	12	12	mesure	measure
+6704	33	33	28	28	sommet	vertex
+6709	1	1	2	2	nature	nature
+6710	1	1	2	2	source	source
+6713	12	12	9	9	cellulaire	cell
+6718	18	18	18	18	système	system
+6719	6	6	7	7	cadre	framework
+6726	13	13	11	11	modèles	alignments
+6730	6	6	5	5	système	system
+6730	19	19	17	17	système	system
+6731	15	15	6	6	source	source
+6740	6	6	5	5	système	system
+6740	19	19	17	17	système	system
+6741	15	15	6	6	source	source
+6765	4	4	4	4	système	system
+6767	4	4	4	5	problème	a problem
+6767	4	4	5	5	problème	problem
+6768	19	19	18	18	solution	solution
+6768	23	23	21	21	droit	straight
+6769	7	7	8	8	oeuvre	intractable
+6770	28	28	29	29	nature	nature
+6774	11	11	11	11	problème	problem
+6775	1	1	0	0	raison	because
+6780	4	4	5	5	modèles	models
+6781	8	8	7	7	source	source
+6781	16	16	14	16	modèles	with new models
+6781	16	16	15	16	modèles	new models
+6781	16	16	16	16	modèles	models
+6785	9	9	8	8	problème	problem
+6785	18	18	17	17	conserver	maintaining
+6787	1	1	1	1	problème	problem
+6787	9	9	7	7	système	system
+6788	4	4	3	3	système	system
+6793	9	9	2	2	attention	attention
+6796	3	3	5	5	vue	view
+6808	20	20	18	18	modèles	models
+6810	7	7	7	7	grands	large
+6812	13	13	11	11	informations	information
+6822	6	6	6	6	problème	problem
+6823	4	4	4	4	classe	class
+6823	21	21	18	18	classe	class
+6829	9	9	6	6	voie	way
+6829	13	13	8	8	association	association
+6835	25	25	23	23	modèles	models
+6836	14	14	14	14	nature	nature
+6837	37	37	28	28	problème	issue
+6842	26	26	23	23	association	association
+6843	25	25	18	18	association	association
+6847	7	7	5	5	charge	charge
+6847	33	33	28	28	charge	charge
+6849	1	1	2	2	charge	charge
+6852	1	1	3	3	source	source
+6853	31	31	29	29	courant	current
+6856	8	8	8	8	mesure	measurement
+6857	22	22	28	28	mesure	measurement
+6858	6	6	5	5	cadre	a
+6878	14	14	6	6	champ	field
+6879	23	23	13	13	régime	operates
+6879	23	23	13	14	régime	operates in
+6883	14	14	8	8	informations	information
+6886	13	13	13	13	mesure	measurement
+6889	23	23	25	25	grands	high
+6893	7	7	9	9	lumière	light
+6899	12	12	12	12	système	system
+6902	16	16	11	11	champ	field
+6904	11	11	6	6	mesure	measurement
+6905	13	13	8	8	mesure	measurement
+6908	3	3	3	3	premières	first
+6915	12	12	12	12	formation	formation
+6916	17	17	9	9	formation	growth
+6918	20	20	19	19	croissance	growth
+6918	32	32	26	27	formation	to formation
+6918	32	32	27	27	formation	formation
+6921	13	13	17	17	croissance	growth
+6927	22	22	18	18	nature	nature
+6929	7	7	7	7	espèces	species
+6932	24	24	24	24	espèces	species
+6934	2	2	15	15	régime	regime
+6936	12	12	15	16	état	ground state
+6936	12	12	16	16	état	state
+6937	2	2	2	2	cadre	frame
+6939	1	1	1	1	système	systems
+6940	20	20	22	22	croissance	growth
+6942	15	15	9	10	croissance	the growth
+6942	15	15	10	10	croissance	growth
+6943	6	6	8	8	croissance	growth
+6954	6	6	5	5	informations	information
+6954	12	12	10	10	mesure	measures
+6956	24	24	24	24	charge	charge
+6958	27	27	23	23	système	system
+6964	17	17	16	16	charge	charge
+6970	41	41	47	47	solution	solution
+6970	41	41	47	48	solution	solution has
+6970	41	41	47	49	solution	solution has been
+6976	11	11	8	8	champ	magnetic
+6976	15	15	12	12	échelle	scale
+6976	22	22	15	15	champ	field
+6991	11	11	9	10	croissance	the growth
+6991	11	11	10	10	croissance	growth
+6997	4	4	3	4	croissance	and growth
+6997	4	4	4	4	croissance	growth
+6997	7	7	5	5	mesure	measurement
+6998	14	14	14	14	formation	formation
+6998	25	25	24	24	formation	formation
+6998	38	38	33	33	croissance	growth
+6998	38	38	33	34	croissance	growth stage
+6999	12	12	6	6	système	system
+7000	32	32	20	21	système	the system
+7000	32	32	21	21	système	system
+7003	5	5	7	7	courant	current
+7003	5	5	7	8	courant	current ,
+7003	21	21	23	23	règle	rule
+7005	10	10	8	8	régime	regime
+7007	9	9	8	8	problème	problem
+7010	28	28	27	27	vue	order
+7011	12	12	11	11	solution	solution
+7011	12	12	11	12	solution	solution in
+7011	21	21	22	22	état	states
+7017	7	7	8	8	oeuvre	effect
+7017	21	21	23	23	nature	nature
+7017	23	23	26	26	espèces	species
+7018	12	12	14	14	modèles	models
+7029	26	26	27	28	champ	electric field
+7032	20	20	14	14	mesure	measurement
+7038	15	15	15	15	champ	field
+7043	5	5	10	10	problème	problem
+7043	5	5	10	11	problème	problem that
+7043	5	5	10	12	problème	problem that we
+7043	5	5	10	13	problème	problem that we show
+7048	11	11	11	11	cadre	frame
+7058	44	44	39	39	pression	pressure
+7059	3	3	2	2	pression	pressure
+7060	32	32	28	28	cadre	frame
+7061	8	8	0	1	échelle	the scaling
+7061	8	8	1	1	échelle	scaling
+7062	20	20	58	58	régime	regime
+7062	25	25	62	62	régime	regime
+7070	12	12	19	19	courant	current
+7073	9	9	6	6	courant	current
+7073	17	17	18	18	courant	current
+7075	14	14	9	9	solution	alternative
+7080	13	13	14	14	croissance	growth
+7081	7	7	8	8	état	state
+7082	26	26	15	15	courant	current
+7082	15	15	19	19	état	state
+7082	19	19	23	23	état	state
+7083	18	18	17	17	état	state
+7085	4	4	10	10	état	state
+7085	22	22	24	24	courant	current
+7086	11	11	11	11	état	state
+7086	14	14	13	13	courant	current
+7093	15	15	14	14	système	system
+7094	13	13	7	7	charge	charge
+7099	17	17	15	15	système	systems
+7109	7	7	5	5	champ	force
+7110	11	11	14	14	vue	view
+7111	8	8	7	7	cadre	framework
+7112	16	16	16	16	état	state
+7116	1	1	1	1	voie	way
+7118	27	27	25	25	place	up
+7126	11	11	7	7	régime	regime
+7126	18	18	14	14	régime	regime
+7127	30	30	6	6	charge	charge
+7127	56	56	42	42	charge	charge
+7134	20	20	13	13	marche	step
+7149	2	2	4	4	modèles	models
+7150	7	7	7	8	système	the system
+7150	7	7	8	8	système	system
+7152	22	22	19	19	système	system
+7155	1	1	1	1	premier	first
+7155	7	7	9	9	formation	formation
+7155	26	26	28	28	état	state
+7156	20	20	18	18	formation	formation
+7158	6	6	3	4	champ	mean field
+7158	6	6	4	4	champ	field
+7166	2	2	3	3	régime	regime
+7166	34	34	26	26	champ	field
+7177	20	20	5	5	formation	formation
+7177	6	6	17	17	solution	bulk
+7185	12	12	12	12	source	source
+7203	16	16	12	12	famille	family
+7204	13	13	8	8	grands	wide
+7204	19	19	14	14	petits	small
+7204	48	48	41	41	champ	field
+7215	33	33	33	33	champ	field
+7215	141	141	120	120	champ	field
+7219	9	9	6	6	échelle	scale
+7233	20	20	17	19	libre	the mean free
+7233	20	20	18	19	libre	mean free
+7233	20	20	19	19	libre	free
+7235	8	8	6	7	libre	mean free
+7235	8	8	7	7	libre	free
+7237	14	14	13	13	croissance	growth
+7240	8	8	9	9	croissance	growth
+7241	18	18	12	12	croissance	growth
+7242	25	25	23	23	nature	nature
+7244	16	16	16	16	croissance	growth
+7246	14	14	11	12	croissance	the growth
+7246	14	14	12	12	croissance	growth
+7247	2	2	3	3	système	system
+7251	14	14	12	12	cadre	framework
+7253	6	6	7	7	vue	view
+7255	10	10	6	6	petits	small
+7256	9	9	5	5	échelle	scale
+7257	19	19	17	17	champ	external
+7260	3	3	3	3	champ	field
+7262	5	5	6	6	premier	first
+7263	27	27	17	17	nature	nature
+7263	48	48	34	34	vue	seen
+7268	9	9	10	10	nature	nature
+7268	9	9	10	11	nature	nature of
+7268	9	9	10	12	nature	nature of the
+7268	34	34	31	31	rapport	ratio
+7269	15	15	19	19	pression	pressure
+7270	26	26	23	24	nature	the nature
+7270	26	26	24	24	nature	nature
+7270	42	42	46	46	pression	pressure
+7270	52	52	58	58	champ	field
+7271	4	4	5	5	champ	field
+7271	21	21	20	20	nature	nature
+7272	11	11	14	14	champ	field
+7277	11	11	8	8	champ	field
+7278	3	3	13	13	état	state
+7281	9	9	7	7	premier	first
+7281	12	12	9	9	croissance	growth
+7281	24	24	22	22	pression	pressure
+7285	17	17	17	17	croissance	growth
+7286	26	26	25	25	croissance	growth
+7286	43	43	40	41	premier	the first
+7286	43	43	41	41	premier	first
+7289	27	27	25	25	champ	applied
+7301	30	30	25	25	pression	pressure
+7302	25	25	23	23	pression	pressure
+7303	14	14	10	10	pression	pressure
+7305	26	26	23	23	échelle	scale
+7306	9	9	11	11	échelle	scale
+7315	23	23	9	9	échelle	scale
+7327	12	12	12	12	état	state
+7327	18	18	19	19	mesure	measurement
+7328	11	11	12	12	champ	field
+7329	1	1	2	2	mesure	measurement
+7329	9	9	12	12	champ	field
+7331	6	6	6	6	mesure	measurement
+7333	2	2	2	2	premier	first
+7333	17	17	16	16	champ	field
+7336	6	6	5	8	premier	combination of the first
+7336	6	6	6	8	premier	of the first
+7336	6	6	7	8	premier	the first
+7336	6	6	8	8	premier	first
+7338	5	5	4	4	formation	formation
+7340	1	1	1	1	formation	formation
+7341	3	3	3	3	formation	formation
+7341	15	15	20	20	croissance	growth
+7346	4	4	3	4	système	the system
+7346	4	4	4	4	système	system
+7346	8	8	7	8	croissance	the growth
+7346	8	8	8	8	croissance	growth
+7348	23	23	26	27	système	the device
+7348	23	23	27	27	système	device
+7351	7	7	4	4	système	systems
+7354	6	6	10	10	source	source
+7357	9	9	10	10	source	source
+7358	28	28	22	22	courant	current
+7358	40	40	31	31	charge	charge
+7359	3	3	4	4	taux	rate
+7364	21	21	21	21	croissance	growth
+7367	4	4	4	4	formation	formation
+7368	7	7	8	8	échelle	scale
+7373	15	15	15	15	champ	perpendicular
+7376	10	10	10	10	cadre	framework
+7378	4	4	4	4	croissance	growth
+7379	28	28	27	27	croissance	growth
+7380	18	18	12	12	croissance	growth
+7383	9	9	5	5	croissance	growth
+7386	1	1	0	0	premier	first
+7391	12	12	12	14	champ	the external static
+7391	12	12	13	14	champ	external static
+7391	18	18	21	21	nature	character
+7397	23	23	23	23	espèces	species
+7401	52	52	47	47	état	state
+7408	13	13	11	11	plan	plan
+7408	13	13	11	12	plan	plan ,
+7413	27	27	17	17	pression	pressure
+7421	22	22	19	19	état	state
+7421	22	22	19	20	état	state and
+7421	29	29	26	26	champ	field
+7426	11	11	11	11	champ	external
+7427	18	18	16	16	système	system
+7433	6	6	4	4	système	system
+7436	7	7	7	7	système	system
+7436	16	16	17	17	source	source
+7437	10	10	7	7	système	system
+7438	8	8	5	5	problème	problem
+7438	8	8	5	6	problème	problem of
+7438	16	16	12	12	nature	nature
+7438	19	19	16	16	source	source
+7439	3	3	6	6	système	system
+7442	1	1	2	2	système	system
+7444	15	15	12	12	lumière	light
+7445	26	26	26	26	nature	kind
+7450	1	1	1	1	premières	former
+7451	19	19	21	21	système	system
+7452	4	4	5	5	mesure	measure
+7453	25	25	26	26	modèles	models
+7456	25	25	17	17	croissance	growth
+7463	1	1	1	1	premières	first
+7467	11	11	9	9	courant	current
+7467	33	33	26	26	courant	current
+7469	28	28	22	22	courant	current
+7472	18	18	17	17	courant	current
+7476	5	5	5	5	croissance	growth
+7476	20	20	33	33	nature	nature
+7480	42	42	40	40	croissance	growth
+7482	1	1	1	1	premier	first
+7486	6	6	6	6	courant	current
+7489	19	19	12	12	charge	charge
+7493	7	7	7	7	oeuvre	up
+7493	7	7	7	8	oeuvre	up a
+7500	9	9	5	5	champ	field
+7504	28	28	25	25	cadre	framework
+7509	12	12	7	7	système	system
+7514	2	2	0	0	premier	first
+7514	11	11	9	10	champ	mean field
+7514	11	11	10	10	champ	field
+7523	13	13	15	15	régime	regime
+7526	15	15	12	13	système	the system
+7526	15	15	13	13	système	system
+7527	2	2	2	2	premier	first
+7530	28	28	27	27	mesure	measurement
+7530	37	37	36	36	régime	regime
+7531	17	17	24	24	source	source
+7536	15	15	9	9	problème	issue
+7539	8	8	8	8	croissance	growth
+7539	19	19	17	17	formation	formation
+7547	2	2	0	0	premier	first
+7548	7	7	8	8	échelle	scale
+7549	1	1	2	2	modèles	models
+7554	12	12	10	10	système	system
+7559	4	4	2	2	mesure	able
+7564	10	10	9	9	échelle	scaling
+7565	16	16	15	15	champ	field
+7567	12	12	9	9	matière	material
+7572	17	17	14	14	lumière	light
+7573	28	28	28	28	réaction	reaction
+7574	22	22	23	23	solution	solution
+7582	16	16	17	17	régime	regime
+7583	4	4	3	3	matière	matter
+7585	6	6	8	8	système	system
+7586	14	14	14	14	échelle	scale
+7590	4	4	5	5	solution	solution
+7591	1	1	0	0	raison	due
+7595	20	20	19	19	champ	field
+7596	30	30	24	24	système	system
+7599	15	15	14	14	vue	approach
+7606	2	2	2	2	échelle	scale
+7609	1	1	1	1	état	state
+7609	19	19	23	24	système	the system
+7609	19	19	24	24	système	system
+7609	64	64	67	67	état	state
+7613	10	10	9	9	régime	regime
+7616	18	18	18	18	système	system
+7617	17	17	19	19	solution	solution
+7618	10	10	10	10	problème	problem
+7620	20	20	23	23	espèces	species
+7621	22	22	19	19	état	state
+7623	2	2	3	3	état	state
+7624	9	9	11	11	problème	problem
+7625	19	19	20	20	état	state
+7633	6	6	6	6	premier	first
+7636	20	20	13	13	système	system
+7638	19	19	18	18	premier	first
+7644	32	32	28	28	nature	shape
+7655	13	13	13	13	système	system
+7655	30	30	24	24	courant	current
+7656	53	53	41	41	courant	current
+7657	10	10	11	11	croissance	growth
+7660	1	1	1	1	premières	first
+7660	38	38	35	35	courant	current
+7663	44	44	38	38	raison	due
+7666	4	4	3	4	croissance	a growth
+7666	4	4	4	4	croissance	growth
+7666	32	32	29	29	croissance	growth
+7671	9	9	12	12	système	system
+7671	9	9	12	13	système	system ,
+7674	9	9	7	7	matière	matter
+7675	4	4	5	5	système	system
+7676	10	10	11	11	état	state
+7676	13	13	13	14	système	the system
+7676	13	13	13	15	système	the system that
+7676	13	13	14	14	système	system
+7676	13	13	14	15	système	system that
+7677	5	5	9	9	solution	solution
+7677	19	19	20	20	état	state
+7678	18	18	21	21	état	state
+7683	28	28	27	28	système	the system
+7683	28	28	28	28	système	system
+7684	1	1	1	1	mesure	measurement
+7684	25	25	22	22	état	state
+7688	10	10	10	10	champ	field
+7692	27	27	26	26	champ	field
+7694	21	21	20	21	système	the system
+7694	21	21	21	21	système	system
+7695	28	28	22	22	charge	charge
+7696	22	22	24	24	régime	regime
+7701	21	21	19	19	formation	formation
+7707	4	4	2	2	modèles	models
+7710	8	8	8	8	modèles	models
+7711	2	2	2	2	premier	first
+7711	29	29	29	29	croissance	growth
+7714	11	11	7	7	échelle	scale
+7715	33	33	27	27	libre	free
+7731	2	2	1	1	cadre	part
+7737	10	10	8	8	croissance	growth
+7738	6	6	4	4	pierre	pierre
+7738	24	24	20	20	pierre	pierre
+7738	46	46	40	40	nature	nature
+7741	24	24	20	20	lumière	light
+7742	17	17	13	13	lumière	light
+7743	21	21	16	16	lumière	light
+7744	16	16	13	13	lumière	light
+7746	11	11	7	7	pierre	pierre
+7748	2	2	1	1	cadre	order
+7761	26	26	24	25	source	the source
+7761	26	26	25	25	source	source
+7764	6	6	6	6	modèles	models
+7769	6	6	6	6	modèles	models
+7770	10	10	9	9	état	state
+7774	20	20	18	18	état	state
+7774	24	24	21	21	système	system
+7777	25	25	29	29	champ	field
+7779	14	14	5	5	formation	formation
+7780	4	4	8	8	champ	field
+7782	6	6	8	8	champ	field
+7782	6	6	8	9	champ	field in
+7782	13	13	16	16	formation	formation
+7784	19	19	18	18	système	system
+7785	25	25	22	22	lumière	light
+7787	11	11	8	8	lumière	light
+7787	20	20	18	18	voie	route
+7790	15	15	13	13	taux	degree
+7793	24	24	16	16	informations	information
+7798	23	23	22	22	pression	pressure
+7799	29	29	23	23	croissance	growth
+7801	31	31	30	31	croissance	growth responses
+7802	22	22	18	18	lumière	light
+7803	1	1	1	2	modèles	best models
+7803	1	1	1	3	modèles	best models for
+7803	1	1	2	2	modèles	models
+7803	1	1	2	3	modèles	models for
+7803	7	7	7	7	croissance	growth
+7805	3	3	2	2	espèces	species
+7805	15	15	11	11	lumière	light
+7806	23	23	16	16	lumière	light
+7807	1	1	1	1	rapport	ratio
+7811	14	14	11	11	modèles	models
+7812	8	8	8	8	modèles	models
+7812	12	12	12	12	modèles	models
+7813	15	15	15	15	modèles	models
+7814	10	10	6	6	modèles	models
+7814	28	28	20	20	modèles	models
+7815	39	39	29	29	modèles	models
+7816	10	10	11	11	problème	problem
+7816	14	14	14	14	croissance	growth
+7833	47	47	35	35	exposition	exposure
+7837	16	16	15	15	espèces	species
+7840	1	1	1	1	réaction	reaction
+7840	21	21	16	16	formation	formation
+7843	1	1	0	0	premier	one
+7846	26	26	23	23	modèles	models
+7849	3	3	3	3	problème	problem
+7864	51	51	32	33	taux	, higher
+7864	51	51	33	33	taux	higher
+7864	68	68	43	43	couverture	forest
+7868	18	18	19	19	rapport	relation
+7869	57	57	44	44	système	system
+7876	37	37	22	22	pierre	stone
+7877	19	19	16	16	croissance	growth
+7878	31	31	23	23	taux	seedling
+7887	16	16	10	10	lumière	light
+7898	3	3	4	4	taux	rates
+7906	23	23	14	14	pratique	useful
+7908	7	7	5	5	mesure	measurement
+7908	9	9	7	8	courant	the current
+7908	9	9	8	8	courant	current
+7909	20	20	19	19	courant	current
+7909	18	18	20	20	mesure	measurement
+7910	11	11	7	7	courant	current
+7914	32	32	28	28	courant	current
+7918	5	5	4	4	solution	solution
+7918	10	10	9	9	réaction	reaction
+7920	10	10	4	4	réaction	reaction
+7923	31	31	26	26	formation	formation
+7924	19	19	21	21	système	system
+7924	23	23	24	24	espèces	species
+7926	16	16	14	14	pression	pressure
+7926	22	22	19	19	pression	pressure
+7928	12	12	12	12	pression	pressure
+7933	34	34	29	29	solution	solution
+7935	2	2	2	2	espèces	species
+7938	7	7	6	6	échelle	level
+7945	37	37	23	23	taux	rates
+7945	59	59	40	40	croissance	growth
+7947	25	25	22	22	climat	climate
+7948	28	28	18	18	modèles	models
+7951	23	23	20	20	croissance	growth
+7955	10	10	2	2	classe	class
+7959	11	11	6	7	organe	are organ
+7959	11	11	7	7	organe	organ
+7962	13	13	8	8	système	system
+7964	4	4	5	5	taux	rate
+7974	28	28	29	29	champ	field
+7975	10	10	2	2	champ	field
+7981	12	12	9	9	formation	formation
+7991	9	9	9	9	état	state
+7992	18	18	14	14	formation	formation
+8000	22	22	26	26	croissance	growth
+8002	26	26	24	24	croissance	growth
+8006	6	6	7	7	croissance	growth
+8032	11	11	8	8	climat	weather
+8032	11	11	8	9	climat	weather ,
+8042	10	10	7	8	modèles	ann models
+8042	10	10	8	8	modèles	models
+8042	25	25	17	17	système	system
+8054	1	1	0	0	formation	formation
+8054	11	11	18	18	réaction	reaction
+8060	1	1	1	1	formation	formation
+8064	4	4	6	6	réaction	response
+8072	17	17	15	15	pression	pressure
+8072	27	27	19	19	couverture	cover
+8073	3	3	3	3	système	system
+8078	31	31	23	24	réaction	the reaction
+8078	31	31	24	24	réaction	reaction
+8080	1	1	2	2	informations	information
+8093	19	19	10	10	famille	family
+8094	20	20	14	14	règle	rule
+8095	19	19	12	12	petits	smaller
+8119	3	3	3	3	réaction	reaction
+8120	8	8	7	7	taux	rate
+8121	6	6	4	4	taux	rates
+8133	36	36	21	21	espèces	species
+8141	9	9	10	10	espèces	species
+8144	15	15	13	13	réaction	response
+8149	17	17	12	12	couverture	cover
+8150	20	20	16	16	couverture	cover
+8153	22	22	23	23	système	system
+8153	32	32	33	33	système	system
+8153	32	32	33	34	système	system ,
+8159	35	35	25	25	famille	family
+8160	6	6	1	1	famille	family
+8161	11	11	5	5	famille	family
+8161	11	11	5	6	famille	family &apos;s
+8161	6	6	6	7	taux	&apos;s level
+8161	6	6	7	7	taux	level
+8161	24	24	15	15	mesure	reasonably
+8161	29	29	21	21	taux	level
+8161	54	54	41	41	famille	family
+8168	14	14	17	17	premier	first
+8172	6	6	5	5	taux	rate
+8174	27	27	15	15	charge	charge
+8175	25	25	13	13	charge	charge
+8176	22	22	6	6	charge	charge
+8177	42	42	24	24	charge	charge
+8178	10	10	5	5	charge	charge
+8179	30	30	14	14	charge	charge
+8188	18	18	15	15	plan	plane
+8217	13	13	14	14	réaction	response
+8229	1	1	1	1	examen	examination
+8230	19	19	13	13	m.	m.
+8238	11	11	10	10	source	source
+8246	13	13	9	9	croissance	growth
+8249	10	10	6	6	croissance	growth
+8251	1	1	1	1	taux	higher
+8251	3	3	2	2	croissance	growth
+8251	7	7	6	6	taux	lower
+8254	34	34	25	25	formation	formation
+8254	58	58	38	38	formation	formation
+8267	28	28	22	22	sommet	at
+8268	29	29	21	22	grands	for larger
+8268	29	29	22	22	grands	larger
+8280	1	1	1	1	taux	high
+8280	35	35	33	33	croissance	growth
+8287	40	40	32	33	mesure	a measure
+8287	40	40	33	33	mesure	measure
+8289	3	3	0	0	espèces	species
+8289	23	23	18	18	réaction	response
+8290	6	6	0	0	réaction	responses
+8290	8	8	3	3	espèces	species
+8292	7	7	3	3	petits	small
+8293	3	3	3	3	réaction	responses
+8293	9	9	6	6	petits	small
+8299	22	22	18	18	petits	small
+8300	15	15	11	11	espèces	species
+8301	46	46	31	31	espèces	species
+8306	45	45	32	32	formation	formation
+8317	5	5	3	3	grands	great
+8317	12	12	10	10	espèces	species
+8322	29	29	26	26	modèles	models
+8331	31	31	21	21	charge	loading
+8336	7	7	8	8	échelle	scale
+8344	5	5	2	2	pression	pressure
+8346	6	6	2	2	solution	solution
+8346	6	6	2	3	solution	solution is
+8347	40	40	33	33	taux	rates
+8347	40	40	33	34	taux	rates ,
+8356	17	17	15	15	système	system
+8359	18	18	16	16	formation	formation
+8365	10	10	9	9	petits	small
+8373	9	9	5	5	espèces	species
+8377	12	12	8	8	espèces	species
+8377	26	26	18	18	espèces	species
+8391	37	37	26	27	taux	at high
+8391	37	37	27	27	taux	high
+8393	3	3	2	2	cadre	framework
+8394	1	1	1	1	cadre	framework
+8395	20	20	14	14	petits	small
+8403	15	15	12	12	informations	information
+8404	1	1	1	1	attention	attention
+8404	23	23	16	16	cellulaire	cellular
+8410	9	9	7	7	raison	because
+8422	11	11	9	10	voie	a way
+8422	11	11	10	10	voie	way
+8448	23	23	24	24	état	state
+8448	23	23	24	25	état	state of
+8449	31	31	26	26	pratique	practical
+8451	8	8	9	9	clé	key
+8457	1	1	2	2	modèles	models
+8458	3	3	1	1	charge	load
+8459	9	9	9	9	modèles	models
+8459	34	34	30	30	charge	load
+8460	1	1	0	0	raison	because
+8461	13	13	8	8	charge	load
+8461	29	29	24	24	charge	load
+8467	34	34	36	36	solution	solution
+8468	25	25	16	16	solution	solution
+8477	9	9	3	3	espèces	species
+8477	17	17	12	12	taux	rate
+8479	3	3	2	2	espèces	species
+8480	20	20	17	17	réaction	response
+8487	13	13	10	10	stade	stage
+8487	13	13	10	11	stade	stage in
+8492	21	21	19	19	espèces	species
+8493	9	9	6	7	m.	in m.
+8493	9	9	7	7	m.	m.
+8493	18	18	14	14	espèces	species
+8494	16	16	8	8	m.	m.
+8496	2	2	2	2	système	system
+8497	17	17	15	15	taux	higher
+8497	19	19	16	16	croissance	growth
+8499	4	4	0	0	croissance	growth
+8499	22	22	12	13	rapport	a ratio
+8499	22	22	13	13	rapport	ratio
+8500	1	1	1	1	taux	higher
+8500	3	3	2	2	croissance	growth
+8500	21	21	12	12	croissance	growth
+8501	4	4	0	0	croissance	growth
+8501	20	20	12	12	croissance	growth
+8513	4	4	1	1	chute	fall
+8515	10	10	10	10	croissance	growth
+8516	12	12	11	11	croissance	growth
+8517	18	18	12	12	croissance	growth
+8518	18	18	11	11	croissance	growth
+8519	9	9	10	10	croissance	growth
+8519	20	20	16	16	courant	current
+8521	23	23	17	17	lumière	light
+8521	36	36	29	29	croissance	growth
+8525	7	7	7	7	croissance	growth
+8526	25	25	19	19	formation	monocyclopentadienyl
+8529	13	13	7	7	libre	free
+8534	49	49	34	34	solution	solution
+8535	40	40	35	35	solution	solution
+8539	21	21	18	19	taux	the rate
+8539	21	21	19	19	taux	rate
+8539	23	23	21	21	exposition	exposure
+8540	27	27	20	20	régime	diet
+8540	38	38	34	34	régime	diet
+8542	32	32	24	24	réaction	response
+8545	33	33	29	29	charge	burden
+8545	49	49	40	40	marche	walking
+8554	8	8	5	5	taux	level
+8558	27	27	20	20	administration	administration
+8561	13	13	5	5	charge	loading
+8565	9	9	7	7	rapport	respect
+8578	15	15	12	12	taux	rate
+8579	1	1	1	1	taux	rate
+8581	1	1	0	0	taux	rate
+8585	4	4	5	5	réaction	reaction
+8585	4	4	5	6	réaction	reaction is
+8586	9	9	10	10	espèces	species
+8597	3	3	4	4	problème	issue
+8625	39	39	27	27	modèles	model
+8626	12	12	9	9	espèces	species
+8626	12	12	9	10	espèces	species were
+8630	8	8	7	7	stade	stage
+8630	23	23	22	22	rapport	ratio
+8630	23	23	22	23	rapport	ratio of
+8631	13	13	11	11	stade	stage
+8636	9	9	5	5	poids	density
+8637	8	8	6	6	stade	stage
+8638	4	4	3	3	modèles	models
+8639	23	23	12	12	espèces	species
+8639	23	23	12	13	espèces	species only
+8639	54	54	33	33	espèces	species
+8639	54	54	33	34	espèces	species ,
+8644	23	23	17	17	espèces	species
+8656	28	28	30	30	terre	earthquake
+8661	28	28	25	25	terre	ground
+8662	41	41	34	34	premier	first
+8662	44	44	41	41	système	system
+8663	52	52	48	48	système	system
+8668	9	9	6	6	espèces	species
+8668	24	24	18	18	espèces	species
+8668	27	27	19	19	croissance	grow
+8671	1	1	2	2	croissance	growth
+8671	8	8	9	9	croissance	growth
+8673	26	26	21	21	croissance	growth
+8673	40	40	33	33	régime	regime
+8673	49	49	43	43	croissance	growth
+8673	56	56	50	50	stade	stages
+8686	7	7	5	5	solution	solution
+8689	13	13	11	11	solution	solution
+8696	5	5	4	4	réaction	reaction
+8698	38	38	26	26	pratique	practice
+8702	11	11	9	9	rapport	ratio
+8702	11	11	9	10	rapport	ratio of
+8716	43	43	31	31	service	service
+8717	16	16	16	16	service	service
+8725	45	45	30	30	source	source
+8729	16	16	13	13	source	source
+8729	16	16	13	14	source	source ,
+8738	19	19	19	19	lumière	light
+8738	19	19	19	20	lumière	light and
+8738	19	19	19	21	lumière	light and with
+8738	37	37	30	30	m.	m.
+8740	22	22	21	21	espèces	species
+8741	37	37	31	31	réaction	reaction
+8742	1	1	1	1	réaction	reaction
+8744	20	20	18	18	réaction	reaction
+8744	20	20	18	19	réaction	reaction ,
+8746	4	4	4	4	exposition	exposure
+8747	13	13	10	10	croissance	growth
+8753	27	27	21	21	taux	rates
+8763	13	13	11	11	classe	class
+8778	29	29	23	23	couverture	forest
+8779	52	52	53	53	solution	solution
+8780	18	18	10	10	taux	rates
+8785	6	6	1	1	grands	large
+8785	6	6	1	2	grands	large and
+8785	8	8	2	3	petits	and small
+8785	8	8	3	3	petits	small
+8786	25	25	20	21	cellulaire	a cellular
+8786	25	25	21	21	cellulaire	cellular
+8788	1	1	1	1	nature	nature
+8789	6	6	6	6	cadre	context
+8789	27	27	29	29	formation	formation
+8791	52	52	45	45	croissance	growth
+8813	28	28	3	3	mesure	much
+8817	8	8	11	11	source	source
+8817	31	31	28	28	modèles	models
+8821	38	38	25	25	espèces	species
+8825	8	8	3	3	modèles	models
+8825	8	8	3	4	modèles	models was
+8825	8	8	3	5	modèles	models was made
+8825	8	8	3	6	modèles	models was made ,
+8827	37	37	35	35	administration	administration
+8837	5	5	5	5	état	condition
+8845	9	9	9	9	croissance	growth
+8852	8	8	7	7	espèces	species
+8855	8	8	6	6	espèces	species
+8858	13	13	5	5	modèles	models
+8861	29	29	23	23	espèces	species
+8861	49	49	33	33	grands	large
+8862	1	1	0	2	examen	i then examine
+8862	1	1	1	2	examen	then examine
+8862	1	1	2	2	examen	examine
+8862	31	31	25	25	régime	diet
+8862	44	44	36	36	grands	large
+8862	51	51	41	41	croissance	grow
+8863	15	15	17	17	espèces	species
+8866	5	5	4	4	espèces	species
+8867	8	8	7	7	source	source
+8872	18	18	13	13	premières	first
+8874	23	23	23	23	famille	family
+8874	40	40	33	34	famille	, family
+8874	40	40	34	34	famille	family
+8879	46	46	30	30	solution	solution
+8881	10	10	7	7	taux	rate
+8883	14	14	10	10	libre	free
+8883	18	18	17	17	solution	solution
+8892	34	34	26	26	charge	charge
+8892	39	39	29	29	formation	formation
+8894	1	1	0	0	examen	examination
+8894	21	21	18	18	rapport	respect
+8896	25	25	19	19	système	digestive
+8904	10	10	4	5	croissance	a growing
+8904	10	10	5	5	croissance	growing
+8904	18	18	12	12	pays	countries
+8918	11	11	10	10	couverture	covers
+8926	8	8	5	5	croissance	growth
+8926	53	53	36	36	espèces	species
+8927	15	15	13	13	croissance	growth
+8928	6	6	5	5	taux	rates
+8928	6	6	5	6	taux	rates and
+8931	1	1	0	0	taux	lower
+8935	60	60	42	42	modèles	models
+8936	12	12	7	7	espèces	species
+8938	8	8	8	8	espèces	species
+8938	13	13	12	12	espèces	species
+8939	6	6	4	4	espèces	species
+8939	6	6	4	5	espèces	species are
+8940	11	11	6	6	espèces	species
+8940	24	24	15	16	lumière	low light
+8940	24	24	16	16	lumière	light
+8941	12	12	8	8	espèces	species
+8945	36	36	23	23	espèces	species
+8945	39	39	26	26	solution	solution
+8950	13	13	9	10	humain	and humans
+8950	13	13	10	10	humain	humans
+8951	16	16	17	17	système	system
+8953	9	9	2	2	croissance	growth
+8960	14	14	15	16	croissance	current growth
+8960	14	14	16	16	croissance	growth
+8961	26	26	25	25	croissance	growth
+8962	6	6	1	1	croissance	growth
+8963	5	5	5	6	croissance	growth pattern
+8965	13	13	9	9	petits	small
+8967	21	21	14	14	petits	small
+8974	22	22	19	19	réaction	response
+8979	10	10	7	7	croissance	growth
+8982	13	13	8	8	taux	rate
+8987	6	6	6	6	taux	rate
+8990	21	21	10	10	solution	solution
+8990	21	21	10	11	solution	solution or
+9003	11	11	6	6	récepteur	receptor
+9003	38	38	31	31	récepteur	receptor
+9005	12	12	1	1	clé	key
+9010	17	17	12	12	mesure	measured
+9018	1	1	1	1	premier	first
+9020	8	8	8	8	formation	formation
+9028	15	15	13	13	couverture	forest
+9032	26	26	25	25	taux	rates
+9032	26	26	25	26	taux	rates ,
+9033	8	8	4	4	taux	rates
+9033	18	18	21	21	taux	rates
+9033	18	18	21	22	taux	rates ,
+9035	9	9	6	6	capital	capital
+9048	19	19	16	16	problème	problem
+9049	18	18	16	16	grands	large
+9050	1	1	1	1	grands	large
+9051	5	5	4	4	rapport	related
+9052	5	5	6	6	état	state
+9053	12	12	8	8	état	state
+9055	10	10	10	10	état	state
+9061	8	8	7	7	modèles	models
+9061	31	31	23	23	classe	class
+9068	18	18	12	12	classe	class
+9079	1	1	1	1	taux	rates
+9084	23	23	19	19	association	association
+9086	4	4	8	8	solution	solution
+9087	1	1	2	2	solution	solution
+9087	30	30	24	24	problème	problem
+9088	1	1	3	3	solution	solution
+9090	12	12	11	12	rapport	aspect ratio
+9090	12	12	12	12	rapport	ratio
+9091	43	43	38	38	stade	stage
+9110	18	18	17	17	système	system
+9119	1	1	0	0	examen	study
+9128	28	28	21	21	taux	rate
+9129	12	12	10	10	taux	rates
+9129	21	21	15	15	charge	loading
+9135	4	4	1	1	premières	first
+9137	4	4	1	1	modèles	models
+9137	4	4	1	2	modèles	models are
+9137	48	48	27	28	pêche	on fishing
+9137	48	48	28	28	pêche	fishing
+9139	15	15	11	11	pêche	fishing
+9140	8	8	5	5	vue	designed
+9140	32	32	20	20	pêche	fishing
+9153	12	12	7	7	rapport	ratio
+9160	41	41	37	37	poids	weight
+9167	39	39	32	32	virus	virus
+9176	7	7	12	12	modèles	models
+9178	68	68	64	64	système	system
+9179	2	2	3	3	cadre	framework
+9184	10	10	9	9	voie	way
+9187	11	11	0	0	couverture	forest
+9188	33	33	21	21	couverture	forest
+9201	25	25	18	18	pêche	fishing
+9202	7	7	15	15	pêche	fishing
+9205	10	10	2	2	pêche	fishing
+9206	22	22	21	21	état	status
+9206	32	32	29	29	pêche	fishing
+9209	1	1	1	1	chute	fall
+9209	16	16	10	10	couverture	forest
+9211	3	3	0	0	croissance	growth
+9211	1	1	1	1	taux	rates
+9217	3	3	0	0	croissance	growth
+9217	1	1	1	1	taux	rates
+9217	6	6	4	4	espèces	species
+9218	1	1	0	0	croissance	growth
+9218	24	24	21	21	croissance	growth
+9228	26	26	3	3	croissance	growth
+9228	41	41	17	17	espèces	species
+9228	41	41	17	18	espèces	species in
+9228	14	14	68	68	source	source
+9229	17	17	11	11	croissance	growth
+9229	30	30	21	21	famille	family
+9233	31	31	28	28	source	source
+9234	14	14	13	13	peine	scarcely
+9236	14	14	11	11	matière	dna
+9241	18	18	16	16	système	system
+9242	14	14	10	10	récepteur	receptor
+9244	73	73	58	58	petits	small
+9247	69	69	60	60	source	source
+9248	29	29	22	22	système	system
+9248	36	36	24	24	source	spring
+9249	45	45	43	43	espèces	species
+9251	28	28	19	19	source	spring
+9252	24	24	23	23	système	system
+9258	26	26	20	20	modèles	model
+9264	9	9	4	4	petits	small
+9273	43	43	32	32	petits	small
+9275	18	18	14	14	croissance	growth
+9276	6	6	6	6	croissance	growth
+9278	15	15	14	14	matière	material
+9280	2	2	3	3	problème	problem
+9288	15	15	15	15	pratique	practice
+9294	10	10	10	10	croissance	growth
+9302	11	11	9	9	taux	higher
+9302	19	19	15	15	espèces	species
+9305	7	7	6	6	taux	level
+9305	27	27	23	23	espèces	species
+9306	9	9	9	9	grands	size
+9308	7	7	4	4	lumière	light
+9308	28	28	22	22	croissance	growth
+9309	15	15	9	9	croissance	growth
+9316	20	20	14	14	croissance	growth
+9318	4	4	3	3	taux	rate
+9318	6	6	5	5	croissance	growth
+9322	5	5	5	5	croissance	growth
+9324	27	27	23	23	croissance	growth
+9325	20	20	11	12	croissance	that growth
+9325	20	20	11	13	croissance	that growth is
+9325	20	20	12	12	croissance	growth
+9325	20	20	12	13	croissance	growth is
+9326	12	12	8	8	croissance	growth
+9327	1	1	1	1	taux	rate
+9329	1	1	1	1	croissance	growth
+9333	27	27	24	24	espèces	species
+9335	8	8	7	7	espèces	species
+9336	8	8	5	5	petits	small
+9337	3	3	0	0	grands	larger
+9338	47	47	35	35	petits	small
+9341	28	28	19	19	espèces	species
+9342	35	35	28	28	pression	pressure
+9346	3	3	2	2	premières	first
+9347	5	5	1	1	croissance	growth
+9347	3	3	2	2	taux	rates
+9358	6	6	7	7	modèles	models
+9358	35	35	33	33	modèles	models
+9361	8	8	6	6	régime	regime
+9361	52	52	43	43	pression	pressure
+9362	33	33	34	34	régime	regime
+9364	16	16	15	15	pression	pressure
+9364	16	16	15	16	pression	pressure ,
+9365	19	19	17	17	nature	nature
+9366	14	14	11	11	taux	rates
+9366	39	39	30	30	taux	rates
+9367	39	39	31	31	pression	pressures
+9368	53	53	40	40	premier	primary
+9372	1	1	0	0	examen	examination
+9377	12	12	9	9	source	source
+9378	20	20	18	18	source	source
+9378	20	20	18	19	source	source area
+9378	20	20	18	20	source	source area for
+9385	30	30	25	25	vue	on
+9390	14	14	12	12	exposition	exposure
+9396	13	13	9	9	libre	free
+9406	3	3	4	4	solution	solution
+9409	12	12	7	7	croissance	growing
+9410	24	24	3	3	croissance	growing
+9415	28	28	20	20	espèces	species
+9416	77	77	70	70	espèces	species
+9427	14	14	15	15	taux	rates
+9428	1	1	0	0	raison	due
+9443	22	22	20	20	modèles	models
+9447	25	25	20	20	système	system
+9448	9	9	6	6	système	system
+9448	9	9	6	7	système	system is
+9448	9	9	6	8	système	system is then
+9456	35	35	27	27	taux	rates
+9457	17	17	14	14	voie	route
+9458	55	55	43	43	informations	insights
+9458	65	65	48	48	taux	rates
+9459	1	1	1	1	taux	rate
+9462	26	26	14	14	grands	large
+9463	7	7	8	8	taux	rate
+9465	31	31	27	27	formation	formation
+9469	39	39	22	22	couverture	cover
+9475	8	8	6	6	couverture	cover
+9477	17	17	12	12	espèces	species
+9478	24	24	23	23	croissance	growth
+9479	31	31	13	13	espèces	species
+9479	10	10	56	56	espèces	species
+9481	2	2	1	1	espèces	species
+9487	31	31	21	21	matière	timber
+9488	7	7	4	4	espèces	species
+9488	13	13	12	12	croissance	growth
+9488	17	17	15	15	espèces	species
+9490	12	12	8	9	premier	the first
+9490	12	12	9	9	premier	first
+9494	3	3	4	4	espèces	species
+9494	23	23	17	17	espèces	species
+9496	11	11	10	10	association	association
+9497	1	1	1	1	association	association
+9498	2	2	2	2	espèces	species
+9499	10	10	7	7	espèces	species
+9501	7	7	4	5	espèces	the species
+9501	7	7	5	5	espèces	species
+9502	7	7	9	9	formation	formation
+9508	41	41	35	35	taux	high
+9525	24	24	20	20	espèces	species
+9539	13	13	14	14	récepteur	receptor
+9543	24	24	19	19	espèces	species
+9550	15	15	12	12	espèces	species
+9552	1	1	0	0	exposition	exposure
+9553	26	26	26	26	modèles	models
+9554	5	5	8	8	système	system
+9554	17	17	20	21	système	the system
+9554	17	17	21	21	système	system
+9555	21	21	19	19	mesure	measuring
+9556	31	31	29	29	modèles	models
+9561	4	4	3	3	association	association
+9563	3	3	2	2	système	system
+9565	10	10	9	9	cadre	framework
+9566	14	14	11	11	pression	pressure
+9571	32	32	24	24	formation	formation
+9588	40	40	38	38	classe	classes
+9588	40	40	38	39	classe	classes and
+9588	46	46	41	41	taux	rates
+9589	1	1	1	1	espèces	species
+9602	2	2	1	1	cadre	part
+9606	23	23	23	23	espèces	species
+9618	37	37	29	29	état	state
+9627	1	1	2	2	modèles	models
+9630	1	1	0	0	pression	systolic
+9632	20	20	14	14	espèces	species
+9632	66	66	59	59	système	system
+9633	19	19	11	11	espèces	species
+9633	19	19	11	12	espèces	species were
+9633	19	19	11	13	espèces	species were apparent
+9634	23	23	23	23	espèces	species
+9635	9	9	4	4	espèces	species
+9636	10	10	8	8	espèces	species
+9636	39	39	31	31	espèces	species
+9638	33	33	30	30	lumière	identify
+9643	3	3	5	5	espèces	species
+9646	6	6	3	3	échelle	level
+9648	9	9	13	13	formation	formation
+9650	11	11	7	7	solution	solution
+9653	20	20	18	18	formation	formation
+9654	1	1	4	4	espèces	species
+9654	1	1	4	5	espèces	species show
+9661	12	12	8	8	association	association
+9662	9	9	8	8	association	association
+9662	6	6	9	9	taux	rate
+9663	5	5	5	5	taux	rate
+9668	2	2	0	0	taux	at
+9669	19	19	17	17	état	state
+9676	26	26	19	19	pêche	fishing
+9687	15	15	12	12	espèces	species
+9708	45	45	32	32	chute	drop
+9709	31	31	21	21	chute	drop
+9712	24	24	19	19	taux	rates
+9713	7	7	6	6	chute	drop
+9715	9	9	1	1	croissance	responses
+9715	9	9	1	2	croissance	responses of
+9715	13	13	6	6	croissance	growth
+9715	6	6	20	20	lumière	light
+9715	37	37	27	27	espèces	species
+9716	9	9	5	5	lumière	light
+9716	21	21	14	14	espèces	species
+9716	32	32	22	22	espèces	species
+9718	8	8	7	7	croissance	growth
+9718	20	20	14	14	croissance	growth
+9718	20	20	14	15	croissance	growth early
+9719	18	18	14	14	croissance	growth
+9719	26	26	17	17	lumière	light
+9721	11	11	9	9	croissance	growth
+9721	36	36	33	33	croissance	growth
+9722	19	19	17	17	croissance	growth
+9723	3	3	3	3	espèces	species
+9723	13	13	12	12	réaction	response
+9725	36	36	29	29	conserver	retain
+9731	16	16	9	9	premières	first
+9733	28	28	19	19	association	associated
+9739	9	9	11	11	espèces	species
+9740	26	26	19	19	mesure	assessment
+9740	35	35	27	27	espèces	species
+9741	4	4	5	6	pratique	the practical
+9741	4	4	6	6	pratique	practical
+9742	14	14	10	10	clé	key
+9743	31	31	25	25	clé	key
+9747	6	6	7	7	mesure	measurement
+9751	31	31	25	25	premières	first
+9751	31	31	25	26	premières	first extensive
+9752	17	17	15	15	sommet	peak
+9753	25	25	17	17	raison	purpose
+9755	17	17	15	15	système	system
+9755	29	29	26	26	espèces	species
+9756	17	17	19	19	espèces	different
+9757	3	3	2	2	espèces	species
+9758	15	15	10	10	espèces	species
+9758	19	19	16	16	système	system
+9759	7	7	8	8	espèces	species
+9759	15	15	15	15	nature	nature
+9761	6	6	8	8	source	source
+9767	17	17	13	13	échelle	scale
+9772	12	12	7	7	modèles	models
+9775	1	1	1	1	réaction	response
+9775	31	31	39	39	vue	perspective
+9776	11	11	10	10	matière	on
+9783	18	18	12	12	mesure	as
+9793	14	14	11	11	formation	formation
+9811	14	14	11	11	machine	computer
+9817	23	23	19	19	problème	conceptual
+9818	28	28	32	32	vue	view
+9818	28	28	32	33	vue	view and
+9818	39	39	45	45	vue	view
+9823	41	41	45	45	informations	information
+9834	18	18	14	14	mesure	able
+9841	28	28	28	28	formation	formation
+9845	29	29	28	28	système	system
+9854	24	24	15	15	système	system
+9859	3	3	4	4	plan	plan
+9861	12	12	12	12	système	system
+9863	8	8	7	7	classe	class
+9869	23	23	10	10	système	system
+9871	3	3	2	2	modèles	models
+9872	25	25	20	20	informations	information
+9872	25	25	20	21	informations	information to
+9873	18	18	19	19	informations	information
+9873	18	18	19	20	informations	information in
+9881	14	14	12	13	classe	specific type
+9881	14	14	13	13	classe	type
+9887	5	5	8	8	problème	problem
+9889	1	1	3	3	problème	problem
+9896	5	5	5	5	problème	issue
+9897	10	10	10	10	problème	problem
+9904	5	5	5	5	modèles	models
+9906	1	1	3	3	système	system
+9907	6	6	9	9	système	system
+9911	1	1	4	4	système	system
+9921	4	4	3	3	système	system
+9924	30	30	28	28	système	system
+9929	31	31	20	20	système	system
+9933	12	12	15	15	informations	information
+9935	10	10	9	9	problème	problem
+9937	20	20	17	17	informations	information
+9939	13	13	18	18	informations	information
+9940	11	11	9	9	système	system
+9941	15	15	14	14	croissance	growing
+9941	15	15	14	15	croissance	growing and
+9944	1	1	1	1	système	system
+9948	10	10	8	9	champ	full range
+9948	10	10	9	9	champ	range
+9953	19	19	19	19	vue	view
+9953	19	19	19	20	vue	view and
+9953	19	19	19	21	vue	view and just
+9953	19	19	19	22	vue	view and just as
+9961	14	14	14	14	humain	human
+9961	17	17	18	18	machine	machine
+9966	3	3	3	3	premier	first
+9966	4	4	4	4	système	system
+9967	20	20	19	19	système	system
+9969	42	42	27	27	machine	machine
+9970	10	10	12	12	système	system
+9977	23	23	28	28	oeuvre	implementation
+9982	23	23	21	21	humain	human
+9987	23	23	19	19	système	system
+9988	12	12	10	10	service	service
+9988	35	35	24	24	système	system
+9995	19	19	17	17	formation	training
+9999	4	4	4	4	organe	organ
+9999	4	4	4	5	organe	organ which
+9999	4	4	4	6	organe	organ which is
+10001	19	19	15	15	organe	organ
+10001	19	19	15	16	organe	organ &apos;s
+10008	32	32	31	31	poids	weights
+10008	51	51	50	50	problème	problem
+10013	31	31	28	28	plan	shot
+10016	16	16	6	6	oeuvre	implementation
+10019	3	3	2	2	informations	information
+10019	13	13	8	8	modèles	models
+10032	20	20	20	20	modèles	models
+10036	8	8	3	3	système	system
+10036	8	8	3	4	système	system is
+10038	18	18	14	14	association	association
+10042	1	1	1	1	mesure	measure
+10043	26	26	27	27	système	system
+10057	7	7	7	7	problème	problem
+10063	1	1	1	1	champ	field
+10066	7	7	5	5	rapport	relation
+10067	10	10	10	10	cadre	framework
+10075	28	28	26	26	état	state
+10084	9	9	20	20	problème	problem
+10090	5	5	7	7	problème	problem
+10093	7	7	8	8	problème	problem
+10094	1	1	1	1	premier	first
+10094	1	1	1	2	premier	first one
+10097	7	7	8	8	problème	problem
+10097	23	23	17	17	humain	human
+10099	13	13	14	14	classe	class
+10104	7	7	6	6	vue	seen
+10105	6	6	6	6	cadre	context
+10105	19	19	17	17	système	system
+10108	1	1	1	1	premier	first
+10112	8	8	9	9	système	system
+10112	29	29	25	25	examen	exam
+10114	2	2	2	2	premier	first
+10117	16	16	12	12	système	system
+10118	9	9	13	13	modèles	models
+10126	21	21	13	13	visage	face
+10141	35	35	32	32	modèles	models
+10141	35	35	32	33	modèles	models may
+10142	4	4	7	7	informations	information
+10142	17	17	21	21	informations	information
+10144	1	1	2	2	informations	information
+10154	5	5	5	5	rapport	respect
+10159	1	1	4	4	système	system
+10162	1	1	1	1	premier	first
+10172	8	8	8	8	solution	solution
+10177	16	16	14	14	classe	class
+10185	19	19	20	20	régime	regime
+10185	19	19	20	21	régime	regime with
+10190	7	7	5	5	parole	speech
+10192	6	6	4	4	informations	information
+10197	23	23	28	28	source	source
+10198	5	5	1	1	état	state
+10201	13	13	15	15	solution	solution
+10202	22	22	15	15	système	system
+10203	9	9	14	14	système	system
+10206	8	8	7	7	pratique	practical
+10206	7	7	8	8	problème	problem
+10208	8	8	6	6	cadre	framework
+10209	3	3	5	5	problème	problem
+10223	2	2	0	0	premier	first
+10228	27	27	23	23	patient	patients
+10231	19	19	24	24	vue	view
+10235	8	8	7	7	solution	solution
+10235	10	10	10	10	problème	problem
+10236	5	5	4	4	problème	problem
+10236	29	29	27	27	vue	view
+10236	29	29	27	28	vue	view ,
+10250	10	10	10	10	système	system
+10251	12	12	15	15	système	system
+10254	3	3	4	4	problème	issue
+10258	25	25	25	25	m.	m.
+10260	19	19	23	23	modèles	models
+10262	8	8	8	8	problème	problem
+10268	2	2	2	3	cadre	mathematical framework
+10268	2	2	3	3	cadre	framework
+10269	1	1	3	3	système	system
+10269	25	25	28	28	parole	speech
+10270	5	5	5	5	parole	speech
+10270	26	26	24	24	parole	speech
+10274	7	7	7	7	parole	speech
+10279	36	36	28	29	cadre	the scope
+10279	36	36	29	29	cadre	scope
+10281	22	22	26	26	cadre	framework
+10283	19	19	19	19	premier	first
+10288	1	1	1	1	premier	first
+10298	4	4	4	4	problème	problems
+10300	3	3	4	4	problème	problem
+10302	9	9	11	11	système	system
+10307	37	37	36	36	problème	problem
+10310	1	1	0	0	premières	first
+10310	5	5	4	4	modèles	models
+10317	35	35	28	28	nature	kinds
+10332	11	11	10	10	modèles	model
+10343	6	6	5	5	nature	nature
+10343	19	19	20	20	vue	order
+10347	37	37	36	37	système	the system
+10347	37	37	37	37	système	system
+10359	16	16	7	7	matière	matter
+10360	7	7	5	5	problème	issue
+10361	29	29	26	26	parole	speech
+10369	2	2	2	2	cadre	framework
+10373	5	5	5	5	pratique	practice
+10381	4	4	7	7	problème	problem
+10384	6	6	7	7	problème	problem
+10396	62	62	53	53	cadre	framework
+10396	86	86	77	77	système	system
+10403	9	9	5	5	problème	problem
+10403	18	18	15	15	formation	formation
+10408	9	9	9	9	charge	responsibility
+10411	8	8	10	10	cadre	framework
+10412	4	4	2	2	place	up
+10412	9	9	7	7	premier	first
+10412	9	9	7	8	premier	first one
+10412	53	53	13	13	modèles	models
+10414	18	18	14	14	informations	information
+10415	8	8	6	6	place	up
+10420	6	6	7	7	cadre	framework
+10422	26	26	25	26	humain	the human
+10422	26	26	26	26	humain	human
+10423	40	40	31	31	cadre	framework
+10424	28	28	15	15	voie	way
+10426	52	52	44	44	champ	world
+10428	6	6	6	6	problème	problem
+10440	19	19	17	17	informations	information
+10442	1	1	1	1	premier	first
+10446	1	1	1	1	premier	first
+10451	18	18	12	13	nature	by nature
+10451	18	18	13	13	nature	nature
+10455	5	5	7	7	système	system
+10460	2	2	0	1	premier	we begin
+10460	2	2	0	2	premier	we begin by
+10460	2	2	1	1	premier	begin
+10460	2	2	1	2	premier	begin by
+10464	5	5	7	7	problème	problem
+10469	12	12	13	13	système	system
+10471	14	14	5	5	système	system
+10475	12	12	14	14	système	system
+10477	5	5	6	6	modèles	models
+10477	19	19	14	14	système	system
+10477	30	30	21	21	système	it
+10478	2	2	1	1	cadre	this
+10479	15	15	12	12	système	system
+10481	7	7	6	6	problème	problem
+10487	8	8	11	11	problème	issue
+10488	12	12	10	11	problème	the problem
+10488	12	12	11	11	problème	problem
+10496	25	25	49	49	système	system
+10498	12	12	16	17	champ	the scope
+10498	12	12	17	17	champ	scope
+10500	36	36	29	29	source	source
+10500	39	39	35	35	problème	problem
+10500	50	50	45	45	problème	problem
+10501	2	2	0	0	premier	first
+10502	28	28	33	33	problème	problem
+10505	3	3	5	5	système	system
+10505	3	3	5	6	système	system is
+10505	3	3	5	7	système	system is a
+10505	8	8	9	9	système	system
+10510	18	18	17	17	système	system
+10511	3	3	4	4	problème	issue
+10512	24	24	20	20	système	system
+10515	3	3	1	1	système	system
+10517	16	16	15	15	pratique	practices
+10519	2	2	5	5	raison	reason
+10519	14	14	17	17	raison	reason
+10522	25	25	23	23	matière	materials
+10526	15	15	14	14	sommet	vertex
+10534	19	19	15	15	clé	key
+10537	12	12	11	11	grands	main
+10538	1	1	1	1	premier	first
+10539	11	11	5	5	modèles	models
+10542	1	1	1	1	problème	problem
+10542	12	12	16	16	problème	problem
+10543	2	2	1	1	problème	problem
+10544	4	4	3	3	problème	problem
+10557	4	4	4	4	rapport	ratio
+10557	24	24	22	22	machine	machine
+10558	1	1	1	1	rapport	ratio
+10558	13	13	14	14	mesure	measure
+10559	5	5	5	5	mesure	measure
+10559	14	14	13	13	informations	information
+10566	28	28	29	29	champ	field
+10571	26	26	21	21	attention	attention
+10571	26	26	21	22	attention	attention in
+10572	19	19	12	12	humain	human
+10572	17	17	14	14	système	system
+10573	4	4	2	2	modèles	models
+10575	14	14	24	24	attention	attention
+10578	4	4	5	5	attention	attention
+10578	4	4	5	6	attention	attention in
+10578	34	34	23	25	libre	both in free
+10578	34	34	24	25	libre	in free
+10578	34	34	25	25	libre	free
+10579	20	20	18	18	attention	attention
+10581	12	12	19	19	attention	attention
+10584	32	32	13	13	modèles	models
+10584	32	32	13	14	modèles	models .
+10584	32	32	13	15	modèles	models . the
+10593	23	23	25	25	système	system
+10594	31	31	17	17	système	system
+10594	62	62	42	42	système	system
+10601	13	13	12	12	modèles	models
+10601	13	13	12	13	modèles	models that
+10601	21	21	19	19	modèles	model
+10602	4	4	2	2	modèles	models
+10602	20	20	16	16	modèles	enginnering
+10606	4	4	4	5	problème	the problem
+10606	4	4	5	5	problème	problem
+10608	10	10	5	5	échelle	large-scale
+10609	14	14	13	13	grands	large
+10609	15	15	15	15	tableaux	tables
+10620	1	1	2	2	croissance	growth
+10629	8	8	8	8	solution	solution
+10639	5	5	4	4	association	association
+10645	10	10	10	10	modèles	model
+10652	20	20	14	14	réaction	reaction
+10654	15	15	13	13	système	mode
+10655	1	1	0	0	association	association
+10678	13	13	12	12	visage	face
+10679	35	35	26	26	association	association
+10697	4	4	4	4	solution	way
+10705	9	9	10	10	plan	plane
+10708	8	8	8	8	problème	problem
+10712	2	2	2	2	problème	problem
+10715	11	11	10	10	classe	class
+10717	7	7	7	7	informations	information
+10720	37	37	32	32	informations	information
+10724	4	4	4	4	modèles	models
+10724	14	14	13	13	informations	information
+10729	12	12	9	9	classe	class
+10733	22	22	16	16	système	system
+10734	5	5	6	6	place	place
+10734	8	8	9	9	cadre	framework
+10747	35	35	30	30	espèces	species
+10750	11	11	11	11	visage	face
+10754	10	10	23	23	plan	area
+10754	19	19	34	34	plan	plan
+10758	2	2	2	2	premier	first
+10758	9	9	7	7	place	up
+10761	9	9	7	7	place	up
+10764	18	18	16	16	état	state
+10765	5	5	5	5	état	state
+10765	25	25	26	26	état	state
+10766	25	25	26	26	visage	face
+10767	18	18	15	16	visage	the face
+10767	18	18	16	16	visage	face
+10768	9	9	19	20	visage	the face
+10768	9	9	20	20	visage	face
+10771	20	20	16	16	humain	human
+10774	29	29	24	24	humain	human
+10782	27	27	26	27	état	prior state
+10782	27	27	27	27	état	state
+10793	11	11	11	11	problème	problem
+10794	20	20	20	20	informations	information
+10794	27	27	24	24	système	system
+10800	35	35	33	34	système	a system
+10800	35	35	34	34	système	system
+10801	14	14	11	11	système	system
+10801	28	28	26	26	classe	class
+10803	30	30	29	29	rapport	according
+10804	31	31	31	31	mesure	measure
+10808	37	37	29	29	classe	class
+10809	1	1	1	1	mesure	measure
+10809	21	21	20	20	système	system
+10822	2	2	2	2	informations	information
+10822	2	2	2	3	informations	information ,
+10826	3	3	3	3	cadre	framework
+10826	3	3	3	4	cadre	framework ,
+10829	5	5	4	4	attention	attention
+10831	1	1	1	1	premier	first
+10832	10	10	8	8	premier	first
+10836	24	24	14	14	état	state
+10837	7	7	5	5	problème	problem
+10839	14	14	13	13	problème	difficulty
+10840	4	4	5	5	place	place
+10847	1	1	0	0	premier	first
+10855	26	26	26	26	champ	field
+10859	26	26	28	28	problème	problem
+10860	16	16	12	12	champ	field
+10860	16	16	12	13	champ	field are
+10861	6	6	7	7	état	state
+10861	16	16	16	16	champ	field
+10865	6	6	4	5	mesure	a measurement
+10865	6	6	5	5	mesure	measurement
+10865	21	21	19	19	état	state
+10876	6	6	8	8	système	system
+10877	1	1	1	1	système	system
+10878	10	10	14	14	premier	first
+10878	10	10	14	15	premier	first one
+10879	36	36	29	30	système	the system
+10879	36	36	30	30	système	system
+10884	32	32	22	22	problème	problem
+10887	29	29	29	29	informations	information
+10888	35	35	32	32	régime	regime
+10888	35	35	32	33	régime	regime do
+10892	15	15	15	15	petits	small
+10893	16	16	14	14	pression	pressure
+10896	15	15	12	12	pression	pressure
+10902	4	4	1	1	premier	first
+10902	26	26	19	19	régime	regime
+10902	40	40	31	31	grands	high
+10903	29	29	25	25	régime	regime
+10908	11	11	7	7	pression	pressure
+10909	10	10	5	5	pression	pressure
+10910	10	10	8	8	pression	pressure
+10910	29	29	27	27	pression	pressure
+10918	14	14	8	8	libre	free
+10918	21	21	17	17	problème	problem
+10919	29	29	25	25	libre	free
+10920	18	18	16	16	libre	free
+10921	22	22	18	19	système	the system
+10921	22	22	19	19	système	system
+10921	33	33	29	29	libre	free
+10926	1	1	3	3	état	state
+10932	3	3	5	5	taux	rate
+10932	32	32	25	25	état	state
+10941	14	14	12	12	mesure	measurement
+10943	3	3	1	1	place	instead
+10948	9	9	9	9	mesure	measurement
+10951	20	20	20	20	mesure	measurement
+10961	9	9	8	8	champ	field
+10963	13	13	12	12	classe	class
+10964	5	5	4	4	problème	question
+10964	28	28	23	23	croissance	growth
+10964	36	36	30	30	solution	solution
+10967	2	2	2	2	cadre	context
+10976	7	7	7	7	état	state
+10976	11	11	11	11	état	state
+10979	12	12	14	14	régime	regime
+10996	14	14	14	14	mesure	measuring
+10999	20	20	15	15	plan	plane
+11002	12	12	11	11	cadre	framework
+11003	10	10	11	11	régime	regime
+11004	7	7	10	10	formation	formation
+11005	5	5	5	5	formation	formation
+11009	24	24	18	18	problème	problem
+11010	16	16	15	15	modèles	models
+11013	4	4	4	4	modèles	models
+11045	31	31	29	29	croissance	growth
+11048	16	16	13	13	échelle	scaling
+11053	11	11	16	16	solution	solution
+11053	14	14	18	19	problème	the problem
+11053	14	14	19	19	problème	problem
+11057	25	25	26	26	rapport	respect
+11065	20	20	19	19	libre	free
+11074	33	33	30	30	état	state
+11077	5	5	6	6	organe	organ
+11084	19	19	14	14	classe	class
+11088	27	27	25	25	mesure	measure
+11089	11	11	5	5	lumière	light
+11089	17	17	12	12	solution	solution
+11094	12	12	11	11	solution	solution
+11095	7	7	7	7	rapport	ratio
+11096	60	60	54	54	régime	regime
+11101	8	8	7	8	premier	a first
+11101	8	8	8	8	premier	first
+11110	3	3	0	5	échelle	on the other hand , scaling
+11110	3	3	1	5	échelle	the other hand , scaling
+11110	3	3	2	5	échelle	other hand , scaling
+11110	3	3	3	5	échelle	hand , scaling
+11110	3	3	4	5	échelle	, scaling
+11110	3	3	5	5	échelle	scaling
+11120	1	1	1	1	premier	first
+11122	13	13	16	16	solution	way
+11136	1	1	3	3	état	state
+11136	26	26	16	16	nature	nature
+11137	13	13	11	11	premier	first
+11148	3	3	3	3	mesure	measurement
+11152	10	10	5	5	lumière	light
+11159	10	10	8	8	formation	formation
+11162	16	16	9	9	petits	small
+11165	1	1	2	2	attention	attention
+11166	12	12	8	8	raison	due
+11166	12	12	8	9	raison	due to
+11167	24	24	22	22	croissance	growth
+11168	2	2	0	0	modèles	model
+11168	10	10	8	8	mesure	measure
+11168	15	15	14	14	pression	pressure
+11180	21	21	15	15	régime	regime
+11180	21	21	15	16	régime	regime ,
+11182	17	17	16	16	état	state
+11183	4	4	1	1	croissance	growth
+11183	4	4	1	2	croissance	growth at
+11186	28	28	35	35	état	state
+11187	5	5	9	9	régime	regime
+11198	20	20	18	18	échelle	scale
+11198	24	24	22	22	espèces	species
+11199	46	46	41	41	échelle	scale
+11205	4	4	2	2	premier	first
+11215	4	4	4	4	formation	formation
+11220	14	14	15	15	régime	regime
+11221	9	9	8	8	premier	first
+11225	5	5	7	7	mesure	measure
+11225	5	5	7	8	mesure	measure the
+11233	27	27	20	20	régime	regime
+11235	11	11	10	10	espèces	species
+11235	11	11	10	11	espèces	species .
+11239	4	4	5	5	champ	field
+11250	2	2	2	2	cadre	frame
+11257	15	15	17	18	problème	the problem
+11257	15	15	18	18	problème	problem
+11260	7	7	6	6	mesure	measuring
+11260	33	33	30	30	place	place
+11274	2	2	1	1	libre	free
+11277	11	11	8	8	cellulaire	cellular
+11287	18	18	14	14	échelle	scale
+11293	14	14	16	16	échelle	scale
+11295	28	28	22	22	croissance	growth
+11295	42	42	35	35	premier	first
+11297	2	2	2	2	cadre	context
+11298	12	12	10	11	petits	, small
+11298	12	12	11	11	petits	small
+11301	17	17	11	11	modèles	models
+11303	11	11	8	8	problème	problem
+11308	5	5	4	4	modèles	models
+11308	26	26	25	25	modèles	models
+11312	27	27	27	27	champ	field
+11323	2	2	4	4	état	state
+11325	30	30	29	29	système	system
+11329	12	12	13	13	état	state
+11329	16	16	17	17	état	state
+11329	16	16	17	18	état	state is
+11336	16	16	16	16	courant	current
+11339	9	9	15	15	formation	formation
+11339	23	23	28	28	pression	pressure
+11339	25	25	30	30	pression	pressure
+11339	32	32	38	38	pression	pressure
+11340	22	22	22	22	pression	pressure
+11341	40	40	37	37	premières	first
+11341	50	50	46	46	matière	matter
+11350	9	9	12	12	nature	nature
+11354	27	27	18	18	lumière	light
+11356	7	7	8	8	système	system
+11363	34	34	35	35	système	system
+11365	29	29	27	27	état	state
+11366	9	9	5	5	système	system
+11366	25	25	23	23	échelle	scale
+11366	29	29	26	26	problème	problem
+11367	10	10	10	10	système	system
+11370	3	3	3	3	régime	regime
+11370	18	18	14	15	champ	mean field
+11370	18	18	15	15	champ	field
+11371	3	3	3	3	régime	regime
+11371	3	3	3	4	régime	regime ,
+11371	3	3	3	5	régime	regime , we
+11371	17	17	17	17	état	states
+11376	37	37	31	31	champ	field
+11389	27	27	26	26	source	point
+11395	2	2	0	0	premier	first
+11395	9	9	8	8	modèles	models
+11395	29	29	23	23	vue	view
+11402	5	5	5	5	chute	falls
+11406	1	1	1	1	mesure	measurement
+11409	32	32	33	33	croissance	growth
+11411	35	35	29	29	petits	small
+11414	4	4	4	4	formation	formation
+11415	9	9	4	4	petits	small
+11416	28	28	26	26	rapport	ratio
+11417	32	32	22	22	régime	regime
+11417	68	68	57	57	régime	regime
+11418	21	21	24	24	charge	charge
+11418	37	37	39	39	solution	solution
+11419	1	1	2	2	mesure	measurement
+11419	21	21	20	20	formation	formation
+11423	20	20	19	19	échelle	scale
+11423	40	40	38	38	échelle	scale
+11423	47	47	41	41	champ	field
+11431	20	20	16	16	pression	pressure
+11433	35	35	29	29	chambre	chamber
+11437	30	30	24	24	modèles	models
+11437	30	30	24	25	modèles	models of
+11440	13	13	11	11	espèces	species
+11440	17	17	13	13	solution	solution
+11442	1	1	2	2	source	source
+11445	23	23	23	23	espèces	species
+11445	23	23	23	24	espèces	species that
+11445	23	23	23	25	espèces	species that are
+11456	48	48	44	44	libre	free
+11456	79	79	77	77	charge	load
+11457	26	26	20	20	libre	free
+11460	17	17	20	20	système	system
+11462	1	1	9	9	mesure	measuring
+11463	7	7	5	5	cadre	through
+11473	10	10	10	11	système	specific system
+11473	10	10	10	12	système	specific system of
+11473	10	10	11	11	système	system
+11473	10	10	11	12	système	system of
+11474	35	35	23	23	oeuvre	used
+11474	39	39	29	29	source	source
+11480	11	11	5	5	matière	matter
+11480	14	14	11	11	régime	regime
+11480	14	14	11	12	régime	regime by
+11483	2	2	2	2	premier	first
+11483	10	10	10	10	état	state
+11487	13	13	12	12	pression	pressure
+11489	31	31	25	25	pression	pressure
+11490	23	23	23	23	nature	nature
+11493	4	4	1	1	premier	first
+11493	16	16	10	10	source	source
+11496	2	2	1	1	premières	first
+11499	9	9	4	4	source	source
+11499	11	11	10	10	régime	regime
+11503	9	9	9	9	croissance	growth
+11514	6	6	7	7	réaction	reaction
+11521	12	12	9	9	rapport	ratio
+11524	13	13	10	10	échelle	scale
+11529	4	4	3	3	informations	informations
+11535	11	11	12	13	champ	magnetic field
+11535	24	24	24	25	champ	magnetic field
+11543	12	12	11	11	pratique	practical
+11545	28	28	24	24	administration	administrative
+11545	28	28	24	25	administration	administrative issues
+11549	4	4	4	4	champ	field
+11558	4	4	1	1	lumière	light
+11558	11	11	9	9	mesure	measurement
+11564	15	15	13	13	échelle	nanometric
+11577	12	12	9	9	système	system
+11580	9	9	12	13	premier	the first
+11580	9	9	13	13	premier	first
+11584	9	9	23	23	vue	view
+11586	20	20	22	22	régime	regime
+11591	8	8	10	10	premières	first
+11594	10	10	11	11	mesure	measurement
+11600	25	25	23	23	pression	pressure
+11601	30	30	24	24	pression	pressure
+11602	31	31	29	29	pression	pressure
+11603	16	16	11	11	pression	pressure
+11609	5	5	8	8	système	system
+11609	5	5	8	9	système	system ,
+11625	15	15	16	16	régime	regime
+11629	8	8	9	9	cadre	part
+11633	13	13	11	11	mesure	measure
+11637	15	15	11	11	premières	first
+11650	6	6	5	5	modèles	model
+11650	18	18	13	13	échelle	level
+11653	48	48	46	46	modèles	model
+11655	13	13	11	11	formation	formation
+11656	3	3	3	4	taux	the concentration
+11656	3	3	3	5	taux	the concentration results
+11656	3	3	4	4	taux	concentration
+11656	3	3	4	5	taux	concentration results
+11656	8	8	8	8	formation	formation
+11656	29	29	36	36	formation	formation
+11657	21	21	23	23	formation	formation
+11660	9	9	9	9	système	system
+11665	7	7	10	10	pression	pressure
+11669	15	15	15	15	état	state
+11670	9	9	10	11	système	the system
+11670	9	9	11	11	système	system
+11672	1	1	1	1	rapport	respect
+11672	38	38	38	38	taux	rate
+11676	39	39	37	37	réaction	reaction
+11677	14	14	17	17	formation	formation
+11679	7	7	12	12	état	state
+11679	32	32	31	31	informations	information
+11682	26	26	19	19	rapport	respect
+11683	8	8	7	7	état	state
+11685	12	12	11	11	mesure	measurement
+11689	7	7	9	9	système	system
+11689	11	11	14	14	source	source
+11694	11	11	13	13	source	source
+11694	11	11	13	14	source	source to
+11695	5	5	5	5	problème	problem
+11696	24	24	24	24	pression	pressure
+11712	31	31	28	28	système	system
+11716	4	4	4	4	système	system
+11719	19	19	19	19	système	system
+11724	23	23	17	17	lumière	light
+11726	5	5	4	4	pression	pressure
+11729	4	4	6	6	régime	regime
+11730	7	7	8	8	formation	formation
+11733	14	14	9	9	formation	produce
+11734	9	9	7	7	formation	formation
+11735	20	20	18	18	état	state
+11736	22	22	20	20	formation	formation
+11738	9	9	14	14	état	level
+11738	28	28	28	28	état	state
+11743	30	30	22	22	pression	pressure
+11751	10	10	11	11	modèles	models
+11762	11	11	10	10	champ	field
+11762	31	31	29	29	nature	nature
+11763	13	13	10	10	nature	nature
+11766	11	11	11	11	rapport	ratio
+11773	27	27	24	24	voie	way
+11776	26	26	27	27	système	system
+11793	1	1	2	2	premier	first
+11798	19	19	15	15	premier	first
+11803	24	24	21	21	champ	field
+11804	10	10	7	7	modèles	models
+11805	15	15	13	15	champ	when the field
+11805	15	15	13	16	champ	when the field is
+11805	15	15	14	15	champ	the field
+11805	15	15	14	16	champ	the field is
+11805	15	15	15	15	champ	field
+11805	15	15	15	16	champ	field is
+11808	27	27	14	14	échelle	scale
+11811	9	9	6	6	raison	due
+11820	2	2	1	1	premier	first
+11834	18	18	19	19	champ	field
+11841	12	12	12	12	voie	way
+11842	37	37	38	38	problème	problem
+11845	29	29	32	32	champ	field
+11846	3	3	5	5	champ	field
+11848	10	10	10	10	système	system
+11851	5	5	7	7	champ	field
+11855	10	10	10	10	nature	nature
+11859	17	17	15	15	solution	solution
+11860	3	3	1	1	marche	walking
+11861	12	12	5	5	marche	walking
+11861	24	24	17	17	marche	walking
+11862	6	6	5	5	marche	walking
+11862	50	50	39	39	marche	walking
+11864	28	28	26	26	charge	loading
+11866	30	30	31	31	champ	field
+11866	30	30	31	32	champ	field is
+11867	10	10	9	9	système	system
+11873	65	65	57	57	premières	first
+11874	15	15	13	13	croissance	growth
+11880	3	3	1	1	sang	blood
+11880	22	22	17	17	taux	levels
+11902	10	10	5	5	espèces	species
+11905	4	4	5	5	pêche	fishery
+11907	30	30	20	21	pêche	no fishing
+11907	30	30	21	21	pêche	fishing
+11907	33	33	24	24	pêche	fishing
+11908	16	16	9	9	petits	pup
+11911	1	1	3	3	règle	rule
+11913	33	33	23	23	croissance	growth
+11920	28	28	20	20	croissance	growth
+11933	24	24	17	17	petits	young
+11935	13	13	15	15	modèles	models
+11936	12	12	10	11	climat	both weather
+11936	12	12	11	11	climat	weather
+11941	11	11	11	11	croissance	growing
+11943	1	1	1	1	espèces	species
+11943	24	24	18	18	réaction	response
+11945	16	16	11	11	croissance	growth
+11945	19	19	16	16	espèces	species
+11946	3	3	1	1	espèces	species
+11948	4	4	3	3	système	system
+11962	1	1	4	4	espèces	species
+11962	46	46	38	38	peine	barely
+11964	9	9	8	8	taux	rate
+11970	28	28	23	23	rapport	ratio
+11976	3	3	3	3	croissance	growth
+11977	22	22	16	16	croissance	growth
+11983	55	55	45	45	grands	great
+11990	31	31	30	30	espèces	endangered
+12010	14	14	9	9	espèces	species
+12013	29	29	19	19	croissance	growth
+12017	33	33	23	23	croissance	growth
+12019	24	24	14	14	informations	information
+12023	34	34	28	28	climat	climate
+12026	32	32	27	27	nature	nature
+12027	5	5	4	4	informations	information
+12029	23	23	17	17	espèces	species
+12033	42	42	34	35	croissance	shoot growth
+12033	42	42	35	35	croissance	growth
+12034	18	18	9	9	classe	class
+12034	40	40	27	27	espèces	species
+12038	20	20	16	16	espèces	species
+12045	10	10	7	7	raison	owing
+12064	11	11	10	10	solution	solution
+12070	1	1	3	3	taux	rates
+12073	21	21	15	15	pression	pressure
+12075	12	12	8	8	pays	countries
+12081	24	24	21	21	pays	countries
+12085	26	26	25	25	état	condition
+12095	1	1	0	0	formation	formation
+12102	25	25	14	14	petits	small
+12104	3	3	3	3	petits	small
+12114	38	38	27	27	système	system
+12115	10	10	12	12	espèces	species
+12116	4	4	5	5	espèces	species
+12116	4	4	5	6	espèces	species i
+12117	13	13	9	9	espèces	species
+12119	11	11	9	9	espèces	species
+12120	2	2	2	2	espèces	species
+12121	3	3	2	2	espèces	species
+12125	32	32	24	24	pression	pressure
+12133	13	13	11	11	source	source
+12137	1	1	2	2	taux	rate
+12138	11	11	11	11	taux	rate
+12138	16	16	14	14	système	system
+12139	6	6	5	5	clé	key
+12139	5	5	6	6	mesure	measure
+12140	26	26	30	30	taux	rates
+12150	15	15	12	12	solution	solution
+12162	6	6	1	1	moelle	marrow
+12172	36	36	24	24	croissance	growth
+12172	36	36	24	25	croissance	growth ,
+12196	52	52	44	44	exposition	exposure
+12200	31	31	30	30	exposition	exposure
+12203	8	8	3	3	croissance	growth
+12207	29	29	24	24	espèces	species
+12214	55	55	39	39	croissance	growth
+12215	21	21	11	11	taux	rates
+12218	27	27	17	17	espèces	species
+12227	24	24	17	17	vierge	pristine
+12233	36	36	25	25	source	source
+12235	9	9	8	8	espèces	species
+12246	13	13	26	26	modèles	models
+12247	14	14	10	10	humain	human
+12254	43	43	18	19	croissance	on growth
+12254	43	43	19	19	croissance	growth
+12256	14	14	0	0	croissance	growth
+12257	5	5	3	3	croissance	growth
+12260	4	4	3	3	échelle	scale
+12260	7	7	6	6	réaction	response
+12268	24	24	15	15	lumière	light
+12278	12	12	16	16	source	source
+12291	13	13	10	10	mesure	measurement
+12291	11	11	11	11	système	system
+12294	19	19	14	14	échelle	scale
+12294	49	49	32	32	échelle	scale
+12296	15	15	11	11	pratique	practical
+12297	23	23	27	27	réaction	reaction
+12298	3	3	11	11	réaction	reaction
+12301	23	23	1	1	réaction	reaction
+12306	5	5	6	6	voie	route
+12306	24	24	21	21	premier	first
+12307	3	3	1	1	formation	formation
+12323	15	15	15	15	nature	nature
+12338	19	19	14	14	couverture	forest
+12341	5	5	5	5	champ	field
+12343	7	7	8	8	charge	load
+12348	26	26	16	16	espèces	species
+12350	19	19	15	15	espèces	species
+12350	19	19	15	16	espèces	species that
+12350	19	19	15	17	espèces	species that have
+12351	6	6	12	12	croissance	growth
+12354	26	26	15	15	croissance	growth
+12354	37	37	20	20	premier	first
+12355	16	16	13	13	taux	rate
+12355	29	29	17	17	surveillance	monitoring
+12355	36	36	22	22	pêche	fishing
+12356	1	1	2	2	taux	rate
+12358	23	23	14	14	surveillance	monitoring
+12358	28	28	17	17	pêche	fishing
+12360	22	22	12	12	taux	rate
+12360	22	22	12	13	taux	rate is
+12361	15	15	13	13	modèles	model
+12362	3	3	1	1	taux	rate
+12363	10	10	15	15	taux	rate
+12369	4	4	2	2	libre	free
+12375	33	33	27	27	croissance	growth
+12377	11	11	8	8	croissance	growth
+12377	9	9	9	9	taux	rate
+12381	6	6	6	6	espèces	species
+12381	14	14	15	15	croissance	growth
+12384	4	4	2	2	réaction	response
+12395	2	2	2	2	espèces	species
+12395	13	13	13	14	grands	the great
+12395	13	13	14	14	grands	great
+12402	11	11	6	6	croissance	growing
+12403	13	13	10	10	croissance	growth
+12405	10	10	8	8	mesure	extent
+12405	15	15	11	11	croissance	growth
+12412	32	32	26	26	croissance	growth
+12421	13	13	11	11	surveillance	monitoring
+12427	40	40	24	24	surveillance	monitoring
+12431	24	24	23	23	espèces	species
+12436	15	15	9	9	espèces	species
+12438	49	49	40	40	taux	rate
+12438	49	49	40	41	taux	rate ,
+12460	37	37	31	31	famille	family
+12463	18	18	15	15	formation	formation
+12467	46	46	44	44	croissance	growth
+12470	9	9	6	6	croissance	growth
+12470	18	18	12	12	couverture	cover
+12485	21	21	23	23	rapport	ratio
+12488	59	59	51	51	pression	pressure
+12496	7	7	5	5	source	source
+12497	9	9	6	6	formation	formation
+12501	1	1	1	1	espèces	species
+12501	1	1	1	2	espèces	species of
+12502	21	21	2	2	espèces	species
+12520	1	1	1	1	croissance	growth
+12520	26	26	20	20	lumière	light
+12521	38	38	31	31	lumière	light
+12523	10	10	11	11	lumière	light
+12523	23	23	22	22	lumière	light
+12523	32	32	32	32	croissance	growth
+12524	15	15	10	10	croissance	growth
+12524	35	35	23	23	modèles	models
+12528	11	11	4	4	taux	rate
+12528	11	11	4	5	taux	rate and
+12528	6	6	7	7	taux	rate
+12532	7	7	9	9	système	system
+12536	16	16	13	13	petits	small
+12539	29	29	26	26	pratique	practices
+12545	42	42	33	33	mesure	measuring
+12549	3	3	5	5	mesure	measurements
+12553	13	13	8	8	couverture	cover
+12554	12	12	11	11	petits	small
+12554	64	64	55	55	couverture	cover
+12554	64	64	55	56	couverture	cover were
+12556	37	37	25	25	couverture	cover
+12562	18	18	14	14	rapport	relative
+12569	15	15	13	13	espèces	species
+12588	21	21	18	18	m.	m.
+12588	21	21	18	19	m.	m. one
+12594	6	6	4	4	service	service
+12596	17	17	16	16	pression	pressure
+12603	1	1	1	1	nature	nature
+12612	1	1	1	1	premier	first
+12615	32	32	23	23	rapport	comparison
+12618	10	10	7	7	modèles	models
+12619	1	1	1	1	modèles	models
+12619	5	5	5	5	petits	small
+12626	24	24	17	17	formation	formation
+12632	21	21	11	11	cellulaire	cellular
+12636	40	40	26	26	croissance	growth
+12637	10	10	6	6	croissance	growth
+12637	20	20	14	14	croissance	growth
+12638	37	37	28	28	croissance	growth
+12639	12	12	7	7	croissance	growth
+12639	20	20	12	12	croissance	growth
+12639	20	20	12	13	croissance	growth check
+12650	6	6	3	3	pêche	fishery
+12651	15	15	12	12	grands	large
+12653	7	7	4	4	pêche	closure
+12653	14	14	9	10	pêche	of fishing
+12653	14	14	9	11	pêche	of fishing on
+12653	14	14	10	10	pêche	fishing
+12653	14	14	10	11	pêche	fishing on
+12655	11	11	8	8	grands	larger
+12655	17	17	13	13	pêche	fishing
+12655	17	17	13	14	pêche	fishing ,
+12656	2	2	2	2	pêche	fishing
+12662	4	4	1	1	grands	great
+12664	4	4	2	2	grands	great
+12669	1	1	2	2	stade	stage
+12675	3	3	1	1	espèces	species
+12676	6	6	7	7	croissance	growth
+12678	62	62	15	15	grands	great
+12679	7	7	3	3	lumière	light
+12679	7	7	3	4	lumière	light has
+12679	7	7	3	5	lumière	light has been
+12680	15	15	7	7	exposition	exposure
+12681	1	1	2	3	sommet	the top
+12681	1	1	3	3	sommet	top
+12685	12	12	7	7	lumière	light
+12686	22	22	19	19	sang	blood
+12694	1	1	0	0	réaction	reaction
+12696	13	13	1	1	réaction	reaction
+12698	12	12	11	11	rapport	ratio
+12698	20	20	20	20	source	source
+12700	63	63	55	55	solution	solution
+12702	32	32	27	27	solution	solution
+12706	22	22	22	22	taux	rate
+12707	18	18	15	15	échelle	scale
+12709	23	23	15	15	sommet	summit
+12710	4	4	6	6	taux	rate
+12710	20	20	16	16	sommet	summit
+12713	7	7	7	7	formation	formation
+12726	2	2	2	2	espèces	species
+12726	31	31	25	25	exposition	exposure
+12728	41	41	25	25	espèces	species
+12740	53	53	27	27	petits	small
+12747	11	11	9	9	lumière	light
+12752	12	12	11	11	croissance	growth
+12764	20	20	16	16	stade	stage
+12764	20	20	16	17	stade	stage ,
+12771	1	1	3	3	système	system
+12775	9	9	12	12	espèces	species
+12787	7	7	8	8	espèces	species
+12788	19	19	11	11	espèces	species
+12790	23	23	19	19	espèces	species
+12791	45	45	28	28	petits	small
+12803	12	12	12	12	rapport	ratio
+12824	5	5	2	2	espèces	species
+12825	35	35	25	25	espèces	species
+12834	11	11	8	8	rapport	respect
+12841	24	24	21	22	solution	the solution
+12841	24	24	22	22	solution	solution
+12848	14	14	8	8	échelle	scale
+12848	44	44	37	37	espèces	species
+12848	44	44	37	38	espèces	species ,
+12848	44	44	37	39	espèces	species , and
+12855	32	32	24	24	premières	first
+12858	17	17	11	12	problème	a problem
+12858	17	17	12	12	problème	problem
+12864	24	24	19	19	système	system
+12868	32	32	24	24	état	status
+12868	47	47	36	36	système	system
+12871	4	4	5	5	système	system
+12871	13	13	13	13	état	state
+12887	38	38	26	26	espèces	species
+12907	4	4	6	6	système	system
+12908	21	21	16	16	système	system
+12910	19	19	9	9	échelle	scale
+12910	9	9	10	10	modèles	models
+12912	6	6	1	1	modèles	models
+12920	25	25	24	24	taux	dimensionless
+12930	41	41	29	29	espèces	species
+12930	75	75	61	61	modèles	models
+12933	20	20	12	12	espèces	species
+12934	1	1	4	4	modèles	models
+12935	6	6	3	3	espèces	species
+12935	36	36	23	23	espèces	species
+12936	35	35	25	25	espèces	species
+12937	21	21	21	21	source	source
+12938	11	11	10	10	source	source
+12939	23	23	24	24	source	source
+12945	18	18	14	14	système	system
+12945	32	32	27	27	modèles	models
+12946	1	1	4	4	modèles	models
+12951	31	31	30	30	récepteur	receptor
+12956	20	20	19	19	récepteur	receptor
+12965	15	15	13	13	croissance	growth
+12976	17	17	15	15	croissance	growth
+12977	25	25	21	21	règle	regulates
+12977	27	27	23	23	croissance	growth
+12981	3	3	3	3	échelle	scale
+12987	3	3	3	3	échelle	scale
+13006	17	17	10	10	système	system
+13006	17	17	10	11	système	system for
+13007	38	38	26	26	espèces	species
+13009	3	3	0	0	croissance	growth
+13012	4	4	6	6	régime	regime
+13012	17	17	14	14	croissance	growth
+13014	25	25	25	25	croissance	growth
+13015	22	22	15	15	croissance	growth
+13026	2	2	1	1	clé	key
+13026	1	1	2	2	réaction	reaction
+13028	30	30	23	23	formation	formation
+13033	8	8	7	7	formation	formation
+13036	33	33	31	31	plan	plane
+13041	4	4	0	0	couverture	forest
+13047	7	7	6	6	réaction	reaction
+13048	47	47	32	32	réaction	reaction
+13053	6	6	4	4	raison	because
+13058	6	6	5	5	sang	blood
+13062	14	14	18	18	réaction	reaction
+13062	14	14	18	19	réaction	reaction ,
+13065	8	8	17	17	formation	formation
+13067	21	21	19	19	espèces	species
+13068	6	6	8	8	récepteur	receptor
+13073	7	7	25	25	réaction	reaction
+13075	5	5	1	1	nature	nature
+13092	23	23	17	17	grands	large
+13093	12	12	8	8	croissance	growth
+13096	1	1	0	0	croissance	growth
+13098	1	1	2	2	taux	rates
+13113	3	3	3	3	modèles	models
+13113	11	11	9	9	taux	rate
+13114	1	1	1	1	modèles	models
+13115	11	11	11	11	taux	rate
+13117	1	1	0	0	modèles	models
+13118	5	5	3	3	croissance	growth
+13119	21	21	15	15	croissance	growth
+13121	69	69	55	55	croissance	growth
+13127	35	35	23	23	formation	formation
+13132	2	2	2	2	libre	free
+13143	13	13	18	18	croissance	growth
+13144	5	5	5	5	espèces	species
+13148	14	14	10	11	taux	slower rates
+13151	6	6	5	5	croissance	growth
+13157	2	2	2	2	famille	family
+13185	16	16	17	17	modèles	models
+13188	16	16	12	12	système	system
+13188	16	16	12	13	système	system is
+13190	29	29	28	28	système	system
+13191	13	13	11	11	formation	formation
+13193	1	1	1	1	formation	formation
+13197	15	15	10	10	poids	weight
+13201	19	19	13	13	poids	weight
+13201	23	23	15	15	mesure	as
+13201	23	23	15	16	mesure	as seeds
+13202	12	12	8	8	espèces	species
+13202	27	27	20	20	poids	weight
+13204	20	20	16	16	modèles	models
+13205	3	3	2	2	modèles	models
+13209	1	1	2	2	modèles	models
+13211	5	5	4	4	modèles	models
+13212	11	11	12	12	taux	rates
+13214	3	3	1	1	taux	rate
+13214	40	40	28	28	pierre	stone
+13216	18	18	15	16	véhicule	the vehicle
+13216	18	18	16	16	véhicule	vehicle
+13226	33	33	25	25	pêche	fishing
+13227	10	10	5	5	pêche	fishing
+13227	46	46	25	25	pêche	fishing
+13228	9	9	0	0	pêche	fishing
+13229	1	1	1	1	réaction	response
+13231	12	12	9	9	réaction	response
+13232	42	42	35	35	terre	down
+13236	13	13	13	13	espèces	species
+13236	33	33	30	30	espèces	species
+13239	5	5	5	5	problème	problem
+13241	15	15	13	13	pression	pressure
+13242	29	29	27	27	pression	pressure
+13244	60	60	52	52	solution	solution
+13256	1	1	2	2	couverture	coverage
+13266	14	14	10	10	modèles	modeling
+13266	14	14	10	11	modèles	modeling did
+13266	36	36	26	26	espèces	species
+13270	24	24	17	20	pays	countries over the world
+13285	8	8	9	9	stade	stage
+13286	31	31	25	25	nature	nature
+13288	18	18	2	3	espèces	that species
+13288	18	18	3	3	espèces	species
+13290	10	10	10	10	stade	stage
+13307	26	26	17	17	balance	balance
+13310	1	1	2	2	source	source
+13336	28	28	22	22	premières	first
+13336	28	28	22	23	premières	first two
+13343	1	1	1	1	modèles	models
+13345	1	1	1	1	modèles	models
+13346	4	4	6	6	modèles	models
+13348	25	25	19	19	système	system
+13349	30	30	21	21	système	system
+13350	39	39	33	33	plan	plane
+13350	64	64	55	55	plan	plane
+13354	10	10	9	9	solution	solution
+13358	2	2	3	3	modèles	models
+13371	3	3	1	1	taux	rate
+13373	6	6	5	5	taux	rates
+13374	1	1	2	2	taux	rate
+13391	27	27	25	25	espèces	species
+13391	35	35	32	32	espèces	species
+13402	21	21	16	16	espèces	species
+13404	29	29	22	22	cadre	framework
+13406	7	7	4	4	taux	rates
+13407	72	72	56	57	espèces	two species
+13407	72	72	57	57	espèces	species
+13418	5	5	4	4	association	association
+13418	18	18	11	11	échelle	scale
+13445	27	27	20	20	rapport	opposed
+13452	1	1	1	1	système	system
+13452	1	1	1	2	système	system is
+13463	13	13	8	8	solution	resolution
+13464	4	4	6	6	système	system
+13475	15	15	13	13	cadre	setting
+13499	18	18	15	15	espèces	species
+13501	6	6	4	4	attention	attention
+13503	4	4	4	4	modèles	models
+13504	7	7	7	7	système	system
+13508	1	1	2	2	problème	difficulty
+13513	3	3	2	2	espèces	species
+13515	14	14	12	12	lumière	light
+13519	31	31	35	35	espèces	species
+13522	23	23	18	18	champ	field
+13545	9	9	7	8	modèles	the models
+13545	9	9	8	8	modèles	models
+13546	28	28	28	28	modèles	models
+13547	35	35	34	34	formation	formation
+13552	13	13	8	8	taux	rate
+13553	23	23	18	18	taux	rate
+13558	4	4	8	8	taux	rate
+13575	4	4	1	1	famille	family
+13575	31	31	23	23	croissance	growth
+13576	4	4	1	1	famille	family
+13582	1	1	1	1	taux	rate
+13582	1	1	1	2	taux	rate is
+13583	1	1	1	1	taux	rate
+13592	9	9	12	12	système	system
+13599	46	46	38	38	espèces	species
+13600	4	4	4	4	premier	first
+13600	34	34	24	24	champ	field
+13602	33	33	27	27	formation	formation
+13602	41	41	34	34	croissance	growth
+13602	48	48	39	40	champ	the field
+13602	48	48	40	40	champ	field
+13604	1	1	1	1	taux	rates
+13605	1	1	1	1	croissance	growth
+13619	13	13	11	11	association	association
+13622	19	19	16	16	croissance	growth
+13623	15	15	10	10	croissance	growth
+13624	80	80	59	59	solution	solution
+13624	80	80	59	60	solution	solution ,
+13625	8	8	4	4	croissance	growth
+13630	5	5	14	14	croissance	growth
+13631	13	13	11	11	croissance	growth
+13631	35	35	25	25	croissance	growth
+13642	2	2	1	1	cadre	part
+13651	23	23	21	21	croissance	growth
+13654	13	13	12	12	modèles	models
+13654	30	30	23	23	modèles	models
+13655	19	19	12	12	échelle	scale
+13660	11	11	8	8	lumière	light
+13660	29	29	24	24	modèles	models
+13662	20	20	16	16	réaction	reaction
+13674	1	1	3	3	modèles	models
+13676	5	5	5	5	stade	stage
+13678	22	22	18	18	clé	key
+13688	21	21	2	2	espèces	species
+13688	29	29	9	9	espèces	species
+13689	2	2	1	1	espèces	species
+13690	26	26	19	19	espèces	species
+13690	58	58	46	46	régime	patterns
+13692	5	5	7	7	taux	rate
+13693	5	5	4	5	espèces	the species
+13693	5	5	5	5	espèces	species
+13704	1	1	1	1	taux	levels
+13706	14	14	7	7	récepteur	receptor
+13707	25	25	22	22	administration	administration
+13712	40	40	26	26	récepteur	receptor
+13716	14	14	11	11	poids	weights
+13719	46	46	39	39	m.	m.
+13723	18	18	16	16	nature	nature
+13724	47	47	40	40	mesure	measurements
+13727	21	21	22	22	association	combination
+13734	68	68	55	55	pression	pressure
+13740	23	23	16	16	réaction	reaction
+13747	11	11	4	4	terre	earth
+13752	34	34	31	31	espèces	species
+13760	7	7	10	10	source	source
+13760	13	13	15	15	rapport	compared
+13773	8	8	1	1	croissance	growth
+13773	21	21	19	19	formation	formation
+13781	31	31	22	22	état	state
+13781	39	39	30	30	pratique	practice
+13791	1	1	1	1	association	association
+13792	13	13	11	11	modèles	models
+13792	21	21	21	21	système	system
+13792	36	36	28	28	taux	levels
+13793	10	10	12	12	système	system
+13795	51	51	41	41	taux	rate
+13796	69	69	54	54	taux	rate
+13797	1	1	5	5	système	system
+13802	16	16	12	12	état	state
+13806	37	37	28	28	humain	human
+13806	40	40	34	34	humain	human
+13806	48	48	41	41	humain	human
+13807	20	20	16	16	humain	human
+13809	8	8	3	4	humain	a human
+13809	8	8	4	4	humain	human
+13811	10	10	8	8	pays	country
+13811	43	43	35	35	pays	country
+13814	15	15	13	13	régime	diet
+13814	15	15	13	14	régime	diet ,
+13824	16	16	1	2	problème	central problem
+13824	16	16	2	2	problème	problem
+13824	3	3	20	22	pêche	is that fishing
+13824	3	3	21	22	pêche	that fishing
+13824	3	3	22	22	pêche	fishing
+13828	13	13	8	8	mesure	measure
+13832	15	15	14	14	cellulaire	cell
+13834	26	26	18	18	espèces	species
+13836	10	10	10	10	réaction	response
+13837	11	11	11	11	réaction	response
+13854	10	10	10	10	espèces	species
+13854	10	10	10	11	espèces	species in
+13857	1	1	2	2	taux	rates
+13860	1	1	1	1	mesure	measured
+13862	11	11	11	11	espèces	species
