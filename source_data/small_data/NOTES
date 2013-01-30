@@ -1,0 +1,8 @@
+Science.psd = /export/ws12/damt/data/intrinsic_eval/filtered_psd/Science-new.test1.filter.psd
+Science.LL.gz = /export/ws12/damt/data/pp/Science-new/test1.no-doc-boundary.normal.LL
+
+Subs.psd = /export/ws12/damt/data/intrinsic_eval/filtered_psd/Subs.test1.filter.psd
+Subs.LL.gz = /export/ws12/damt/data/pp/Subs/test1.no-doc-boundary.normal.LL
+
+EMEA.psd = /export/ws12/damt/data/intrinsic_eval/filtered_psd/EMEA-new.test1.filter.psd
+EMEA.LL.gz = /export/ws12/damt/data/pp/EMEA-new/test1.no-doc-boundary.normal.LL

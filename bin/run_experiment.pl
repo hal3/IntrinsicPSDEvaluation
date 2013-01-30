@@ -19,7 +19,7 @@ my $pruneMinRelProb = 0.01; # AND remove english translations that are more than
 my $doPrune = 0;
 
 my $srandNum = 2780;
-my $seenFName = "source_data/seen.hansard32.gz";
+my $seenFName = "source_data/seen.hansard.gz";
 
 my $USAGE = "usage: run_experiment.pl (dataspec) (options)
 
@@ -37,7 +37,7 @@ where options includes:
   -seen file       read seen pairs from file [$seenFName]
   -ignore str      ignore features named string (multiple allowed)
   -srand #         seed random number generated with # or X for prng [$srandNum]
-  -classifier str  specify classifier to use [$classifier]
+  -classifier str  specify classifier to use [$classifier] (eg: vw, bfgw, dt, oracleType)
   -showclassifier  show output from classifier
   -dontbucket      bucket features (make them all binary)
   -dontevensplit   don't run the (hacky) thing for making even splits
@@ -234,28 +234,32 @@ for (my $fold=0; $fold<$numFolds; $fold++) {
 
     }
 
-    writeFile("classifiers/$experiment.train", @train);
-    writeFile("classifiers/$experiment.traindev", @traindev);
-    writeFile("classifiers/$experiment.dev"  , @dev);
-    writeFile("classifiers/$experiment.test" , @test);
-
     my $auc;
-    if (($classifier eq 'vw') || ($classifier eq 'bfgs')) {
-        $auc = run_vw($fold,
-                      "classifiers/$experiment.train",    scalar @train,
-                      "classifiers/$experiment.dev",      scalar @dev,
-                      "classifiers/$experiment.traindev", scalar @traindev,
-                      "classifiers/$experiment.test",     scalar @test
-                      );
-    } elsif ($classifier eq 'dt') {
-        $auc = run_dt($fold,
-                      "classifiers/$experiment.train",    scalar @train,
-                      "classifiers/$experiment.dev",      scalar @dev,
-                      "classifiers/$experiment.traindev", scalar @traindev,
-                      "classifiers/$experiment.test",     scalar @test
-                      );
+    if ($classifier ne 'oracleType') {
+        writeFile("classifiers/$experiment.train", @train);
+        writeFile("classifiers/$experiment.traindev", @traindev);
+        writeFile("classifiers/$experiment.dev"  , @dev);
+        writeFile("classifiers/$experiment.test" , @test);
+
+        if (($classifier eq 'vw') || ($classifier eq 'bfgs')) {
+            $auc = run_vw($fold,
+                          "classifiers/$experiment.train",    scalar @train,
+                          "classifiers/$experiment.dev",      scalar @dev,
+                          "classifiers/$experiment.traindev", scalar @traindev,
+                          "classifiers/$experiment.test",     scalar @test
+                );
+        } elsif ($classifier eq 'dt') {
+            $auc = run_dt($fold,
+                          "classifiers/$experiment.train",    scalar @train,
+                          "classifiers/$experiment.dev",      scalar @dev,
+                          "classifiers/$experiment.traindev", scalar @traindev,
+                          "classifiers/$experiment.test",     scalar @test
+                );
+        } else {
+            die "unknown classifier '$classifier'";
+        }
     } else {
-        die "unknown classifier '$classifier'";
+        $auc = compute_oracleType(\@traindev, \@test);
     }
     push @aucs, $auc;
     print STDERR "\n" if not $quiet;
@@ -267,6 +271,32 @@ foreach my $auc (@aucs) { $avgAuc += $auc; $stdAuc += $auc*$auc; }
 $avgAuc /= $numFolds;
 $stdAuc = sqrt($stdAuc / $numFolds - $avgAuc*$avgAuc);
 print "Average score $avgAuc (std $stdAuc)\n";
+
+sub compute_oracleType {
+    my ($trainDev, $test) = @_;
+
+    my %type = ();
+    for (my $n=0; $n<@$trainDev; $n++) {
+        my $y = $trainDev->[$n]{'label'};
+        my $w = $trainDev->[$n]{'phrase'};
+        $type{$w} += $y;
+    }
+
+    open ORAC, "> classifiers/.tmpforauc" or die;
+    for (my $n=0; $n<@$test; $n++) {
+        my $y = $test->[$n]{'label'};
+        my $w = $test->[$n]{'phrase'};
+        my $yhat = rand() * 2 - 1;
+        if (defined $type{$w}) {
+            $yhat = $type{$w};
+        }
+        print ORAC $yhat . ' ' . $y . "\n";
+    }
+    close ORAC or die;
+    my $auc = `cat classifiers/.tmpforauc | bin/auc.pl`;
+    chomp $auc;
+    return $auc;
+}
 
 
 sub run_vw {
