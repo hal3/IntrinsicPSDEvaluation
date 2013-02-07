@@ -4,7 +4,7 @@ use strict;
 my $damt = $ENV{'damt'} or die;
 
 my %types = ();
-foreach my $dom qw(EMEA Science Subs) {
+foreach my $dom qw(EMEA Science Subs news) {
     open F, "source_data/$dom.psd" or die;
     while (<F>) {
         chomp;
