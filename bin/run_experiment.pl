@@ -537,9 +537,11 @@ sub generateData {
 
     open LS, "find features/ -iname \"$domReal.token.*\" |" or die $!;
     while (my $fname = <LS>) {
-        $fname =~ /^$domReal\.token\.(.+)$/;
-        my $user = $1;
-        if (not defined $user) { print STDERR "skipping file $fname...\n" if not $quiet; next; }
+	chomp $fname;
+        $fname =~ /^(.+)\.token\.(.+)$/;
+        #$fname =~ /\/^$domReal\.token\.(.+)$/;
+        my $user = $2;
+        if (not defined $user) { print STDERR "skipping token file with name $fname ...\n" if not $quiet; next; }
         if (exists $ignoreFeatures{$user}) {
             print STDERR "Skipping features from $fname\n" if not $quiet;
             next;
