@@ -44,7 +44,7 @@ close DB;
 close GS;
 close DS;
 
-open O, "> features/$dom.hal-ppl" or die;
+open O, "> features/$dom.type.hal-ppl" or die;
 foreach my $w (keys %info) {
     print O $w;
     foreach my $f (keys %{$info{$w}}) {
@@ -73,9 +73,10 @@ sub printStats {
     $mu /= $cnt;
     $std /= $cnt;
     $std -= $mu*$mu;
+    if ($std < 0) { $std = 0; }
     $std = sqrt($std);
 
-    print O "\tf^mean:$mu\t$f^std:$std\t$f^cnt:$cnt\t$f^min:$min\t$f^max:$max\t$f^sum:$sum\n";
+    print O "\tf^mean:$mu\t$f^std:$std\t$f^cnt:$cnt\t$f^min:$min\t$f^max:$max\t$f^sum:$sum";
 }
 close O;
 
