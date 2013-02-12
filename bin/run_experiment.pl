@@ -498,9 +498,6 @@ sub generateData {
         }
 #        print O $Y . "\t" . $_ . "\n";
 
-        if ((defined $numTypes{$fr_phrase}) && ($numTypes{$fr_phrase} >= $maxTokPerType)) { next; }
-        $numTypes{$fr_phrase}++;
-
         push @W, $fr_phrase;
         push @Y, $Y;
     }
@@ -519,7 +516,6 @@ sub generateData {
             print STDERR "Skipping features from $fname\n" if not $quiet;
             next;
         }
-
         
         print STDERR "Reading features from $fname\n" if not $quiet;
         open F, $fname or die $!;
@@ -580,7 +576,7 @@ sub generateData {
             $n++;
         }
         close F;
-        if ($n >= @F) { 
+        if ($n > @F) { 
             print STDERR "error: too many lines in file $fname, ignoring the rest but things are wacky and you should harangue someone about this ($n versus " . (scalar @F) . ")...\n";
         }
         if ($n < @F) {
@@ -589,7 +585,20 @@ sub generateData {
     }
     close LS;
 
-    return (@F);
+    my @Fpruned = ();
+    for (my $n=0; $n<@F; $n++) {
+        my $p = $F[$n]{'phrase'};
+        
+        if ((defined $numTypes{$p}) && ($numTypes{$p} >= $maxTokPerType)) { next; }
+        $numTypes{$p}++;
+
+        my $n0 = scalar @Fpruned;
+        foreach my $k (keys %{$F[$n]}) {
+            $Fpruned[$n0]{$k} = $F[$n]{$k};
+        }
+    }
+
+    return (@Fpruned);
 }
 
 sub split_fval {
