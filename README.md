@@ -54,3 +54,5 @@ with data copied from the following locations:
 /export/ws12/damt/data/pp/EMEA-new/test1.no-doc-boundary.normal.fr
 /export/ws12/damt/data/pp/EMEA-new/test1.no-doc-boundary.normal.en
 
+
+test by hal
