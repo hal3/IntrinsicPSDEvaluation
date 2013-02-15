@@ -1,12 +1,9 @@
 1	8	8	8	8	composition	composition
-2	39	39	29	31	libre	to the free
-2	39	39	30	31	libre	the free
 2	39	39	31	31	libre	free
 6	46	46	41	41	composition	composition
 11	26	26	18	18	formalisme	formalism
 11	39	39	28	28	champ	field
 13	7	7	7	7	champ	field
-17	1	1	1	2	calculons	first calculate
 17	1	1	2	2	calculons	calculate
 17	22	22	15	15	champ	field
 21	6	6	5	5	formalisme	formalism
@@ -15,7 +12,6 @@
 24	18	18	15	15	agent	agent
 25	12	12	12	12	perfusion	perfusion
 29	1	1	1	1	premier	first
-29	1	1	1	2	premier	first one
 33	5	5	5	5	étude	study
 34	1	1	1	1	étude	study
 35	1	1	1	1	étude	study
@@ -25,14 +21,10 @@
 47	11	11	9	9	modèles	models
 47	16	16	11	11	oeuvre	use
 49	14	14	10	10	étude	studied
-50	22	22	21	22	échelle	fine scale
-50	22	22	21	23	échelle	fine scale of
 50	22	22	22	22	échelle	scale
-50	22	22	22	23	échelle	scale of
 52	3	3	4	4	pression	pressure
 56	16	16	15	15	étude	study
 57	1	1	2	2	étude	study
-57	1	1	2	3	étude	study ,
 57	28	28	24	24	déformations	deformation
 59	15	15	15	15	système	system
 65	12	12	28	28	modèles	model
@@ -47,12 +39,9 @@
 84	28	28	26	26	nouveau	new
 86	20	20	11	11	lumière	light
 92	1	1	2	2	point	point
-92	1	1	2	3	point	point which
-92	1	1	2	4	point	point which is
 92	28	28	23	23	études	studies
 93	8	8	8	8	source	source
 94	1	1	1	1	taux	rate
-94	7	7	3	4	fond	the background
 94	7	7	4	4	fond	background
 97	6	6	6	6	étude	study
 97	37	37	30	30	excitation	excitation
@@ -67,8 +56,6 @@
 101	22	22	17	17	système	system
 103	17	17	13	14	matérielle	hardware platforms
 104	4	4	1	1	oeuvre	implement
-104	4	4	1	2	oeuvre	implement the
-104	9	9	2	3	service	the service
 104	9	9	3	3	service	service
 105	16	16	9	9	composition	composition
 113	16	16	10	10	compositions	compositions
@@ -84,10 +71,7 @@
 123	1	1	2	2	étude	study
 125	10	10	10	10	étude	study
 125	17	17	14	14	impulsions	pulse
-126	7	7	3	4	mesure	the measurement
 126	7	7	4	4	mesure	measurement
-130	11	11	3	5	étude	is to study
-130	11	11	4	5	étude	to study
 130	11	11	5	5	étude	study
 135	3	3	1	1	premier	grosse-wulkenhaar
 136	12	12	19	19	point	point
@@ -98,9 +82,7 @@
 144	29	29	24	24	anneau	ring
 145	9	9	6	6	montage	show
 145	24	24	15	15	système	system
-145	24	24	15	16	système	system ,
 145	30	30	21	21	source	source
-145	30	30	21	22	source	source that
 148	15	15	19	19	champ	magnetic
 151	6	6	7	7	étude	study
 151	13	13	13	13	anneau	ring
@@ -109,30 +91,24 @@
 152	11	11	8	8	étude	studying
 152	22	22	18	18	anneau	ring
 152	40	40	37	37	courant	current
-152	56	56	48	49	courant	a current
 152	56	56	49	49	courant	current
 158	65	65	52	52	libre	free
 158	70	70	59	59	formation	formation
 164	6	6	7	7	nouveau	new
 165	9	9	6	6	flux	streams
-166	17	17	8	9	système	in routers
 166	17	17	9	9	système	routers
 168	13	13	3	3	matérielle	hardware
-168	16	16	8	9	charge	in charge
 168	16	16	9	9	charge	charge
 168	36	36	26	26	source	source
-168	36	36	26	27	source	source id
 169	28	28	20	20	anneau	ring
 171	8	8	7	7	premier	initial
 172	1	1	6	6	premier	initial
 174	18	18	17	17	pratique	practice
 175	3	3	3	3	problème	problem
 176	14	14	13	13	premières	first
-176	14	14	13	14	premières	first levels
 177	11	11	11	11	couplage	coupling
 178	27	27	28	28	modèles	models
 179	26	26	25	25	modèles	models
-182	16	16	14	15	localisation	a localization
 182	16	16	15	15	localisation	localization
 182	24	24	26	26	système	system
 185	6	6	7	7	problème	problem
@@ -144,7 +120,6 @@
 191	3	3	1	1	pronostic	prognosis
 191	12	12	9	9	échelle	scale
 192	16	16	15	15	pronostic	prognosis
-192	16	16	15	16	pronostic	prognosis problem
 193	13	13	10	10	échelle	scale
 198	68	68	78	78	système	system
 201	13	13	10	10	cadre	context
@@ -154,7 +129,6 @@
 212	4	4	3	3	nouveau	new
 214	1	1	1	1	construisons	build
 214	32	32	27	27	plan	plane
-214	32	32	27	28	plan	plane :
 216	1	1	1	1	problème	problem
 218	14	14	6	6	premier	first
 226	8	8	10	10	cadre	framework
@@ -164,17 +138,14 @@
 233	10	10	9	9	travaux	work
 234	14	14	12	12	système	computer
 234	22	22	18	18	état	state
-239	12	12	9	10	solution	a solution
 239	12	12	10	10	solution	solution
 239	37	37	37	37	système	system
 239	60	60	57	57	galaxies	galaxies
 239	75	75	69	69	étude	study
-240	47	47	43	45	diffusion	, scattering experiments
 240	47	47	44	45	diffusion	scattering experiments
 243	1	1	1	1	étude	work
 245	5	5	4	4	étude	study
 245	32	32	18	18	angulaire	angular
-245	69	69	46	47	milieu	the middle
 245	69	69	47	47	milieu	middle
 253	2	2	2	2	revient	amounts
 253	31	31	25	25	relâchement	relaxation
@@ -186,11 +157,7 @@
 276	9	9	9	9	paquets	packets
 276	18	18	15	15	paquets	packets
 278	11	11	7	7	système	systems
-278	11	11	7	8	système	systems (
-278	11	11	7	9	système	systems ( is
-278	11	11	7	10	système	systems ( is )
 282	13	13	7	7	système	system
-282	13	13	7	8	système	system &apos;s
 284	13	13	10	10	cadre	during
 288	24	24	16	16	indispensables	order
 301	50	50	36	36	impulsions	pulses
@@ -201,7 +168,6 @@
 308	17	17	21	21	point	point
 308	29	29	33	33	mesures	measurements
 324	28	28	24	24	droit	can
-327	29	29	26	27	délivrance	is delivered
 327	29	29	27	27	délivrance	delivered
 330	21	21	16	16	diffusion	dissemination
 332	14	14	15	15	modèles	patterns
@@ -209,15 +175,12 @@
 346	6	6	3	3	nouveau	novel
 348	4	4	4	5	point	starting point
 349	2	2	0	0	fins	for
-349	2	2	0	1	fins	for this
 349	21	21	20	20	localisation	location
 351	15	15	16	16	système	system
 351	37	37	35	35	patient	patient
 353	10	10	8	8	modèles	models
 356	5	5	4	4	moyen	way
 357	26	26	22	22	croissance	growing
-358	9	9	3	5	étude	, we investigate
-358	9	9	4	5	étude	we investigate
 358	9	9	5	5	étude	investigate
 358	54	54	31	31	localisation	localization
 359	1	1	1	1	premier	first
@@ -230,8 +193,6 @@
 362	17	17	15	15	radiation	radiation
 362	15	15	16	16	pression	pressure
 363	1	1	1	1	mesures	measurements
-363	1	1	1	2	mesures	measurements show
-370	22	22	19	20	calculer	be computed
 370	22	22	20	20	calculer	computed
 373	5	5	6	6	solution	solution
 373	8	8	10	10	système	system
@@ -247,12 +208,10 @@
 394	4	4	3	3	système	system
 394	36	36	30	30	face	face
 394	41	41	34	34	étude	studying
-398	15	15	12	13	point	the point
 398	15	15	13	13	point	point
 398	17	17	15	15	vue	view
 403	21	21	25	25	informations	information
 413	13	13	13	13	réaction	reaction
-413	13	13	13	14	réaction	reaction ,
 414	1	1	4	4	spectres	spectra
 415	15	15	14	14	état	state
 415	22	22	16	16	diffusion	scattering
@@ -262,14 +221,12 @@
 427	6	6	7	7	étude	study
 427	49	49	43	43	pression	pressure
 428	21	21	26	26	mesures	measurement
-430	15	15	14	15	étude	the study
 430	15	15	15	15	étude	study
 432	27	27	25	25	diffusion	diffusion
 434	24	24	16	16	diffusion	diffusion
 435	5	5	4	4	études	studies
 435	24	24	18	19	grands	large scale
 436	21	21	15	15	évidence	identified
-436	21	21	15	16	évidence	identified separately
 437	24	24	18	18	diffusion	diffusion
 440	6	6	3	3	cadre	part
 440	13	13	9	9	informations	information
@@ -284,7 +241,6 @@
 450	29	29	21	21	système	system
 451	1	1	1	1	solution	solution
 451	39	39	29	29	système	system
-452	29	29	19	20	étude	: study
 452	29	29	20	20	étude	study
 454	26	26	19	19	système	system
 454	50	50	39	39	étude	study
@@ -318,11 +274,7 @@
 508	11	11	2	2	système	system
 508	23	23	12	12	état	state
 509	7	7	7	7	diffusion	distribution
-511	22	22	7	8	diffusion	, spreading
-511	22	22	7	9	diffusion	, spreading the
 511	22	22	8	8	diffusion	spreading
-511	22	22	8	9	diffusion	spreading the
-519	15	15	10	11	source	the source
 519	15	15	11	11	source	source
 522	13	13	14	14	taux	rates
 523	5	5	5	5	problème	question
@@ -331,10 +283,8 @@
 527	14	14	11	11	échantillon	sample
 530	15	15	22	22	lumière	light
 530	13	13	23	23	source	source
-530	13	13	23	24	source	source ,
 533	5	5	5	5	étude	study
 534	7	7	6	6	étude	study
-534	9	9	8	9	champ	the field
 534	9	9	9	9	champ	field
 536	31	31	27	27	évidence	light
 536	41	41	35	35	régime	regime
@@ -344,8 +294,6 @@
 542	21	21	18	18	bureau	desktop
 549	12	12	8	8	graphique	graphical
 553	22	22	19	19	attention	attention
-553	22	22	19	20	attention	attention on
-556	27	27	24	25	association	the association
 556	27	27	25	25	association	association
 557	40	40	33	33	conserver	keep
 557	45	45	40	40	point	locus
@@ -354,10 +302,7 @@
 560	10	10	11	11	formation	formation
 561	14	14	8	8	raison	because
 562	4	4	3	3	problème	problem
-562	11	11	6	7	premier	the first
-562	11	11	6	8	premier	the first place
 562	11	11	7	7	premier	first
-562	11	11	7	8	premier	first place
 565	4	4	5	5	dépôt	deposition
 566	7	7	4	4	formation	formation
 567	5	5	5	5	formation	formation
@@ -379,7 +324,6 @@
 587	12	12	5	5	impulsions	pulse
 589	10	10	6	6	impulsions	pulse
 591	23	23	18	18	impulsions	pulses
-591	23	23	18	19	impulsions	pulses that
 592	13	13	11	11	mesures	measure
 593	5	5	4	4	étude	detail
 593	27	27	27	27	champ	field
@@ -389,45 +333,32 @@
 607	54	54	47	47	paquets	packet
 616	7	7	4	4	cadre	on
 617	1	1	1	1	travaux	work
-617	1	1	1	2	travaux	work is
 619	6	6	9	9	étude	study
 620	1	1	4	4	exposons	expose
 623	3	3	3	3	travaux	work
 624	22	22	21	21	formalisme	formalism
-624	22	22	21	22	formalisme	formalism for
 626	2	2	1	1	premier	first
-626	2	2	1	2	premier	first ,
 626	31	31	25	25	étude	study
 626	37	37	30	30	état	state
 630	10	10	5	5	couplage	coupling
 631	8	8	6	6	vitesses	velocities
 631	42	42	32	32	rechercher	search
 633	13	13	9	9	détail	detail
-634	4	4	4	5	manuscrit	the manuscript
 634	4	4	5	5	manuscrit	manuscript
-638	16	16	13	14	étude	are studied
 638	16	16	14	14	étude	studied
 639	2	2	2	2	premier	first
-639	2	2	2	3	premier	first one
 642	14	14	12	12	étude	study
 645	16	16	3	3	mesure	measure
 651	17	17	31	31	diffusion	scattering
-653	67	67	7	8	étude	different studies
-653	67	67	7	9	étude	different studies done
 653	67	67	8	8	étude	studies
-653	67	67	8	9	étude	studies done
 655	26	26	24	24	échantillon	sample
-656	3	3	8	9	mesure	the measurement
 656	3	3	9	9	mesure	measurement
 656	14	14	23	23	pression	pressure
 660	46	46	40	40	pression	pressure
 663	7	7	5	5	problème	problem
-663	7	7	5	6	problème	problem ,
 670	1	1	1	1	étude	results
-674	5	5	4	5	informations	the information
 674	5	5	5	5	informations	information
 675	17	17	14	14	informations	information
-676	50	50	44	45	informations	of information
 676	50	50	45	45	informations	information
 677	57	57	36	36	informations	information
 677	64	64	45	45	informations	information
@@ -448,12 +379,7 @@
 702	26	26	23	23	récepteur	receiver
 709	1	1	0	0	raison	because
 712	17	17	13	13	mémoire	manuscript
-712	17	17	13	14	mémoire	manuscript ,
-719	21	21	14	17	compositions	out of the composition
-719	21	21	15	17	compositions	of the composition
-719	21	21	16	17	compositions	the composition
 719	21	21	17	17	compositions	composition
-720	18	18	16	17	source	no source
 720	18	18	17	17	source	source
 720	40	40	39	39	compositions	compositions
 721	1	1	1	1	rapport	reference
@@ -461,10 +387,8 @@
 721	24	24	17	17	état	state
 726	30	30	31	31	système	system
 727	3	3	5	5	passage	passage
-727	3	3	5	6	passage	passage ,
 727	11	11	10	10	couplage	coupling
 728	14	14	14	14	passage	passage
-729	8	8	8	9	système	state system
 729	8	8	9	9	système	system
 730	6	6	10	10	solution	solution
 732	19	19	18	18	lumière	light
@@ -480,14 +404,10 @@
 740	21	21	20	20	flux	flux
 741	26	26	23	23	formation	formation
 741	28	28	28	28	système	system
-741	28	28	28	29	système	system .
 741	48	48	45	45	modèles	models
 746	12	12	12	12	noyaux	nuclei
 751	24	24	23	23	système	system
-751	24	24	23	24	système	system ,
-752	24	24	17	18	matérielles	, physical
 752	24	24	18	18	matérielles	physical
-753	20	20	7	8	fonctions	of service
 753	20	20	8	8	fonctions	service
 753	25	25	11	11	occurrence	occurrence
 754	20	20	20	20	système	system
@@ -509,7 +429,6 @@
 789	11	11	8	8	porteurs	carrier
 793	13	13	15	15	système	system
 794	13	13	10	10	embarqués	embedded
-797	25	25	14	15	récepteur	a receiver
 797	25	25	15	15	récepteur	receiver
 806	17	17	18	18	matière	matter
 807	42	42	35	35	échantillon	sample
@@ -518,7 +437,6 @@
 818	12	12	9	9	entrant	incoming
 819	11	11	10	10	échantillon	sample
 820	18	18	25	25	échantillon	specimen
-821	15	15	8	9	diffusion	, scattering
 821	15	15	9	9	diffusion	scattering
 823	40	40	30	30	pratique	practice
 824	22	22	28	28	flux	flux
@@ -527,7 +445,6 @@
 826	33	33	22	22	diffusion	scattering
 828	7	7	6	6	expose	outlines
 828	9	9	8	8	principes	fundamentals
-829	9	9	8	9	principes	the principles
 829	9	9	9	9	principes	principles
 837	11	11	8	8	informations	information
 837	15	15	10	10	rapport	report
@@ -537,7 +454,6 @@
 844	9	9	6	6	délivrée	delivered
 844	12	12	9	9	échantillon	sample
 846	2	2	2	2	expose	reports
-846	2	2	2	3	expose	reports on
 847	23	23	18	18	diffusion	scattering
 847	52	52	45	45	échantillon	sample
 850	20	20	14	14	informations	information
@@ -545,22 +461,14 @@
 854	18	18	15	15	fins	purposes
 855	3	3	11	11	système	system
 860	15	15	12	12	échelle	context
-860	15	15	12	13	échelle	context of
 861	1	1	1	1	travaux	work
 874	21	21	23	23	matière	matter
 876	32	32	22	22	problème	problem
 876	39	39	28	28	problème	problem
 878	1	1	1	1	faut	requires
-883	6	6	6	8	problème	makes the problem
-883	6	6	7	8	problème	the problem
 883	6	6	8	8	problème	problem
 883	50	50	53	54	cadre	framework via
-890	8	8	5	7	nature	such as flash-crowds
-890	8	8	5	8	nature	such as flash-crowds and
-890	8	8	6	7	nature	as flash-crowds
-890	8	8	6	8	nature	as flash-crowds and
 890	8	8	7	7	nature	flash-crowds
-890	8	8	7	8	nature	flash-crowds and
 899	8	8	8	8	état	state
 899	35	35	31	31	mesure	measure
 900	51	51	25	25	nouveau	new
@@ -575,12 +483,10 @@
 908	11	11	4	4	patient	patient
 908	23	23	15	15	délivrer	deliver
 909	5	5	3	3	clé	key
-909	5	5	3	4	clé	key system
 915	1	1	2	2	composition	composition
 916	18	18	15	15	milieux	environments
 916	26	26	24	24	compositions	compositions
 917	31	31	15	15	régime	dietary
-917	31	31	15	16	régime	dietary information
 918	1	1	1	1	études	studies
 919	36	36	24	24	taxons	taxa
 920	8	8	8	8	étude	study
@@ -591,7 +497,6 @@
 929	7	7	2	2	extraits	extracted
 936	13	13	13	13	régler	control
 938	9	9	7	7	informations	information
-939	1	1	1	2	attention	other focus
 939	1	1	2	2	attention	focus
 941	19	19	15	15	nature	field
 945	33	33	20	20	climat	weather
@@ -616,7 +521,6 @@
 995	1	1	1	1	article	paper
 996	28	28	18	18	moyen	using
 998	12	12	4	4	mesures	measurements
-998	12	12	4	5	mesures	measurements ,
 998	6	6	21	21	article	paper
 1004	16	16	9	9	pêche	fishing
 1005	22	22	17	17	pêche	fishing
@@ -650,7 +554,6 @@
 1072	1	1	0	0	gouttes	drops
 1074	1	1	0	0	gouttes	beads
 1077	11	11	12	12	espèces	species
-1077	11	11	12	13	espèces	species ,
 1086	4	4	4	4	connaissance	knowledge
 1088	2	2	3	3	premières	first
 1094	16	16	10	10	couvert	cover
@@ -666,7 +569,6 @@
 1103	43	43	32	32	pays	markets
 1105	22	22	18	18	marché	market
 1106	18	18	4	4	modèles	models
-1106	18	18	4	5	modèles	models ,
 1106	11	11	14	14	marché	market
 1106	9	9	15	15	études	studies
 1107	30	30	22	22	modèles	models
@@ -688,17 +590,11 @@
 1131	1	1	1	1	études	studies
 1139	8	8	5	5	auteurs	we
 1142	7	7	1	1	espèces	species
-1142	7	7	1	2	espèces	species ,
 1143	12	12	4	4	flux	flow
-1143	12	12	4	5	flux	flow as
-1143	12	12	4	6	flux	flow as a
 1149	6	6	3	3	formation	formation
 1149	21	21	14	14	mesures	measurements
 1150	26	26	24	24	formation	formation
 1150	40	40	38	38	rendements	yields
-1150	40	40	38	39	rendements	yields of
-1151	2	2	0	2	conclut	it is concluded
-1151	2	2	1	2	conclut	is concluded
 1151	2	2	2	2	conclut	concluded
 1151	36	36	28	28	milieux	media
 1155	5	5	1	1	tiges	tree
@@ -707,16 +603,13 @@
 1158	73	73	61	61	dépôt	deposit
 1159	13	13	9	9	tiges	tree
 1159	20	20	16	16	douglas	douglas-fir
-1159	20	20	16	17	douglas	douglas-fir ,
 1160	5	5	4	4	douglas	douglas-fir
 1162	28	28	18	18	croissance	increasing
 1163	26	26	18	18	provenance	provenance
 1164	15	15	11	11	source	source
 1164	28	28	23	23	source	source
 1171	33	33	32	32	source	source
-1171	33	33	32	33	source	source ,
 1174	14	14	12	12	étude	study
-1175	13	13	6	7	essais	were tested
 1175	13	13	7	7	essais	tested
 1176	41	41	20	20	fabrique	fabric
 1177	1	1	3	3	rayons	radii
@@ -729,8 +622,6 @@
 1190	29	29	23	23	déformation	deformation
 1190	51	51	35	35	socle	basement
 1193	17	17	10	10	souris	mice
-1193	17	17	10	11	souris	mice that
-1193	17	17	10	12	souris	mice that had
 1194	31	31	20	20	état	state
 1198	5	5	4	4	étude	study
 1198	10	10	9	9	cadre	framework
@@ -747,25 +638,20 @@
 1226	1	1	0	0	étude	examination
 1227	49	49	31	31	famille	family
 1230	23	23	15	15	équilibres	equilibria
-1230	23	23	15	16	équilibres	equilibria ,
 1233	48	48	32	32	point	point
 1237	5	5	5	5	espèces	snakes
-1253	34	34	34	35	vigueur	plant vigor
 1253	34	34	35	35	vigueur	vigor
 1259	1	1	0	0	raison	owing
 1260	19	19	18	18	source	source
 1262	4	4	4	4	travaux	research
 1265	14	14	12	12	famille	family
 1266	28	28	18	18	rapport	relation
-1266	28	28	18	19	rapport	relation to
 1274	8	8	9	9	petits	offspring
 1274	22	22	20	20	premier	first
 1275	12	12	6	6	petits	offspring
 1276	4	4	3	3	classe	class
 1277	6	6	4	4	classe	class
 1277	23	23	21	21	lumière	light
-1277	23	23	21	22	lumière	light that
-1277	23	23	21	23	lumière	light that is
 1280	22	22	21	21	taux	rate
 1280	35	35	33	33	taux	rates
 1280	45	45	40	40	membres	individuals
@@ -781,7 +667,6 @@
 1301	10	10	9	9	espèces	species
 1302	9	9	6	6	mesure	able
 1303	33	33	21	21	espèces	species
-1303	33	33	21	22	espèces	species is
 1306	1	1	0	0	modèles	models
 1307	9	9	5	5	échantillons	samples
 1310	1	1	1	1	modèles	models
@@ -801,7 +686,6 @@
 1324	24	24	22	22	souches	strains
 1324	32	32	26	26	croissance	growth
 1325	2	2	2	2	étude	review
-1325	2	2	2	3	étude	review ,
 1326	12	12	8	8	lumière	light
 1326	15	15	11	11	taux	rates
 1327	18	18	14	14	taux	rate
@@ -816,7 +700,6 @@
 1331	26	26	20	20	lumière	light
 1336	10	10	8	8	source	source
 1336	15	15	15	15	raison	due
-1336	15	15	15	16	raison	due to
 1336	18	18	22	22	taux	rates
 1338	11	11	10	10	carottes	cores
 1342	13	13	12	12	carottes	cores
@@ -825,27 +708,22 @@
 1356	1	1	0	0	croissance	growth
 1361	1	1	0	0	auteurs	we
 1361	11	11	9	9	famille	family
-1361	11	11	9	10	famille	family ,
 1361	21	21	19	19	membres	members
 1361	24	24	22	22	famille	family
 1361	34	34	30	30	premier	first
 1363	19	19	14	14	famille	family
-1363	19	19	14	15	famille	family has
 1364	17	17	13	13	membres	members
 1364	20	20	17	17	famille	family
 1365	4	4	1	1	famille	family
 1366	12	12	7	7	lumière	insights
-1367	1	1	0	1	auteurs	this paper
 1367	1	1	1	1	auteurs	paper
 1367	10	10	11	11	espèces	species
 1369	7	7	3	3	espèces	species
 1375	1	1	1	1	études	research
 1375	11	11	10	10	voie	pathways
-1375	11	11	10	11	voie	pathways in
 1376	39	39	28	28	clé	key
 1376	42	42	33	33	cascade	cascade
 1377	1	1	1	1	études	studies
-1378	33	33	34	35	cellulaire	, cell
 1378	33	33	35	35	cellulaire	cell
 1380	30	30	23	23	premières	primary
 1380	83	83	70	70	plaquettes	platelets
@@ -863,12 +741,7 @@
 1412	5	5	1	1	échantillons	samples
 1413	2	2	0	0	mesures	measures
 1415	2	2	2	2	peuplement	stand
-1416	2	2	2	3	étude	present study
-1416	2	2	2	4	étude	present study there
-1416	2	2	2	5	étude	present study there was
 1416	2	2	3	3	étude	study
-1416	2	2	3	4	étude	study there
-1416	2	2	3	5	étude	study there was
 1417	12	12	12	12	peuplement	stand
 1419	5	5	3	3	peuplement	stand
 1423	15	15	15	15	composition	composition
@@ -877,8 +750,6 @@
 1437	25	25	21	21	espèces	species
 1440	16	16	17	17	réaction	response
 1442	8	8	9	9	spectres	spectra
-1442	8	8	9	10	spectres	spectra of
-1450	5	5	3	4	point	the extent
 1450	5	5	4	4	point	extent
 1451	9	9	5	5	espèces	species
 1452	12	12	5	5	espèces	species
@@ -894,7 +765,6 @@
 1469	20	20	20	20	croissance	growth
 1471	7	7	6	6	abondante	abundant
 1471	16	16	13	13	études	studies
-1473	21	21	17	18	source	the source
 1473	21	21	18	18	source	source
 1474	11	11	10	10	croissance	growth
 1477	20	20	11	11	source	source
@@ -903,7 +773,6 @@
 1491	19	19	17	17	moyen	using
 1494	1	1	0	0	auteurs	we
 1496	13	13	8	8	espèces	species
-1496	15	15	10	11	genre	the genus
 1496	15	15	11	11	genre	genus
 1497	14	14	12	12	espèces	species
 1497	22	22	19	19	nouveau	new
@@ -919,7 +788,6 @@
 1510	19	19	10	10	échantillons	sample
 1513	31	31	18	18	lumière	light
 1513	28	28	19	19	diffusion	scattering
-1513	28	28	19	20	diffusion	scattering ,
 1515	27	27	25	25	liaison	binding
 1519	2	2	2	2	étude	study
 1526	5	5	3	3	raison	owing
@@ -930,7 +798,6 @@
 1532	30	30	18	18	croissance	growth
 1532	28	28	19	19	taux	rates
 1533	9	9	6	6	étude	study
-1533	12	12	10	11	particuliers	or unusual
 1533	12	12	11	11	particuliers	unusual
 1536	44	44	35	35	plaque	plate
 1537	1	1	1	1	examen	examinations
@@ -939,7 +806,6 @@
 1540	7	7	6	6	lumière	context
 1547	13	13	9	9	rapports	ratios
 1548	6	6	7	7	mesures	measurements
-1548	6	6	7	8	mesures	measurements ,
 1549	7	7	9	9	espèces	species
 1551	1	1	5	6	provenance	provenance showing
 1554	22	22	15	15	couverture	forest
@@ -949,16 +815,13 @@
 1557	29	29	17	17	mesures	measures
 1557	42	42	30	30	espèces	species
 1559	4	4	2	2	espèces	species
-1560	6	6	5	6	premier	of first
 1560	6	6	6	6	premier	first
 1564	8	8	7	7	études	studies
 1564	20	20	14	14	clé	key
 1565	3	3	2	2	étude	study
 1566	38	38	34	34	pompe	pumps
-1570	53	53	33	34	croissance	the growing
 1570	53	53	34	34	croissance	growing
 1572	14	14	12	12	régler	control
-1572	30	30	27	28	source	a source
 1572	30	30	28	28	source	source
 1575	15	15	10	10	premières	early
 1576	14	14	13	13	étude	study
@@ -973,12 +836,9 @@
 1602	3	3	1	1	liaison	linkage
 1612	14	14	13	13	genres	genera
 1612	16	16	15	15	espèces	species
-1612	16	16	15	16	espèces	species ,
 1613	4	4	5	5	espèces	species
-1614	1	1	0	1	auteurs	this study
 1614	1	1	1	1	auteurs	study
 1615	5	5	5	5	tiges	shoots
-1615	5	5	5	6	tiges	shoots is
 1616	3	3	2	2	espèces	species
 1616	6	6	5	6	apex	shoot apex
 1618	1	1	0	0	mesure	as
@@ -988,16 +848,13 @@
 1623	23	23	14	14	genres	genera
 1623	28	28	20	20	étude	study
 1623	38	38	27	27	espèces	species
-1624	1	1	0	1	auteurs	this study
 1624	1	1	1	1	auteurs	study
 1628	21	21	16	16	patron	pattern
 1631	1	1	0	0	mesure	as
 1633	27	27	24	24	membres	members
 1635	12	12	7	7	croissance	growth
-1635	12	12	7	8	croissance	growth is
 1635	28	28	18	18	croissance	growth
 1635	32	32	22	22	études	studies
-1635	32	32	22	23	études	studies ,
 1635	37	37	25	25	échantillons	samples
 1636	3	3	1	1	études	studies
 1636	8	8	6	6	croissance	growth
@@ -1010,7 +867,6 @@
 1641	19	19	14	14	croissance	growth
 1644	7	7	3	3	abondante	abundant
 1649	3	3	2	2	portées	took
-1649	3	3	2	3	portées	took place
 1651	20	20	10	10	espèce	species
 1657	43	43	38	38	exposition	exposure
 1667	1	1	1	1	genre	genus
@@ -1039,7 +895,6 @@
 1702	5	5	5	5	étude	study
 1703	16	16	9	9	charges	load
 1703	27	27	16	16	grands	large
-1704	17	17	12	13	système	the system
 1704	17	17	13	13	système	system
 1708	19	19	19	19	système	system
 1712	9	9	11	11	espèces	species
@@ -1056,11 +911,7 @@
 1745	2	2	2	2	modèles	model
 1748	12	12	11	11	subissant	undergoing
 1748	14	14	13	13	mouvement	mobility
-1748	14	14	13	14	mouvement	mobility ,
 1750	15	15	9	9	article	paper
-1750	15	15	9	10	article	paper are
-1750	15	15	9	11	article	paper are expected
-1750	15	15	9	12	article	paper are expected to
 1750	32	32	25	25	déformations	deformations
 1751	36	36	29	29	point	point
 1752	16	16	9	9	études	studies
@@ -1073,7 +924,6 @@
 1769	21	21	13	13	espèce	species
 1771	25	25	22	22	espèce	species
 1772	1	1	7	7	auteurs	aim
-1772	1	1	7	8	auteurs	aim of
 1773	4	4	3	3	solution	solution
 1775	1	1	0	0	auteurs	we
 1777	1	1	0	0	auteurs	we
@@ -1081,7 +931,6 @@
 1781	4	4	4	4	antérieure	previous
 1781	12	12	10	10	formation	formation
 1783	12	12	10	10	champ	field
-1783	31	31	24	25	substituant	the substituent
 1783	31	31	25	25	substituant	substituent
 1783	50	50	42	42	cadre	framework
 1784	2	2	15	15	lumière	light
@@ -1096,11 +945,9 @@
 1797	3	3	2	2	article	paper
 1799	3	3	1	1	entrée	input
 1799	33	33	30	30	déformation	strain
-1807	20	20	19	20	espèces	the species
 1807	20	20	20	20	espèces	species
 1809	17	17	12	12	membres	limb
 1810	21	21	13	13	membres	limb
-1810	52	52	38	39	nature	the wild
 1810	52	52	39	39	nature	wild
 1813	3	3	4	4	source	spring
 1814	3	3	4	4	source	spring
@@ -1128,7 +975,6 @@
 1842	8	8	5	5	croissance	growth
 1843	66	66	35	35	croissance	growth
 1846	1	1	0	0	croissance	growth
-1847	28	28	20	21	prévues	as expected
 1847	28	28	21	21	prévues	expected
 1850	3	3	3	3	stade	stage
 1851	1	1	1	1	taux	rate
@@ -1140,10 +986,8 @@
 1867	14	14	11	11	genre	genus
 1870	1	1	1	1	occurrence	occurrence
 1870	23	23	20	20	genre	genus
-1870	23	23	20	21	genre	genus is
 1871	5	5	9	9	taxons	taxa
 1871	38	38	30	30	occurrence	occurrence
-1871	38	38	30	31	occurrence	occurrence in
 1873	3	3	0	0	études	studies
 1873	27	27	20	20	couverture	cover
 1875	25	25	16	16	couverture	cover
@@ -1156,14 +1000,11 @@
 1887	20	20	12	12	couplage	coupling
 1888	7	7	6	6	système	system
 1888	29	29	22	22	réaction	reaction
-1888	29	29	22	23	réaction	reaction was
-1888	36	36	28	29	nature	in nature
 1888	36	36	29	29	nature	nature
 1891	33	33	20	20	métalliques	metallic
 1892	30	30	23	23	nature	nature
 1893	13	13	6	6	charge	charge
 1893	16	16	9	9	nature	nature
-1893	29	29	18	19	charge	and charged
 1893	29	29	19	19	charge	charged
 1893	68	68	55	55	cadre	framework
 1896	30	30	21	21	charge	charge
@@ -1174,14 +1015,10 @@
 1900	13	13	8	8	pression	pressure
 1902	5	5	2	2	déformation	strain
 1902	9	9	4	4	rupture	failure
-1902	9	9	4	5	rupture	failure was
-1902	9	9	4	6	rupture	failure was found
-1902	9	9	4	7	rupture	failure was found to
 1905	44	44	33	33	étude	study
 1906	23	23	18	18	pression	pressure
 1914	21	21	24	24	régime	diet
 1915	27	27	22	22	avérés	occurred
-1923	6	6	8	9	échantillon	a sample
 1923	6	6	9	9	échantillon	sample
 1925	18	18	12	12	échantillons	sampling
 1930	9	9	4	4	petits	small
@@ -1197,7 +1034,6 @@
 1959	16	16	16	16	cadre	framework
 1962	70	70	57	57	lumière	light
 1963	1	1	1	1	taux	rate
-1963	1	1	1	2	taux	rate was
 1965	7	7	4	4	exposition	exposure
 1968	2	2	4	4	étude	study
 1969	1	1	2	2	souris	mice
@@ -1208,7 +1044,6 @@
 1975	3	3	3	3	étude	study
 1978	30	30	19	19	droit	right
 1980	28	28	32	32	blocage	blockade
-1981	17	17	5	6	réaction	was reacted
 1981	17	17	6	6	réaction	reacted
 1990	34	34	31	31	état	state
 1991	30	30	16	16	échelle	scale
@@ -1225,14 +1060,11 @@
 2009	35	35	27	27	diffusion	diffusion
 2015	1	1	1	1	étude	study
 2017	27	27	27	27	essais	tests
-2019	1	1	2	3	essais	and cw
 2019	1	1	3	3	essais	cw
 2022	8	8	5	5	croissance	growth
-2023	13	13	10	11	labrador	, labrador
 2023	13	13	11	11	labrador	labrador
 2029	28	28	19	19	étude	study
 2029	36	36	25	25	labrador	labrador
-2029	36	36	25	26	labrador	labrador are
 2032	14	14	13	13	requises	required
 2033	2	2	2	2	étude	study
 2037	24	24	19	19	espèces	target
@@ -1242,7 +1074,6 @@
 2048	2	2	3	3	milieu	broth
 2050	12	12	9	9	croissance	growth
 2054	28	28	24	24	espèce	species
-2054	28	28	24	25	espèce	species in
 2054	30	30	27	27	genre	genus
 2060	1	1	2	2	modèles	models
 2060	5	5	4	4	patrons	patterns
@@ -1297,7 +1128,6 @@
 2153	26	26	17	17	induisent	induce
 2157	2	2	2	2	spectres	spectra
 2158	33	33	28	28	taux	amount
-2158	33	33	28	29	taux	amount of
 2160	16	16	12	12	taux	detectable
 2161	28	28	14	14	cellulaire	cell
 2161	14	14	26	26	spectres	spectra
@@ -1328,11 +1158,8 @@
 2230	28	28	22	22	taxons	taxa
 2231	4	4	1	1	localisation	localization
 2231	1	1	2	2	études	studies
-2231	1	1	2	3	études	studies have
 2234	44	44	31	31	récepteur	receptor
-2234	44	44	31	32	récepteur	receptor ,
 2236	23	23	15	15	rigidité	stiffness
-2236	23	23	15	16	rigidité	stiffness ,
 2238	25	25	21	21	essais	testing
 2240	1	1	1	1	article	paper
 2240	7	7	7	7	étude	study
@@ -1362,7 +1189,6 @@
 2274	50	50	39	39	milieu	mid
 2282	10	10	10	10	réaction	reaction
 2284	24	24	1	1	couronne	crown
-2284	1	1	12	13	réaction	by reaction
 2284	1	1	13	13	réaction	reaction
 2285	25	25	14	14	pression	pressure
 2293	37	37	29	29	loups	wolves
@@ -1373,7 +1199,6 @@
 2297	23	23	17	17	loups	wolves
 2298	23	23	16	16	corporelles	body
 2300	4	4	3	3	auteurs	we
-2300	4	4	3	4	auteurs	we speculate
 2305	22	22	12	12	arc-en-ciel	rainbow
 2310	1	1	2	2	modèles	models
 2311	26	26	19	19	petits	small
@@ -1385,7 +1210,6 @@
 2319	12	12	6	6	croissance	growth
 2319	24	24	11	11	grands	large
 2320	19	19	16	16	système	system
-2320	19	19	16	17	système	system ,
 2323	32	32	25	25	enceinte	chamber
 2324	15	15	8	8	récepteur	receptor
 2326	3	3	1	1	récepteur	receptor
@@ -1399,12 +1223,9 @@
 2336	12	12	12	12	auteurs	authors
 2337	4	4	4	4	espèce	species
 2338	13	13	11	11	espèce	species
-2338	13	13	11	12	espèce	species ,
 2340	23	23	25	25	espèce	species
 2340	25	25	28	28	nouveau	new
 2340	26	26	29	29	genre	genus
-2344	13	13	12	14	raison	this is due
-2344	13	13	13	14	raison	is due
 2344	13	13	14	14	raison	due
 2344	18	18	20	20	modèles	models
 2345	4	4	3	3	souris	mice
@@ -1421,13 +1242,10 @@
 2359	11	11	9	9	patrons	patterns
 2359	25	25	16	16	patrons	patterns
 2362	8	8	0	0	sang	blood
-2362	8	8	0	1	sang	blood was
 2365	10	10	8	8	blocage	blockade
-2368	10	10	16	19	et/ou	and ( or )
 2368	10	10	17	19	et/ou	( or )
 2369	8	8	10	10	fixation	binding
 2372	1	1	1	1	espèces	species
-2373	9	9	6	7	clé	the key
 2373	9	9	7	7	clé	key
 2375	5	5	4	4	espèces	species
 2375	28	28	26	26	genre	genus
@@ -1458,7 +1276,6 @@
 2408	5	5	1	1	espèces	species
 2408	22	22	14	14	espèces	species
 2408	20	20	15	15	composition	composition
-2408	20	20	15	16	composition	composition were
 2410	1	1	0	0	auteurs	we
 2410	15	15	9	9	espèces	species
 2411	1	1	1	1	étude	study
@@ -1470,30 +1287,23 @@
 2419	37	37	31	31	taux	rates
 2421	8	8	7	7	homologue	homologous
 2425	1	1	2	2	étude	study
-2425	1	1	2	3	étude	study ,
 2425	7	7	7	7	nature	nature
 2425	15	15	15	15	matière	matter
-2425	15	15	15	16	matière	matter ,
 2427	28	28	26	26	passage	passage
 2432	10	10	12	12	liaison	linkage
 2438	30	30	25	25	rendements	yields
-2438	30	30	25	26	rendements	yields ,
 2439	17	17	17	17	rendements	yields
-2439	17	17	17	18	rendements	yields ,
 2440	6	6	4	4	études	studies
 2441	44	44	37	37	pays	countries
-2441	44	44	37	38	pays	countries may
 2442	6	6	5	5	état	reported
 2442	22	22	18	18	surveillance	surveillance
 2443	2	2	1	1	souches	strains
 2443	8	8	5	5	stériles	sterile
-2446	20	20	19	20	pays	the country
 2446	20	20	20	20	pays	country
 2447	1	1	1	1	nouveau	novel
 2449	10	10	7	7	souches	strain
 2449	22	22	20	20	informations	information
 2449	26	26	23	23	surveillance	surveillance
-2450	12	12	7	8	moyen	a means
 2450	12	12	8	8	moyen	means
 2455	8	8	5	5	moyennes	means
 2457	3	3	4	4	moyennes	means
@@ -1511,7 +1321,6 @@
 2465	17	17	9	9	étude	study
 2465	40	40	29	29	système	system
 2466	13	13	9	9	système	system
-2472	7	7	3	4	essais	, test
 2472	7	7	4	4	essais	test
 2474	2	2	1	1	étude	study
 2474	11	11	15	15	finis	finite
@@ -1525,12 +1334,10 @@
 2489	11	11	8	8	espèce	species
 2490	24	24	18	18	lumière	light
 2493	5	5	4	4	moules	zebra
-2496	1	1	0	1	examen	we explore
 2496	1	1	1	1	examen	explore
 2496	41	41	31	31	moules	zebra
 2498	1	1	1	1	nouveau	new
 2502	1	1	1	1	modèles	models
-2502	1	1	1	2	modèles	models have
 2502	22	22	19	19	modèles	models
 2503	23	23	21	21	modèles	models
 2506	11	11	16	16	modèles	models
@@ -1541,12 +1348,10 @@
 2519	30	30	24	24	membres	members
 2521	2	2	2	2	article	review
 2524	1	1	2	2	article	paper
-2524	1	1	2	3	article	paper ,
 2524	7	7	8	8	étude	study
 2526	31	31	32	32	système	system
 2527	14	14	13	13	rapport	report
 2528	29	29	21	22	véhicule	errant vehicle
-2528	29	29	21	23	véhicule	errant vehicle ,
 2530	9	9	9	9	taux	rate
 2534	23	23	17	17	témoins	controls
 2537	20	20	21	21	espèces	species
@@ -1555,10 +1360,7 @@
 2539	17	17	12	12	nouveau	new
 2540	3	3	1	1	essais	test
 2540	10	10	7	7	moyen	using
-2540	10	10	7	8	moyen	using the
-2540	13	13	8	9	nouveau	the new
 2540	13	13	9	9	nouveau	new
-2542	6	6	3	4	occurrence	the occurrence
 2542	6	6	4	4	occurrence	occurrence
 2544	17	17	15	15	auteurs	we
 2546	25	25	18	18	solution	solution
@@ -1582,8 +1384,6 @@
 2563	11	11	12	12	pression	pressure
 2563	30	30	27	27	état	state
 2564	4	4	5	5	pression	pressure
-2564	4	4	5	6	pression	pressure to
-2566	17	17	14	15	taux	the rate
 2566	17	17	15	15	taux	rate
 2566	24	24	22	22	déformations	strains
 2568	12	12	13	13	taux	rate
@@ -1600,14 +1400,12 @@
 2582	7	7	1	1	espèces	species
 2582	16	16	14	14	espèces	species
 2582	54	54	43	43	perturbations	perturbations
-2582	54	54	43	44	perturbations	perturbations ,
 2583	1	1	1	1	article	paper
 2584	4	4	7	7	dépôt	deposit
 2586	1	1	1	1	souches	strains
 2587	19	19	18	18	patient	patient
 2592	16	16	16	16	point	point
 2592	18	18	18	18	vue	view
-2592	18	18	18	19	vue	view and
 2598	16	16	15	15	mesures	measurements
 2601	64	64	55	55	rayons	rays
 2603	11	11	9	9	croissance	growth
@@ -1621,9 +1419,7 @@
 2626	28	28	25	25	mouvement	movement
 2632	43	43	38	38	moyen	using
 2633	7	7	3	3	essais	tests
-2633	7	7	3	4	essais	tests are
 2634	9	9	7	7	essais	test
-2634	9	9	7	8	essais	test records
 2635	12	12	11	11	champ	field
 2636	2	2	3	3	champ	field
 2637	12	12	11	11	champ	field
@@ -1650,7 +1446,6 @@
 2701	10	10	7	7	frottement	friction
 2701	19	19	18	18	rigidité	roughness
 2703	11	11	11	11	système	system
-2703	11	11	11	12	système	system was
 2703	19	19	17	17	rigidité	roughness
 2704	16	16	13	13	rigidité	roughness
 2706	15	15	7	7	lumière	light
@@ -1665,7 +1460,6 @@
 2714	1	1	1	1	concordance	agreement
 2714	9	9	6	6	lumière	light
 2714	27	27	20	20	lumière	light
-2720	33	33	31	32	addition	and addition
 2720	33	33	32	32	addition	addition
 2721	27	27	22	22	m.	m.
 2724	4	4	4	4	étude	study
@@ -1675,12 +1469,10 @@
 2734	1	1	1	1	modèles	models
 2737	15	15	11	11	formation	formation
 2737	25	25	22	22	installation	facility
-2737	25	25	22	23	installation	facility ,
 2737	53	53	43	43	formation	formation
 2745	13	13	11	11	premier	first
 2745	17	17	16	16	composition	composition
 2745	24	24	21	21	espèces	species
-2745	24	24	21	22	espèces	species from
 2746	2	2	1	1	article	article
 2747	13	13	6	6	pression	pressure
 2748	1	1	1	1	administration	administration
@@ -1700,23 +1492,19 @@
 2770	22	22	5	5	modèles	model
 2770	6	6	16	16	rigidité	rigidity
 2775	6	6	5	5	incertitude	uncertainty
-2775	6	6	5	6	incertitude	uncertainty as
 2776	4	4	1	1	croissance	growing
 2777	1	1	1	1	contraire	contrast
 2777	4	4	4	4	espèces	species
-2778	19	19	19	20	flux	through flow
 2778	19	19	20	20	flux	flow
 2778	26	26	25	25	tiges	stems
 2780	4	4	1	1	nouveau	new
 2780	14	14	9	9	nouveau	new
 2781	19	19	14	14	nouveau	novel
 2782	2	2	3	3	élucidé	elucidated
-2782	2	2	3	4	élucidé	elucidated on
 2785	27	27	17	17	premier	first
 2785	32	32	21	21	mesures	measurements
 2786	6	6	3	3	sortie	output
 2786	8	8	6	6	requises	required
-2792	12	12	10	11	humain	the human
 2792	12	12	11	11	humain	human
 2793	2	2	4	4	humain	human
 2794	3	3	4	4	cellulaire	cell
@@ -1740,7 +1528,6 @@
 2816	4	4	4	4	association	association
 2816	7	7	6	6	petits	calves
 2817	3	3	1	1	petits	calves
-2817	3	3	1	2	petits	calves were
 2817	26	26	19	19	mesure	as
 2819	6	6	9	9	espèce	species
 2819	18	18	15	15	premières	first
@@ -1763,9 +1550,7 @@
 2842	3	3	1	1	nouveau	new
 2842	8	8	9	9	espèce	species
 2844	6	6	4	6	essais	tests was carried
-2844	6	6	4	7	essais	tests was carried out
 2844	9	9	11	11	échantillons	samples
-2844	17	17	17	18	dépôt	the deposit
 2844	17	17	18	18	dépôt	deposit
 2845	5	5	5	5	essais	tests
 2845	15	15	15	15	essais	tests
@@ -1797,10 +1582,6 @@
 2872	40	40	30	30	études	studies
 2880	36	36	23	23	ours	bear
 2881	30	30	19	19	sang	blood
-2881	30	30	19	20	sang	blood and
-2881	30	30	19	21	sang	blood and hair
-2881	28	28	20	22	échantillons	and hair samples
-2881	28	28	21	22	échantillons	hair samples
 2881	28	28	22	22	échantillons	samples
 2890	5	5	2	2	entiers	whole
 2892	29	29	23	23	réaction	responses
@@ -1811,11 +1592,9 @@
 2904	1	1	1	1	étude	study
 2904	47	47	41	41	espèce	species
 2909	24	24	18	18	croissance	growth
-2909	24	24	18	19	croissance	growth when
 2913	1	1	0	0	composition	composition
 2915	44	44	33	33	morte	dead
 2916	12	12	0	0	coupe	clearcuts
-2916	12	12	0	1	coupe	clearcuts had
 2916	3	3	3	3	espèce	species
 2916	35	35	26	26	échelle	scale
 2919	1	1	1	1	moyen	way
@@ -1828,42 +1607,33 @@
 2929	10	10	8	8	rapport	ratio
 2929	17	17	15	15	extraits	extracted
 2929	21	21	19	19	angulaire	angular
-2933	6	6	6	7	rapport	the ratio
 2933	6	6	7	7	rapport	ratio
 2934	15	15	14	14	étude	study
-2944	23	23	14	15	scalaire	and scalar
 2944	23	23	15	15	scalaire	scalar
 2946	8	8	7	7	pratique	practice
-2946	8	8	7	8	pratique	practice a
 2948	10	10	8	8	scalaire	scalar
 2948	17	17	14	14	petits	small
 2950	17	17	30	30	grands	large
-2950	24	24	34	35	source	in source
 2950	24	24	35	35	source	source
 2952	5	5	6	6	problème	problem
 2954	1	1	1	1	manuscrit	manuscript
 2961	7	7	5	5	solution	solution
-2961	7	7	5	6	solution	solution --
 2963	10	10	7	7	raison	because
 2963	21	21	19	19	milieu	medium
 2966	5	5	6	6	étude	study
 2968	11	11	7	7	diffusion	scattering
 2971	27	27	5	5	lumière	light
 2973	3	3	2	2	inscrit	fits
-2974	2	2	3	4	études	field studies
 2974	2	2	4	4	études	studies
 2974	20	20	17	17	incertitude	uncertainties
 2975	1	1	1	1	incertitude	uncertainties
 2976	6	6	3	3	écoulements	flow
 2977	6	6	6	6	écoulements	flow
 2978	6	6	8	8	système	systems
-2978	6	6	8	9	système	systems ,
 2979	22	22	17	17	conjugué	conjugate
 2980	1	1	1	1	étude	study
-2980	15	15	14	16	problème	our problem solving
 2980	15	15	15	16	problème	problem solving
 2981	26	26	18	18	conjugué	conjugate
-2982	6	6	5	6	problème	global problem
 2982	6	6	6	6	problème	problem
 2982	9	9	10	10	problème	problem
 2992	24	24	27	27	vitesses	velocity
@@ -1875,7 +1645,6 @@
 3008	1	1	6	6	nature	nature
 3008	26	26	18	18	connaissance	them
 3008	21	21	26	26	modèles	models
-3008	21	21	26	27	modèles	models of
 3009	4	4	1	1	modèles	models
 3012	5	5	5	5	modèles	models
 3012	18	18	18	18	modèles	models
@@ -1890,32 +1659,22 @@
 3029	13	13	10	10	courant	current
 3029	22	22	16	16	source	source
 3029	27	27	18	18	délivrer	deliver
-3030	5	5	4	5	source	a source
 3030	5	5	5	5	source	source
 3032	19	19	20	20	étude	study
-3032	21	21	22	23	problème	this problem
-3032	21	21	22	24	problème	this problem must
 3032	21	21	23	23	problème	problem
-3032	21	21	23	24	problème	problem must
 3033	12	12	3	3	problème	problem
-3033	12	12	3	4	problème	problem in
-3033	12	12	3	5	problème	problem in a
 3036	4	4	3	3	formation	formation
 3036	14	14	14	14	champ	field
 3038	3	3	2	2	intéresse	focuses
 3042	13	13	23	24	croissance	growth rate
-3042	13	13	23	25	croissance	growth rate and
 3043	40	40	40	40	modèles	model
 3046	5	5	3	3	dépôt	deposition
 3047	7	7	4	4	composition	composition
 3047	16	16	13	13	biais	means
 3048	8	8	1	1	composition	composition
 3048	21	21	13	13	pression	pressure
-3048	21	21	13	14	pression	pressure ,
-3048	21	21	13	15	pression	pressure , on
 3051	5	5	5	5	étude	study
 3057	2	2	3	3	modèles	models
-3057	20	20	22	23	champ	mean field
 3057	20	20	23	23	champ	field
 3063	5	5	1	1	excitation	excitation
 3063	1	1	3	3	spectres	spectra
@@ -1931,7 +1690,6 @@
 3084	51	51	41	41	survenue	occurrence
 3084	59	59	49	49	vue	order
 3086	16	16	11	11	modèles	models
-3086	35	35	31	32	système	the system
 3086	35	35	32	32	système	system
 3087	76	76	70	70	embarqués	embedded
 3089	17	17	17	17	service	service
@@ -1944,10 +1702,7 @@
 3095	10	10	9	9	solution	solution
 3099	44	44	39	39	diffusion	distribution
 3099	46	46	41	41	informations	information
-3102	10	10	8	9	rapport	and compare
-3102	10	10	8	10	rapport	and compare them
 3102	10	10	9	9	rapport	compare
-3102	10	10	9	10	rapport	compare them
 3105	29	29	21	21	couplage	pairing
 3107	31	31	22	22	grands	big
 3108	1	1	1	1	travaux	work
@@ -1955,7 +1710,6 @@
 3111	45	45	31	31	couplage	pairing
 3114	28	28	25	25	matérielle	hardware
 3117	1	1	0	0	premier	first
-3117	1	1	0	1	premier	first ,
 3120	5	5	5	5	problème	mismatch
 3122	2	2	2	2	point	issue
 3122	6	6	6	6	étude	work
@@ -1967,11 +1721,6 @@
 3142	10	10	4	4	étude	study
 3144	3	3	2	2	étude	study
 3145	1	1	1	1	étude	investigation
-3145	1	1	1	2	étude	investigation on
-3145	1	1	1	3	étude	investigation on the
-3145	1	1	1	4	étude	investigation on the light
-3145	1	1	1	5	étude	investigation on the light shift
-3145	1	1	1	6	étude	investigation on the light shift and
 3149	5	5	2	3	raie	detailed line
 3149	7	7	5	5	raie	line
 3151	7	7	7	7	calculer	calculate
@@ -1979,27 +1728,19 @@
 3153	10	10	9	9	spectres	spectra
 3154	18	18	10	10	travaux	task
 3160	1	1	2	2	coupe	cut
-3165	11	11	14	15	échantillon	the sample
-3165	11	11	14	16	échantillon	the sample .
 3165	11	11	15	15	échantillon	sample
-3165	11	11	15	16	échantillon	sample .
 3168	1	1	1	1	échantillons	samples
-3169	3	3	2	3	localiser	the localization
 3169	3	3	3	3	localiser	localization
 3169	8	8	7	7	échantillons	sample
 3169	14	14	12	12	mesures	measurements
-3171	10	10	10	11	courant	is current
 3171	10	10	11	11	courant	current
 3172	1	1	1	1	mesure	measure
 3172	18	18	19	19	échantillon	sample
 3176	6	6	5	6	requête	user query
-3176	6	6	5	7	requête	user query as
 3180	5	5	3	3	modèles	models
 3180	10	10	9	9	cadre	framework
-3180	10	10	9	10	cadre	framework that
 3181	1	1	0	0	premier	first
 3183	20	20	19	19	requête	query
-3183	20	20	19	20	requête	query ,
 3190	12	12	2	2	modèles	model
 3190	2	2	5	5	premier	first
 3192	1	1	10	10	étude	study
@@ -2007,7 +1748,6 @@
 3196	22	22	14	14	libre	free
 3198	5	5	3	3	courant	current
 3200	3	3	3	3	classe	class
-3200	25	25	25	26	calculer	to compute
 3200	25	25	26	26	calculer	compute
 3203	18	18	21	21	point	point
 3204	17	17	15	15	affaires	business
@@ -2017,7 +1757,6 @@
 3211	9	9	7	7	problème	problem
 3212	10	10	7	7	problème	problem
 3213	31	31	22	22	mesure	which
-3214	25	25	19	20	mémoire	main memory
 3214	25	25	20	20	mémoire	memory
 3216	9	9	5	5	service	service
 3216	19	19	11	11	entrée	entry
@@ -2037,24 +1776,19 @@
 3238	7	7	8	8	liaison	bond
 3238	13	13	12	12	décroissance	decrease
 3238	18	18	18	18	couverture	coverage
-3238	18	18	18	19	couverture	coverage when
 3240	1	1	2	2	excitation	excitation
 3241	6	6	7	7	excitation	excitation
 3241	10	10	10	10	argent	silver
 3241	21	21	22	22	plans	planes
 3242	12	12	11	11	excitation	excitation
 3247	4	4	4	4	problème	problem
-3247	24	24	25	26	libre	mean free
 3247	24	24	26	26	libre	free
 3248	3	3	3	3	formalisme	formalism
-3248	19	19	13	15	modèles	the standard models
 3248	19	19	14	15	modèles	standard models
 3249	1	1	1	1	formalisme	formalism
 3249	19	19	19	19	plane	plane
 3249	23	23	25	25	courant	current
 3249	44	44	46	46	plane	plane
-3249	48	48	52	54	courant	mean transport current
-3249	48	48	53	54	courant	transport current
 3249	48	48	54	54	courant	current
 3250	1	1	1	1	nouveau	new
 3251	69	69	60	60	angulaire	angular
@@ -2063,16 +1797,13 @@
 3251	104	104	94	94	vitesses	velocity
 3253	8	8	5	5	nouveau	novel
 3253	9	9	6	6	formalisme	formalism
-3255	1	1	1	2	formalisme	novel formalism
 3255	1	1	2	2	formalisme	formalism
 3255	23	23	26	26	problème	problem
 3257	33	33	27	27	requises	required
-3257	33	33	27	28	requises	required for
 3258	8	8	21	21	potentialités	potentialities
 3262	15	15	14	14	étude	study
 3264	14	14	12	12	problème	problem
 3265	13	13	10	10	échantillons	sample
-3265	13	13	10	11	échantillons	sample size
 3266	25	25	24	24	problème	problem
 3267	15	15	14	14	modèles	models
 3267	26	26	25	25	modèles	models
@@ -2092,13 +1823,11 @@
 3294	4	4	3	3	rayons	ray
 3298	1	1	2	2	mesure	measurement
 3300	1	1	1	1	premier	first
-3303	13	13	13	14	point	a point
 3303	13	13	14	14	point	point
 3305	25	25	23	23	fonctions	functions
 3309	37	37	33	33	association	association
 3310	27	27	20	20	modèles	models
 3313	2	2	3	3	étude	study
-3313	40	40	37	38	cellulaire	a cell
 3313	40	40	38	38	cellulaire	cell
 3314	32	32	25	25	espèce	species
 3316	25	25	26	26	premier	former
@@ -2106,9 +1835,7 @@
 3320	4	4	23	23	modèles	models
 3326	13	13	1	1	études	studying
 3328	15	15	10	10	localiser	locate
-3328	15	15	10	11	localiser	locate real
 3328	27	27	42	42	études	studies
-3330	6	6	5	6	modèles	on models
 3330	6	6	6	6	modèles	models
 3330	15	15	15	15	modèles	models
 3330	29	29	26	26	solution	solution
@@ -2116,7 +1843,6 @@
 3336	15	15	15	15	point	point
 3336	23	23	18	18	système	system
 3337	17	17	16	16	premier	first
-3337	37	37	30	31	champ	mean field
 3337	37	37	31	31	champ	field
 3345	4	4	5	5	études	studies
 3346	8	8	8	8	mesure	measure
@@ -2128,18 +1854,10 @@
 3354	13	13	13	13	régime	regime
 3355	13	13	11	11	travaux	works
 3363	10	10	35	35	champ	field
-3364	1	1	1	4	connaissance	this field , knowing
-3364	1	1	2	4	connaissance	field , knowing
-3364	1	1	3	4	connaissance	, knowing
 3364	1	1	4	4	connaissance	knowing
 3366	6	6	5	5	moyen	using
 3370	6	6	8	8	étude	study
 3375	18	18	7	7	cadre	our
-3375	1	1	17	22	travaux	every day . from a research
-3375	1	1	18	22	travaux	day . from a research
-3375	1	1	19	22	travaux	. from a research
-3375	1	1	20	22	travaux	from a research
-3375	1	1	21	22	travaux	a research
 3375	1	1	22	22	travaux	research
 3377	2	2	5	5	intéresse	focus
 3380	33	33	36	36	régime	regime
@@ -2151,10 +1869,6 @@
 3383	31	31	23	23	nouveau	new
 3383	34	34	26	26	échantillon	sample
 3383	39	39	30	30	couplage	coupling
-3383	39	39	30	31	couplage	coupling of
-3383	39	39	30	32	couplage	coupling of the
-3383	39	39	30	33	couplage	coupling of the system
-3389	25	25	13	14	calculer	to compute
 3389	25	25	14	14	calculer	compute
 3392	11	11	12	12	borne	bound
 3393	6	6	4	4	face	cope
@@ -2170,8 +1884,6 @@
 3402	10	10	10	10	étude	study
 3402	22	22	21	21	cascade	cascade
 3404	17	17	19	19	spectres	spectra
-3404	17	17	19	20	spectres	spectra on
-3404	29	29	28	29	cascade	quantum cascade
 3404	29	29	29	29	cascade	cascade
 3406	17	17	4	4	lumière	light
 3411	5	5	1	1	embarqués	embedded
@@ -2208,7 +1920,6 @@
 3456	16	16	18	18	mesure	measurement
 3456	37	37	42	42	taux	rate
 3456	50	50	51	51	réaction	reaction
-3457	15	15	14	15	champ	oh field
 3457	15	15	15	15	champ	field
 3458	42	42	43	43	mesure	measurement
 3460	6	6	3	3	point	adjusted
@@ -2216,13 +1927,11 @@
 3461	1	1	1	1	étude	study
 3461	5	5	7	7	campagne	campaign
 3463	4	4	1	1	étude	study
-3463	48	48	46	47	campagne	same campaign
 3463	48	48	47	47	campagne	campaign
 3464	1	1	1	1	nature	nature
 3464	3	3	5	5	espèces	species
 3465	8	8	4	4	informations	information
 3466	9	9	3	3	lumière	light
-3466	9	9	3	4	lumière	light is
 3469	24	24	17	17	porteurs	carrier
 3471	25	25	12	12	couplage	coupling
 3473	15	15	14	14	courant	current
@@ -2230,16 +1939,11 @@
 3475	25	25	42	42	bureau	office
 3476	1	1	1	1	travaux	works
 3477	26	26	6	6	travaux	work
-3480	12	12	7	10	flux	is to use several
-3480	12	12	8	10	flux	to use several
-3480	12	12	9	10	flux	use several
 3480	12	12	10	10	flux	several
-3481	2	2	0	1	premier	our first
 3481	2	2	1	1	premier	first
 3490	24	24	21	21	échelle	scaling
 3491	20	20	19	19	calculer	calculate
 3492	11	11	9	9	noyaux	nuclei
-3493	11	11	11	12	noyaux	the nuclei
 3493	11	11	12	12	noyaux	nuclei
 3493	16	16	15	15	rapport	respect
 3495	17	17	13	13	fins	thin
@@ -2248,24 +1952,17 @@
 3497	17	17	13	13	état	state
 3497	38	38	33	33	travaux	works
 3500	14	14	8	8	mesure	measurements
-3500	14	14	8	9	mesure	measurements have
-3500	14	14	8	10	mesure	measurements have been
 3500	23	23	18	18	affranchir	minimize
 3503	17	17	21	21	point	point
-3503	34	34	35	36	perturbations	, disturbances
 3503	34	34	36	36	perturbations	disturbances
 3504	41	41	34	34	plane	planar
-3504	41	41	34	35	plane	planar ,
 3512	3	3	0	0	premier	first
-3512	3	3	0	1	premier	first ,
-3512	3	3	0	2	premier	first , i
 3524	21	21	14	14	occurrence	occurrence
 3524	28	28	19	19	rapport	regard
 3525	2	2	0	0	cadre	when
 3526	24	24	21	21	système	system
 3526	35	35	29	29	motifs	pattern
 3528	30	30	25	25	système	system
-3528	30	30	25	26	système	system is
 3530	41	41	23	23	solution	solution
 3531	1	1	2	2	système	system
 3533	27	27	25	25	rapport	respect
@@ -2279,7 +1976,6 @@
 3539	42	42	44	44	modèles	models
 3545	11	11	7	7	fonctions	functions
 3547	3	3	2	2	modèles	models
-3547	11	11	6	7	étude	to study
 3547	11	11	7	7	étude	study
 3548	15	15	16	16	fonctions	functions
 3549	7	7	6	6	mesures	measures
@@ -2299,7 +1995,6 @@
 3576	7	7	8	8	pression	pressure
 3579	1	1	2	2	pression	pressure
 3579	7	7	5	5	mesure	measurement
-3580	2	2	2	3	pression	a pressure
 3580	2	2	3	3	pression	pressure
 3582	3	3	4	4	pression	pressure
 3582	7	7	7	7	mesure	measurement
@@ -2327,7 +2022,6 @@
 3605	8	8	8	8	écoulements	flows
 3607	16	16	10	10	pompe	pump
 3607	40	40	31	31	taux	rates
-3608	20	20	17	18	pompe	the pump
 3608	20	20	18	18	pompe	pump
 3608	55	55	39	39	pompe	pump
 3608	52	52	40	40	entrée	inlet
@@ -2337,7 +2031,6 @@
 3611	26	26	15	15	écoulements	flow
 3614	1	1	1	1	travaux	work
 3614	6	6	6	6	études	studies
-3618	14	14	13	14	composition	the compositions
 3618	14	14	14	14	composition	compositions
 3619	13	13	7	7	lumière	light
 3619	9	9	8	8	diffusion	scattering
@@ -2370,7 +2063,6 @@
 3672	17	17	16	16	mesure	able
 3672	21	21	21	21	incertitude	uncertainty
 3673	19	19	17	17	terre	earth
-3674	8	8	8	9	cadre	general frame
 3674	8	8	9	9	cadre	frame
 3676	24	24	16	16	régime	limits
 3676	44	44	33	33	système	systems
@@ -2398,22 +2090,16 @@
 3706	5	5	8	8	nouveau	new
 3708	2	2	2	2	premier	first
 3709	23	23	14	14	finis	finite
-3720	5	5	1	3	étude	, when considering
-3720	5	5	2	3	étude	when considering
 3720	5	5	3	3	étude	considering
-3732	5	5	5	6	manuscrit	the manuscript
 3732	5	5	6	6	manuscrit	manuscript
 3733	21	21	13	13	mesure	measurement
 3735	5	5	3	3	premières	first
 3735	24	24	22	22	état	state
-3736	5	5	5	6	manuscrit	the manuscript
 3736	5	5	6	6	manuscrit	manuscript
 3739	24	24	23	23	espèces	species
-3739	24	24	23	24	espèces	species ,
 3740	1	1	1	1	étude	study
 3740	15	15	15	15	pression	pressure
 3741	20	20	21	21	sortie	exit
-3742	27	27	21	22	sortie	&apos;s exit
 3742	27	27	22	22	sortie	exit
 3743	1	1	1	1	étude	study
 3743	23	23	27	27	système	system
@@ -2421,9 +2107,7 @@
 3745	1	1	1	1	mesure	measurement
 3746	1	1	0	0	mesures	experiments
 3746	33	33	33	33	module	module
-3746	33	33	33	34	module	module ,
 3746	47	47	47	47	module	module
-3746	47	47	47	48	module	module ,
 3746	58	58	59	59	système	system
 3748	6	6	5	5	dépôt	deposition
 3748	9	9	7	8	métalliques	metal thin
@@ -2441,34 +2125,24 @@
 3759	22	22	20	20	raison	due
 3760	8	8	8	8	calculer	calculate
 3762	36	36	30	30	raison	due
-3762	36	36	30	31	raison	due to
 3774	1	1	0	0	informations	information
 3774	26	26	26	26	système	system
 3775	20	20	10	10	taux	rates
 3778	18	18	14	14	système	system
 3779	20	20	15	15	machine	machine
-3780	25	25	14	15	vue	, from
 3780	25	25	15	15	vue	from
 3784	14	14	19	19	état	state
-3787	17	17	14	15	blocage	that block
 3787	17	17	15	15	blocage	block
 3788	10	10	8	8	affections	conditions
-3788	10	10	8	9	affections	conditions that
-3788	10	10	8	10	affections	conditions that make
-3788	10	10	8	11	affections	conditions that make up
 3795	2	2	2	2	étude	work
 3798	6	6	4	4	cascade	cascading
 3798	24	24	19	19	source	source
-3804	3	3	2	3	calculer	the calculation
-3804	3	3	2	4	calculer	the calculation of
 3804	3	3	3	3	calculer	calculation
-3804	3	3	3	4	calculer	calculation of
 3805	1	1	2	2	pratique	practice
 3807	14	14	10	10	système	system
 3807	23	23	16	16	issues	from
 3808	4	4	4	4	connaissance	knowledge
 3809	11	11	11	11	problème	problem
-3809	11	11	11	12	problème	problem to
 3810	6	6	5	5	priori	priori
 3817	10	10	9	9	vue	order
 3818	17	17	19	19	modèles	models
@@ -2478,7 +2152,6 @@
 3829	14	14	12	12	problème	problem
 3834	13	13	32	32	moyen	average
 3836	5	5	3	3	inscrit	part
-3836	5	5	3	4	inscrit	part of
 3837	11	11	8	8	rayons	radiography
 3839	25	25	17	17	apparues	emerged
 3839	67	67	50	50	fissures	cracks
@@ -2489,25 +2162,19 @@
 3860	15	15	10	10	réaction	reaction
 3873	8	8	7	7	problème	problem
 3876	8	8	20	20	étude	investigations
-3876	8	8	20	21	étude	investigations ,
 3877	8	8	8	8	pêche	fishing
 3881	12	12	7	7	espèce	species
-3881	12	12	7	8	espèce	species &apos;
 3881	41	41	36	36	espèces	species
-3882	1	1	0	1	auteurs	this paper
 3882	1	1	1	1	auteurs	paper
 3884	28	28	18	18	espèces	species
 3885	10	10	13	13	modèles	models
 3895	23	23	18	18	perturbations	disturbances
-3895	23	23	18	19	perturbations	disturbances because
-3896	23	23	17	18	nouveau	the new
 3896	23	23	18	18	nouveau	new
 3897	4	4	3	3	sommets	summits
 3901	13	13	13	13	milieu	medium
 3905	1	1	2	2	voie	route
 3906	1	1	2	2	étude	study
 3906	28	28	24	24	nature	nature
-3909	27	27	23	24	premières	the first
 3909	27	27	24	24	premières	first
 3912	21	21	19	19	stériles	sterile
 3916	1	1	0	0	auteurs	we
@@ -2517,14 +2184,11 @@
 3919	1	1	1	1	article	paper
 3919	3	3	2	2	état	reports
 3920	5	5	4	4	rapport	ratio
-3920	5	5	4	5	rapport	ratio of
 3922	10	10	10	10	cher	cost
 3922	39	39	33	33	échantillons	samples
 3925	27	27	22	22	ligneux	woody
 3929	1	1	1	1	croyons	believe
 3929	20	20	14	14	couverture	cover
-3929	20	20	14	15	couverture	cover ,
-3929	20	20	14	16	couverture	cover , while
 3930	28	28	16	16	lumière	light
 3931	3	3	0	0	lumière	light
 3932	2	2	2	2	ouvertures	openings
@@ -2534,10 +2198,7 @@
 3939	10	10	9	9	fabriques	fabrics
 3939	25	25	19	19	cascade	cascade
 3947	3	3	6	6	fabriques	fabrics
-3948	3	3	2	3	fabriques	the fabrics
 3948	3	3	3	3	fabriques	fabrics
-3950	15	15	9	11	cascade	of the cascade
-3950	15	15	10	11	cascade	the cascade
 3950	15	15	11	11	cascade	cascade
 3952	4	4	3	3	corporelles	body
 3965	17	17	7	7	issues	generated
@@ -2552,7 +2213,6 @@
 3981	33	33	24	24	taxons	taxa
 3982	3	3	4	4	parenté	relatedness
 3984	26	26	19	19	boîtes	boxes
-3984	26	26	19	20	boîtes	boxes that
 3988	48	48	29	29	espèce	species
 3989	1	1	1	1	étude	study
 3990	12	12	12	12	composition	composition
@@ -2565,10 +2225,8 @@
 4013	20	20	17	19	formation	formation is studied
 4014	1	1	0	0	études	studies
 4014	8	8	7	7	rendements	yields
-4014	8	8	7	8	rendements	yields was
 4014	33	33	26	26	réaction	reaction
 4018	9	9	5	5	taux	rates
-4018	9	9	5	6	taux	rates ,
 4021	27	27	17	17	tiges	stem
 4025	5	5	4	4	réaction	response
 4025	7	7	7	7	croissance	growth
@@ -2638,12 +2296,10 @@
 4103	4	4	0	0	plaque	plaque
 4103	1	1	1	1	rupture	rupture
 4103	13	13	10	10	blocage	blockage
-4104	14	14	6	7	taux	the elevated
 4104	14	14	7	7	taux	elevated
 4106	25	25	18	18	récepteur	receptor
 4108	1	1	0	0	étude	analysis
 4108	19	19	17	17	taux	level
-4108	32	32	25	26	taux	the high
 4108	32	32	26	26	taux	high
 4109	3	3	3	3	étude	study
 4109	10	10	9	9	taux	high
@@ -2680,7 +2336,6 @@
 4157	31	31	27	27	croissance	growth
 4157	63	63	61	61	subissant	undergoing
 4158	10	10	9	9	milieu	medium
-4160	14	14	8	9	cellulaire	a cellular
 4160	14	14	9	9	cellulaire	cellular
 4160	30	30	25	25	flux	flux
 4161	22	22	16	16	flux	flux
@@ -2701,7 +2356,6 @@
 4184	34	34	25	25	rapport	respect
 4185	35	35	22	22	mesure	as
 4187	3	3	3	3	rapports	ratios
-4187	3	3	3	4	rapports	ratios of
 4190	9	9	6	6	petits	small
 4193	27	27	22	22	virus	viral
 4199	25	25	21	21	pression	pressure
@@ -2727,7 +2381,6 @@
 4225	6	6	6	6	système	system
 4228	7	7	6	6	solution	solution
 4231	10	10	9	9	étude	study
-4231	30	30	18	19	taux	a rate
 4231	30	30	19	19	taux	rate
 4233	4	4	6	6	croissance	growth
 4234	36	36	23	23	croissance	growth
@@ -2741,7 +2394,6 @@
 4258	9	9	6	6	croissance	growth
 4258	34	34	19	19	croissance	growth
 4266	18	18	21	21	rendements	yields
-4266	18	18	21	22	rendements	yields ,
 4269	24	24	14	14	taux	rates
 4274	12	12	14	14	nature	nature
 4275	8	8	7	7	espèces	species
@@ -2762,12 +2414,10 @@
 4301	23	23	14	14	compensation	compensation
 4301	21	21	15	15	mesures	measures
 4302	25	25	19	19	récepteur	receptor
-4305	1	1	1	2	examinons	are examining
 4305	1	1	2	2	examinons	examining
 4306	32	32	26	26	études	studies
 4308	1	1	1	1	études	studies
 4308	9	9	6	6	penser	suggest
-4313	13	13	7	8	souches	test strains
 4313	13	13	8	8	souches	strains
 4316	31	31	23	23	étude	study
 4318	14	14	11	11	souches	strains
@@ -2775,16 +2425,9 @@
 4321	26	26	19	19	détail	detail
 4322	8	8	8	8	rapports	reports
 4322	12	12	11	11	premier	first
-4322	12	12	11	12	premier	first of
-4322	12	12	11	13	premier	first of which
-4322	14	14	12	14	état	of which deals
-4322	14	14	13	14	état	which deals
 4322	14	14	14	14	état	deals
 4322	18	18	18	18	cellulaire	cell
-4328	13	13	7	8	membres	to members
 4328	13	13	8	8	membres	members
-4329	17	17	16	18	homologues	to be homologous
-4329	17	17	17	18	homologues	be homologous
 4329	17	17	18	18	homologues	homologous
 4335	10	10	6	6	mesure	measure
 4335	30	30	17	17	milieux	media
@@ -2797,17 +2440,13 @@
 4344	1	1	3	3	modèles	models
 4348	8	8	8	8	excitation	excitation
 4348	19	19	19	19	champ	field
-4357	4	4	3	4	excitation	of excitation
 4357	4	4	4	4	excitation	excitation
 4358	17	17	13	13	études	studies
 4358	30	30	28	28	ligneux	woody
 4366	4	4	5	5	espèces	species
 4367	4	4	4	4	espèces	species
-4367	4	4	4	5	espèces	species were
 4368	18	18	21	21	petits	small
-4368	55	55	44	45	espèce	with species
 4368	55	55	45	45	espèce	species
-4370	30	30	15	20	évidence	no evidence for this was found
 4370	30	30	16	20	évidence	evidence for this was found
 4370	33	33	23	23	étude	study
 4371	5	5	1	1	études	studies
@@ -2819,16 +2458,12 @@
 4378	21	21	10	10	espèces	species
 4380	17	17	13	13	espèces	species
 4381	11	11	10	10	espèces	species
-4381	11	11	10	11	espèces	species that
-4381	11	11	10	12	espèces	species that are
 4388	12	12	8	8	patron	patterning
 4389	1	1	1	1	plans	plans
-4389	1	1	1	2	plans	plans that
 4389	12	12	9	9	mesure	equipped
 4391	16	16	9	9	énergétiques	energy
 4391	29	29	18	18	étude	studies
 4393	59	59	35	35	couverture	cover
-4393	59	59	35	36	couverture	cover ,
 4396	1	1	1	1	couverture	cover
 4399	2	2	4	4	étude	study
 4402	19	19	15	15	exposition	exposure
@@ -2851,13 +2486,11 @@
 4429	25	25	17	17	échantillon	sample
 4431	12	12	10	10	échantillon	sample
 4434	33	33	13	13	échantillons	samples
-4434	33	33	13	14	échantillons	samples are
 4437	17	17	14	14	nouveau	new
 4437	20	20	15	15	ancrage	anchorage
 4438	1	1	1	1	article	paper
 4438	45	45	24	24	rapports	reports
 4438	48	48	27	27	étude	study
-4438	48	48	27	28	étude	study on
 4439	17	17	16	16	essais	proving
 4439	24	24	21	21	système	system
 4440	10	10	7	7	ancrage	anchorage
@@ -2866,7 +2499,6 @@
 4441	70	70	59	59	charge	loading
 4442	1	1	0	0	connaissance	knowledge
 4446	19	19	17	17	espèces	species
-4446	19	19	17	18	espèces	species was
 4446	29	29	25	25	étude	study
 4448	5	5	1	1	taxons	taxa
 4448	19	19	16	16	échantillons	samples
@@ -2874,10 +2506,7 @@
 4449	9	9	9	9	échantillon	sample
 4450	4	4	2	2	espèces	species
 4450	12	12	9	9	étude	study
-4450	12	12	9	10	étude	study ,
 4450	37	37	33	34	taxons	different taxa
-4450	37	37	33	35	taxons	different taxa that
-4450	37	37	33	36	taxons	different taxa that were
 4451	34	34	28	28	source	key
 4455	32	32	28	28	voie	pathway
 4456	34	34	27	27	étude	study
@@ -2905,14 +2534,12 @@
 4494	24	24	18	18	couplage	coupling
 4495	4	4	4	4	calculant	computing
 4496	3	3	3	3	couplage	coupling
-4497	23	23	19	20	membres	a member
 4497	23	23	20	20	membres	member
 4498	9	9	8	8	espèce	species
 4500	14	14	13	13	espèces	genera
 4500	26	26	23	23	parenté	relationship
 4500	34	34	34	34	espèce	species
 4500	40	40	39	39	genre	genus
-4504	18	18	11	12	marquées	, labeled
 4504	18	18	12	12	marquées	labeled
 4507	14	14	8	8	raison	because
 4510	30	30	13	13	espèces	species
@@ -2921,15 +2548,12 @@
 4518	13	13	5	5	espèces	species
 4518	41	41	27	27	patrons	patterns
 4519	1	1	1	1	espèces	species
-4521	9	9	5	6	induit	) induced
 4521	9	9	6	6	induit	induced
 4521	24	24	21	21	premières	first
 4522	9	9	6	6	induit	induced
-4522	9	9	6	7	induit	induced the
 4526	32	32	30	30	charges	loads
 4527	39	39	32	32	service	service
 4528	4	4	4	4	modèles	models
-4528	4	4	4	5	modèles	models for
 4529	33	33	33	33	occurrence	occurrence
 4535	36	36	27	27	pression	pressure
 4536	7	7	7	7	mesures	measurements
@@ -2937,18 +2561,12 @@
 4537	26	26	20	20	exposant	exponent
 4539	1	1	1	1	étude	investigation
 4539	17	17	14	14	pression	pressure
-4539	19	19	16	17	taux	a rate
 4539	19	19	17	17	taux	rate
 4540	38	38	37	37	peuplement	settlement
 4542	6	6	12	12	étude	study
 4543	34	34	27	27	espèces	species
-4543	34	34	27	28	espèces	species in
 4544	20	20	15	15	couverture	cover
-4544	20	20	15	16	couverture	cover was
-4544	20	20	15	17	couverture	cover was made
 4548	13	13	7	7	étude	study
-4550	11	11	10	12	mesures	manual field measures
-4550	11	11	11	12	mesures	field measures
 4550	11	11	12	12	mesures	measures
 4550	18	18	15	15	tiges	stem
 4550	16	16	16	16	localisation	location
@@ -2972,15 +2590,12 @@
 4569	63	63	50	50	cadre	framework
 4570	17	17	10	10	essais	tests
 4571	9	9	7	7	connaissance	knowledge
-4576	1	1	1	2	étude	tests conducted
 4576	1	1	2	2	étude	conducted
 4576	5	5	5	5	article	study
-4576	5	5	5	6	article	study have
 4577	14	14	21	21	système	system
 4579	17	17	17	17	requises	es
 4580	1	1	1	1	article	paper
 4582	3	3	1	1	modèles	models
-4582	3	3	1	2	modèles	models are
 4582	44	44	31	31	formation	formation
 4583	46	46	34	34	fini	finite
 4587	32	32	20	20	pression	pressure
@@ -2992,8 +2607,6 @@
 4593	25	25	20	20	perturbations	disturbance
 4594	37	37	24	24	témoins	controls
 4603	1	1	1	1	étude	study
-4604	1	1	0	2	croyons	it is believed
-4604	1	1	1	2	croyons	is believed
 4604	1	1	2	2	croyons	believed
 4606	15	15	17	17	association	association
 4612	9	9	3	3	antérieure	earlier
@@ -3020,25 +2633,20 @@
 4665	2	2	1	1	clé	key
 4666	4	4	10	10	membres	members
 4666	24	24	25	25	plaque	plate
-4666	24	24	25	26	plaque	plate ,
 4667	11	11	9	9	informations	information
 4668	10	10	9	9	plaque	plate
 4668	19	19	17	17	espèces	species
 4671	9	9	7	7	plaque	plate
 4672	7	7	6	6	plaque	plate
-4672	7	7	6	7	plaque	plate back
 4674	7	7	5	5	administration	administered
 4676	23	23	18	18	souches	strains
 4677	9	9	6	6	récoltées	harvested
 4678	13	13	12	12	souches	strains
-4679	32	32	33	34	témoins	, respectively
 4679	32	32	34	34	témoins	respectively
 4680	1	1	1	1	article	paper
 4682	3	3	4	4	études	studies
-4687	25	25	15	16	croissance	early growth
 4687	25	25	16	16	croissance	growth
 4688	53	53	17	17	croissance	growth
-4688	53	53	17	18	croissance	growth ,
 4689	24	24	18	18	moyennes	average
 4696	7	7	5	5	laissent	suggest
 4698	17	17	13	13	système	system
@@ -3051,7 +2659,6 @@
 4712	1	1	1	1	contraire	contrast
 4713	12	12	7	7	croissance	growth
 4713	35	35	26	26	champ	field
-4713	35	35	26	27	champ	field trials
 4715	22	22	16	16	croissance	growth
 4716	16	16	21	21	espèces	species
 4718	80	80	57	57	ratio	ratio
@@ -3077,14 +2684,10 @@
 4754	2	2	3	3	cadre	context
 4756	1	1	1	1	espèce	species
 4756	4	4	6	6	supposée	assumed
-4756	4	4	6	7	supposée	assumed to
-4756	4	4	6	8	supposée	assumed to be
 4758	6	6	5	5	espèce	species
-4758	8	8	7	8	genre	this genus
 4758	8	8	8	8	genre	genus
 4759	1	1	1	1	espèce	species
 4759	9	9	11	11	installation	installation
-4760	12	12	9	10	milieu	the habitat
 4760	12	12	10	10	milieu	habitat
 4761	1	1	1	1	point	point
 4761	22	22	28	28	cadre	context
@@ -3103,12 +2706,9 @@
 4780	24	24	18	18	appuyant	basis
 4782	1	1	1	1	étude	study
 4783	4	4	3	3	étude	study
-4789	23	23	18	19	système	the system
 4789	23	23	19	19	système	system
 4793	44	44	30	30	modèles	models
 4794	17	17	15	15	élevage	cattle
-4794	17	17	15	16	élevage	cattle was
-4794	17	17	15	17	élevage	cattle was undertaken
 4795	48	48	35	35	genre	genus
 4796	17	17	3	3	échantillons	samples
 4796	7	7	14	14	genre	genus
@@ -3116,16 +2716,12 @@
 4797	18	18	17	17	échantillons	samples
 4797	24	24	24	24	échantillons	samples
 4797	33	33	29	29	genre	genus
-4797	39	39	36	37	échantillons	the samples
 4797	39	39	37	37	échantillons	samples
 4797	47	47	42	42	genre	genus
 4797	56	56	50	50	espèces	species
 4798	15	15	14	14	espèce	species
 4799	12	12	11	11	échantillons	samples
-4799	35	35	29	30	échantillons	the samples
-4799	35	35	29	31	échantillons	the samples ,
 4799	35	35	30	30	échantillons	samples
-4799	35	35	30	31	échantillons	samples ,
 4801	3	3	5	5	échantillons	samples
 4801	9	9	12	12	espèces	species
 4802	2	2	2	2	échantillons	samples
@@ -3137,7 +2733,6 @@
 4804	25	25	27	27	espèces	species
 4806	12	12	5	5	taux	levels
 4809	11	11	8	8	taux	levels
-4815	1	1	1	2	article	present paper
 4815	1	1	2	2	article	paper
 4815	6	6	7	7	rapport	it
 4817	1	1	1	1	étude	study
@@ -3147,10 +2742,8 @@
 4820	22	22	19	19	courant	current
 4826	3	3	1	1	système	system
 4828	3	3	1	1	modèles	models
-4828	3	3	1	2	modèles	models are
 4832	4	4	4	4	biais	with
 4833	13	13	9	9	biais	biased
-4833	13	13	9	10	biais	biased with
 4834	3	3	1	2	article	paper addresses
 4834	6	6	4	4	mesures	measures
 4834	10	10	8	8	biais	bias
@@ -3160,18 +2753,13 @@
 4839	1	1	1	1	croyons	believe
 4839	29	29	19	19	grands	large
 4840	27	27	18	18	classe	class
-4840	27	27	18	19	classe	class a
-4840	49	49	37	39	et/ou	and ( or
 4840	49	49	38	39	et/ou	( or
 4841	1	1	1	1	étude	study
-4841	1	1	1	2	étude	study was
-4842	11	11	7	10	et/ou	and ( or )
 4842	11	11	8	10	et/ou	( or )
 4845	20	20	13	13	déformé	distorted
 4846	25	25	20	20	moyen	through
 4850	18	18	14	14	nouveau	new
 4855	11	11	10	10	moyen	means
-4860	57	57	44	45	espèces	host species
 4860	57	57	45	45	espèces	species
 4864	17	17	8	8	prélèvement	uptake
 4865	28	28	20	20	flux	fluxes
@@ -3205,7 +2793,6 @@
 4917	13	13	8	8	m.	m.
 4917	19	19	15	15	espèces	species
 4918	9	9	5	5	espèces	species
-4918	9	9	5	6	espèces	species further
 4918	29	29	20	20	espèces	species
 4918	51	51	38	38	flux	flow
 4918	58	58	43	43	m.	m.
@@ -3239,23 +2826,18 @@
 4963	1	1	1	1	point	point
 4963	6	6	7	7	point	point
 4972	2	2	2	2	étude	study
-4972	2	2	2	3	étude	study is
 4972	27	27	20	20	souples	flexible
 4972	71	71	41	41	souples	flexible
 4974	34	34	26	26	souples	flexible
 4975	13	13	1	1	informations	information
 4975	24	24	9	9	taux	rates
 4975	35	35	15	15	modèles	models
-4977	16	16	12	13	mesure	would result
-4977	16	16	12	14	mesure	would result in
 4977	16	16	13	13	mesure	result
-4977	16	16	13	14	mesure	result in
 4979	12	12	9	9	ligneux	woody
 4979	25	25	26	26	mesure	as
 4980	13	13	10	10	ligneux	woody
 4981	15	15	15	15	système	system
 4988	1	1	1	1	essais	testing
-4990	17	17	12	13	moyen	a means
 4990	17	17	13	13	moyen	means
 4991	78	78	64	64	rendements	yields
 4992	1	1	1	1	opposition	contrast
@@ -3268,10 +2850,8 @@
 5003	10	10	11	11	pression	pressure
 5005	1	1	1	1	administration	administration
 5005	26	26	18	18	poids	body
-5010	57	57	45	46	sylvestre	for scots
 5010	57	57	46	46	sylvestre	scots
 5012	55	55	44	44	flux	flux
-5013	63	63	66	67	sylvestre	for scots
 5013	63	63	67	67	sylvestre	scots
 5014	2	2	2	2	étude	study
 5014	18	18	17	17	patrons	patterns
@@ -3291,8 +2871,6 @@
 5025	16	16	16	16	état	state
 5026	12	12	11	11	état	state
 5027	38	38	29	29	pression	pressures
-5028	14	14	15	17	modèles	of the models
-5028	14	14	16	17	modèles	the models
 5028	14	14	17	17	modèles	models
 5034	6	6	2	2	sang	blood
 5034	4	4	3	3	échantillons	samples
@@ -3302,11 +2880,9 @@
 5038	15	15	13	13	localisation	location
 5039	7	7	4	4	espèces	species
 5040	1	1	1	1	espèces	taxa
-5041	32	32	28	29	premier	the first
 5041	32	32	29	29	premier	first
 5041	33	33	30	30	auteurs	author
 5042	2	2	15	15	espèces	species
-5042	4	4	17	18	genre	the genus
 5042	4	4	18	18	genre	genus
 5043	12	12	9	9	taxons	taxa
 5043	26	26	17	17	étude	study
@@ -3315,7 +2891,6 @@
 5044	15	15	11	11	genre	genus
 5045	18	18	13	13	espèces	species
 5050	7	7	6	6	marquées	marked
-5050	7	7	6	7	marquées	marked ,
 5051	3	3	1	1	croissance	growth
 5051	1	1	2	2	taux	rate
 5054	12	12	8	8	étude	study
@@ -3324,28 +2899,22 @@
 5057	23	23	14	14	croissance	growth
 5061	1	1	1	1	diffusion	diffusion
 5061	19	19	16	16	exposant	exposing
-5065	7	7	5	7	croyons	suggested to be
-5065	7	7	6	7	croyons	to be
 5065	7	7	7	7	croyons	be
 5065	36	36	28	29	pêche	capture fisheries
 5067	5	5	2	2	petits	small
 5068	8	8	9	9	espèces	species
 5072	16	16	7	7	perturbations	disturbance
-5072	34	34	21	22	composition	stand composition
 5072	34	34	22	22	composition	composition
 5073	5	5	1	1	composition	compositional
 5073	16	16	10	10	espèces	species
-5074	7	7	6	7	composition	stand composition
 5074	7	7	7	7	composition	composition
 5074	24	24	20	20	couvert	cover
 5075	14	14	9	9	associations	associations
 5075	23	23	15	15	couvert	cover
 5076	11	11	6	6	couvert	cover
 5076	24	24	20	20	couvert	cover
-5076	24	24	20	21	couvert	cover ,
 5077	22	22	12	12	raison	because
 5078	7	7	3	3	conserver	conservation
-5078	7	7	3	4	conserver	conservation of
 5078	10	10	6	6	espèces	species
 5079	22	22	21	21	composition	composition
 5081	9	9	1	1	croissance	growth
@@ -3375,7 +2944,6 @@
 5110	13	13	11	11	coupe	overstory
 5110	35	35	28	28	sapin	fir
 5111	25	25	16	16	sapin	fir
-5111	25	25	16	17	sapin	fir ,
 5111	30	30	23	23	espèces	species
 5113	22	22	16	16	espèces	species
 5113	20	20	17	17	composition	composition
@@ -3389,7 +2957,6 @@
 5121	1	1	3	3	rendements	evidence
 5127	20	20	18	18	système	system
 5128	11	11	9	9	rendements	yield
-5128	11	11	9	10	rendements	yield ,
 5130	14	14	15	15	carottes	cores
 5131	15	15	14	14	carottes	cores
 5135	24	24	20	20	chênes	oak
@@ -3398,7 +2965,6 @@
 5135	59	59	47	47	perturbations	disturbances
 5135	68	68	50	51	restauration	aid restoration
 5136	43	43	25	25	champ	field
-5137	33	33	28	29	motifs	the motives
 5137	33	33	29	29	motifs	motives
 5145	7	7	6	6	carottes	cores
 5146	22	22	12	12	espèces	species
@@ -3418,8 +2984,6 @@
 5173	9	9	7	7	récepteur	receptor
 5173	13	13	10	10	cellulaire	cell
 5176	10	10	2	2	spectres	spectra
-5176	10	10	2	3	spectres	spectra were
-5176	10	10	2	4	spectres	spectra were used
 5177	6	6	3	3	liaison	binding
 5184	1	1	1	1	article	paper
 5188	25	25	18	18	solution	solution
@@ -3434,7 +2998,6 @@
 5205	5	5	4	4	essais	testing
 5207	7	7	6	6	espèce	species
 5207	19	19	14	14	croissance	growth
-5208	8	8	8	9	espèce	this species
 5208	8	8	9	9	espèce	species
 5209	1	1	1	1	étude	study
 5209	7	7	5	5	connaissance	knowledge
@@ -3454,8 +3017,6 @@
 5230	8	8	8	8	étude	study
 5231	19	19	20	20	formation	formation
 5238	9	9	8	8	raison	due
-5238	9	9	8	9	raison	due to
-5238	9	9	8	10	raison	due to a
 5238	15	15	14	14	passage	crossing
 5239	4	4	1	1	liaison	bond
 5243	1	1	1	1	opposition	contrast
@@ -3468,7 +3029,6 @@
 5246	41	41	33	33	biais	through
 5246	47	47	34	34	liaison	bonding
 5247	6	6	5	5	liaison	bond
-5251	1	1	0	1	étude	my study
 5251	1	1	1	1	étude	study
 5258	47	47	35	35	témoin	control
 5259	39	39	34	34	témoins	control
@@ -3476,14 +3036,11 @@
 5264	7	7	6	6	pompe	pumping
 5265	38	38	30	30	modèles	models
 5271	15	15	14	14	espèces	species
-5271	15	15	14	15	espèces	species ,
 5275	1	1	2	2	lots	lots
 5275	4	4	3	4	récoltées	collected during
 5277	29	29	18	18	échantillons	samples
 5280	3	3	1	1	études	studies
-5280	3	3	1	2	études	studies of
 5287	23	23	15	15	accessoires	accessory
-5288	5	5	2	3	composition	is compositionally
 5288	5	5	3	3	composition	compositionally
 5288	25	25	22	22	accessoires	accessory
 5289	10	10	1	1	composition	composition
@@ -3497,9 +3054,7 @@
 5300	10	10	6	6	surveillance	vigilance
 5302	24	24	23	23	taux	rate
 5303	20	20	17	17	petits	juveniles
-5303	20	20	17	18	petits	juveniles in
 5307	7	7	1	1	homologues	homologous
-5307	7	7	1	2	homologues	homologous and
 5310	29	29	24	24	association	association
 5311	8	8	11	11	appariement	pairing
 5313	20	20	17	17	association	association
@@ -3516,7 +3071,6 @@
 5328	13	13	14	14	association	association
 5330	1	1	1	1	mesures	measurements
 5330	19	19	16	16	espèce	species
-5336	20	20	18	19	vivement	a highly
 5336	20	20	19	19	vivement	highly
 5337	15	15	12	12	croissance	growth
 5341	29	29	25	25	croissance	growth
@@ -3529,7 +3083,6 @@
 5368	14	14	12	12	conserver	conserve
 5369	19	19	13	13	dureté	hardness
 5370	2	2	2	2	étude	study
-5370	14	14	10	11	moyen	a means
 5370	14	14	11	11	moyen	means
 5371	1	1	1	1	taux	rate
 5373	47	47	39	39	réaction	reaction
@@ -3562,15 +3115,10 @@
 5419	26	26	18	18	formation	formation
 5425	22	22	19	19	croissance	growth
 5425	20	20	20	20	milieux	media
-5425	20	20	20	21	milieux	media ,
 5428	15	15	10	10	avérés	proved
-5428	15	15	10	11	avérés	proved to
-5428	15	15	10	12	avérés	proved to be
 5432	3	3	1	1	problème	concern
 5432	21	21	16	16	tronçon	log
 5433	8	8	9	9	problème	issue
-5435	20	20	27	29	mesure	ever actually measuring
-5435	20	20	28	29	mesure	actually measuring
 5435	20	20	29	29	mesure	measuring
 5443	52	52	38	38	étude	study
 5447	4	4	7	7	flux	fluxes
@@ -3590,24 +3138,18 @@
 5479	4	4	4	4	étude	study
 5480	26	26	21	21	mesures	measures
 5481	1	1	3	3	modèles	models
-5481	1	1	3	4	modèles	models that
 5481	9	9	8	8	mesures	measures
 5484	9	9	10	10	modèles	models
-5484	9	9	10	11	modèles	models that
 5484	17	17	15	15	mesures	measures
 5485	6	6	4	4	modèles	models
 5488	5	5	3	3	échantillons	samples
-5488	5	5	3	4	échantillons	samples ,
 5489	22	22	11	11	croûte	crust
-5489	22	22	11	12	croûte	crust was
 5489	8	8	14	15	source	major source
 5490	1	1	1	1	formation	formation
 5490	34	34	31	31	croûte	crust
 5491	29	29	22	22	source	source
 5492	15	15	17	17	plaque	plate
 5493	13	13	10	10	croûte	crust
-5495	2	2	2	4	étude	of the study
-5495	2	2	3	4	étude	the study
 5495	2	2	4	4	étude	study
 5495	13	13	15	15	échantillons	samples
 5501	33	33	33	33	échantillons	samples
@@ -3633,11 +3175,9 @@
 5537	44	44	30	30	arc-en-ciel	trout
 5539	24	24	22	22	refuges	refuges
 5540	1	1	0	0	surveillance	monitoring
-5540	16	16	11	12	restauration	habitat restoration
 5540	16	16	12	12	restauration	restoration
 5546	4	4	1	1	genre	genus
 5547	20	20	20	20	espèce	species
-5547	23	23	22	23	genre	the genus
 5547	23	23	23	23	genre	genus
 5548	21	21	19	19	taxons	taxa
 5551	12	12	10	10	patrons	patterns
@@ -3650,8 +3190,6 @@
 5564	12	12	11	11	modèles	models
 5567	1	1	2	2	étude	study
 5568	9	9	8	8	élevage	farming
-5568	9	9	8	9	élevage	farming was
-5568	9	9	8	10	élevage	farming was done
 5569	23	23	13	13	témoins	control
 5574	7	7	6	6	espèce	species
 5574	10	10	9	9	famille	family
@@ -3675,11 +3213,9 @@
 5597	8	8	0	0	lots	batch
 5598	12	12	9	9	modèles	models
 5600	20	20	14	14	solution	solution
-5604	5	5	4	5	connaissance	a knowledge
 5604	5	5	5	5	connaissance	knowledge
 5616	1	1	1	1	auteurs	authors
 5616	12	12	15	15	agent	agent
-5616	12	12	15	16	agent	agent in
 5617	13	13	9	9	réaction	response
 5618	48	48	36	36	marche	walking
 5620	7	7	7	7	espèces	species
@@ -3687,7 +3223,6 @@
 5625	20	20	15	15	témoins	controls
 5627	3	3	1	1	réaction	response
 5628	14	14	13	13	informations	information
-5628	14	14	13	14	informations	information and
 5631	1	1	1	1	auteurs	authors
 5632	2	2	2	2	article	paper
 5632	12	12	10	10	matière	related
@@ -3714,20 +3249,15 @@
 5655	61	61	39	39	surveillance	monitoring
 5657	13	13	11	11	occasion	opportunity
 5659	1	1	1	1	croyons	suggest
-5659	28	28	20	22	surveillance	use in monitoring
-5659	28	28	21	22	surveillance	in monitoring
 5659	28	28	22	22	surveillance	monitoring
 5661	26	26	19	19	raison	due
 5662	1	1	0	0	essais	attempts
 5662	11	11	10	10	espèces	species
-5662	34	34	23	25	réaction	either no reaction
-5662	34	34	24	25	réaction	no reaction
 5662	34	34	25	25	réaction	reaction
 5663	15	15	10	10	addition	addition
 5663	21	21	15	15	réaction	reaction
 5666	44	44	29	29	croissance	growth
 5667	10	10	11	11	croissance	growth
-5667	10	10	11	12	croissance	growth ,
 5668	13	13	7	7	croissance	growth
 5669	1	1	0	0	couverture	forest
 5669	2	2	1	1	morte	floors
@@ -3751,7 +3281,6 @@
 5717	1	1	30	30	échantillons	samples
 5717	4	4	32	32	récoltés	harvested
 5717	16	16	40	40	croissance	growth
-5717	16	16	40	41	croissance	growth ,
 5718	11	11	8	8	charge	load
 5719	19	19	15	15	taux	rate
 5720	19	19	22	22	humain	human
@@ -3767,7 +3296,6 @@
 5731	8	8	4	4	croissance	growth
 5731	23	23	14	14	espèces	species
 5733	12	12	6	6	membres	limbs
-5733	12	12	6	7	membres	limbs ,
 5733	26	26	20	20	espèces	species
 5736	1	1	1	1	étude	study
 5739	14	14	12	13	études	studies carried
@@ -3776,12 +3304,10 @@
 5743	1	1	1	1	article	paper
 5746	10	10	8	8	calculer	calculate
 5746	42	42	32	32	calculer	calculate
-5747	1	1	32	33	calculons	are calculated
 5747	1	1	33	33	calculons	calculated
 5750	1	1	1	1	formation	formation
 5756	17	17	12	12	pêche	fishery
 5756	30	30	23	23	rendements	returns
-5756	35	35	25	26	pêche	the fishing
 5756	35	35	26	26	pêche	fishing
 5756	45	45	32	32	pêche	fishery
 5757	17	17	13	13	pêche	fishery
@@ -3794,10 +3320,8 @@
 5766	29	29	13	13	espèces	species
 5766	31	31	15	15	grands	large
 5767	15	15	10	10	étude	study
-5767	15	15	10	11	étude	study has
 5767	37	37	27	27	grands	large
 5771	51	51	43	43	espèces	species
-5771	51	51	43	44	espèces	species were
 5772	24	24	19	19	pression	pressure
 5774	21	21	14	14	lit	bed
 5775	8	8	3	3	espèces	species
@@ -3805,7 +3329,6 @@
 5782	5	5	3	3	souris	mice
 5785	10	10	6	6	souris	mice
 5790	3	3	3	3	étude	study
-5794	1	1	1	2	conclut	is concluded
 5794	1	1	2	2	conclut	concluded
 5795	42	42	28	28	composition	composition
 5795	48	48	35	35	état	state
@@ -3814,7 +3337,6 @@
 5800	23	23	20	20	mineur	minor
 5800	30	30	29	29	calculer	calculate
 5803	60	60	47	47	addition	adding
-5810	13	13	11	12	solution	the solution
 5810	13	13	12	12	solution	solution
 5810	25	25	20	20	libre	free
 5812	2	2	2	2	réaction	reaction
@@ -3823,8 +3345,6 @@
 5821	72	72	66	66	point	point
 5823	41	41	32	32	couronne	crown
 5826	1	1	2	3	étude	study conducted
-5826	1	1	2	4	étude	study conducted over
-5826	1	1	2	5	étude	study conducted over a
 5828	5	5	7	7	superposition	superposition
 5828	8	8	11	11	tiges	shoots
 5828	17	17	20	20	tiges	shoots
@@ -3856,26 +3376,15 @@
 5878	23	23	13	13	mémoire	memory
 5879	26	26	18	18	mémoire	memory
 5883	12	12	7	7	premier	first
-5883	12	12	7	8	premier	first ,
 5884	1	1	1	1	étude	thesis
-5884	1	1	1	2	étude	thesis is
 5884	19	19	18	18	problème	problem
-5885	12	12	12	13	problème	is addressed
-5885	12	12	12	14	problème	is addressed for
-5885	12	12	12	15	problème	is addressed for the
-5885	12	12	12	16	problème	is addressed for the case
 5885	12	12	13	13	problème	addressed
-5885	12	12	13	14	problème	addressed for
-5885	12	12	13	15	problème	addressed for the
-5885	12	12	13	16	problème	addressed for the case
 5889	12	12	13	13	système	system
 5890	16	16	11	11	solution	solution
 5890	30	30	24	24	état	state
 5894	9	9	8	8	problème	problem
-5894	9	9	8	9	problème	problem in
 5902	4	4	2	2	association	associating
 5904	1	1	1	1	études	studies
-5908	13	13	15	16	système	the system
 5908	13	13	16	16	système	system
 5910	18	18	20	20	champ	field
 5911	15	15	8	8	champ	field
@@ -3889,25 +3398,18 @@
 5921	1	1	1	1	travaux	progresses
 5921	21	21	17	17	système	system
 5929	19	19	16	16	et/ou	and/or
-5930	10	10	9	10	charge	this load
 5930	10	10	10	10	charge	load
 5930	19	19	20	20	oeuvre	install
 5930	28	28	32	32	modèles	models
-5930	38	38	43	44	charges	total load
 5930	38	38	44	44	charges	load
 5931	19	19	19	19	mémoire	memory
 5932	4	4	4	4	modèles	models
-5932	4	4	4	5	modèles	models ,
 5934	17	17	17	17	modèles	models
 5935	1	1	1	1	premier	first
-5935	1	1	1	2	premier	first one
 5935	23	23	21	21	mémoire	memory
 5936	1	1	1	1	étude	study
 5937	12	12	14	14	induit	assumes
-5937	12	12	14	15	induit	assumes that
 5937	20	20	25	25	charge	load
-5939	16	16	15	17	champ	the mean field
-5939	16	16	16	17	champ	mean field
 5939	16	16	17	17	champ	field
 5939	35	35	35	35	pratique	practical
 5942	2	2	2	2	cadre	scope
@@ -3917,30 +3419,24 @@
 5952	18	18	15	15	modèles	models
 5952	51	51	41	41	issues	computed
 5953	1	1	1	1	modèles	models
-5955	6	6	6	7	appréhender	can track
-5955	6	6	6	8	appréhender	can track and
 5955	6	6	7	7	appréhender	track
-5955	6	6	7	8	appréhender	track and
 5958	23	23	19	19	opposition	contrast
 5964	34	34	26	26	solution	solution
 5968	19	19	21	21	travaux	work
 5974	2	2	3	3	point	point
 5974	4	4	5	5	vue	view
 5975	60	60	32	32	figure	figure
-5975	76	76	54	55	figure	the figure
 5975	76	76	55	55	figure	figure
 5976	2	2	3	3	point	point
 5976	4	4	5	5	vue	view
 5977	52	52	44	44	figure	figure
 5981	1	1	1	1	fonctions	functions
-5990	2	2	1	2	premier	the first
 5990	2	2	2	2	premier	first
 5990	24	24	28	28	mouvement	moving
 5990	48	48	40	40	frottement	friction
 5991	22	22	18	18	frottement	friction
 5993	2	2	2	2	cadre	frame
 5993	7	7	7	7	formalisme	formalism
-5995	9	9	7	8	évidence	cases show
 5995	9	9	8	8	évidence	show
 5999	3	3	3	3	vital	vital
 6000	25	25	16	16	entiers	integer
@@ -3951,17 +3447,12 @@
 6007	18	18	14	14	système	system
 6008	4	4	4	4	système	system
 6009	4	4	4	4	solution	solution
-6009	4	4	4	5	solution	solution of
-6009	4	4	4	6	solution	solution of this
-6009	6	6	5	7	problème	of this problem
-6009	6	6	6	7	problème	this problem
 6009	6	6	7	7	problème	problem
 6010	30	30	26	26	finis	finite
 6012	23	23	16	16	flux	fluxes
 6019	5	5	6	6	chute	falls
 6021	8	8	8	8	nature	nature
 6022	24	24	27	27	solution	solution
-6022	24	24	27	28	solution	solution to
 6022	34	34	36	36	solution	solution
 6023	1	1	1	1	étude	study
 6027	14	14	9	9	solution	solution
@@ -3971,20 +3462,16 @@
 6044	4	4	7	7	noyaux	kernels
 6047	7	7	5	5	calculer	compute
 6047	10	10	7	7	noyaux	kernels
-6047	10	10	7	8	noyaux	kernels .
 6049	4	4	5	5	problème	problem
 6049	31	31	31	31	problème	problem
 6053	10	10	10	10	patient	patient
 6055	16	16	14	14	patient	patient
-6056	9	9	4	5	finis	the finite
 6056	9	9	5	5	finis	finite
 6056	15	15	13	13	mesures	measurements
 6058	11	11	12	12	patient	patient
 6058	18	18	18	18	finis	finite
-6060	20	20	15	16	patient	the patient
 6060	20	20	16	16	patient	patient
 6061	6	6	5	5	patient	patient
-6061	6	6	5	6	patient	patient with
 6062	6	6	7	7	étude	study
 6063	2	2	2	2	intéresse	interested
 6064	1	1	1	1	étude	study
@@ -4000,7 +3487,6 @@
 6087	22	22	19	19	borne	bound
 6088	4	4	4	4	mémoire	thesis
 6091	48	48	46	46	problème	problem
-6092	9	9	7	8	classe	the class
 6092	9	9	8	8	classe	class
 6095	68	68	55	55	fonctions	functions
 6098	19	19	14	15	finies	finite strains
@@ -4010,7 +3496,6 @@
 6111	5	5	5	5	déformation	deformation
 6113	5	5	3	3	énergétiques	energy
 6116	3	3	5	5	modèles	models
-6116	3	3	5	6	modèles	models ,
 6116	16	16	21	21	cadre	framework
 6123	6	6	6	6	cadre	framework
 6123	31	31	27	27	étude	study
@@ -4019,11 +3504,9 @@
 6125	1	1	1	1	modèles	models
 6125	5	5	7	7	études	studies
 6126	13	13	15	15	montage	montage
-6128	12	12	6	7	évidence	, highlight
 6128	12	12	7	7	évidence	highlight
 6128	22	22	13	13	gouttes	drop
 6131	2	2	2	2	généralise	generalizes
-6131	2	2	2	3	généralise	generalizes some
 6132	4	4	4	4	modèles	models
 6135	1	1	2	2	étude	study
 6142	4	4	3	3	étude	study
@@ -4032,7 +3515,6 @@
 6146	21	21	20	20	solution	solution
 6147	2	2	2	2	premières	first
 6150	3	3	1	1	fissures	cracks
-6151	7	7	11	12	fini	mixed finite
 6151	7	7	12	12	fini	finite
 6152	5	5	7	7	couplage	coupling
 6156	14	14	13	13	diffusion	diffusion
@@ -4040,31 +3522,22 @@
 6157	24	24	25	25	solution	solution
 6157	27	27	29	29	problème	problem
 6159	29	29	26	26	finis	method
-6159	29	29	26	27	finis	method .
 6160	16	16	15	15	classe	class
 6162	37	37	31	31	finis	finite
 6165	31	31	25	25	système	system
 6166	17	17	14	14	système	system
-6168	1	1	0	1	premier	our first
 6168	1	1	1	1	premier	first
 6171	4	4	3	3	modèles	models
-6172	4	4	2	4	problème	with different problems
-6172	4	4	2	5	problème	with different problems ,
-6172	4	4	3	4	problème	different problems
-6172	4	4	3	5	problème	different problems ,
 6172	4	4	4	4	problème	problems
-6172	4	4	4	5	problème	problems ,
 6173	4	4	2	2	problème	issue
 6175	1	1	1	1	premier	first
 6177	1	1	1	2	marché	commercial market
 6177	9	9	9	9	connaît	is
 6181	10	10	10	10	mesures	measurements
-6181	10	10	10	11	mesures	measurements of
 6183	4	4	6	6	mesures	measurements
 6185	22	22	19	19	champ	field
 6186	12	12	14	14	point	point
 6186	14	14	16	16	vue	view
-6187	25	25	16	17	charge	gate charge
 6187	25	25	17	17	charge	charge
 6188	3	3	1	1	mesures	measurements
 6196	1	1	1	1	travaux	work
@@ -4073,14 +3546,12 @@
 6198	25	25	22	22	cadre	framework
 6199	25	25	23	23	système	system
 6201	6	6	2	2	travaux	works
-6201	6	6	2	3	travaux	works and
 6202	13	13	12	12	classe	class
 6202	29	29	26	26	classe	class
 6204	1	1	3	3	système	system
 6208	1	1	1	1	mesures	measures
 6209	2	2	1	1	travaux	works
 6212	4	4	5	5	classe	class
-6212	6	6	9	10	modèles	&apos; models
 6212	6	6	10	10	modèles	models
 6215	3	3	3	3	décompose	structured
 6217	1	1	2	2	modèles	models
@@ -4089,8 +3560,6 @@
 6226	21	21	20	20	flux	flux
 6226	35	35	32	32	régime	regime
 6227	15	15	13	13	supposés	supposed
-6227	15	15	13	14	supposés	supposed to
-6227	15	15	13	15	supposés	supposed to be
 6228	3	3	3	3	modèles	models
 6229	13	13	12	12	plane	flat
 6229	12	12	13	13	plaque	plate
@@ -4105,7 +3574,6 @@
 6243	9	9	9	9	formalisme	formalism
 6244	1	1	1	1	formalisme	formalism
 6246	28	28	20	20	modèles	models
-6246	30	30	22	23	système	the system
 6246	30	30	23	23	système	system
 6248	1	1	1	1	vue	order
 6248	26	26	25	25	nouveau	new
@@ -4122,11 +3590,8 @@
 6262	1	1	1	1	solution	solution
 6262	18	18	20	20	modèles	models
 6264	5	5	5	5	patrons	patterns
-6264	5	5	5	6	patrons	patterns to
 6267	5	5	5	5	patrons	patterns
-6267	5	5	5	6	patrons	patterns that
 6268	0	0	0	0	patrons	thus
-6268	0	0	0	1	patrons	thus ,
 6268	3	3	5	5	patrons	patterns
 6268	9	9	8	8	patrons	pattern
 6268	7	7	9	9	système	system
@@ -4145,12 +3610,8 @@
 6314	34	34	29	29	principes	principles
 6314	37	37	33	33	patrons	pattern
 6316	5	5	4	4	motifs	patterns
-6318	1	1	0	1	motifs	safety patterns
 6318	1	1	1	1	motifs	patterns
 6319	34	34	31	31	système	systems
-6319	34	34	31	32	système	systems as
-6319	34	34	31	33	système	systems as well
-6319	34	34	31	34	système	systems as well as
 6323	7	7	7	7	étude	study
 6323	26	26	26	26	système	system
 6324	17	17	17	17	priori	priori
@@ -4159,56 +3620,40 @@
 6332	3	3	2	2	inscrit	ascribes
 6332	17	17	16	16	fonctions	functions
 6332	22	22	18	18	biais	means
-6334	2	2	0	1	premier	we first
 6334	2	2	1	1	premier	first
 6335	31	31	31	31	attention	attention
 6335	38	38	37	37	fonctions	functions
 6336	19	19	17	17	attention	attention
 6336	32	32	26	26	mouvement	movement
-6336	32	32	26	27	mouvement	movement preparation
 6337	17	17	18	18	mémoire	memory
 6338	11	11	12	12	mouvement	movement
 6343	10	10	10	10	problème	problem
 6343	19	19	13	13	service	service
 6344	2	2	0	0	premier	first
 6350	4	4	4	4	surveillance	monitoring
-6351	27	27	20	22	machine	in these machines
-6351	27	27	21	22	machine	these machines
 6351	27	27	22	22	machine	machines
 6353	14	14	13	13	mesures	measurements
 6353	18	18	17	17	machine	machine
 6354	18	18	4	4	rapport	according
 6355	12	12	15	15	machine	machine
-6355	12	12	15	16	machine	machine .
-6355	12	12	15	17	machine	machine . this
-6355	12	12	15	18	machine	machine . this one
-6355	12	12	15	19	machine	machine . this one was
 6356	36	36	37	37	avérés	proven
 6360	4	4	4	4	charges	charges
 6360	10	10	12	12	charge	charge
 6360	20	20	18	18	champ	field
-6360	20	20	18	19	champ	field between
 6361	17	17	17	17	champ	field
 6361	23	23	19	19	charge	charge
 6362	6	6	3	3	finis	method
 6362	28	28	22	22	charge	charge
 6363	12	12	15	15	maillage	mesh
-6363	12	12	15	16	maillage	mesh is
 6363	20	20	30	30	diffusion	diffusion
 6364	3	3	5	5	maillage	mesh
 6366	23	23	20	20	mesures	measurements
 6366	31	31	23	23	plane	planar
-6370	2	2	0	1	premier	we first
 6370	2	2	1	1	premier	first
 6371	3	3	2	2	construisons	build
 6376	3	3	5	5	système	system
-6376	42	42	34	35	organe	, organs
-6376	42	42	34	36	organe	, organs ,
 6376	42	42	35	35	organe	organs
-6376	42	42	35	36	organe	organs ,
-6376	68	68	51	52	énergétiques	and energy
 6376	68	68	52	52	énergétiques	energy
-6378	19	19	19	20	étude	the study
 6378	19	19	20	20	étude	study
 6379	15	15	11	11	patient	patient
 6380	3	3	4	4	surveillance	monitoring
@@ -4218,11 +3663,8 @@
 6386	5	5	9	9	modèles	models
 6389	7	7	11	11	cadre	framework
 6389	17	17	17	17	étude	study
-6390	1	1	1	2	premier	the first
 6390	1	1	2	2	premier	first
 6391	7	7	4	4	modèles	models
-6391	7	7	4	5	modèles	models can
-6391	7	7	4	6	modèles	models can be
 6396	5	5	9	9	système	system
 6402	13	13	13	13	formation	formation
 6403	3	3	5	5	modèles	models
@@ -4242,26 +3684,20 @@
 6423	9	9	10	10	noyaux	kernel
 6427	18	18	17	17	étude	study
 6428	3	3	1	1	premier	first
-6428	3	3	1	2	premier	first show
 6428	19	19	16	16	point	viewpoint
 6428	43	43	35	35	point	point
 6429	5	5	6	6	premières	first
 6432	8	8	8	8	premières	first
-6432	8	8	8	9	premières	first that
 6433	2	2	2	3	induisent	eventually induce
 6433	5	5	5	5	premières	first
 6434	9	9	9	9	état	state
 6435	16	16	16	16	système	system
-6435	16	16	16	17	système	system in
-6436	20	20	8	9	appréhender	to apprehend
 6436	20	20	9	9	appréhender	apprehend
 6437	5	5	7	7	formalisme	formalism
-6437	19	19	21	22	rechercher	to search
 6437	19	19	22	22	rechercher	search
 6437	23	23	28	28	motifs	motifs
 6438	4	4	5	5	étude	study
 6438	17	17	19	24	formalisme	formalism ( for modular interaction network
-6438	17	17	19	25	formalisme	formalism ( for modular interaction network )
 6441	4	4	4	4	travaux	work
 6442	27	27	27	27	exposition	exposure
 6443	10	10	10	10	incertitude	uncertainty
@@ -4273,12 +3709,10 @@
 6452	12	12	10	10	grands	large
 6459	8	8	7	7	grands	large
 6460	10	10	8	8	matrices	matrices
-6460	10	10	8	9	matrices	matrices with
 6460	12	12	11	11	motif	pattern
 6460	25	25	20	20	système	system
 6463	2	2	1	1	mémoire	thesis
 6463	21	21	19	19	rapport	respect
-6464	21	21	18	19	priori	a priori
 6464	21	21	19	19	priori	priori
 6464	19	19	20	20	modèles	models
 6467	6	6	6	6	étude	study
@@ -4298,7 +3732,6 @@
 6488	3	3	1	1	écoulements	flows
 6488	15	15	10	10	système	system
 6488	26	26	17	17	état	state
-6488	26	26	17	18	état	state (
 6489	8	8	12	12	problème	problem
 6490	1	1	3	3	point	point
 6490	3	3	5	5	vue	view
@@ -4310,10 +3743,8 @@
 6500	12	12	10	10	modèles	model
 6503	1	1	1	1	problème	problem
 6504	5	5	4	4	formalisme	formalism
-6504	5	5	4	5	formalisme	formalism to
 6505	1	1	0	0	premier	first
 6506	6	6	5	5	modèles	models
-6510	15	15	16	17	cadre	specific area
 6510	15	15	17	17	cadre	area
 6511	4	4	5	5	travaux	work
 6514	14	14	13	13	milieux	media
@@ -4324,14 +3755,11 @@
 6520	24	24	21	21	déformations	deformations
 6521	23	23	15	15	introduits	introduced
 6522	2	2	2	2	cadre	frame
-6522	18	18	11	12	étude	to study
 6522	18	18	12	12	étude	study
 6523	8	8	3	3	premier	first
 6525	2	2	1	1	premier	begin
-6525	2	2	1	2	premier	begin with
 6529	29	29	22	22	blocage	blockage
 6530	3	3	2	2	formalisme	formalism
-6531	7	7	4	5	priori	a priori
 6531	7	7	5	5	priori	priori
 6531	30	30	24	24	écoulements	flow
 6532	5	5	3	3	véhicule	vehicle
@@ -4341,9 +3769,7 @@
 6538	8	8	7	7	étude	study
 6541	40	40	26	26	modèles	models
 6542	3	3	5	5	système	system
-6543	23	23	35	37	et/ou	and / or
 6543	23	23	36	37	et/ou	/ or
-6543	27	27	41	42	modèles	the models
 6543	27	27	42	42	modèles	models
 6547	6	6	4	4	évidence	underline
 6548	8	8	9	9	échantillon	samples
@@ -4351,20 +3777,15 @@
 6559	7	7	8	8	modèles	models
 6560	12	12	29	29	modèles	models
 6562	3	3	4	4	incertitude	uncertainty
-6563	11	11	6	8	incertitude	kind of uncertainty
-6563	11	11	7	8	incertitude	of uncertainty
 6563	11	11	8	8	incertitude	uncertainty
 6564	16	16	12	12	modèles	models
 6565	7	7	4	4	incertitude	uncertainty
 6566	9	9	15	15	point	point
 6567	17	17	17	17	incertitude	uncertainty
 6569	40	40	20	20	incertitude	uncertainty
-6569	40	40	20	21	incertitude	uncertainty space
 6571	4	4	3	3	incertitude	uncertainty
 6572	33	33	27	27	échelle	scale
-6572	33	33	27	28	échelle	scale resolution
 6578	32	32	36	36	modèles	models
-6583	2	2	1	2	premier	the first
 6583	2	2	2	2	premier	first
 6583	40	40	34	34	champ	field
 6584	4	4	4	4	atténué	reduced
@@ -4376,17 +3797,12 @@
 6598	2	2	2	2	premières	first
 6598	3	3	3	3	études	studies
 6599	5	5	5	5	mesures	measures
-6599	5	5	5	6	mesures	measures are
 6600	14	14	15	15	état	state
-6600	14	14	15	16	état	state is
 6603	8	8	6	6	calculer	calculate
 6605	10	10	10	10	problème	problem
 6607	31	31	8	8	spatiaux	spatial
 6607	30	30	9	9	biais	biases
-6609	36	36	30	31	premier	the first
-6609	36	36	30	32	premier	the first cancer
 6609	36	36	31	31	premier	first
-6609	36	36	31	32	premier	first cancer
 6610	1	1	1	1	travaux	work
 6610	5	5	5	5	cadre	framework
 6611	19	19	12	12	requête	query
@@ -4396,22 +3812,17 @@
 6616	21	21	18	18	humain	human
 6616	20	20	19	19	visage	face
 6617	11	11	10	10	visage	face
-6617	11	11	10	11	visage	face ,
 6620	16	16	10	10	requête	query
 6621	39	39	23	23	modèles	models
-6621	39	39	23	24	modèles	models that
 6621	43	43	27	27	système	system
 6621	48	48	32	32	détail	detail
 6622	16	16	13	13	modèles	modeling
 6624	11	11	8	8	modèles	models
 6624	16	16	13	13	détail	detail
-6624	20	20	16	17	système	main system
 6624	20	20	17	17	système	system
 6625	7	7	7	7	étude	analysis
 6625	10	10	12	12	système	system
 6627	7	7	8	8	modèles	models
-6627	7	7	8	9	modèles	models .
-6627	7	7	8	10	modèles	models . this
 6627	21	21	21	21	modèles	models
 6627	30	30	23	23	humain	human
 6628	9	9	9	9	moyen	average
@@ -4419,7 +3830,6 @@
 6631	24	24	17	17	attention	attention
 6631	29	29	23	23	informations	information
 6631	49	49	37	37	humain	human
-6631	49	49	37	38	humain	human vision
 6632	8	8	9	9	mesure	measure
 6637	28	28	23	23	famille	family
 6639	23	23	20	20	sommets	vertices
@@ -4442,7 +3852,6 @@
 6655	35	35	25	25	cadre	framework
 6659	20	20	18	18	connaissance	knowledge
 6661	4	4	1	1	problème	address
-6661	27	27	21	22	solution	the solutions
 6661	27	27	22	22	solution	solutions
 6674	9	9	7	7	calculer	compute
 6678	17	17	14	14	nouveau	new
@@ -4458,31 +3867,20 @@
 6687	16	16	16	16	étude	study
 6689	6	6	9	9	travaux	works
 6689	18	18	17	17	finis	finite
-6689	29	29	31	32	issues	) stemming
 6689	29	29	32	32	issues	stemming
 6691	43	43	35	35	diffusion	diffusion
-6692	14	14	9	10	priori	a priori
-6692	14	14	9	11	priori	a priori as
 6692	14	14	10	10	priori	priori
-6692	14	14	10	11	priori	priori as
-6692	17	17	13	15	posteriori	as a posteriori
-6692	17	17	14	15	posteriori	a posteriori
 6692	17	17	15	15	posteriori	posteriori
 6693	21	21	22	22	solution	solution
-6696	20	20	22	23	matérielle	the hardware
 6696	20	20	23	23	matérielle	hardware
-6696	46	46	50	51	mesures	experimental measures
 6696	46	46	51	51	mesures	measures
 6696	55	55	56	56	machine	machine
-6696	55	55	56	57	machine	machine is
 6697	35	35	29	29	matérielle	hardware
 6698	69	69	64	64	informations	information
 6699	4	4	2	2	mémoire	thesis
-6699	4	4	2	3	mémoire	thesis we
 6700	1	1	3	3	travaux	work
 6700	9	9	6	6	étude	study
 6700	19	19	19	19	sommets	vertices
-6700	19	19	19	20	sommets	vertices in
 6700	22	22	23	23	maillage	mesh
 6702	4	4	5	5	cadre	framework
 6702	18	18	12	12	mesure	measure
@@ -4495,8 +3893,6 @@
 6713	12	12	9	9	cellulaire	cell
 6714	25	25	29	29	étude	purpose
 6716	29	29	24	24	mesures	measures
-6716	29	29	24	25	mesures	measures of
-6718	5	5	4	5	confrontation	that confronting
 6718	5	5	5	5	confrontation	confronting
 6718	18	18	18	18	système	system
 6719	6	6	7	7	cadre	framework
@@ -4518,13 +3914,11 @@
 6758	6	6	6	6	examinons	investigate
 6761	5	5	6	6	localisation	localization
 6765	4	4	4	4	système	system
-6767	4	4	4	5	problème	a problem
 6767	4	4	5	5	problème	problem
 6768	19	19	18	18	solution	solution
 6768	23	23	21	21	droit	straight
 6768	44	44	43	43	radiation	radiation
 6769	7	7	8	8	oeuvre	intractable
-6769	20	20	22	23	radiation	the radiation
 6769	20	20	23	23	radiation	radiation
 6770	28	28	29	29	nature	nature
 6774	2	2	2	2	déformation	deformation
@@ -4534,8 +3928,6 @@
 6780	4	4	5	5	modèles	models
 6780	27	27	23	23	déformation	deformation
 6781	8	8	7	7	source	source
-6781	16	16	14	16	modèles	with new models
-6781	16	16	15	16	modèles	new models
 6781	16	16	16	16	modèles	models
 6783	16	16	14	14	étude	study
 6783	30	30	26	26	bords	edge
@@ -4560,7 +3952,6 @@
 6802	8	8	6	6	calculons	compute
 6802	10	10	7	7	déformation	deformation
 6803	12	12	11	11	déformation	deformation
-6803	19	19	14	15	convient	is suitable
 6803	19	19	15	15	convient	suitable
 6804	8	8	6	6	maillage	mesh
 6804	15	15	12	12	déformation	deformation
@@ -4608,7 +3999,6 @@
 6858	1	1	1	1	étude	study
 6858	6	6	5	5	cadre	a
 6859	10	10	8	8	rendu	makes
-6859	17	17	13	14	dépôt	the deposition
 6859	17	17	14	14	dépôt	deposition
 6859	39	39	34	34	enceintes	substrate
 6863	15	15	13	13	mesures	measurements
@@ -4618,14 +4008,12 @@
 6878	14	14	6	6	champ	field
 6879	34	34	12	12	échantillon	sample
 6879	23	23	13	13	régime	operates
-6879	23	23	13	14	régime	operates in
 6881	3	3	3	3	échantillons	samples
 6883	14	14	8	8	informations	information
 6886	13	13	13	13	mesure	measurement
 6887	8	8	8	8	étude	study
 6889	23	23	25	25	grands	high
 6891	2	2	2	2	étude	study
-6891	2	2	2	3	étude	study ,
 6893	2	2	2	2	étude	study
 6893	7	7	9	9	lumière	light
 6893	4	4	10	10	diffusion	scattering
@@ -4644,10 +4032,8 @@
 6915	12	12	12	12	formation	formation
 6916	17	17	9	9	formation	growth
 6918	20	20	19	19	croissance	growth
-6918	32	32	26	27	formation	to formation
 6918	32	32	27	27	formation	formation
 6918	37	37	29	29	diffusion	diffusion
-6918	37	37	29	30	diffusion	diffusion zone
 6921	13	13	17	17	croissance	growth
 6926	2	2	1	1	conducteurs	conducting
 6927	8	8	8	8	conducteurs	conducting
@@ -4657,18 +4043,15 @@
 6932	12	12	12	12	moyen	mid
 6932	24	24	24	24	espèces	species
 6934	2	2	15	15	régime	regime
-6936	12	12	15	16	état	ground state
 6936	12	12	16	16	état	state
 6937	2	2	2	2	cadre	frame
 6939	1	1	1	1	système	systems
 6940	20	20	22	22	croissance	growth
-6942	15	15	9	10	croissance	the growth
 6942	15	15	10	10	croissance	growth
 6943	6	6	8	8	croissance	growth
 6946	25	25	28	29	porteurs	charge carriers
 6954	6	6	5	5	informations	information
 6954	12	12	10	10	mesure	measures
-6955	15	15	14	15	porteurs	the carriers
 6955	15	15	15	15	porteurs	carriers
 6956	24	24	24	24	charge	charge
 6958	27	27	23	23	système	system
@@ -4678,33 +4061,24 @@
 6965	15	15	10	10	étude	study
 6970	22	22	28	28	composition	composition
 6970	41	41	47	47	solution	solution
-6970	41	41	47	48	solution	solution has
-6970	41	41	47	49	solution	solution has been
 6971	1	1	1	1	étude	study
 6971	5	5	2	2	évidence	shows
 6976	11	11	8	8	champ	magnetic
 6976	15	15	12	12	échelle	scale
 6976	22	22	15	15	champ	field
 6981	19	19	20	20	échantillon	sample
-6981	19	19	20	21	échantillon	sample &apos;s
 6984	5	5	2	2	évidence	showed
-6991	11	11	9	10	croissance	the growth
 6991	11	11	10	10	croissance	growth
 6991	26	26	25	25	diffusion	diffusion
-6997	4	4	3	4	croissance	and growth
 6997	4	4	4	4	croissance	growth
 6997	7	7	5	5	mesure	measurement
 6998	14	14	14	14	formation	formation
 6998	25	25	24	24	formation	formation
 6998	38	38	33	33	croissance	growth
-6998	38	38	33	34	croissance	growth stage
 6999	12	12	6	6	système	system
-7000	32	32	20	21	système	the system
 7000	32	32	21	21	système	system
-7003	1	1	3	4	calcule	have calculated
 7003	1	1	4	4	calcule	calculated
 7003	5	5	7	7	courant	current
-7003	5	5	7	8	courant	current ,
 7003	21	21	23	23	règle	rule
 7004	13	13	9	9	évidence	emphasis
 7005	10	10	8	8	régime	regime
@@ -4712,7 +4086,6 @@
 7010	28	28	27	27	vue	order
 7011	7	7	6	6	étude	study
 7011	12	12	11	11	solution	solution
-7011	12	12	11	12	solution	solution in
 7011	21	21	22	22	état	states
 7015	15	15	18	18	étude	study
 7016	12	12	12	12	étude	study
@@ -4732,29 +4105,20 @@
 7034	11	11	9	9	coupure	cut
 7036	15	15	17	17	écoulements	flows
 7038	1	1	0	0	mesures	measurements
-7038	5	5	2	3	induit	the induced
 7038	5	5	3	3	induit	induced
 7038	15	15	15	15	champ	field
 7040	15	15	12	12	induit	induces
-7040	15	15	12	13	induit	induces a
 7040	18	18	19	19	induit	induces
-7040	18	18	19	20	induit	induces a
 7043	5	5	10	10	problème	problem
-7043	5	5	10	11	problème	problem that
-7043	5	5	10	12	problème	problem that we
-7043	5	5	10	13	problème	problem that we show
 7044	7	7	12	12	évidence	identified
 7048	11	11	11	11	cadre	frame
-7049	13	13	20	21	moyen	for using
 7049	13	13	21	21	moyen	using
 7054	3	3	2	2	induisent	induce
-7054	3	3	2	3	induisent	induce the
 7058	44	44	39	39	pression	pressure
 7059	3	3	2	2	pression	pressure
 7059	22	22	22	23	isolant	insulating states
 7059	32	32	32	32	point	point
 7060	32	32	28	28	cadre	frame
-7061	8	8	0	1	échelle	the scaling
 7061	8	8	1	1	échelle	scaling
 7062	20	20	58	58	régime	regime
 7062	26	26	61	61	isolant	insulating
@@ -4822,7 +4186,6 @@
 7149	2	2	4	4	modèles	models
 7149	16	16	16	16	couplage	coupling
 7149	13	13	18	18	point	point
-7150	7	7	7	8	système	the system
 7150	7	7	8	8	système	system
 7150	15	15	14	14	couplage	coupling
 7150	12	12	16	16	point	point
@@ -4833,7 +4196,6 @@
 7155	7	7	9	9	formation	formation
 7155	26	26	28	28	état	state
 7156	20	20	18	18	formation	formation
-7158	6	6	3	4	champ	mean field
 7158	6	6	4	4	champ	field
 7159	5	5	4	4	formalisme	formalism
 7159	16	16	11	11	appariement	pairing
@@ -4847,7 +4209,6 @@
 7179	6	6	6	6	nouveau	new
 7180	20	20	26	26	mousse	foams
 7185	12	12	12	12	source	source
-7190	1	1	0	1	mesures	we performed
 7190	1	1	1	1	mesures	performed
 7192	5	5	1	1	évidence	demonstrate
 7192	17	17	9	9	interdite	gap
@@ -4871,10 +4232,7 @@
 7219	9	9	6	6	échelle	scale
 7228	26	26	23	23	induit	induces
 7233	11	11	9	9	glissement	slip
-7233	20	20	17	19	libre	the mean free
-7233	20	20	18	19	libre	mean free
 7233	20	20	19	19	libre	free
-7235	8	8	6	7	libre	mean free
 7235	8	8	7	7	libre	free
 7235	24	24	19	19	glissement	slip
 7237	14	14	13	13	croissance	growth
@@ -4884,7 +4242,6 @@
 7242	25	25	23	23	nature	nature
 7243	9	9	9	9	compositions	compositions
 7244	16	16	16	16	croissance	growth
-7246	14	14	11	12	croissance	the growth
 7246	14	14	12	12	croissance	growth
 7247	2	2	3	3	système	system
 7247	21	21	15	15	évidence	highlighted
@@ -4906,11 +4263,8 @@
 7266	29	29	21	21	couplage	coupled
 7267	19	19	19	19	échantillons	samples
 7268	9	9	10	10	nature	nature
-7268	9	9	10	11	nature	nature of
-7268	9	9	10	12	nature	nature of the
 7268	34	34	31	31	rapport	ratio
 7269	15	15	19	19	pression	pressure
-7270	26	26	23	24	nature	the nature
 7270	26	26	24	24	nature	nature
 7270	42	42	46	46	pression	pressure
 7270	52	52	58	58	champ	field
@@ -4926,20 +4280,15 @@
 7284	8	8	6	6	étude	study
 7285	17	17	17	17	croissance	growth
 7286	26	26	25	25	croissance	growth
-7286	43	43	40	41	premier	the first
 7286	43	43	41	41	premier	first
 7289	27	27	25	25	champ	applied
 7290	7	7	9	9	isolant	insulator
 7300	7	7	5	5	évidence	obtained
-7300	7	7	5	6	évidence	obtained and
 7301	30	30	25	25	pression	pressure
 7302	1	1	2	2	manuscrit	document
-7302	1	1	2	3	manuscrit	document ,
-7302	1	1	2	4	manuscrit	document , we
 7302	25	25	23	23	pression	pressure
 7303	14	14	10	10	pression	pressure
 7303	23	23	19	19	mesures	measuring
-7303	23	23	19	20	mesures	measuring range
 7304	1	1	1	1	mesures	measurements
 7305	16	16	16	16	mesures	measurements
 7305	26	26	23	23	échelle	scale
@@ -4948,12 +4297,9 @@
 7310	11	11	11	11	manuscrit	manuscript
 7311	1	1	1	1	étude	study
 7315	23	23	9	9	échelle	scale
-7315	31	31	25	26	dépôt	the deposition
 7315	31	31	26	26	dépôt	deposition
-7321	6	6	5	6	échantillon	a sample
 7321	6	6	6	6	échantillon	sample
 7323	2	2	2	2	supposés	supposed
-7323	2	2	2	3	supposés	supposed to
 7327	12	12	12	12	état	state
 7327	18	18	19	19	mesure	measurement
 7328	11	11	12	12	champ	field
@@ -4962,9 +4308,6 @@
 7331	6	6	6	6	mesure	measurement
 7333	2	2	2	2	premier	first
 7333	17	17	16	16	champ	field
-7336	6	6	5	8	premier	combination of the first
-7336	6	6	6	8	premier	of the first
-7336	6	6	7	8	premier	the first
 7336	6	6	8	8	premier	first
 7337	23	23	23	23	modifiant	modifying
 7338	1	1	1	1	étude	work
@@ -4974,11 +4317,8 @@
 7340	1	1	1	1	formation	formation
 7341	3	3	3	3	formation	formation
 7341	15	15	20	20	croissance	growth
-7346	4	4	3	4	système	the system
 7346	4	4	4	4	système	system
-7346	8	8	7	8	croissance	the growth
 7346	8	8	8	8	croissance	growth
-7348	23	23	26	27	système	the device
 7348	23	23	27	27	système	device
 7351	7	7	4	4	système	systems
 7353	1	1	1	1	examinons	examine
@@ -5004,10 +4344,7 @@
 7376	10	10	10	10	cadre	framework
 7377	35	35	30	30	anneau	ring
 7377	41	41	38	38	flux	flux
-7377	41	41	38	39	flux	flux .
-7377	41	41	38	40	flux	flux . the
 7378	4	4	4	4	croissance	growth
-7379	4	4	4	5	boîtes	the dots
 7379	4	4	5	5	boîtes	dots
 7379	28	28	27	27	croissance	growth
 7380	1	1	1	1	étude	study
@@ -5018,7 +4355,6 @@
 7386	1	1	0	0	premier	first
 7387	1	1	1	1	montage	experimental
 7387	9	9	9	9	pompe	pump
-7391	12	12	12	14	champ	the external static
 7391	12	12	13	14	champ	external static
 7391	18	18	21	21	nature	character
 7393	15	15	12	12	moyen	average
@@ -5030,17 +4366,14 @@
 7400	33	33	26	26	composition	composition
 7400	45	45	37	37	dureté	hardness
 7401	52	52	47	47	état	state
-7403	16	16	13	14	diffusion	the diffusion
 7403	16	16	14	14	diffusion	diffusion
 7407	38	38	33	33	évidence	show
 7408	13	13	11	11	plan	plan
-7408	13	13	11	12	plan	plan ,
 7409	8	8	8	8	diffusion	diffusion
 7411	16	16	11	11	dépôt	deposition
 7413	27	27	17	17	pression	pressure
 7417	16	16	24	24	flux	flux
 7421	22	22	19	19	état	state
-7421	22	22	19	20	état	state and
 7421	29	29	26	26	champ	field
 7422	11	11	8	8	porteurs	process
 7424	1	1	1	1	mesures	measurements
@@ -5053,12 +4386,10 @@
 7436	16	16	17	17	source	source
 7437	10	10	7	7	système	system
 7438	8	8	5	5	problème	problem
-7438	8	8	5	6	problème	problem of
 7438	16	16	12	12	nature	nature
 7438	19	19	16	16	source	source
 7439	3	3	6	6	système	system
 7442	1	1	2	2	système	system
-7443	35	35	19	20	métalliques	the metal
 7443	35	35	20	20	métalliques	metal
 7444	15	15	12	12	lumière	light
 7445	15	15	14	14	fonctions	functions
@@ -5069,10 +4400,7 @@
 7452	4	4	5	5	mesure	measure
 7453	25	25	26	26	modèles	models
 7456	1	1	1	1	travaux	work
-7456	1	1	1	2	travaux	work is
 7456	25	25	17	17	croissance	growth
-7458	21	21	15	17	subissant	, and undergo
-7458	21	21	16	17	subissant	and undergo
 7458	21	21	17	17	subissant	undergo
 7460	33	33	2	2	étude	study
 7461	1	1	2	2	étude	study
@@ -5091,22 +4419,17 @@
 7476	20	20	33	33	nature	nature
 7478	18	18	20	20	études	studies
 7478	43	43	42	42	recouvrement	covering
-7478	56	56	56	58	spectres	the optical spectra
 7478	56	56	57	58	spectres	optical spectra
-7480	7	7	8	10	dépôt	during the deposition
-7480	7	7	9	10	dépôt	the deposition
 7480	7	7	10	10	dépôt	deposition
 7480	22	22	25	25	flux	flux
 7480	42	42	40	40	croissance	growth
 7482	1	1	1	1	premier	first
-7483	25	25	18	19	fonctions	&apos;s functions
 7483	25	25	19	19	fonctions	functions
 7486	6	6	6	6	courant	current
 7486	13	13	9	9	échantillon	sample
 7486	15	15	11	11	échantillon	sample
 7489	19	19	12	12	charge	charge
 7493	7	7	7	7	oeuvre	up
-7493	7	7	7	8	oeuvre	up a
 7494	16	16	8	8	échantillons	sample
 7494	20	20	13	13	détail	detail
 7500	9	9	5	5	champ	field
@@ -5119,7 +4442,6 @@
 7513	7	7	8	8	fonctions	functions
 7513	19	19	14	14	étude	study
 7514	2	2	0	0	premier	first
-7514	11	11	9	10	champ	mean field
 7514	11	11	10	10	champ	field
 7516	23	23	18	18	calcule	calculates
 7520	13	13	15	15	porteurs	carriers
@@ -5127,7 +4449,6 @@
 7523	6	6	6	6	étude	study
 7523	13	13	15	15	régime	regime
 7526	1	1	1	1	étude	study
-7526	15	15	12	13	système	the system
 7526	15	15	13	13	système	system
 7527	2	2	2	2	premier	first
 7529	24	24	26	26	couplage	coupling
@@ -5178,7 +4499,6 @@
 7577	5	5	7	7	couplage	coupling
 7578	17	17	18	18	amortissement	damping
 7579	1	1	2	3	couplage	coupling regime
-7579	1	1	2	4	couplage	coupling regime ,
 7582	16	16	17	17	régime	regime
 7583	4	4	3	3	matière	matter
 7585	6	6	8	8	système	system
@@ -5201,11 +4521,8 @@
 7602	45	45	36	36	évidence	revealed
 7604	25	25	24	24	mouvement	displacement
 7606	2	2	2	2	échelle	scale
-7608	30	30	34	36	formalisme	quite heavy formalism
-7608	30	30	35	36	formalisme	heavy formalism
 7608	30	30	36	36	formalisme	formalism
 7609	1	1	1	1	état	state
-7609	19	19	23	24	système	the system
 7609	19	19	24	24	système	system
 7609	64	64	67	67	état	state
 7613	10	10	9	9	régime	regime
@@ -5226,19 +4543,14 @@
 7625	19	19	20	20	état	state
 7633	6	6	6	6	premier	first
 7636	20	20	13	13	système	system
-7637	5	5	4	5	modifiant	that change
 7637	5	5	5	5	modifiant	change
 7637	7	7	6	6	flux	fluxes
-7637	7	7	6	7	flux	fluxes .
 7638	19	19	18	18	premier	first
 7640	6	6	7	7	étude	study
 7641	21	21	17	17	flux	flux
 7643	16	16	18	18	couplage	coupling
 7644	32	32	28	28	nature	shape
-7644	34	34	30	31	bords	the edge
 7644	34	34	31	31	bords	edge
-7648	16	16	15	17	flux	a quantum flux
-7648	16	16	16	17	flux	quantum flux
 7648	16	16	17	17	flux	flux
 7650	7	7	8	8	localisation	localization
 7650	12	12	11	11	désordonné	disordered
@@ -5263,27 +4575,21 @@
 7663	44	44	38	38	raison	due
 7664	8	8	9	9	vitesses	velocities
 7666	1	1	1	1	étude	study
-7666	4	4	3	4	croissance	a growth
 7666	4	4	4	4	croissance	growth
 7666	32	32	29	29	croissance	growth
 7667	5	5	2	2	évidence	show
 7667	17	17	16	16	composition	composition
 7671	9	9	12	12	système	system
-7671	9	9	12	13	système	system ,
 7672	1	1	0	0	ajustement	fitting
 7674	9	9	7	7	matière	matter
 7675	4	4	5	5	système	system
 7676	10	10	11	11	état	state
-7676	13	13	13	14	système	the system
-7676	13	13	13	15	système	the system that
 7676	13	13	14	14	système	system
-7676	13	13	14	15	système	system that
 7677	5	5	9	9	solution	solution
 7677	19	19	20	20	état	state
 7678	18	18	21	21	état	state
 7679	15	15	15	15	échantillon	sample
 7681	13	13	10	10	échantillon	sample
-7683	28	28	27	28	système	the system
 7683	28	28	28	28	système	system
 7684	1	1	1	1	mesure	measurement
 7684	18	18	13	13	nouveau	new
@@ -5293,10 +4599,8 @@
 7688	19	19	16	16	déduites	deduced
 7692	27	27	26	26	champ	field
 7693	4	4	4	4	mesures	measurement
-7693	4	4	4	5	mesures	measurement on
 7694	4	4	4	4	travaux	work
 7694	15	15	14	14	modifiant	changing
-7694	21	21	20	21	système	the system
 7694	21	21	21	21	système	system
 7695	7	7	7	7	étude	study
 7695	28	28	22	22	charge	charge
@@ -5304,7 +4608,6 @@
 7696	22	22	24	24	régime	regime
 7697	19	19	20	20	dégénérescence	degeneracy
 7698	7	7	7	7	étude	study
-7700	18	18	0	1	évidence	we show
 7700	18	18	1	1	évidence	show
 7700	9	9	20	20	bords	edges
 7701	21	21	19	19	formation	formation
@@ -5321,7 +4624,6 @@
 7720	21	21	14	14	gazeuse	gas
 7726	19	19	20	20	étude	study
 7731	2	2	1	1	cadre	part
-7731	4	4	3	4	études	the studies
 7731	4	4	4	4	études	studies
 7731	17	17	17	17	couplage	coupling
 7731	40	40	35	35	échantillons	samples
@@ -5344,7 +4646,6 @@
 7748	2	2	1	1	cadre	order
 7749	6	6	6	6	induit	induces
 7750	1	1	1	1	nouveau	new
-7761	26	26	24	25	source	the source
 7761	26	26	25	25	source	source
 7761	34	34	31	31	ancrage	anchoring
 7764	6	6	6	6	modèles	models
@@ -5362,7 +4663,6 @@
 7779	14	14	5	5	formation	formation
 7780	4	4	8	8	champ	field
 7782	6	6	8	8	champ	field
-7782	6	6	8	9	champ	field in
 7782	13	13	16	16	formation	formation
 7784	19	19	18	18	système	system
 7785	25	25	22	22	lumière	light
@@ -5382,16 +4682,12 @@
 7801	31	31	30	31	croissance	growth responses
 7801	41	41	36	36	sapin	fir
 7802	22	22	18	18	lumière	light
-7803	1	1	1	2	modèles	best models
-7803	1	1	1	3	modèles	best models for
 7803	1	1	2	2	modèles	models
-7803	1	1	2	3	modèles	models for
 7803	7	7	7	7	croissance	growth
 7804	34	34	27	27	mesures	measurements
 7805	3	3	2	2	espèces	species
 7805	15	15	11	11	lumière	light
 7806	8	8	7	7	sapin	fir
-7806	8	8	7	8	sapin	fir and
 7806	23	23	16	16	lumière	light
 7807	1	1	1	1	rapport	ratio
 7808	1	1	1	1	article	paper
@@ -5405,7 +4701,6 @@
 7814	1	1	1	1	auteurs	authors
 7814	10	10	6	6	modèles	models
 7814	16	16	8	8	fonctions	functions
-7814	16	16	8	9	fonctions	functions ,
 7814	24	24	13	13	graphique	graphical
 7814	28	28	20	20	modèles	models
 7815	1	1	1	1	études	studies
@@ -5421,7 +4716,6 @@
 7833	41	41	41	41	associations	associations
 7834	40	40	0	0	auteurs	we
 7837	7	7	4	4	étude	study
-7837	7	7	4	5	étude	study therefore
 7837	16	16	15	15	espèces	species
 7837	40	40	33	33	taxons	taxa
 7839	1	1	1	1	addition	addition
@@ -5442,7 +4736,6 @@
 7849	3	3	3	3	problème	problem
 7859	21	21	23	23	échantillons	samples
 7860	37	37	31	31	couvert	canopy
-7864	51	51	32	33	taux	, higher
 7864	51	51	33	33	taux	higher
 7864	68	68	43	43	couverture	forest
 7864	69	69	44	44	morte	floor
@@ -5451,7 +4744,6 @@
 7868	30	30	30	30	déformations	deformations
 7869	15	15	11	11	déformations	strain
 7869	38	38	33	33	échantillon	sample
-7869	38	38	33	34	échantillon	sample and
 7869	57	57	44	44	système	system
 7870	18	18	14	14	échantillon	sample
 7872	45	45	37	37	évidence	evidence
@@ -5461,12 +4753,8 @@
 7878	31	31	23	23	taux	seedling
 7881	1	1	0	0	ombrage	shade
 7881	7	7	2	2	mousse	moss
-7882	32	32	23	24	mousse	with moss
-7882	32	32	23	25	mousse	with moss removed
 7882	32	32	24	24	mousse	moss
-7882	32	32	24	25	mousse	moss removed
 7883	7	7	4	4	sapin	fir
-7883	7	7	4	5	sapin	fir ,
 7883	21	21	14	14	témoins	controls
 7886	15	15	13	13	espèce	species
 7886	21	21	19	19	vigueur	vigor
@@ -5478,7 +4766,6 @@
 7894	2	2	2	2	connaissance	knowledge
 7895	7	7	4	4	nouveau	new
 7896	5	5	4	4	principes	principles
-7896	5	5	4	5	principes	principles previously
 7896	27	27	20	20	travaux	work
 7898	3	3	4	4	taux	rates
 7900	1	1	1	1	nouveau	new
@@ -5486,7 +4773,6 @@
 7906	23	23	14	14	pratique	useful
 7906	26	26	18	18	étude	study
 7908	7	7	5	5	mesure	measurement
-7908	9	9	7	8	courant	the current
 7908	9	9	8	8	courant	current
 7909	20	20	19	19	courant	current
 7909	18	18	20	20	mesure	measurement
@@ -5512,7 +4798,6 @@
 7926	16	16	14	14	pression	pressure
 7926	22	22	19	19	pression	pressure
 7928	12	12	12	12	pression	pressure
-7929	1	1	1	2	étude	present study
 7929	1	1	2	2	étude	study
 7932	35	35	23	23	apex	tip
 7933	28	28	23	23	mouvement	movement
@@ -5533,12 +4818,10 @@
 7955	10	10	2	2	classe	class
 7957	1	1	2	2	composition	composition
 7958	1	1	1	1	étude	study
-7959	11	11	6	7	organe	are organ
 7959	11	11	7	7	organe	organ
 7961	8	8	7	7	moyen	use
 7962	13	13	8	8	système	system
 7964	4	4	5	5	taux	rate
-7964	42	42	35	36	volets	are identified
 7964	42	42	36	36	volets	identified
 7965	18	18	8	8	quantitative	quantitative
 7965	15	15	15	15	étude	study
@@ -5559,7 +4842,6 @@
 8000	22	22	26	26	croissance	growth
 8001	2	2	2	2	tiges	stems
 8002	26	26	24	24	croissance	growth
-8002	32	32	28	29	témoin	a control
 8002	32	32	29	29	témoin	control
 8004	7	7	6	6	apparues	apparent
 8004	20	20	13	13	mesures	measurements
@@ -5569,13 +4851,10 @@
 8014	17	17	17	17	genre	kind
 8021	2	2	1	1	souches	strains
 8032	11	11	8	8	climat	weather
-8032	11	11	8	9	climat	weather ,
-8034	25	25	19	21	passage	to pass through
 8034	25	25	20	21	passage	pass through
 8035	3	3	2	2	passage	passage
 8040	10	10	9	9	ajustement	adjustment
 8041	1	1	1	1	article	paper
-8042	10	10	7	8	modèles	ann models
 8042	10	10	8	8	modèles	models
 8042	25	25	17	17	système	system
 8043	1	1	1	1	article	article
@@ -5602,13 +4881,11 @@
 8074	18	18	18	18	soulèvement	heave
 8074	31	31	29	29	installation	installation
 8077	35	35	30	30	soulèvement	heave
-8078	31	31	23	24	réaction	the reaction
 8078	31	31	24	24	réaction	reaction
 8080	1	1	2	2	informations	information
 8085	9	9	8	8	composition	composition
 8086	3	3	3	3	étude	analysis
 8089	20	20	17	17	point	point
-8089	20	20	17	18	point	point ,
 8093	19	19	10	10	famille	family
 8094	20	20	14	14	règle	rule
 8095	19	19	12	12	petits	smaller
@@ -5624,13 +4901,9 @@
 8120	8	8	7	7	taux	rate
 8121	6	6	4	4	taux	rates
 8127	1	1	1	1	études	studies
-8127	1	1	1	2	études	studies have
 8128	37	37	23	23	témoins	controls
 8129	1	1	1	1	études	studies
 8131	2	2	7	7	études	studies
-8131	2	2	7	8	études	studies that
-8131	2	2	7	9	études	studies that used
-8133	22	22	13	14	connaît	is known
 8133	22	22	14	14	connaît	known
 8133	36	36	21	21	espèces	species
 8137	9	9	5	5	paquets	packets
@@ -5641,13 +4914,10 @@
 8150	20	20	16	16	couverture	cover
 8153	22	22	23	23	système	system
 8153	32	32	33	33	système	system
-8153	32	32	33	34	système	system ,
 8154	28	28	31	31	compositions	compositions
 8159	35	35	25	25	famille	family
 8160	6	6	1	1	famille	family
 8161	11	11	5	5	famille	family
-8161	11	11	5	6	famille	family &apos;s
-8161	6	6	6	7	taux	&apos;s level
 8161	6	6	7	7	taux	level
 8161	24	24	15	15	mesure	reasonably
 8161	29	29	21	21	taux	level
@@ -5667,7 +4937,6 @@
 8179	30	30	14	14	charge	charge
 8181	16	16	10	10	addition	addition
 8181	22	22	15	15	opposition	contrast
-8181	22	22	15	16	opposition	contrast to
 8183	21	21	15	15	opposition	contrast
 8186	1	1	1	1	ceinture	belt
 8188	18	18	15	15	plan	plane
@@ -5678,7 +4947,6 @@
 8201	12	12	8	8	étude	analyzed
 8207	5	5	5	5	étude	study
 8214	24	24	18	18	installation	set
-8214	24	24	18	19	installation	set up
 8217	1	1	0	0	essais	trials
 8217	13	13	14	14	réaction	response
 8229	1	1	1	1	examen	examination
@@ -5701,15 +4969,12 @@
 8258	34	34	28	28	ceinture	belt
 8259	29	29	23	23	point	point
 8267	28	28	22	22	sommet	at
-8268	29	29	21	22	grands	for larger
 8268	29	29	22	22	grands	larger
 8270	5	5	3	3	couplage	coupling
 8276	13	13	13	13	calculer	calculate
-8276	13	13	13	14	calculer	calculate group
 8280	1	1	1	1	taux	high
 8280	35	35	33	33	croissance	growth
 8287	31	31	27	27	agent	agent
-8287	40	40	32	33	mesure	a measure
 8287	40	40	33	33	mesure	measure
 8288	6	6	7	7	études	studies
 8289	3	3	0	0	espèces	species
@@ -5731,7 +4996,6 @@
 8306	54	54	42	42	ceinture	belt
 8313	2	2	1	1	loups	wolves
 8313	5	5	3	4	loups	eastern wolves
-8313	5	5	3	5	loups	eastern wolves ,
 8314	13	13	10	10	loups	wolves
 8315	11	11	3	3	nouveau	new
 8315	19	19	8	8	antérieure	previous
@@ -5746,29 +5010,23 @@
 8318	38	38	29	29	loups	wolves
 8321	3	3	0	0	ajustement	fitting
 8322	10	10	3	3	étude	study
-8322	10	10	3	4	étude	study ,
-8322	10	10	3	5	étude	study , i
 8322	29	29	26	26	modèles	models
 8324	29	29	25	25	ajustement	fit
 8327	36	36	29	30	essais	experimental investigation
 8331	31	31	21	21	charge	loading
 8334	15	15	11	11	rupture	fracture
-8334	15	15	11	12	rupture	fracture life
 8336	1	1	1	1	étude	study
 8336	7	7	8	8	échelle	scale
-8338	2	2	1	2	induit	also induced
 8338	2	2	2	2	induit	induced
 8341	29	29	22	22	ratio	ratio
 8342	8	8	4	4	dépôt	deposit
 8343	4	4	6	6	flux	flow
 8344	5	5	2	2	pression	pressure
 8346	6	6	2	2	solution	solution
-8346	6	6	2	3	solution	solution is
 8346	4	4	12	12	finies	finite
 8347	19	19	14	14	flux	flow
 8347	43	43	32	32	flux	flow
 8347	40	40	33	33	taux	rates
-8347	40	40	33	34	taux	rates ,
 8348	7	7	6	6	flux	flow
 8348	23	23	19	19	flux	flow
 8349	29	29	22	22	flux	flow
@@ -5790,7 +5048,6 @@
 8385	42	42	42	42	souches	strains
 8387	1	1	2	2	souches	strains
 8388	20	20	16	16	souches	strains
-8391	37	37	26	27	taux	at high
 8391	37	37	27	27	taux	high
 8392	1	1	1	1	article	paper
 8393	3	3	2	2	cadre	framework
@@ -5805,22 +5062,18 @@
 8404	23	23	16	16	cellulaire	cellular
 8404	22	22	17	17	localisation	localization
 8408	19	19	16	16	travaux	work
-8408	19	19	16	17	travaux	work ,
 8410	9	9	7	7	raison	because
 8412	10	10	6	6	moyen	using
 8413	17	17	15	15	fixation	fixation
 8414	23	23	13	13	flux	flow
-8415	11	11	6	7	flux	a flow
 8415	11	11	7	7	flux	flow
 8416	20	20	15	15	addition	addition
-8422	11	11	9	10	voie	a way
 8422	11	11	10	10	voie	way
 8424	1	1	1	1	étude	paper
 8429	1	1	1	1	article	paper
 8438	1	1	1	1	étude	study
 8445	1	1	1	1	article	review
 8448	23	23	24	24	état	state
-8448	23	23	24	25	état	state of
 8449	31	31	26	26	pratique	practical
 8451	8	8	9	9	clé	key
 8453	86	86	77	77	mesures	measures
@@ -5835,12 +5088,10 @@
 8461	1	1	2	2	essais	tests
 8461	13	13	8	8	charge	load
 8461	29	29	24	24	charge	load
-8462	6	6	4	5	plane	a planar
 8462	6	6	5	5	plane	planar
 8462	11	11	14	14	face	face
 8462	20	20	20	20	rigidité	stiffness
 8464	51	51	32	32	composition	compositional
-8464	51	51	32	33	composition	compositional region
 8467	34	34	36	36	solution	solution
 8468	13	13	5	5	addition	addition
 8468	25	25	16	16	solution	solution
@@ -5855,9 +5106,7 @@
 8480	20	20	17	17	réaction	response
 8482	1	1	2	2	étude	study
 8487	13	13	10	10	stade	stage
-8487	13	13	10	11	stade	stage in
 8492	21	21	19	19	espèces	species
-8493	9	9	6	7	m.	in m.
 8493	9	9	7	7	m.	m.
 8493	18	18	14	14	espèces	species
 8494	16	16	8	8	m.	m.
@@ -5865,7 +5114,6 @@
 8497	17	17	15	15	taux	higher
 8497	19	19	16	16	croissance	growth
 8499	4	4	0	0	croissance	growth
-8499	22	22	12	13	rapport	a ratio
 8499	22	22	13	13	rapport	ratio
 8500	1	1	1	1	taux	higher
 8500	3	3	2	2	croissance	growth
@@ -5875,13 +5123,9 @@
 8502	1	1	1	1	article	paper
 8502	8	8	7	7	incertitude	uncertainty
 8503	11	11	10	10	incertitude	uncertainty
-8503	11	11	10	11	incertitude	uncertainty ,
 8504	23	23	15	15	incertitude	uncertainty
-8508	35	35	22	23	peuplement	to stand
 8508	35	35	23	23	peuplement	stand
 8509	7	7	5	5	tiges	stems
-8509	7	7	5	6	tiges	stems ,
-8509	19	19	17	18	espèce	tree species
 8509	19	19	18	18	espèce	species
 8511	26	26	16	16	pied	standing
 8513	4	4	1	1	chute	fall
@@ -5910,10 +5154,8 @@
 8534	49	49	34	34	solution	solution
 8535	40	40	35	35	solution	solution
 8538	1	1	1	1	études	studies
-8538	1	1	1	2	études	studies have
 8539	4	4	4	4	étude	study
 8539	18	18	16	16	souris	mice
-8539	21	21	18	19	taux	the rate
 8539	21	21	19	19	taux	rate
 8539	23	23	21	21	exposition	exposure
 8540	15	15	10	10	témoin	control
@@ -5927,15 +5169,11 @@
 8542	32	32	24	24	réaction	response
 8543	13	13	11	11	souris	mice
 8544	16	16	13	13	souris	mice
-8544	36	36	27	28	souris	control mice
 8544	36	36	28	28	souris	mice
 8545	33	33	29	29	charge	burden
 8545	37	37	32	32	souris	mice
-8545	37	37	32	33	souris	mice ,
 8545	49	49	40	40	marche	walking
 8548	3	3	3	3	étude	study
-8548	3	3	3	4	étude	study ,
-8548	3	3	3	5	étude	study , the
 8553	1	1	0	0	perfusion	infusion
 8554	8	8	5	5	taux	level
 8558	27	27	20	20	administration	administration
@@ -5952,7 +5190,6 @@
 8582	8	8	5	5	récoltés	harvested
 8584	1	1	0	0	connaissance	knowledge
 8585	4	4	5	5	réaction	reaction
-8585	4	4	5	6	réaction	reaction is
 8586	9	9	10	10	espèces	species
 8587	4	4	4	4	article	paper
 8597	3	3	4	4	problème	issue
@@ -5961,7 +5198,6 @@
 8603	33	33	24	24	souris	mice
 8612	24	24	23	23	charges	charge
 8614	1	1	1	1	article	paper
-8614	1	1	1	2	article	paper makes
 8616	1	1	1	1	travaux	work
 8619	4	4	4	4	article	paper
 8623	25	25	16	16	liaison	bond
@@ -5969,11 +5205,9 @@
 8625	2	2	18	18	études	studies
 8625	39	39	27	27	modèles	model
 8626	12	12	9	9	espèces	species
-8626	12	12	9	10	espèces	species were
 8630	1	1	1	2	étude	research considered
 8630	8	8	7	7	stade	stage
 8630	23	23	22	22	rapport	ratio
-8630	23	23	22	23	rapport	ratio of
 8630	28	28	32	32	ligneux	woody
 8631	13	13	11	11	stade	stage
 8632	17	17	1	1	échantillons	samples
@@ -5985,14 +5219,10 @@
 8638	21	21	12	12	moyen	means
 8638	41	41	28	28	ligneux	woody
 8639	23	23	12	12	espèces	species
-8639	23	23	12	13	espèces	species only
 8639	54	54	33	33	espèces	species
-8639	54	54	33	34	espèces	species ,
 8644	23	23	17	17	espèces	species
 8654	8	8	7	7	avérés	found
-8654	8	8	7	8	avérés	found to
 8656	28	28	30	30	terre	earthquake
-8657	19	19	18	19	genre	the type
 8657	19	19	19	19	genre	type
 8660	9	9	7	7	étude	study
 8661	4	4	4	4	étude	study
@@ -6006,15 +5236,10 @@
 8668	24	24	18	18	espèces	species
 8668	27	27	19	19	croissance	grow
 8670	9	9	7	7	genre	such
-8670	9	9	7	8	genre	such a
-8670	11	11	8	9	étude	a study
-8670	11	11	8	10	étude	a study ,
 8670	11	11	9	9	étude	study
-8670	11	11	9	10	étude	study ,
 8671	1	1	2	2	croissance	growth
 8671	8	8	9	9	croissance	growth
 8671	22	22	21	21	espèce	species
-8673	23	23	17	18	mesures	these measures
 8673	23	23	18	18	mesures	measures
 8673	26	26	21	21	croissance	growth
 8673	40	40	33	33	régime	regime
@@ -6045,7 +5270,6 @@
 8699	42	42	30	30	bords	edge
 8700	24	24	17	17	bords	edge
 8702	11	11	9	9	rapport	ratio
-8702	11	11	9	10	rapport	ratio of
 8703	16	16	10	10	patrons	patterns
 8712	46	46	29	29	passage	transit
 8713	1	1	1	1	article	paper
@@ -6061,12 +5285,8 @@
 8725	45	45	30	30	source	source
 8725	40	40	32	32	essais	assays
 8729	16	16	13	13	source	source
-8729	16	16	13	14	source	source ,
 8738	19	19	19	19	lumière	light
-8738	19	19	19	20	lumière	light and
-8738	19	19	19	21	lumière	light and with
 8738	37	37	30	30	m.	m.
-8739	9	9	7	8	spectres	the spectrum
 8739	9	9	8	8	spectres	spectrum
 8739	15	15	14	14	rendements	yields
 8740	22	22	21	21	espèces	species
@@ -6077,7 +5297,6 @@
 8744	8	8	8	8	calculer	calculate
 8744	12	12	13	13	rendements	yields
 8744	20	20	18	18	réaction	reaction
-8744	20	20	18	19	réaction	reaction ,
 8746	4	4	4	4	exposition	exposure
 8747	13	13	10	10	croissance	growth
 8752	2	2	2	2	assume	assumes
@@ -6094,10 +5313,7 @@
 8780	10	10	8	8	addition	addition
 8780	18	18	10	10	taux	rates
 8785	6	6	1	1	grands	large
-8785	6	6	1	2	grands	large and
-8785	8	8	2	3	petits	and small
 8785	8	8	3	3	petits	small
-8786	25	25	20	21	cellulaire	a cellular
 8786	25	25	21	21	cellulaire	cellular
 8788	1	1	1	1	nature	nature
 8789	6	6	6	6	cadre	context
@@ -6108,8 +5324,6 @@
 8794	1	1	1	1	études	studies
 8794	19	19	14	14	induisent	induce
 8797	1	1	2	2	étude	study
-8797	1	1	2	3	étude	study ,
-8797	1	1	2	4	étude	study , we
 8799	30	30	21	21	filaments	filament
 8799	50	50	33	33	espèce	species
 8801	1	1	1	1	étude	study
@@ -6128,16 +5342,12 @@
 8821	38	38	25	25	espèces	species
 8824	37	37	29	29	liaison	bond
 8825	8	8	3	3	modèles	models
-8825	8	8	3	4	modèles	models was
-8825	8	8	3	5	modèles	models was made
-8825	8	8	3	6	modèles	models was made ,
 8827	37	37	35	35	administration	administration
 8834	2	2	2	2	étude	study
 8836	10	10	6	7	tiges	tree stem
 8836	19	19	13	13	récoltées	collected
 8837	5	5	5	5	état	condition
 8840	1	1	1	1	mesures	measurements
-8840	1	1	1	2	mesures	measurements on
 8841	22	22	14	14	tiges	stem
 8845	7	7	7	7	mesures	measures
 8845	9	9	9	9	croissance	growth
@@ -6152,8 +5362,6 @@
 8858	13	13	5	5	modèles	models
 8861	29	29	23	23	espèces	species
 8861	49	49	33	33	grands	large
-8862	1	1	0	2	examen	i then examine
-8862	1	1	1	2	examen	then examine
 8862	1	1	2	2	examen	examine
 8862	31	31	25	25	régime	diet
 8862	44	44	36	36	grands	large
@@ -6163,7 +5371,6 @@
 8867	8	8	7	7	source	source
 8872	18	18	13	13	premières	first
 8874	23	23	23	23	famille	family
-8874	40	40	33	34	famille	, family
 8874	40	40	34	34	famille	family
 8879	1	1	2	2	étude	study
 8879	46	46	30	30	solution	solution
@@ -6174,7 +5381,6 @@
 8889	19	19	20	20	liaison	bonding
 8891	19	19	12	13	charges	mulliken charges
 8892	19	19	8	8	liaison	bond
-8892	19	19	8	9	liaison	bond does
 8892	34	34	26	26	charge	charge
 8892	39	39	29	29	formation	formation
 8893	5	5	0	0	liaison	bonding
@@ -6185,10 +5391,8 @@
 8896	2	2	4	4	étude	study
 8896	25	25	19	19	système	digestive
 8902	13	13	10	10	notée	noted
-8903	1	1	1	2	étude	present study
 8903	1	1	2	2	étude	study
 8903	5	5	3	3	penser	suggested
-8904	10	10	4	5	croissance	a growing
 8904	10	10	5	5	croissance	growing
 8904	18	18	12	12	pays	countries
 8907	36	36	24	24	plaque	plate
@@ -6196,37 +5400,29 @@
 8909	9	9	5	5	moyennes	mean
 8910	4	4	5	5	étude	study
 8911	4	4	11	11	composition	composition
-8911	4	4	11	12	composition	composition was
 8912	9	9	7	7	échantillons	samples
 8913	5	5	4	4	composition	composition
 8915	1	1	0	0	patrons	patterns
 8915	6	6	5	5	composition	composition
 8916	20	20	13	13	évidence	demonstrated
 8917	4	4	2	2	article	paper
-8917	4	4	2	3	article	paper ,
 8918	11	11	10	10	couverture	covers
 8919	1	1	1	1	auteurs	authors
 8925	1	1	2	2	composition	composition
-8926	1	1	0	1	mesures	i measured
 8926	1	1	1	1	mesures	measured
 8926	8	8	5	5	croissance	growth
 8926	53	53	36	36	espèces	species
 8926	71	71	53	53	moules	zebra
-8927	1	1	4	6	mesures	, i measured
-8927	1	1	5	6	mesures	i measured
 8927	1	1	6	6	mesures	measured
 8927	15	15	13	13	croissance	growth
 8927	21	21	15	15	marquées	marked
 8927	20	20	16	16	moules	mussels
 8928	2	2	1	1	moules	mussels
-8928	2	2	1	2	moules	mussels had
 8928	6	6	5	5	taux	rates
-8928	6	6	5	6	taux	rates and
 8929	25	25	20	20	moules	zebra
 8930	12	12	9	9	moules	zebra
 8931	1	1	0	0	taux	lower
 8931	15	15	8	8	moules	mussels
-8931	24	24	17	18	moules	of zebra
 8931	24	24	18	18	moules	zebra
 8933	2	2	2	2	étude	paper
 8935	60	60	42	42	modèles	models
@@ -6236,9 +5432,7 @@
 8938	8	8	8	8	espèces	species
 8938	13	13	12	12	espèces	species
 8939	6	6	4	4	espèces	species
-8939	6	6	4	5	espèces	species are
 8940	11	11	6	6	espèces	species
-8940	24	24	15	16	lumière	low light
 8940	24	24	16	16	lumière	light
 8941	12	12	8	8	espèces	species
 8943	52	52	42	42	rapports	ratios
@@ -6246,17 +5440,14 @@
 8945	24	24	16	16	ajustement	fitting
 8945	36	36	23	23	espèces	species
 8945	39	39	26	26	solution	solution
-8950	13	13	9	10	humain	and humans
 8950	13	13	10	10	humain	humans
 8951	16	16	17	17	système	system
 8953	9	9	2	2	croissance	growth
 8954	9	9	6	6	peuplement	stand
-8954	9	9	6	7	peuplement	stand at
 8957	9	9	10	10	nouveau	new
 8957	10	10	11	11	peuplement	stand
 8957	21	21	19	19	échantillon	sample
 8959	19	19	16	16	peuplement	stand
-8960	14	14	15	16	croissance	current growth
 8960	14	14	16	16	croissance	growth
 8961	22	22	20	21	couvert	canopy layer
 8961	26	26	25	25	croissance	growth
@@ -6269,7 +5460,6 @@
 8966	26	26	23	23	coupe	logged
 8967	3	3	2	2	addition	addition
 8967	21	21	14	14	petits	small
-8974	7	7	6	7	souches	two strains
 8974	7	7	7	7	souches	strains
 8974	22	22	19	19	réaction	response
 8979	10	10	7	7	croissance	growth
@@ -6278,7 +5468,6 @@
 8982	13	13	8	8	taux	rate
 8987	6	6	6	6	taux	rate
 8990	21	21	10	10	solution	solution
-8990	21	21	10	11	solution	solution or
 8991	47	47	33	33	couplage	coupled
 8996	4	4	4	4	ajusté	adjusted
 8996	18	18	6	6	mesures	measurements
@@ -6306,11 +5495,9 @@
 9030	11	11	5	5	récoltées	logged
 9031	18	18	12	12	récoltées	logged
 9032	26	26	25	25	taux	rates
-9032	26	26	25	26	taux	rates ,
 9033	8	8	4	4	taux	rates
 9033	6	6	6	6	récoltées	logged
 9033	18	18	21	21	taux	rates
-9033	18	18	21	22	taux	rates ,
 9035	9	9	6	6	capital	capital
 9036	1	1	1	1	article	paper
 9039	1	1	2	2	déformation	deformation
@@ -6339,7 +5526,6 @@
 9061	31	31	23	23	classe	class
 9062	1	1	0	0	inventaires	inventories
 9068	18	18	12	12	classe	class
-9069	10	10	2	3	composition	with composition
 9069	10	10	3	3	composition	composition
 9079	1	1	1	1	taux	rates
 9081	11	11	9	9	souches	strains
@@ -6355,7 +5541,6 @@
 9087	30	30	24	24	problème	problem
 9087	33	33	29	29	plaque	plate
 9088	1	1	3	3	solution	solution
-9090	12	12	11	12	rapport	aspect ratio
 9090	12	12	12	12	rapport	ratio
 9091	36	36	31	31	déformations	deformations
 9091	43	43	38	38	stade	stage
@@ -6374,9 +5559,7 @@
 9133	13	13	16	16	fonctions	functions
 9135	4	4	1	1	premières	first
 9137	4	4	1	1	modèles	models
-9137	4	4	1	2	modèles	models are
 9137	11	11	5	5	calculer	calculate
-9137	48	48	27	28	pêche	on fishing
 9137	48	48	28	28	pêche	fishing
 9138	10	10	9	9	témoins	controls
 9139	15	15	11	11	pêche	fishing
@@ -6385,7 +5568,6 @@
 9143	9	9	10	10	flux	flux
 9153	12	12	7	7	rapport	ratio
 9160	10	10	8	8	perturbations	perturbations
-9160	10	10	8	9	perturbations	perturbations ,
 9160	16	16	14	14	corporelles	body
 9160	41	41	37	37	poids	weight
 9161	16	16	14	14	addition	adding
@@ -6393,7 +5575,6 @@
 9167	39	39	32	32	virus	virus
 9168	21	21	13	13	dirigés	antibodies
 9175	7	7	2	2	ceinture	belt
-9175	7	7	2	3	ceinture	belt in
 9175	32	32	29	29	ceinture	belt
 9176	1	1	3	3	études	studies
 9176	7	7	12	12	modèles	models
@@ -6408,7 +5589,6 @@
 9188	33	33	21	21	couverture	forest
 9188	34	34	22	22	morte	floor
 9190	1	1	2	2	perturbations	disturbances
-9195	30	30	19	20	échantillons	field samples
 9195	30	30	20	20	échantillons	samples
 9201	25	25	18	18	pêche	fishing
 9202	7	7	15	15	pêche	fishing
@@ -6436,7 +5616,6 @@
 9228	26	26	3	3	croissance	growth
 9228	37	37	14	14	souches	strains
 9228	41	41	17	17	espèces	species
-9228	41	41	17	18	espèces	species in
 9228	44	44	20	20	genres	genera
 9228	14	14	68	68	source	source
 9229	17	17	11	11	croissance	growth
@@ -6449,14 +5628,12 @@
 9236	1	1	4	4	études	studies
 9236	14	14	11	11	matière	dna
 9240	29	29	22	22	faut	need
-9240	29	29	22	23	faut	need to
 9241	18	18	16	16	système	system
 9242	14	14	10	10	récepteur	receptor
 9244	73	73	58	58	petits	small
 9245	1	1	1	1	article	paper
 9247	37	37	30	30	glissement	slide
 9247	69	69	60	60	source	source
-9247	89	89	73	74	glissement	the landslide
 9247	89	89	74	74	glissement	landslide
 9248	11	11	7	7	composition	composition
 9248	29	29	22	22	système	system
@@ -6467,10 +5644,7 @@
 9251	28	28	19	19	source	spring
 9252	24	24	23	23	système	system
 9252	34	34	29	29	composition	composition
-9252	34	34	29	30	composition	composition as
-9252	34	34	29	31	composition	composition as well
 9253	7	7	2	2	étude	study
-9253	7	7	2	3	étude	study ,
 9258	26	26	20	20	modèles	model
 9261	1	1	1	1	étude	study
 9262	28	28	20	20	nouveau	newly
@@ -6487,7 +5661,6 @@
 9280	2	2	3	3	problème	problem
 9280	14	14	11	11	étude	study
 9281	4	4	2	2	étude	study
-9281	4	4	2	3	étude	study was
 9281	47	47	39	39	composition	composition
 9285	12	12	11	13	essais	test results performed
 9287	1	1	1	1	étude	study
@@ -6511,18 +5684,13 @@
 9322	5	5	5	5	croissance	growth
 9324	19	19	17	17	diffusion	diffusion
 9324	27	27	23	23	croissance	growth
-9325	20	20	11	12	croissance	that growth
-9325	20	20	11	13	croissance	that growth is
 9325	20	20	12	12	croissance	growth
-9325	20	20	12	13	croissance	growth is
 9326	12	12	8	8	croissance	growth
 9327	1	1	1	1	taux	rate
 9329	1	1	1	1	croissance	growth
-9330	1	1	0	1	auteurs	heer we
 9330	1	1	1	1	auteurs	we
 9333	27	27	24	24	espèces	species
 9334	11	11	5	5	composition	composition
-9334	11	11	5	6	composition	composition ,
 9335	8	8	7	7	espèces	species
 9336	8	8	5	5	petits	small
 9337	3	3	0	0	grands	larger
@@ -6551,7 +5719,6 @@
 9361	52	52	43	43	pression	pressure
 9362	33	33	34	34	régime	regime
 9364	16	16	15	15	pression	pressure
-9364	16	16	15	16	pression	pressure ,
 9364	20	20	18	18	composition	composition
 9365	19	19	17	17	nature	nature
 9366	14	14	11	11	taux	rates
@@ -6566,8 +5733,6 @@
 9377	6	6	3	3	composition	composition
 9377	12	12	9	9	source	source
 9378	20	20	18	18	source	source
-9378	20	20	18	19	source	source area
-9378	20	20	18	20	source	source area for
 9380	27	27	24	24	socle	basement
 9383	3	3	2	2	étude	study
 9385	30	30	25	25	vue	on
@@ -6599,17 +5764,12 @@
 9438	34	34	28	28	liaison	binding
 9438	43	43	38	38	addition	addition
 9440	1	1	1	1	études	studies
-9440	1	1	1	2	études	studies in
-9440	1	1	1	3	études	studies in this
-9442	1	1	0	1	mouvement	cooperative motion
 9442	1	1	1	1	mouvement	motion
 9443	3	3	3	3	mesures	measurements
 9443	22	22	20	20	modèles	models
 9444	8	8	9	9	études	studies
 9447	25	25	20	20	système	system
 9448	9	9	6	6	système	system
-9448	9	9	6	7	système	system is
-9448	9	9	6	8	système	system is then
 9453	13	13	11	11	échantillons	soils
 9456	19	19	13	13	face	incurred
 9456	37	37	26	26	passage	passage
@@ -6632,22 +5792,18 @@
 9469	39	39	22	22	couverture	cover
 9474	45	45	29	29	témoins	controls
 9475	5	5	3	3	composition	composition
-9475	5	5	3	4	composition	composition ,
 9475	8	8	6	6	couverture	cover
 9477	5	5	5	5	associations	associations
 9477	17	17	12	12	espèces	species
 9478	24	24	23	23	croissance	growth
 9479	27	27	9	9	genres	genera
-9479	27	27	9	10	genres	genera (
 9479	31	31	13	13	espèces	species
 9479	38	38	21	21	espèce	species
 9479	50	50	34	34	espèce	species
 9479	10	10	56	56	espèces	species
 9481	2	2	1	1	espèces	species
 9482	1	1	2	2	espèce	species
-9482	4	4	4	5	genre	the genus
 9482	4	4	5	5	genre	genus
-9483	6	6	6	7	genre	the genus
 9483	6	6	7	7	genre	genus
 9483	19	19	15	15	genres	genera
 9484	4	4	5	5	genre	genus
@@ -6658,7 +5814,6 @@
 9488	13	13	12	12	croissance	growth
 9488	17	17	15	15	espèces	species
 9489	3	3	2	2	coupe	cutting
-9490	12	12	8	9	premier	the first
 9490	12	12	9	9	premier	first
 9492	6	6	3	3	tiges	increment
 9494	5	5	3	3	chênes	oak
@@ -6672,7 +5827,6 @@
 9498	2	2	2	2	espèces	species
 9499	10	10	7	7	espèces	species
 9500	16	16	13	13	genre	genus
-9501	7	7	4	5	espèces	the species
 9501	7	7	5	5	espèces	species
 9501	28	28	28	28	espèce	species
 9502	1	1	1	1	taxons	taxa
@@ -6680,9 +5834,7 @@
 9508	41	41	35	35	taux	high
 9511	19	19	13	13	milieu	concentration
 9511	32	32	24	24	moyen	via
-9511	32	32	24	25	moyen	via a
 9512	16	16	12	12	composition	composition
-9512	16	16	12	13	composition	composition ,
 9513	39	39	22	22	rupture	failure
 9514	9	9	8	8	charges	load
 9514	24	24	21	21	charges	loads
@@ -6695,7 +5847,6 @@
 9539	13	13	14	14	récepteur	receptor
 9539	39	39	42	42	agent	agent
 9543	24	24	19	19	espèces	species
-9544	1	1	0	1	auteurs	this study
 9544	1	1	1	1	auteurs	study
 9545	9	9	6	6	auteurs	we
 9548	11	11	5	5	espèce	species
@@ -6706,10 +5857,8 @@
 9552	1	1	0	0	exposition	exposure
 9553	6	6	6	6	adaptations	adaptations
 9553	12	12	13	13	adaptations	adaptations
-9553	12	12	13	14	adaptations	adaptations in
 9553	26	26	26	26	modèles	models
 9554	5	5	8	8	système	system
-9554	17	17	20	21	système	the system
 9554	17	17	21	21	système	system
 9555	3	3	3	3	adaptations	adaptations
 9555	21	21	19	19	mesure	measuring
@@ -6724,14 +5873,11 @@
 9571	32	32	24	24	formation	formation
 9572	26	26	15	15	équilibres	equilibria
 9574	1	1	1	1	équilibres	equilibria
-9581	71	71	57	58	milieu	the middle
 9581	71	71	58	58	milieu	middle
 9588	40	40	38	38	classe	classes
-9588	40	40	38	39	classe	classes and
 9588	46	46	41	41	taux	rates
 9589	1	1	1	1	espèces	species
 9590	8	8	6	6	espèce	species
-9590	8	8	6	7	espèce	species ,
 9602	2	2	1	1	cadre	part
 9602	5	5	4	4	travaux	study
 9602	10	10	11	11	genre	genus
@@ -6740,7 +5886,6 @@
 9608	17	17	16	16	auteurs	we
 9613	1	1	1	1	échantillons	samples
 9613	8	8	2	2	récoltés	collected
-9613	8	8	2	3	récoltés	collected for
 9615	30	30	28	28	genre	genus
 9618	37	37	29	29	état	state
 9619	11	11	6	6	excitation	excitation
@@ -6752,8 +5897,6 @@
 9632	58	58	53	53	rapports	ratios
 9632	66	66	59	59	système	system
 9633	19	19	11	11	espèces	species
-9633	19	19	11	12	espèces	species were
-9633	19	19	11	13	espèces	species were apparent
 9634	7	7	7	7	espèce	species
 9634	23	23	23	23	espèces	species
 9635	9	9	4	4	espèces	species
@@ -6765,12 +5908,9 @@
 9636	39	39	31	31	espèces	species
 9637	5	5	12	12	ceinture	belt
 9638	19	19	18	18	composition	composition
-9638	19	19	18	19	composition	composition ,
 9638	33	33	30	30	lumière	identify
 9639	4	4	3	3	composition	composition
-9639	4	4	3	4	composition	composition ,
 9639	17	17	9	9	composition	composition
-9639	17	17	9	10	composition	composition ,
 9641	2	2	7	7	ceinture	belt
 9643	3	3	5	5	espèces	species
 9646	11	11	2	2	peuplement	stand
@@ -6781,7 +5921,6 @@
 9650	11	11	7	7	solution	solution
 9653	20	20	18	18	formation	formation
 9654	1	1	4	4	espèces	species
-9654	1	1	4	5	espèces	species show
 9661	12	12	8	8	association	association
 9662	4	4	2	2	ajusté	fit
 9662	9	9	8	8	association	association
@@ -6790,7 +5929,6 @@
 9662	34	34	21	21	associations	associations
 9663	5	5	5	5	taux	rate
 9668	2	2	0	0	taux	at
-9669	2	2	1	2	conclut	is concluded
 9669	2	2	2	2	conclut	concluded
 9669	19	19	17	17	état	state
 9671	6	6	7	7	ouvertures	openings
@@ -6798,8 +5936,6 @@
 9672	10	10	9	9	finis	study
 9672	16	16	11	11	face	face
 9672	24	24	19	19	face	face
-9672	24	24	19	20	face	face is
-9672	24	24	19	21	face	face is conducted
 9673	19	19	14	14	déformation	deformation
 9674	9	9	4	4	plane	plane
 9674	8	8	5	5	déformation	strain
@@ -6807,9 +5943,6 @@
 9682	48	48	32	32	restauration	restoration
 9687	15	15	12	12	espèces	species
 9688	39	39	22	22	prélèvement	removal
-9688	39	39	22	23	prélèvement	removal ,
-9688	39	39	22	24	prélèvement	removal , which
-9688	39	39	22	25	prélèvement	removal , which is
 9695	37	37	38	38	taxons	taxa
 9701	14	14	13	13	taxons	taxa
 9701	22	22	24	24	taxons	taxa
@@ -6820,7 +5953,6 @@
 9713	1	1	1	1	contraire	contrast
 9713	7	7	6	6	chute	drop
 9715	9	9	1	1	croissance	responses
-9715	9	9	1	2	croissance	responses of
 9715	13	13	6	6	croissance	growth
 9715	6	6	20	20	lumière	light
 9715	37	37	27	27	espèces	species
@@ -6829,7 +5961,6 @@
 9716	32	32	22	22	espèces	species
 9718	8	8	7	7	croissance	growth
 9718	20	20	14	14	croissance	growth
-9718	20	20	14	15	croissance	growth early
 9719	18	18	14	14	croissance	growth
 9719	26	26	17	17	lumière	light
 9721	11	11	9	9	croissance	growth
@@ -6840,23 +5971,16 @@
 9725	3	3	1	1	douglas	douglas-fir
 9725	30	30	24	24	point	developing
 9725	36	36	29	29	conserver	retain
-9726	9	9	6	7	faut	are requires
-9726	9	9	6	8	faut	are requires the
 9726	9	9	7	7	faut	requires
-9726	9	9	7	8	faut	requires the
 9727	2	2	2	2	article	paper
 9728	54	54	34	34	peuplement	stands
-9728	54	54	34	35	peuplement	stands ,
 9731	16	16	9	9	premières	first
 9733	28	28	19	19	association	associated
 9739	9	9	11	11	espèces	species
 9740	26	26	19	19	mesure	assessment
 9740	35	35	27	27	espèces	species
-9741	4	4	5	6	pratique	the practical
 9741	4	4	6	6	pratique	practical
 9741	19	19	18	18	agent	agent
-9741	19	19	18	19	agent	agent ,
-9741	19	19	18	20	agent	agent , was
 9742	14	14	10	10	clé	key
 9743	31	31	25	25	clé	key
 9744	21	21	11	11	peuplement	stand
@@ -6873,7 +5997,6 @@
 9748	9	9	15	15	espèce	species
 9749	3	3	2	2	espèce	species
 9751	31	31	25	25	premières	first
-9751	31	31	25	26	premières	first extensive
 9752	17	17	15	15	sommet	peak
 9753	25	25	17	17	raison	purpose
 9755	17	17	15	15	système	system
@@ -6896,11 +6019,9 @@
 9775	31	31	39	39	vue	perspective
 9776	11	11	10	10	matière	on
 9776	60	60	49	49	restauration	restoration
-9779	2	2	3	4	régler	be overcome
 9779	2	2	4	4	régler	overcome
 9780	14	14	13	13	compositions	composition
 9780	17	17	15	15	fonctions	functions
-9780	17	17	15	16	fonctions	functions ,
 9783	18	18	12	12	mesure	as
 9791	24	24	21	21	espèce	species
 9793	14	14	11	11	formation	formation
@@ -6912,15 +6033,12 @@
 9818	24	24	26	26	flux	flux
 9818	26	26	30	30	point	point
 9818	28	28	32	32	vue	view
-9818	28	28	32	33	vue	view and
 9818	37	37	43	43	point	point
 9818	39	39	45	45	vue	view
 9819	1	1	2	2	module	module
-9819	35	35	29	30	priori	a priori
 9819	35	35	30	30	priori	priori
 9820	6	6	5	5	détail	detail
 9823	41	41	45	45	informations	information
-9832	4	4	4	5	manuscrit	the manuscript
 9832	4	4	5	5	manuscrit	manuscript
 9834	18	18	14	14	mesure	able
 9837	5	5	4	4	agent	agent
@@ -6935,22 +6053,15 @@
 9861	12	12	12	12	système	system
 9863	8	8	7	7	classe	class
 9863	31	31	29	32	induisent	meanwhile they also lead
-9863	31	31	29	33	induisent	meanwhile they also lead to
-9863	31	31	29	34	induisent	meanwhile they also lead to the
 9866	1	1	1	2	principes	principles stated
-9866	1	1	1	3	principes	principles stated here
 9867	4	4	3	3	module	module
 9868	47	47	39	39	finis	finite
 9869	23	23	10	10	système	system
 9871	3	3	2	2	modèles	models
 9872	25	25	20	20	informations	information
-9872	25	25	20	21	informations	information to
 9873	18	18	19	19	informations	information
-9873	18	18	19	20	informations	information in
-9877	3	3	1	2	priori	a priori
 9877	3	3	2	2	priori	priori
 9878	6	6	5	5	posteriori	posteriori
-9881	14	14	12	13	classe	specific type
 9881	14	14	13	13	classe	type
 9887	7	7	7	7	appariement	correspondence
 9887	5	5	8	8	problème	problem
@@ -6971,9 +6082,7 @@
 9921	4	4	3	3	système	system
 9921	71	71	56	56	faut	must
 9921	80	80	61	61	agent	agent
-9921	80	80	61	62	agent	agent is
 9923	12	12	11	11	patrons	patterns
-9923	12	12	11	12	patrons	patterns in
 9924	30	30	28	28	système	system
 9925	1	1	1	1	patrons	patterns
 9928	11	11	9	9	patrons	patterns
@@ -6985,23 +6094,16 @@
 9937	20	20	17	17	informations	information
 9939	13	13	18	18	informations	information
 9940	11	11	9	9	système	system
-9940	16	16	12	13	agent	an agent
 9940	16	16	13	13	agent	agent
 9941	4	4	2	2	agent	agent
 9941	15	15	14	14	croissance	growing
-9941	15	15	14	15	croissance	growing and
 9944	1	1	1	1	système	system
-9948	10	10	8	9	champ	full range
 9948	10	10	9	9	champ	range
 9948	14	14	13	13	déformations	deformations
 9953	20	20	18	18	graphique	graphical
 9953	19	19	19	19	vue	view
-9953	19	19	19	20	vue	view and
-9953	19	19	19	21	vue	view and just
-9953	19	19	19	22	vue	view and just as
 9953	26	26	26	26	figure	figures
 9954	10	10	10	10	figure	figure
-9954	21	21	20	21	induit	the induced
 9954	21	21	21	21	induit	induced
 9960	13	13	4	4	nouveau	new
 9960	14	14	5	5	formalisme	formalism
@@ -7016,7 +6118,6 @@
 9970	10	10	12	12	système	system
 9970	21	21	22	22	travaux	work
 9977	23	23	28	28	oeuvre	implementation
-9981	26	26	23	24	agent	artificial agent
 9981	26	26	24	24	agent	agent
 9982	23	23	21	21	humain	human
 9983	29	29	22	22	contraire	opposition
@@ -7030,11 +6131,8 @@
 9995	19	19	17	17	formation	training
 9998	42	42	38	38	contraire	contrary
 9999	4	4	4	4	organe	organ
-9999	4	4	4	5	organe	organ which
-9999	4	4	4	6	organe	organ which is
 10000	1	1	1	1	travaux	research
 10001	19	19	15	15	organe	organ
-10001	19	19	15	16	organe	organ &apos;s
 10001	22	22	19	19	déformation	deformation
 10002	9	9	6	6	travaux	works
 10004	4	4	3	3	travaux	works
@@ -7043,7 +6141,6 @@
 10008	20	20	18	18	fonctions	functions
 10008	32	32	31	31	poids	weights
 10008	51	51	50	50	problème	problem
-10012	5	5	4	5	retrouver	to find
 10012	5	5	5	5	retrouver	find
 10012	24	24	21	21	plans	shots
 10013	31	31	28	28	plan	shot
@@ -7055,10 +6152,8 @@
 10023	12	12	15	15	entrée	input
 10032	20	20	20	20	modèles	models
 10036	8	8	3	3	système	system
-10036	8	8	3	4	système	system is
 10037	1	1	1	1	étude	study
 10037	3	3	3	3	intéresse	interested
-10037	3	3	3	4	intéresse	interested in
 10038	18	18	14	14	association	association
 10042	1	1	1	1	mesure	measure
 10043	26	26	27	27	système	system
@@ -7073,17 +6168,12 @@
 10076	14	14	12	12	extraits	sample
 10077	1	1	1	1	travaux	work
 10081	5	5	5	5	introduits	introduced
-10084	1	1	3	4	études	of studies
-10084	1	1	3	5	études	of studies ,
 10084	1	1	4	4	études	studies
-10084	1	1	4	5	études	studies ,
 10084	9	9	20	20	problème	problem
 10088	1	1	1	1	travaux	work
 10090	5	5	7	7	problème	problem
 10093	7	7	8	8	problème	problem
 10094	1	1	1	1	premier	first
-10094	1	1	1	2	premier	first one
-10094	2	2	2	3	calcule	one computes
 10094	2	2	3	3	calcule	computes
 10097	7	7	8	8	problème	problem
 10097	23	23	17	17	humain	human
@@ -7099,18 +6189,15 @@
 10112	29	29	25	25	examen	exam
 10114	2	2	2	2	premier	first
 10116	16	16	14	14	mémoire	report
-10116	16	16	14	15	mémoire	report .
 10117	16	16	12	12	système	system
 10118	9	9	13	13	modèles	models
 10120	7	7	5	5	fonctions	functions
 10124	5	5	5	5	induit	induces
 10126	21	21	13	13	visage	face
 10129	29	29	27	27	spatiaux	spatial
-10129	29	29	27	28	spatiaux	spatial ones
 10138	8	8	6	6	plans	plans
 10139	1	1	2	2	plans	plans
 10141	35	35	32	32	modèles	models
-10141	35	35	32	33	modèles	models may
 10142	4	4	7	7	informations	information
 10142	17	17	21	21	informations	information
 10144	1	1	2	2	informations	information
@@ -7132,13 +6219,9 @@
 10177	16	16	14	14	classe	class
 10179	12	12	10	10	travaux	work
 10180	28	28	23	23	formalisme	formalism
-10180	28	28	23	24	formalisme	formalism for
 10180	34	34	26	26	fonctions	functions
-10180	34	34	26	27	fonctions	functions and
-10180	32	32	27	28	mesures	and measures
 10180	32	32	28	28	mesures	measures
 10185	19	19	20	20	régime	regime
-10185	19	19	20	21	régime	regime with
 10190	7	7	5	5	parole	speech
 10190	20	20	15	15	localisation	localization
 10192	6	6	4	4	informations	information
@@ -7149,7 +6232,6 @@
 10201	13	13	15	15	solution	solution
 10202	4	4	4	4	couplage	coupling
 10202	22	22	15	15	système	system
-10203	3	3	5	6	manuscrit	the thesis
 10203	3	3	6	6	manuscrit	thesis
 10203	9	9	14	14	système	system
 10206	1	1	1	1	travaux	work
@@ -7175,7 +6257,6 @@
 10235	10	10	10	10	problème	problem
 10236	5	5	4	4	problème	problem
 10236	29	29	27	27	vue	view
-10236	29	29	27	28	vue	view ,
 10244	4	4	4	4	nouveau	new
 10248	17	17	16	16	localisation	localization
 10250	10	10	10	10	système	system
@@ -7186,8 +6267,6 @@
 10260	19	19	23	23	modèles	models
 10262	8	8	8	8	problème	problem
 10268	1	1	1	1	nouveau	new
-10268	1	1	1	2	nouveau	new mathematical
-10268	2	2	2	3	cadre	mathematical framework
 10268	2	2	3	3	cadre	framework
 10269	1	1	3	3	système	system
 10269	25	25	28	28	parole	speech
@@ -7197,7 +6276,6 @@
 10274	7	7	7	7	parole	speech
 10276	5	5	5	5	étude	study
 10277	4	4	7	7	étude	study
-10279	36	36	28	29	cadre	the scope
 10279	36	36	29	29	cadre	scope
 10281	22	22	26	26	cadre	framework
 10282	29	29	16	16	mouvement	moves
@@ -7206,7 +6284,6 @@
 10287	6	6	11	11	études	studies
 10288	1	1	1	1	premier	first
 10293	16	16	19	19	coupe	cutting
-10293	16	16	19	20	coupe	cutting process
 10295	3	3	4	4	déformation	deformation
 10298	4	4	4	4	problème	problems
 10300	3	3	4	4	problème	problem
@@ -7223,11 +6300,9 @@
 10332	11	11	10	10	modèles	model
 10343	6	6	5	5	nature	nature
 10343	19	19	20	20	vue	order
-10344	4	4	4	7	construisons	is constructed which aims
 10344	4	4	5	7	construisons	constructed which aims
 10345	2	2	2	2	manuscrit	thesis
 10347	11	11	8	8	étude	study
-10347	37	37	36	37	système	the system
 10347	37	37	37	37	système	system
 10349	2	2	1	1	quantitative	quantitative
 10351	22	22	9	9	mouvement	motion
@@ -7261,12 +6336,10 @@
 10411	19	19	17	17	moyen	means
 10412	4	4	2	2	place	up
 10412	9	9	7	7	premier	first
-10412	9	9	7	8	premier	first one
 10412	53	53	13	13	modèles	models
 10414	18	18	14	14	informations	information
 10415	8	8	6	6	place	up
 10420	6	6	7	7	cadre	framework
-10422	26	26	25	26	humain	the human
 10422	26	26	26	26	humain	human
 10423	31	31	22	22	généralise	generalizes
 10423	40	40	31	31	cadre	framework
@@ -7275,33 +6348,18 @@
 10426	52	52	44	44	champ	world
 10428	6	6	6	6	problème	problem
 10429	12	12	10	10	canevas	framework
-10429	12	12	10	11	canevas	framework for
 10440	19	19	17	17	informations	information
 10442	1	1	1	1	premier	first
 10444	1	1	1	1	mémoire	thesis
 10446	1	1	1	1	premier	first
-10451	18	18	12	13	nature	by nature
 10451	18	18	13	13	nature	nature
 10453	0	0	0	0	face	vis-à-vis
 10455	5	5	7	7	système	system
-10458	1	1	0	2	travaux	in this thesis
-10458	1	1	0	3	travaux	in this thesis ,
-10458	1	1	0	4	travaux	in this thesis , we
-10458	1	1	1	2	travaux	this thesis
-10458	1	1	1	3	travaux	this thesis ,
-10458	1	1	1	4	travaux	this thesis , we
 10458	1	1	2	2	travaux	thesis
-10458	1	1	2	3	travaux	thesis ,
-10458	1	1	2	4	travaux	thesis , we
-10458	4	4	3	5	étude	, we investigate
-10458	4	4	4	5	étude	we investigate
 10458	4	4	5	5	étude	investigate
 10458	6	6	7	7	mesures	measures
 10459	8	8	8	8	mesures	measures
-10460	2	2	0	1	premier	we begin
-10460	2	2	0	2	premier	we begin by
 10460	2	2	1	1	premier	begin
-10460	2	2	1	2	premier	begin by
 10460	6	6	5	5	mesures	measures
 10460	21	21	13	13	nouveau	new
 10460	26	26	20	20	mesures	measures
@@ -7326,10 +6384,8 @@
 10479	15	15	12	12	système	system
 10481	7	7	6	6	problème	problem
 10487	8	8	11	11	problème	issue
-10488	12	12	10	11	problème	the problem
 10488	12	12	11	11	problème	problem
 10496	25	25	49	49	système	system
-10498	12	12	16	17	champ	the scope
 10498	12	12	17	17	champ	scope
 10500	1	1	1	1	mémoire	document
 10500	36	36	29	29	source	source
@@ -7338,8 +6394,6 @@
 10501	2	2	0	0	premier	first
 10502	28	28	33	33	problème	problem
 10505	3	3	5	5	système	system
-10505	3	3	5	6	système	system is
-10505	3	3	5	7	système	system is a
 10505	8	8	9	9	système	system
 10505	17	17	11	11	travaux	work
 10506	1	1	2	2	travaux	work
@@ -7348,7 +6402,6 @@
 10511	3	3	4	4	problème	issue
 10511	15	15	11	11	mouvement	movement
 10512	7	7	6	6	travaux	work
-10512	7	7	6	7	travaux	work lead
 10512	24	24	20	20	système	system
 10515	3	3	1	1	système	system
 10516	22	22	19	19	nouveau	new
@@ -7378,9 +6431,7 @@
 10544	4	4	3	3	problème	problem
 10551	24	24	19	19	composition	composition
 10553	9	9	9	9	agent	agent
-10553	9	9	9	10	agent	agent ,
 10555	3	3	2	2	contraire	contrary
-10555	3	3	2	3	contraire	contrary ,
 10557	4	4	4	4	rapport	ratio
 10557	24	24	22	22	machine	machine
 10558	1	1	1	1	rapport	ratio
@@ -7391,10 +6442,8 @@
 10563	3	3	2	2	intéresse	deals
 10566	28	28	29	29	champ	field
 10570	10	10	10	10	travaux	work
-10570	10	10	10	11	travaux	work .
 10571	1	1	1	1	étude	study
 10571	26	26	21	21	attention	attention
-10571	26	26	21	22	attention	attention in
 10572	19	19	12	12	humain	human
 10572	17	17	14	14	système	system
 10573	4	4	2	2	modèles	models
@@ -7402,16 +6451,11 @@
 10575	14	14	24	24	attention	attention
 10576	5	5	4	4	appuyant	based
 10578	4	4	5	5	attention	attention
-10578	4	4	5	6	attention	attention in
-10578	34	34	23	25	libre	both in free
-10578	34	34	24	25	libre	in free
 10578	34	34	25	25	libre	free
 10579	20	20	18	18	attention	attention
 10581	12	12	19	19	attention	attention
 10582	8	8	9	9	diffusion	streaming
 10584	32	32	13	13	modèles	models
-10584	32	32	13	14	modèles	models .
-10584	32	32	13	15	modèles	models . the
 10589	23	23	21	21	travaux	work
 10593	23	23	25	25	système	system
 10594	31	31	17	17	système	system
@@ -7420,11 +6464,9 @@
 10599	5	5	4	4	principes	principles
 10600	3	3	2	2	travaux	works
 10601	13	13	12	12	modèles	models
-10601	13	13	12	13	modèles	models that
 10601	21	21	19	19	modèles	model
 10602	4	4	2	2	modèles	models
 10602	20	20	16	16	modèles	enginnering
-10606	4	4	4	5	problème	the problem
 10606	4	4	5	5	problème	problem
 10608	10	10	5	5	échelle	large-scale
 10609	14	14	13	13	grands	large
@@ -7462,14 +6504,12 @@
 10713	12	12	12	12	localiser	locates
 10714	15	15	16	16	maillage	paving
 10715	11	11	10	10	classe	class
-10716	10	10	10	11	appuyant	) relying
 10716	10	10	11	11	appuyant	relying
 10716	14	14	14	14	graphiques	graphic
 10717	7	7	7	7	informations	information
 10720	37	37	32	32	informations	information
 10724	4	4	4	4	modèles	models
 10724	14	14	13	13	informations	information
-10724	33	33	26	27	graphique	especially graphic
 10724	33	33	27	27	graphique	graphic
 10725	6	6	6	6	milieu	milieu
 10729	12	12	9	9	classe	class
@@ -7479,7 +6519,6 @@
 10734	8	8	9	9	cadre	framework
 10747	35	35	30	30	espèces	species
 10750	11	11	11	11	visage	face
-10751	6	6	3	4	étude	the study
 10751	6	6	4	4	étude	study
 10751	9	9	7	7	localisation	localization
 10752	4	4	4	4	travaux	thesis
@@ -7495,9 +6534,7 @@
 10765	25	25	26	26	état	state
 10766	19	19	21	21	localisation	localization
 10766	25	25	26	26	visage	face
-10767	18	18	15	16	visage	the face
 10767	18	18	16	16	visage	face
-10768	9	9	19	20	visage	the face
 10768	9	9	20	20	visage	face
 10769	9	9	8	8	quantitative	quantitative
 10771	20	20	16	16	humain	human
@@ -7506,7 +6543,6 @@
 10774	29	29	24	24	humain	human
 10775	1	1	1	1	auteurs	authors
 10778	6	6	3	3	travaux	work
-10782	27	27	26	27	état	prior state
 10782	27	27	27	27	état	state
 10783	3	3	2	2	intéresse	interests
 10786	1	1	34	34	étude	study
@@ -7517,7 +6553,6 @@
 10793	11	11	11	11	problème	problem
 10794	20	20	20	20	informations	information
 10794	27	27	24	24	système	system
-10800	35	35	33	34	système	a system
 10800	35	35	34	34	système	system
 10801	14	14	11	11	système	system
 10801	28	28	26	26	classe	class
@@ -7529,9 +6564,7 @@
 10811	35	35	36	36	patrons	patterns
 10812	1	1	1	1	études	studies
 10822	2	2	2	2	informations	information
-10822	2	2	2	3	informations	information ,
 10826	3	3	3	3	cadre	framework
-10826	3	3	3	4	cadre	framework ,
 10827	3	3	2	2	intéresse	addresses
 10827	22	22	17	17	localisation	localization
 10829	5	5	4	4	attention	attention
@@ -7547,7 +6580,6 @@
 10837	22	22	20	20	localisation	localization
 10839	14	14	13	13	problème	difficulty
 10840	4	4	5	5	place	place
-10842	4	4	3	4	souris	traditional mouse
 10842	4	4	4	4	souris	mouse
 10846	12	12	8	8	entrée	input
 10847	1	1	0	0	premier	first
@@ -7557,11 +6589,9 @@
 10855	26	26	26	26	champ	field
 10859	26	26	28	28	problème	problem
 10860	16	16	12	12	champ	field
-10860	16	16	12	13	champ	field are
 10861	6	6	7	7	état	state
 10861	16	16	16	16	champ	field
 10862	1	1	1	1	mémoire	thesis
-10865	6	6	4	5	mesure	a measurement
 10865	6	6	5	5	mesure	measurement
 10865	21	21	19	19	état	state
 10872	1	1	1	1	étude	study
@@ -7569,19 +6599,15 @@
 10876	6	6	8	8	système	system
 10877	1	1	1	1	système	system
 10878	10	10	14	14	premier	first
-10878	10	10	14	15	premier	first one
-10879	36	36	29	30	système	the system
 10879	36	36	30	30	système	system
 10880	11	11	9	9	mouvement	motion
 10884	32	32	22	22	problème	problem
 10886	6	6	7	7	étude	study
 10887	6	6	5	5	milieux	media
-10887	6	6	5	6	milieux	media ,
 10887	29	29	29	29	informations	information
 10887	35	35	35	35	diffusion	diffusion
 10887	43	43	40	40	mouvement	motion
 10888	35	35	32	32	régime	regime
-10888	35	35	32	33	régime	regime do
 10888	65	65	55	55	spectres	spectra
 10889	31	31	29	29	milieu	medium
 10891	4	4	5	5	étude	study
@@ -7603,16 +6629,12 @@
 10910	29	29	27	27	pression	pressure
 10916	9	9	9	9	retrouver	recover
 10917	10	10	13	13	milieu	medium
-10917	10	10	13	14	milieu	medium when
-10917	10	10	13	15	milieu	medium when the
 10918	14	14	8	8	libre	free
 10918	21	21	17	17	problème	problem
 10919	29	29	25	25	libre	free
 10920	10	10	9	9	calculer	calculate
-10920	10	10	9	10	calculer	calculate the
 10920	18	18	16	16	libre	free
 10921	11	11	10	10	calculer	calculate
-10921	22	22	18	19	système	the system
 10921	22	22	19	19	système	system
 10921	33	33	29	29	libre	free
 10926	1	1	3	3	état	state
@@ -7632,7 +6654,6 @@
 10943	3	3	1	1	place	instead
 10944	22	22	19	19	impulsions	pulses
 10945	4	4	4	4	manuscrit	manuscript
-10945	4	4	4	5	manuscrit	manuscript ,
 10945	9	9	10	10	mesures	measurements
 10947	27	27	21	21	installation	facility
 10948	9	9	9	9	mesure	measurement
@@ -7680,10 +6701,7 @@
 11009	24	24	18	18	problème	problem
 11009	27	27	21	21	diffusion	diffusion
 11010	4	4	3	3	point	out
-11010	10	10	7	8	calculer	the computation
-11010	10	10	7	9	calculer	the computation of
 11010	10	10	8	8	calculer	computation
-11010	10	10	8	9	calculer	computation of
 11010	12	12	11	11	diffusion	diffusion
 11010	16	16	15	15	modèles	models
 11012	18	18	14	14	diffusion	diffusion
@@ -7696,7 +6714,6 @@
 11033	10	10	9	9	calculer	compute
 11035	14	14	13	13	incertitude	uncertainty
 11037	7	7	8	8	biais	bias
-11037	7	7	8	9	biais	bias ,
 11039	6	6	6	6	étude	study
 11039	28	28	23	23	et/ou	and/or
 11040	22	22	20	20	étude	study
@@ -7704,16 +6721,11 @@
 11042	28	28	27	27	détail	detail
 11042	31	31	30	30	échantillons	samples
 11045	8	8	5	5	mémoire	memory
-11045	8	8	5	6	mémoire	memory effects
 11045	25	25	22	22	priori	priori
 11045	31	31	29	29	croissance	growth
 11048	16	16	13	13	échelle	scaling
-11049	1	1	3	4	travaux	this work
-11049	1	1	3	5	travaux	this work is
 11049	1	1	4	4	travaux	work
-11049	1	1	4	5	travaux	work is
 11053	11	11	16	16	solution	solution
-11053	14	14	18	19	problème	the problem
 11053	14	14	19	19	problème	problem
 11057	6	6	7	7	étude	study
 11057	25	25	26	26	rapport	respect
@@ -7727,7 +6739,6 @@
 11075	6	6	6	6	nouveau	new
 11077	5	5	6	6	organe	organ
 11079	8	8	12	12	point	point
-11079	8	8	12	13	point	point with
 11084	19	19	14	14	classe	class
 11084	28	28	30	30	point	point
 11088	19	19	18	18	point	elaborate
@@ -7740,15 +6751,9 @@
 11096	48	48	46	46	diffusion	diffusion
 11096	60	60	54	54	régime	regime
 11100	13	13	13	13	cascade	cascade
-11101	8	8	7	8	premier	a first
 11101	8	8	8	8	premier	first
 11105	5	5	1	1	quantitative	quantitative
 11105	4	4	2	2	étude	study
-11110	3	3	0	5	échelle	on the other hand , scaling
-11110	3	3	1	5	échelle	the other hand , scaling
-11110	3	3	2	5	échelle	other hand , scaling
-11110	3	3	3	5	échelle	hand , scaling
-11110	3	3	4	5	échelle	, scaling
 11110	3	3	5	5	échelle	scaling
 11112	23	23	13	13	spectres	spectra
 11113	4	4	1	1	spectres	spectra
@@ -7773,8 +6778,6 @@
 11162	16	16	9	9	petits	small
 11165	1	1	2	2	attention	attention
 11166	12	12	8	8	raison	due
-11166	12	12	8	9	raison	due to
-11167	4	4	4	5	manuscrit	the manuscript
 11167	4	4	5	5	manuscrit	manuscript
 11167	24	24	22	22	croissance	growth
 11168	2	2	0	0	modèles	model
@@ -7786,14 +6789,10 @@
 11177	1	1	1	1	étude	study
 11179	12	12	6	6	nouveau	new
 11180	21	21	15	15	régime	regime
-11180	21	21	15	16	régime	regime ,
 11180	28	28	20	21	requises	levels required
-11182	7	7	4	6	étude	we have studied
-11182	7	7	5	6	étude	have studied
 11182	7	7	6	6	étude	studied
 11182	17	17	16	16	état	state
 11183	4	4	1	1	croissance	growth
-11183	4	4	1	2	croissance	growth at
 11184	45	45	43	43	couplage	coupling
 11186	1	1	1	1	mesures	measurements
 11186	28	28	35	35	état	state
@@ -7811,24 +6810,19 @@
 11215	1	1	1	1	mesures	measurements
 11215	4	4	4	4	formation	formation
 11217	4	4	4	4	étude	study
-11218	29	29	22	23	gouttes	around drops
 11218	29	29	23	23	gouttes	drops
 11219	1	1	4	4	étude	study
 11220	1	1	1	1	étude	study
 11220	14	14	15	15	régime	regime
 11221	9	9	8	8	premier	first
 11222	1	1	1	1	manuscrit	thesis
-11223	4	4	4	5	mémoire	this thesis
 11223	4	4	5	5	mémoire	thesis
 11223	9	9	10	10	étude	study
 11225	5	5	7	7	mesure	measure
-11225	5	5	7	8	mesure	measure the
-11226	4	4	4	5	manuscrit	the manuscript
 11226	4	4	5	5	manuscrit	manuscript
 11226	6	6	6	6	intéresse	deals
 11233	27	27	20	20	régime	regime
 11235	11	11	10	10	espèces	species
-11235	11	11	10	11	espèces	species .
 11236	8	8	10	10	écoulements	flows
 11239	2	2	2	2	induit	induces
 11239	4	4	5	5	champ	field
@@ -7840,21 +6834,12 @@
 11254	6	6	6	6	distinguent	distinguish
 11255	11	11	4	4	couplage	coupling
 11256	20	20	20	20	confrontation	correspondance
-11257	15	15	17	18	problème	the problem
 11257	15	15	18	18	problème	problem
 11260	7	7	6	6	mesure	measuring
 11260	33	33	30	30	place	place
 11261	4	4	4	4	étude	study
 11262	16	16	16	16	étude	study
-11264	5	5	4	7	induit	from an obstacle induces
-11264	5	5	4	8	induit	from an obstacle induces a
-11264	5	5	5	7	induit	an obstacle induces
-11264	5	5	5	8	induit	an obstacle induces a
-11264	5	5	6	7	induit	obstacle induces
-11264	5	5	6	8	induit	obstacle induces a
 11264	5	5	7	7	induit	induces
-11264	5	5	7	8	induit	induces a
-11270	15	15	13	14	flux	the flow
 11270	15	15	14	14	flux	flow
 11274	2	2	1	1	libre	free
 11276	6	6	2	2	bords	edges
@@ -7864,7 +6849,6 @@
 11282	29	29	24	24	flux	flux
 11285	28	28	20	20	scalaire	scalar
 11285	26	26	21	21	flux	flux
-11286	15	15	11	12	spectres	a spectrum
 11286	15	15	12	12	spectres	spectrum
 11287	12	12	11	11	induit	induced
 11287	18	18	14	14	échelle	scale
@@ -7876,8 +6860,6 @@
 11295	46	46	47	47	évidence	monocrystals
 11297	2	2	2	2	cadre	context
 11298	15	15	9	9	mesures	measurements
-11298	15	15	9	10	mesures	measurements ,
-11298	12	12	10	11	petits	, small
 11298	12	12	11	11	petits	small
 11301	17	17	11	11	modèles	models
 11303	11	11	8	8	problème	problem
@@ -7893,7 +6875,6 @@
 11326	37	37	35	35	formalisme	formalism
 11329	12	12	13	13	état	state
 11329	16	16	17	17	état	state
-11329	16	16	17	18	état	state is
 11330	13	13	15	15	point	point
 11331	7	7	7	7	étude	study
 11334	5	5	7	7	étude	study
@@ -7921,10 +6902,7 @@
 11360	13	13	13	13	diffusion	scattering
 11362	9	9	10	10	point	dot
 11363	14	14	16	16	point	dot
-11363	14	14	16	17	point	dot .
 11363	27	27	28	28	point	dot
-11363	27	27	28	29	point	dot and
-11363	27	27	28	30	point	dot and are
 11363	34	34	35	35	système	system
 11363	37	37	38	38	mesures	measurements
 11365	29	29	27	27	état	state
@@ -7933,14 +6911,10 @@
 11366	29	29	26	26	problème	problem
 11367	10	10	10	10	système	system
 11370	3	3	3	3	régime	regime
-11370	18	18	14	15	champ	mean field
 11370	18	18	15	15	champ	field
 11371	3	3	3	3	régime	regime
-11371	3	3	3	4	régime	regime ,
-11371	3	3	3	5	régime	regime , we
 11371	17	17	17	17	état	states
 11372	6	6	4	4	étude	study
-11372	15	15	12	13	gazeuse	the gas
 11372	15	15	13	13	gazeuse	gas
 11376	37	37	31	31	champ	field
 11380	7	7	6	6	excitation	excitation
@@ -7966,14 +6940,11 @@
 11406	1	1	1	1	mesure	measurement
 11406	32	32	31	31	étude	study
 11407	28	28	22	22	quantitative	quantitative
-11408	37	37	31	32	déformations	the strain
 11408	37	37	32	32	déformations	strain
 11408	40	40	36	36	boîtes	quantum
-11409	22	22	25	26	boîtes	the dots
 11409	22	22	26	26	boîtes	dots
 11409	32	32	33	33	croissance	growth
 11410	16	16	4	4	évidence	evidence
-11410	16	16	4	5	évidence	evidence a
 11411	35	35	29	29	petits	small
 11414	4	4	4	4	formation	formation
 11415	9	9	4	4	petits	small
@@ -7995,7 +6966,6 @@
 11425	15	15	17	17	diffusion	diffusion
 11431	20	20	16	16	pression	pressure
 11431	33	33	30	30	évidence	evidence
-11431	33	33	30	31	évidence	evidence for
 11433	17	17	11	11	flux	flow
 11433	37	37	28	28	flux	flow
 11433	35	35	29	29	chambre	chamber
@@ -8004,8 +6974,6 @@
 11434	25	25	11	11	flux	flow
 11436	26	26	20	20	flux	flow
 11437	30	30	24	24	modèles	models
-11437	30	30	24	25	modèles	models of
-11439	24	24	20	21	gazeuse	the gas
 11439	24	24	21	21	gazeuse	gas
 11440	13	13	11	11	espèces	species
 11440	17	17	13	13	solution	solution
@@ -8014,35 +6982,27 @@
 11443	24	24	23	23	spectres	spectra
 11444	9	9	12	12	spectres	spectra
 11445	23	23	23	23	espèces	species
-11445	23	23	23	24	espèces	species that
-11445	23	23	23	25	espèces	species that are
 11450	14	14	15	15	diffusion	diffusion
 11456	48	48	44	44	libre	free
 11456	79	79	77	77	charge	load
 11457	26	26	20	20	libre	free
 11458	7	7	8	8	déformation	deformation
-11458	7	7	8	9	déformation	deformation and
 11460	17	17	20	20	système	system
 11462	1	1	9	9	mesure	measuring
 11463	7	7	5	5	cadre	through
 11467	1	1	1	1	étude	study
 11469	8	8	16	16	spectres	spectra
 11470	12	12	12	12	évidence	demonstrated
-11470	16	16	14	15	impulsions	a pulse
 11470	16	16	15	15	impulsions	pulse
 11471	20	20	32	32	spectres	spectra
 11473	1	1	1	1	manuscrit	manuscript
-11473	10	10	10	11	système	specific system
-11473	10	10	10	12	système	specific system of
 11473	10	10	11	11	système	system
-11473	10	10	11	12	système	system of
 11474	35	35	23	23	oeuvre	used
 11474	39	39	29	29	source	source
 11479	18	18	16	16	matrices	matrices
 11479	23	23	20	20	calculons	calculate
 11480	11	11	5	5	matière	matter
 11480	14	14	11	11	régime	regime
-11480	14	14	11	12	régime	regime by
 11482	9	9	8	8	étude	study
 11483	2	2	2	2	premier	first
 11483	10	10	10	10	état	state
@@ -8050,7 +7010,6 @@
 11485	36	36	37	37	étude	study
 11487	7	7	7	7	étude	study
 11487	13	13	12	12	pression	pressure
-11489	6	6	3	4	étude	à study
 11489	6	6	4	4	étude	study
 11489	31	31	25	25	pression	pressure
 11490	23	23	23	23	nature	nature
@@ -8069,10 +7028,7 @@
 11510	3	3	3	3	dépôt	deposition
 11512	1	1	1	1	motif	pattern
 11514	6	6	7	7	réaction	reaction
-11516	8	8	5	7	passage	is a transition
-11516	8	8	6	7	passage	a transition
 11516	8	8	7	7	passage	transition
-11520	1	1	1	2	confrontation	a comparison
 11520	1	1	2	2	confrontation	comparison
 11520	18	18	14	14	évidence	out
 11521	12	12	9	9	rapport	ratio
@@ -8088,7 +7044,6 @@
 11540	1	1	1	1	diffusion	scattering
 11543	12	12	11	11	pratique	practical
 11545	28	28	24	24	administration	administrative
-11545	28	28	24	25	administration	administrative issues
 11549	4	4	4	4	champ	field
 11554	2	2	1	1	impulsions	pulses
 11556	21	21	19	19	mémoire	thesis
@@ -8101,7 +7056,6 @@
 11564	15	15	13	13	échelle	nanometric
 11572	1	1	1	1	mémoire	thesis
 11577	12	12	9	9	système	system
-11580	9	9	12	13	premier	the first
 11580	9	9	13	13	premier	first
 11581	5	5	5	5	montage	system
 11582	17	17	16	16	échantillons	samples
@@ -8125,15 +7079,11 @@
 11603	16	16	11	11	pression	pressure
 11605	6	6	4	4	déformation	deformation
 11609	5	5	8	8	système	system
-11609	5	5	8	9	système	system ,
 11614	10	10	11	11	mouvement	motion
 11615	5	5	5	5	étude	study
 11618	22	22	18	18	étude	study
 11619	7	7	7	7	composition	composition
-11619	7	7	7	8	composition	composition of
-11619	7	7	7	9	composition	composition of which
 11619	15	15	15	15	compensation	compensation
-11619	30	30	24	25	compensation	chosen compensation
 11619	30	30	25	25	compensation	compensation
 11622	5	5	3	3	compensation	compensation
 11623	3	3	2	2	composition	composition
@@ -8155,18 +7105,12 @@
 11650	6	6	5	5	modèles	model
 11650	18	18	13	13	échelle	level
 11651	20	20	15	15	spectres	spectra
-11653	12	12	10	11	calculant	the calculation
-11653	12	12	10	12	calculant	the calculation of
 11653	12	12	11	11	calculant	calculation
-11653	12	12	11	12	calculant	calculation of
 11653	48	48	46	46	modèles	model
 11654	20	20	18	18	mouvement	motion
 11655	1	1	1	1	étude	study
 11655	13	13	11	11	formation	formation
-11656	3	3	3	4	taux	the concentration
-11656	3	3	3	5	taux	the concentration results
 11656	3	3	4	4	taux	concentration
-11656	3	3	4	5	taux	concentration results
 11656	8	8	8	8	formation	formation
 11656	29	29	36	36	formation	formation
 11657	21	21	23	23	formation	formation
@@ -8177,20 +7121,14 @@
 11667	14	14	13	13	fermions	fermi
 11668	31	31	26	26	liaison	binding
 11669	15	15	15	15	état	state
-11670	9	9	10	11	système	the system
 11670	9	9	11	11	système	system
 11672	1	1	1	1	rapport	respect
 11672	38	38	38	38	taux	rate
 11673	11	11	10	10	dégénérescence	degeneracy
 11676	39	39	37	37	réaction	reaction
-11677	10	10	11	12	intéresse	are interested
-11677	10	10	11	13	intéresse	are interested in
 11677	10	10	12	12	intéresse	interested
-11677	10	10	12	13	intéresse	interested in
 11677	14	14	17	17	formation	formation
 11679	1	1	2	2	étude	study
-11679	1	1	2	3	étude	study ,
-11679	1	1	2	4	étude	study , we
 11679	7	7	12	12	état	state
 11679	32	32	31	31	informations	information
 11682	26	26	19	19	rapport	respect
@@ -8202,26 +7140,19 @@
 11689	11	11	14	14	source	source
 11692	3	3	2	2	étude	study
 11694	3	3	3	3	essais	tests
-11694	3	3	3	4	essais	tests have
 11694	11	11	13	13	source	source
-11694	11	11	13	14	source	source to
 11695	1	1	1	1	essais	tests
 11695	5	5	5	5	problème	problem
 11696	24	24	24	24	pression	pressure
 11698	1	1	0	0	essais	tests
-11698	9	9	8	9	flux	a flow
 11698	9	9	9	9	flux	flow
-11701	15	15	19	20	homologue	: homologous
 11701	15	15	20	20	homologue	homologous
 11712	31	31	28	28	système	system
 11716	4	4	4	4	système	system
 11719	19	19	19	19	système	system
 11720	1	1	1	1	étude	studying
-11721	29	29	20	21	fini	a finite
 11721	29	29	21	21	fini	finite
 11722	4	4	2	2	étude	study
-11722	4	4	2	3	étude	study was
-11722	4	4	2	4	étude	study was later
 11723	19	19	20	20	compositions	composition
 11724	23	23	17	17	lumière	light
 11725	35	35	29	29	frottement	friction
@@ -8242,16 +7173,13 @@
 11744	31	31	29	29	homologue	homologue
 11745	18	18	23	23	induit	induced
 11747	5	5	6	6	détail	detail
-11747	5	5	6	7	détail	detail together
 11748	12	12	12	12	issues	obtained
-11750	5	5	5	6	manuscrit	the manuscript
 11750	5	5	6	6	manuscrit	manuscript
 11751	10	10	11	11	modèles	models
 11751	37	37	14	14	motifs	patterns
 11751	59	59	32	32	dépôt	deposition
 11754	6	6	1	1	dépôt	deposition
 11755	18	18	14	14	motifs	patterns
-11755	18	18	14	15	motifs	patterns of
 11757	4	4	2	2	travaux	results
 11761	18	18	17	17	composition	composition
 11762	11	11	10	10	champ	field
@@ -8271,7 +7199,6 @@
 11785	4	4	5	5	étude	study
 11787	14	14	15	15	excitation	excitation
 11790	6	6	7	7	étude	devoted
-11790	6	6	7	8	étude	devoted to
 11791	21	21	20	20	élucidé	elucidated
 11791	23	23	23	23	localisation	localization
 11793	1	1	2	2	premier	first
@@ -8284,12 +7211,7 @@
 11803	7	7	6	6	ancrage	pinning
 11803	24	24	21	21	champ	field
 11804	10	10	7	7	modèles	models
-11805	15	15	13	15	champ	when the field
-11805	15	15	13	16	champ	when the field is
-11805	15	15	14	15	champ	the field
-11805	15	15	14	16	champ	the field is
 11805	15	15	15	15	champ	field
-11805	15	15	15	16	champ	field is
 11806	18	18	15	16	porteurs	charge carrier
 11807	4	4	2	2	détail	further
 11808	27	27	14	14	échelle	scale
@@ -8317,7 +7239,6 @@
 11843	6	6	7	7	formalisme	formalism
 11843	11	11	11	11	étude	study
 11845	13	13	15	15	spectres	spectra
-11845	13	13	15	16	spectres	spectra ,
 11845	29	29	32	32	champ	field
 11846	3	3	5	5	champ	field
 11847	1	1	1	1	mémoire	thesis
@@ -8339,7 +7260,6 @@
 11862	50	50	39	39	marche	walking
 11864	28	28	26	26	charge	loading
 11866	30	30	31	31	champ	field
-11866	30	30	31	32	champ	field is
 11867	10	10	9	9	système	system
 11873	65	65	57	57	premières	first
 11874	15	15	13	13	croissance	growth
@@ -8353,7 +7273,6 @@
 11903	13	13	9	9	témoins	controls
 11904	1	1	1	1	étude	study
 11905	4	4	5	5	pêche	fishery
-11907	30	30	20	21	pêche	no fishing
 11907	30	30	21	21	pêche	fishing
 11907	33	33	24	24	pêche	fishing
 11908	2	2	1	1	ajusté	fitted
@@ -8368,7 +7287,6 @@
 11933	24	24	17	17	petits	young
 11934	3	3	3	3	souris	mice
 11935	13	13	15	15	modèles	models
-11936	12	12	10	11	climat	both weather
 11936	12	12	11	11	climat	weather
 11941	11	11	11	11	croissance	growing
 11943	1	1	1	1	espèces	species
@@ -8380,9 +7298,7 @@
 11948	4	4	3	3	système	system
 11949	26	26	24	24	fini	finite
 11950	14	14	11	11	point	site
-11950	14	14	11	12	point	site in
 11956	25	25	21	22	exposant	scaling exponent
-11956	25	25	21	23	exposant	scaling exponent of
 11958	21	21	19	19	moyennes	average
 11962	1	1	4	4	espèces	species
 11962	46	46	38	38	peine	barely
@@ -8390,7 +7306,6 @@
 11964	9	9	8	8	taux	rate
 11970	28	28	23	23	rapport	ratio
 11971	9	9	8	8	études	studies
-11971	9	9	8	9	études	studies of
 11972	4	4	3	3	compensation	compensation
 11976	3	3	3	3	croissance	growth
 11977	22	22	16	16	croissance	growth
@@ -8399,16 +7314,13 @@
 11983	55	55	45	45	grands	great
 11984	11	11	9	9	abondante	abundant
 11985	17	17	18	18	études	studies
-11985	17	17	18	19	études	studies ,
 11986	16	16	12	12	rendu	made
-11986	16	16	12	13	rendu	made it
 11990	31	31	30	30	espèces	endangered
 11991	1	1	1	1	inventaires	surveys
 11991	19	19	15	15	rigueur	rigor
 11992	9	9	6	6	moyen	using
 12001	32	32	26	26	flux	flow
 12002	12	12	9	9	espèce	species
-12005	22	22	41	42	similitude	for similarity
 12005	22	22	42	42	similitude	similarity
 12006	5	5	6	6	composition	composition
 12007	7	7	6	6	similitude	similarity
@@ -8416,16 +7328,10 @@
 12013	13	13	8	8	avérés	were
 12013	29	29	19	19	croissance	growth
 12014	1	1	1	1	études	studies
-12016	10	10	5	6	rechercher	screen for
 12016	10	10	6	6	rechercher	for
 12017	33	33	23	23	croissance	growth
 12019	24	24	14	14	informations	information
-12020	1	1	0	2	auteurs	in this paper
-12020	1	1	0	3	auteurs	in this paper we
-12020	1	1	1	2	auteurs	this paper
-12020	1	1	1	3	auteurs	this paper we
 12020	1	1	2	2	auteurs	paper
-12020	1	1	2	3	auteurs	paper we
 12020	12	12	15	15	composition	composition
 12021	26	26	22	22	taxons	taxa
 12022	20	20	15	15	composition	composition
@@ -8436,10 +7342,8 @@
 12029	23	23	17	17	espèces	species
 12030	37	37	22	22	étude	study
 12032	20	20	19	19	souches	genets
-12033	42	42	34	35	croissance	shoot growth
 12033	42	42	35	35	croissance	growth
 12033	52	52	40	40	coupe	cutting
-12033	52	52	40	41	coupe	cutting in
 12034	18	18	9	9	classe	class
 12034	40	40	27	27	espèces	species
 12037	3	3	2	2	induisent	enhances
@@ -8471,22 +7375,14 @@
 12110	48	48	34	34	filaments	filament
 12111	24	24	15	15	filaments	filament
 12111	21	21	16	16	moules	molds
-12111	57	57	38	39	moules	fine molds
 12111	57	57	39	39	moules	molds
 12112	32	32	17	17	filaments	filament
 12113	1	1	1	1	étude	study
 12114	4	4	5	5	études	studies
-12114	4	4	5	6	études	studies have
-12114	20	20	14	16	connaît	little is known
-12114	20	20	14	17	connaît	little is known about
-12114	20	20	15	16	connaît	is known
-12114	20	20	15	17	connaît	is known about
 12114	20	20	16	16	connaît	known
-12114	20	20	16	17	connaît	known about
 12114	38	38	27	27	système	system
 12115	10	10	12	12	espèces	species
 12116	4	4	5	5	espèces	species
-12116	4	4	5	6	espèces	species i
 12117	13	13	9	9	espèces	species
 12119	11	11	9	9	espèces	species
 12120	2	2	2	2	espèces	species
@@ -8494,7 +7390,6 @@
 12121	37	37	34	34	occasion	opportunities
 12125	6	6	4	4	fonctions	functions
 12125	32	32	24	24	pression	pressure
-12128	27	27	25	26	incertitude	stated uncertainty
 12128	27	27	26	26	incertitude	uncertainty
 12128	31	31	29	29	mesures	measurements
 12129	21	21	11	11	auteurs	we
@@ -8513,18 +7408,14 @@
 12161	9	9	5	5	échantillon	sample
 12162	6	6	1	1	moelle	marrow
 12162	37	37	27	27	étude	study
-12162	37	37	27	28	étude	study area
 12172	1	1	0	0	études	studies
-12172	23	23	16	17	partenaire	, mate
 12172	23	23	17	17	partenaire	mate
 12172	36	36	24	24	croissance	growth
-12172	36	36	24	25	croissance	growth ,
 12172	53	53	36	36	fonctions	functions
 12186	53	53	43	43	souris	mouse
 12193	19	19	20	20	cascade	cascade
 12195	1	1	1	1	compositions	compositions
 12195	23	23	17	17	composition	composition
-12196	5	5	6	7	tiges	the shoots
 12196	5	5	7	7	tiges	shoots
 12196	52	52	44	44	exposition	exposure
 12199	3	3	3	3	calculer	computing
@@ -8554,7 +7445,6 @@
 12247	14	14	10	10	humain	human
 12252	7	7	6	6	marquées	marked
 12253	16	16	17	17	article	paper
-12254	43	43	18	19	croissance	on growth
 12254	43	43	19	19	croissance	growth
 12256	14	14	0	0	croissance	growth
 12257	5	5	3	3	croissance	growth
@@ -8563,7 +7453,6 @@
 12268	24	24	15	15	lumière	light
 12272	21	21	19	19	étude	study
 12274	22	22	16	17	éclaircie	thinning occurred
-12274	22	22	16	18	éclaircie	thinning occurred as
 12278	12	12	16	16	source	source
 12284	19	19	14	14	rapports	ratios
 12288	1	1	1	1	étude	study
@@ -8595,7 +7484,6 @@
 12323	21	21	21	21	composition	composition
 12323	31	31	28	28	opposition	contrast
 12330	1	1	1	1	écoulements	flows
-12330	19	19	20	21	écoulements	the flows
 12330	19	19	21	21	écoulements	flows
 12332	12	12	12	12	écoulements	flows
 12334	19	19	11	11	composition	composition
@@ -8611,15 +7499,11 @@
 12343	7	7	8	8	charge	load
 12343	22	22	20	20	moyen	through
 12347	17	17	18	18	moyen	means
-12347	29	29	28	29	priori	a priori
 12347	29	29	29	29	priori	priori
 12348	26	26	16	16	espèces	species
 12349	2	2	1	1	études	studies
 12350	4	4	5	5	étude	study
-12350	4	4	5	6	étude	study on
 12350	19	19	15	15	espèces	species
-12350	19	19	15	16	espèces	species that
-12350	19	19	15	17	espèces	species that have
 12351	6	6	12	12	croissance	growth
 12354	26	26	15	15	croissance	growth
 12354	37	37	20	20	premier	first
@@ -8632,7 +7516,6 @@
 12358	23	23	14	14	surveillance	monitoring
 12358	28	28	17	17	pêche	fishing
 12360	22	22	12	12	taux	rate
-12360	22	22	12	13	taux	rate is
 12361	15	15	13	13	modèles	model
 12362	3	3	1	1	taux	rate
 12363	10	10	15	15	taux	rate
@@ -8650,7 +7533,6 @@
 12381	14	14	15	15	croissance	growth
 12384	4	4	2	2	réaction	response
 12395	2	2	2	2	espèces	species
-12395	13	13	13	14	grands	the great
 12395	13	13	14	14	grands	great
 12401	8	8	7	7	milieu	medium
 12402	11	11	6	6	croissance	growing
@@ -8679,18 +7561,13 @@
 12435	39	39	33	33	études	studies
 12436	8	8	5	5	études	studies
 12436	15	15	9	9	espèces	species
-12436	17	17	11	12	genres	the genera
 12436	17	17	12	12	genres	genera
 12438	49	49	40	40	taux	rate
-12438	49	49	40	41	taux	rate ,
 12440	26	26	27	27	adaptations	adaptations
 12443	38	38	30	30	ours	bear
 12446	2	2	2	2	laissent	suggest
 12446	6	6	7	7	échantillons	samples
-12447	5	5	0	1	étude	this study
-12447	5	5	0	2	étude	this study forms
 12447	5	5	1	1	étude	study
-12447	5	5	1	2	étude	study forms
 12447	10	10	8	8	travaux	investigations
 12447	21	21	19	19	étude	study
 12447	25	25	22	22	genre	genus
@@ -8700,7 +7577,6 @@
 12452	12	12	10	10	anneau	ring
 12454	19	19	11	11	espèce	species
 12456	3	3	4	4	ovules	ovules
-12456	3	3	4	5	ovules	ovules are
 12460	2	2	2	2	études	studies
 12460	37	37	31	31	famille	family
 12461	7	7	5	5	rendements	yield
@@ -8714,7 +7590,6 @@
 12477	7	7	5	5	finis	finite
 12477	17	17	16	16	nouveau	unknown
 12483	39	39	37	37	pieux	driven
-12483	42	42	39	40	pieux	root piles
 12483	42	42	40	40	pieux	piles
 12484	2	2	2	2	article	paper
 12484	5	5	4	4	auteurs	authors
@@ -8725,14 +7600,12 @@
 12488	59	59	51	51	pression	pressure
 12489	4	4	4	4	étude	study
 12490	1	1	1	1	échantillons	samples
-12491	23	23	19	20	étude	this study
 12491	23	23	20	20	étude	study
 12495	28	28	2	2	spectres	spectra
 12496	7	7	5	5	source	source
 12497	9	9	6	6	formation	formation
 12498	5	5	6	6	échantillon	sample
 12501	1	1	1	1	espèces	species
-12501	1	1	1	2	espèces	species of
 12502	21	21	2	2	espèces	species
 12502	26	26	5	5	peuplement	stand
 12503	14	14	14	14	perturbations	disturbances
@@ -8744,7 +7617,6 @@
 12521	38	38	31	31	lumière	light
 12523	10	10	11	11	lumière	light
 12523	14	14	16	16	apex	tips
-12523	14	14	16	17	apex	tips was
 12523	23	23	22	22	lumière	light
 12523	32	32	32	32	croissance	growth
 12524	15	15	10	10	croissance	growth
@@ -8754,37 +7626,28 @@
 12526	19	19	6	6	déformation	strain
 12528	8	8	3	3	déformation	strain
 12528	11	11	4	4	taux	rate
-12528	11	11	4	5	taux	rate and
 12528	6	6	7	7	taux	rate
 12528	18	18	12	12	déformation	deformation
 12528	32	32	20	20	détail	detail
-12531	1	1	1	2	connaît	is known
 12531	1	1	2	2	connaît	known
 12532	1	1	1	1	étude	study
 12532	7	7	9	9	système	system
 12536	1	1	1	1	manuscrit	paper
 12536	16	16	13	13	petits	small
 12537	50	50	36	36	tiges	stems
-12538	14	14	6	7	témoin	a control
 12538	14	14	7	7	témoin	control
 12539	29	29	26	26	pratique	practices
 12541	24	24	17	17	coupe	harvest
 12545	42	42	33	33	mesure	measuring
 12549	3	3	5	5	mesure	measurements
 12549	11	11	8	8	peuplement	stand
-12549	11	11	8	9	peuplement	stand and
 12551	1	1	1	1	études	case-study
 12553	13	13	8	8	couverture	cover
 12553	23	23	18	18	composition	composition
 12554	5	5	4	4	distinguent	distinguishable
 12554	12	12	11	11	petits	small
 12554	64	64	55	55	couverture	cover
-12554	64	64	55	56	couverture	cover were
-12555	15	15	12	13	point	same degree
-12555	15	15	12	14	point	same degree as
 12555	15	15	13	13	point	degree
-12555	15	15	13	14	point	degree as
-12555	16	16	14	15	mentionné	as reported
 12555	16	16	15	15	mentionné	reported
 12556	13	13	11	11	composition	composition
 12556	37	37	25	25	couverture	cover
@@ -8794,21 +7657,17 @@
 12565	14	14	9	9	boîtes	boxes
 12565	23	23	15	15	inventaires	surveys
 12567	1	1	1	1	couvert	cover
-12567	1	1	1	2	couvert	cover did
 12567	4	4	4	4	différait	differ
 12567	11	11	8	8	témoins	control
 12568	1	1	1	1	taxons	taxa
 12569	3	3	4	5	patrons	observed patterns
 12569	15	15	13	13	espèces	species
-12571	5	5	8	9	échantillons	the sample
 12571	5	5	9	9	échantillons	sample
 12572	1	1	1	1	mesures	measurements
 12579	24	24	15	15	récoltés	collected
 12587	1	1	1	1	nouveau	new
 12588	1	1	1	1	nouveau	new
 12588	21	21	18	18	m.	m.
-12588	21	21	18	19	m.	m. one
-12589	20	20	17	18	nouveau	the new
 12589	20	20	18	18	nouveau	new
 12593	14	14	11	11	essais	test
 12594	6	6	4	4	service	service
@@ -8828,12 +7687,10 @@
 12619	1	1	1	1	modèles	models
 12619	5	5	5	5	petits	small
 12620	1	1	1	1	croyons	suggest
-12625	40	40	34	35	composition	of composition
 12625	40	40	35	35	composition	composition
 12626	24	24	17	17	formation	formation
 12631	14	14	11	11	fonctions	functions
 12632	21	21	11	11	cellulaire	cellular
-12633	14	14	13	14	peuplement	old stand
 12633	14	14	14	14	peuplement	stand
 12635	33	33	26	26	témoin	control
 12636	4	4	3	3	dégagement	release
@@ -8847,20 +7704,15 @@
 12638	37	37	28	28	croissance	growth
 12639	12	12	7	7	croissance	growth
 12639	20	20	12	12	croissance	growth
-12639	20	20	12	13	croissance	growth check
 12640	40	40	31	31	étude	studied
 12644	1	1	0	0	auteurs	we
 12649	18	18	7	7	mesures	measures
 12650	6	6	3	3	pêche	fishery
 12651	15	15	12	12	grands	large
 12653	7	7	4	4	pêche	closure
-12653	14	14	9	10	pêche	of fishing
-12653	14	14	9	11	pêche	of fishing on
 12653	14	14	10	10	pêche	fishing
-12653	14	14	10	11	pêche	fishing on
 12655	11	11	8	8	grands	larger
 12655	17	17	13	13	pêche	fishing
-12655	17	17	13	14	pêche	fishing ,
 12656	2	2	2	2	pêche	fishing
 12660	36	36	28	28	échantillon	sample
 12662	4	4	1	1	grands	great
@@ -8872,11 +7724,8 @@
 12676	6	6	7	7	croissance	growth
 12678	62	62	15	15	grands	great
 12679	7	7	3	3	lumière	light
-12679	7	7	3	4	lumière	light has
-12679	7	7	3	5	lumière	light has been
 12679	34	34	27	27	couvert	canopies
 12680	15	15	7	7	exposition	exposure
-12681	1	1	2	3	sommet	the top
 12681	1	1	3	3	sommet	top
 12685	12	12	7	7	lumière	light
 12685	39	39	28	28	couvert	canopies
@@ -8909,10 +7758,7 @@
 12732	19	19	15	15	étude	examined
 12735	20	20	19	19	souches	strains
 12740	53	53	27	27	petits	small
-12746	16	16	12	13	faut	is necessary
-12746	16	16	12	14	faut	is necessary to
 12746	16	16	13	13	faut	necessary
-12746	16	16	13	14	faut	necessary to
 12747	11	11	9	9	lumière	light
 12751	20	20	14	14	contraire	rather
 12752	12	12	11	11	croissance	growth
@@ -8920,11 +7766,9 @@
 12760	4	4	4	4	ratio	ratio
 12761	5	5	4	4	auteurs	we
 12761	25	25	17	17	ratio	ratio
-12763	18	18	17	18	noyaux	the nuclei
 12763	18	18	18	18	noyaux	nuclei
 12764	16	16	10	10	noyaux	nuclei
 12764	20	20	16	16	stade	stage
-12764	20	20	16	17	stade	stage ,
 12764	26	26	24	24	noyaux	nuclei
 12764	36	36	34	34	noyaux	nuclei
 12770	1	1	1	1	étude	paper
@@ -8955,29 +7799,23 @@
 12826	7	7	8	8	tiges	shoots
 12826	17	17	14	14	témoins	controls
 12828	9	9	8	8	point	point
-12828	24	24	17	18	espèce	on species
 12828	24	24	18	18	espèce	species
 12829	29	29	19	19	fissures	fissures
 12833	19	19	13	13	fourchette	range
-12833	19	19	13	14	fourchette	range of
 12834	11	11	8	8	rapport	respect
 12836	39	39	36	36	liaison	exocyclic
 12837	26	26	20	20	rendements	yields
 12838	6	6	1	1	fixation	binding
 12841	19	19	17	17	addition	addition
-12841	24	24	21	22	solution	the solution
 12841	24	24	22	22	solution	solution
 12845	17	17	14	14	couvert	canopy
 12848	14	14	8	8	échelle	scale
 12848	29	29	21	21	couvert	canopy
 12848	44	44	37	37	espèces	species
-12848	44	44	37	38	espèces	species ,
-12848	44	44	37	39	espèces	species , and
 12849	21	21	14	14	couvert	canopy
 12849	42	42	32	32	couvert	canopy
 12851	38	38	25	25	couvert	canopy
 12855	32	32	24	24	premières	first
-12858	17	17	11	12	problème	a problem
 12858	17	17	12	12	problème	problem
 12860	9	9	8	8	composition	composition
 12864	24	24	19	19	système	system
@@ -8993,7 +7831,6 @@
 12884	1	1	2	2	spectres	spectra
 12887	38	38	26	26	espèces	species
 12888	8	8	9	9	coupe	forest
-12888	8	8	9	10	coupe	forest management
 12889	30	30	19	19	perturbations	disturbance
 12900	13	13	9	9	souris	mice
 12901	7	7	1	1	souches	strains
@@ -9008,7 +7845,6 @@
 12912	15	15	7	7	rigidité	stiffness
 12913	17	17	11	11	finis	finite
 12916	1	1	0	0	étude	investigations
-12916	1	1	0	1	étude	investigations are
 12917	2	2	1	1	étude	study
 12920	25	25	24	24	taux	dimensionless
 12929	22	22	13	13	moyen	using
@@ -9032,9 +7868,7 @@
 12945	32	32	27	27	modèles	models
 12946	1	1	4	4	modèles	models
 12947	1	1	3	3	article	paper
-12947	1	1	3	4	article	paper ,
 12948	4	4	4	4	article	paper
-12948	7	7	7	8	étude	case study
 12948	7	7	8	8	étude	study
 12948	13	13	14	14	travaux	work
 12951	21	21	21	21	induit	induced
@@ -9063,7 +7897,6 @@
 12995	21	21	16	16	rupture	failure
 13004	1	1	0	0	auteurs	we
 13006	17	17	10	10	système	system
-13006	17	17	10	11	système	system for
 13007	19	19	17	17	fonctions	functions
 13007	38	38	26	26	espèces	species
 13009	3	3	0	0	croissance	growth
@@ -9080,7 +7913,6 @@
 13029	31	31	20	20	rendements	yields
 13033	8	8	7	7	formation	formation
 13036	33	33	31	31	plan	plane
-13038	7	7	6	7	liaisons	, bond
 13038	7	7	7	7	liaisons	bond
 13041	4	4	0	0	couverture	forest
 13041	5	5	1	1	morte	floor
@@ -9092,7 +7924,6 @@
 13053	6	6	4	4	raison	because
 13058	6	6	5	5	sang	blood
 13062	14	14	18	18	réaction	reaction
-13062	14	14	18	19	réaction	reaction ,
 13065	8	8	17	17	formation	formation
 13067	21	21	19	19	espèces	species
 13068	6	6	8	8	récepteur	receptor
@@ -9104,7 +7935,6 @@
 13078	10	10	3	3	radiation	radiation
 13086	1	1	1	1	article	paper
 13088	1	1	1	1	article	paper
-13088	4	4	4	5	calculer	to estimate
 13088	4	4	5	5	calculer	estimate
 13090	27	27	26	26	échantillons	specimens
 13092	23	23	17	17	grands	large
@@ -9113,10 +7943,8 @@
 13098	1	1	2	2	taux	rates
 13100	4	4	4	4	étude	study
 13101	11	11	8	8	espèce	species
-13101	11	11	8	9	espèce	species ,
 13103	13	13	14	14	apex	apex
 13108	3	3	5	5	étude	study
-13108	3	3	5	6	étude	study of
 13112	2	2	1	1	étude	study
 13113	3	3	3	3	modèles	models
 13113	11	11	9	9	taux	rate
@@ -9128,7 +7956,6 @@
 13121	69	69	55	55	croissance	growth
 13127	35	35	23	23	formation	formation
 13130	12	12	13	13	failles	faults
-13130	12	12	13	14	failles	faults do
 13132	2	2	2	2	libre	free
 13141	29	29	25	25	distinguent	distinguished
 13143	13	13	18	18	croissance	growth
@@ -9143,9 +7970,6 @@
 13156	12	12	11	11	issues	produced
 13157	2	2	2	2	famille	family
 13159	7	7	7	7	mesures	measurements
-13159	7	7	7	8	mesures	measurements ,
-13159	7	7	7	9	mesures	measurements , however
-13159	7	7	7	10	mesures	measurements , however ,
 13160	7	7	7	7	mesures	measures
 13162	15	15	13	13	mesures	measures
 13165	4	4	3	3	étude	study
@@ -9154,18 +7978,14 @@
 13171	4	4	2	2	auteurs	we
 13172	1	1	0	0	auteurs	we
 13173	7	7	8	8	connaissance	knowledge
-13181	29	29	23	26	et/ou	and ( or )
 13181	29	29	24	26	et/ou	( or )
-13182	31	31	24	25	pieux	are investigated
 13182	31	31	25	25	pieux	investigated
 13183	19	19	17	17	finis	finite
 13184	5	5	2	2	radiation	radiation
 13185	16	16	17	17	modèles	models
 13186	6	6	5	5	excitation	excitation
-13186	6	6	5	6	excitation	excitation and
 13188	13	13	8	8	rigidité	stiffness
 13188	16	16	12	12	système	system
-13188	16	16	12	13	système	system is
 13189	7	7	5	5	pieux	piles
 13189	34	34	31	31	excitation	excitation
 13190	21	21	19	19	excitation	excitation
@@ -9180,7 +8000,6 @@
 13197	15	15	10	10	poids	weight
 13201	19	19	13	13	poids	weight
 13201	23	23	15	15	mesure	as
-13201	23	23	15	16	mesure	as seeds
 13202	12	12	8	8	espèces	species
 13202	27	27	20	20	poids	weight
 13204	17	17	12	12	énergétiques	energy
@@ -9194,12 +8013,8 @@
 13213	2	2	1	1	article	paper
 13214	3	3	1	1	taux	rate
 13214	40	40	28	28	pierre	stone
-13216	18	18	15	16	véhicule	the vehicle
 13216	18	18	16	16	véhicule	vehicle
-13217	23	23	13	14	études	much study
-13217	23	23	13	15	études	much study of
 13217	23	23	14	14	études	study
-13217	23	23	14	15	études	study of
 13220	1	1	1	1	examinons	consider
 13225	35	35	23	23	membres	members
 13226	33	33	25	25	pêche	fishing
@@ -9219,7 +8034,6 @@
 13256	1	1	2	2	couverture	coverage
 13257	28	28	17	17	dureté	hardness
 13266	14	14	10	10	modèles	modeling
-13266	14	14	10	11	modèles	modeling did
 13266	36	36	26	26	espèces	species
 13270	24	24	17	20	pays	countries over the world
 13274	31	31	25	25	apex	apex
@@ -9227,20 +8041,16 @@
 13284	11	11	16	16	espèce	species
 13285	8	8	9	9	stade	stage
 13286	1	1	0	0	auteurs	we
-13286	1	1	0	1	auteurs	we will
 13286	31	31	25	25	nature	nature
 13286	43	43	34	34	fins	for
 13287	1	1	0	0	auteurs	we
 13287	27	27	22	22	tiges	stem
-13288	18	18	2	3	espèces	that species
 13288	18	18	3	3	espèces	species
 13290	3	3	2	2	peuplement	stand
 13290	6	6	5	5	auteurs	we
 13290	10	10	10	10	stade	stage
-13292	8	8	3	4	auteurs	we present
 13292	8	8	4	4	auteurs	present
 13294	24	24	21	21	perturbations	disturbances
-13304	4	4	3	4	échantillons	the samples
 13304	4	4	4	4	échantillons	samples
 13307	26	26	17	17	balance	balance
 13310	1	1	2	2	source	source
@@ -9252,7 +8062,6 @@
 13334	32	32	24	24	milieux	in-stream
 13335	27	27	22	22	composition	composition
 13336	28	28	22	22	premières	first
-13336	28	28	22	23	premières	first two
 13336	31	31	26	26	coupe	logging
 13337	26	26	22	22	fonctions	functions
 13341	25	25	16	16	point	point
@@ -9267,7 +8076,6 @@
 13350	39	39	33	33	plan	plane
 13350	64	64	55	55	plan	plane
 13351	34	34	24	24	étude	study
-13351	80	80	63	64	ancrage	&apos; anchorage
 13351	80	80	64	64	ancrage	anchorage
 13354	10	10	9	9	solution	solution
 13358	2	2	3	3	modèles	models
@@ -9282,17 +8090,14 @@
 13397	30	30	20	20	genres	genera
 13400	36	36	30	30	genres	genera
 13402	21	21	16	16	espèces	species
-13403	1	1	1	2	étude	present study
 13403	1	1	2	2	étude	study
 13403	32	32	25	25	genres	genera
 13404	29	29	22	22	cadre	framework
 13406	7	7	4	4	taux	rates
 13407	54	54	44	44	arc-en-ciel	trout
-13407	72	72	56	57	espèces	two species
 13407	72	72	57	57	espèces	species
 13410	30	30	18	18	point	focus
 13415	2	2	0	0	énergétiques	energetic
-13417	19	19	9	10	énergétiques	of energetic
 13417	19	19	10	10	énergétiques	energetic
 13418	5	5	4	4	association	association
 13418	18	18	11	11	échelle	scale
@@ -9301,7 +8106,6 @@
 13445	27	27	20	20	rapport	opposed
 13448	6	6	5	5	étude	study
 13452	1	1	1	1	système	system
-13452	1	1	1	2	système	system is
 13454	2	2	1	1	requises	required
 13454	4	4	2	2	échantillon	sample
 13454	6	6	8	8	fixées	clamped
@@ -9310,7 +8114,6 @@
 13459	6	6	8	8	diffusion	diffusion
 13460	18	18	15	15	diffusion	diffusion
 13462	3	3	4	4	études	studies
-13462	3	3	4	5	études	studies in
 13463	13	13	8	8	solution	resolution
 13464	4	4	6	6	système	system
 13466	6	6	7	7	perfusion	infusion
@@ -9321,20 +8124,13 @@
 13475	15	15	13	13	cadre	setting
 13477	2	2	1	1	études	studies
 13477	18	18	10	11	essais	test data
-13480	5	5	5	8	fond	long and even bottom
-13480	5	5	6	8	fond	and even bottom
-13480	5	5	7	8	fond	even bottom
 13480	5	5	8	8	fond	bottom
 13484	1	1	1	1	étude	study
 13490	60	60	34	34	témoin	control
 13491	44	44	31	31	témoins	controls
 13492	21	21	16	16	diffusion	diffusion
 13493	1	1	1	1	mouvement	movement
-13496	22	22	12	14	témoins	than on controls
-13496	22	22	13	14	témoins	on controls
 13496	22	22	14	14	témoins	controls
-13498	1	1	0	2	auteurs	heer , we
-13498	1	1	1	2	auteurs	, we
 13498	1	1	2	2	auteurs	we
 13499	18	18	15	15	espèces	species
 13501	6	6	4	4	attention	attention
@@ -9355,9 +8151,7 @@
 13534	9	9	4	4	composition	composition
 13537	5	5	2	2	induit	induced
 13541	3	3	3	3	faut	should
-13541	3	3	3	4	faut	should be
 13544	27	27	22	22	étude	study
-13545	9	9	7	8	modèles	the models
 13545	9	9	8	8	modèles	models
 13546	28	28	28	28	modèles	models
 13547	35	35	34	34	formation	formation
@@ -9375,19 +8169,16 @@
 13576	4	4	1	1	famille	family
 13579	21	21	22	22	milieu	culture
 13582	1	1	1	1	taux	rate
-13582	1	1	1	2	taux	rate is
 13583	1	1	1	1	taux	rate
 13588	14	14	9	9	provenance	from
 13590	5	5	3	3	mesures	measurement
 13592	9	9	12	12	système	system
 13599	26	26	23	23	coupe	harvest
-13599	26	26	23	24	coupe	harvest of
 13599	46	46	38	38	espèces	species
 13600	4	4	4	4	premier	first
 13600	34	34	24	24	champ	field
 13602	33	33	27	27	formation	formation
 13602	41	41	34	34	croissance	growth
-13602	48	48	39	40	champ	the field
 13602	48	48	40	40	champ	field
 13604	1	1	1	1	taux	rates
 13605	1	1	1	1	croissance	growth
@@ -9395,21 +8186,15 @@
 13610	7	7	1	1	ombrage	shading
 13611	3	3	0	0	coupe	cutting
 13611	6	6	2	3	ombrage	shade cloth
-13611	25	25	21	22	ombrage	of shading
 13611	25	25	22	22	ombrage	shading
 13618	7	7	4	4	composition	composition
 13618	16	16	9	9	étude	study
 13619	13	13	11	11	association	association
 13620	14	14	15	15	moyennes	average
-13620	14	14	15	16	moyennes	average ,
-13620	14	14	15	17	moyennes	average , on
-13620	25	25	16	18	étude	, on study
-13620	25	25	17	18	étude	on study
 13620	25	25	18	18	étude	study
 13622	19	19	16	16	croissance	growth
 13623	15	15	10	10	croissance	growth
 13624	80	80	59	59	solution	solution
-13624	80	80	59	60	solution	solution ,
 13625	8	8	4	4	croissance	growth
 13629	1	1	1	1	addition	addition
 13629	3	3	3	3	charbon	charcoal
@@ -9428,15 +8213,12 @@
 13654	13	13	12	12	modèles	models
 13654	30	30	23	23	modèles	models
 13655	1	1	1	1	étude	study
-13655	21	21	10	11	peuplement	a stand
 13655	21	21	11	11	peuplement	stand
 13655	19	19	12	12	échelle	scale
 13655	32	32	27	27	couvert	canopies
 13656	2	2	2	2	assume	assumes
 13656	5	5	6	6	couvert	canopy
 13659	36	36	25	25	couvert	canopy
-13659	36	36	25	26	couvert	canopy reasonably
-13659	36	36	25	27	couvert	canopy reasonably well
 13660	11	11	8	8	lumière	light
 13660	29	29	24	24	modèles	models
 13662	20	20	16	16	réaction	reaction
@@ -9445,36 +8227,29 @@
 13665	1	1	3	3	peuplement	stand
 13666	1	1	2	2	peuplement	stand
 13667	2	2	2	2	peuplement	stand
-13667	30	30	24	25	couvert	( canopy
 13667	30	30	25	25	couvert	canopy
 13669	29	29	28	28	vitesses	speeds
-13669	29	29	28	29	vitesses	speeds ,
 13670	3	3	2	2	éclaircie	thinning
 13671	1	1	2	2	patrons	patterns
 13671	25	25	19	19	éclaircie	thinning
 13674	1	1	3	3	modèles	models
 13676	5	5	5	5	stade	stage
 13678	22	22	18	18	clé	key
-13682	1	1	0	2	examinons	this study examines
 13682	1	1	1	2	examinons	study examines
 13682	11	11	8	8	filaments	filament
 13683	10	10	6	6	filaments	filament
 13686	1	1	1	1	croyons	suggest
 13688	21	21	2	2	espèces	species
 13688	29	29	9	9	espèces	species
-13688	1	1	21	22	échantillons	were collected
 13688	1	1	22	22	échantillons	collected
 13689	2	2	1	1	espèces	species
 13690	26	26	19	19	espèces	species
 13690	58	58	46	46	régime	patterns
 13692	5	5	7	7	taux	rate
-13693	5	5	4	5	espèces	the species
 13693	5	5	5	5	espèces	species
 13695	3	3	2	2	étude	study
-13695	6	6	5	6	examinons	have investigated
 13695	6	6	6	6	examinons	investigated
 13697	2	2	2	2	étude	study
-13697	25	25	21	22	blocage	of blocking
 13697	25	25	22	22	blocage	blocking
 13699	13	13	11	11	blocage	blocking
 13700	43	43	33	33	échantillons	samples
@@ -9489,17 +8264,14 @@
 13714	11	11	10	10	espèce	species
 13716	14	14	11	11	poids	weights
 13719	46	46	39	39	m.	m.
-13721	10	10	11	12	mesures	of measurements
 13721	10	10	12	12	mesures	measurements
 13722	3	3	2	2	études	studies
-13722	3	3	2	3	études	studies ,
 13723	4	4	4	4	mesures	measurements
 13723	18	18	16	16	nature	nature
 13723	20	20	20	20	échantillons	samples
 13724	37	37	33	33	échantillons	samples
 13724	47	47	40	40	mesure	measurements
 13724	58	58	50	50	principes	principals
-13724	58	58	50	51	principes	principals ,
 13725	27	27	20	20	étude	study
 13727	21	21	22	22	association	combination
 13729	9	9	9	9	mentionné	reported
@@ -9516,7 +8288,6 @@
 13760	7	7	10	10	source	source
 13760	13	13	15	15	rapport	compared
 13761	7	7	7	7	compositions	compositions
-13762	15	15	11	12	croûte	a crust
 13762	15	15	12	12	croûte	crust
 13773	8	8	1	1	croissance	growth
 13773	11	11	3	3	décroissance	decay
@@ -9528,8 +8299,6 @@
 13780	4	4	4	4	rigidité	stiffness
 13780	16	16	15	15	charges	loads
 13781	26	26	18	18	rupture	failure
-13781	26	26	18	19	rupture	failure as
-13781	26	26	18	20	rupture	failure as a
 13781	31	31	22	22	état	state
 13781	39	39	30	30	pratique	practice
 13781	46	46	34	34	rupture	rupture
@@ -9550,24 +8319,18 @@
 13806	40	40	34	34	humain	human
 13806	48	48	41	41	humain	human
 13807	20	20	16	16	humain	human
-13809	8	8	3	4	humain	a human
 13809	8	8	4	4	humain	human
 13811	10	10	8	8	pays	country
 13811	43	43	35	35	pays	country
 13812	32	32	26	26	évidence	evidence
 13814	2	2	4	4	étude	study
 13814	15	15	13	13	régime	diet
-13814	15	15	13	14	régime	diet ,
-13824	16	16	1	2	problème	central problem
 13824	16	16	2	2	problème	problem
-13824	3	3	20	22	pêche	is that fishing
-13824	3	3	21	22	pêche	that fishing
 13824	3	3	22	22	pêche	fishing
 13826	2	2	2	2	étude	work
 13826	13	13	10	10	mesures	measures
 13828	5	5	4	4	ajustement	adjusting
 13828	13	13	8	8	mesure	measure
-13828	16	16	12	13	moyen	&apos;s average
 13828	16	16	13	13	moyen	average
 13832	15	15	14	14	cellulaire	cell
 13834	26	26	18	18	espèces	species
@@ -9582,9 +8345,7 @@
 13851	10	10	5	5	ligneux	woody
 13854	6	6	6	6	ligneux	woody
 13854	10	10	10	10	espèces	species
-13854	10	10	10	11	espèces	species in
 13857	1	1	2	2	taux	rates
-13858	5	5	3	4	échantillons	the samples
 13858	5	5	4	4	échantillons	samples
 13860	1	1	1	1	mesure	measured
 13861	2	2	2	2	espèce	species
