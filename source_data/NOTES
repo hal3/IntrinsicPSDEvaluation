@@ -8,3 +8,5 @@
  8011  cp /export/ws12/damt/data/intrinsic_eval/hal/Subs.all.psd Subs.psd
  8012  cp /export/ws12/damt/data/intrinsic_eval/hal/news.[ef][nr].gz .
  8013  cp /export/ws12/damt/data/intrinsic_eval/hal/news.all.psd news.psd
+
+/h/k/d/p/evaluation % (cat additional.phrases extended.phrases representative.phrases| awk 'NF > 0' | sort -u; cat /home/hal/projects/IntrinsicPSDEvaluation/source_data-old/*.psd | cut -f6 | sort -u) | sort -u | awk 'NF > 0' > /home/hal/projects/IntrinsicPSDEvaluation/source_data/all-phrases
