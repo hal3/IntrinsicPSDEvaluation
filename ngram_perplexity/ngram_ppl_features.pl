@@ -44,7 +44,7 @@ close DB;
 close GS;
 close DS;
 
-open O, "> features/$dom.hal-ppl" or die;
+open O, "> features/$dom.type.hal-ppl" or die;
 foreach my $w (keys %info) {
     print O $w;
     foreach my $f (keys %{$info{$w}}) {
