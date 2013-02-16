@@ -141,10 +141,10 @@ while (1) {
         my $delta  = shift or die "usage: --search [argname] [min] [max] [*#|+#]";
         $SEARCH{$vwArg}{MIN} = $minVal;
         $SEARCH{$vwArg}{MAX} = $maxVal;
-        if ($delta =~ /^\+([0-9\.]+)$/) {
+        if ($delta =~ /^\+([0-9\.e+-]+)$/) {
             if ($1 <= 0) { die "don't be stupid."; }
             $SEARCH{$vwArg}{PLUS} = $1;
-        } elsif ($delta =~ /^\*([0-9\.]+)$/) {
+        } elsif ($delta =~ /^\*([0-9\.e+-]+)$/) {
             if ($1 <= 1) { die "don't be stupid."; }
             $SEARCH{$vwArg}{TIMES} = $1;
         } else { die "usage: --search [argname] [min] [max] [*#|+#]"; }
@@ -160,10 +160,10 @@ while (1) {
         my $id = $vwArg1 . ' ___ORSEARCH___ ' . $vwArg2;
         $SEARCH{$vwArg1}{MIN} = $minVal1;
         $SEARCH{$vwArg1}{MAX} = $maxVal1;
-        if ($delta1 =~ /^\+([0-9\.]+)$/) {
+        if ($delta1 =~ /^\+([0-9\.e+-]+)$/) {
             if ($1 <= 0) { die "don't be stupid."; }
             $SEARCH{$vwArg1}{PLUS} = $1;
-        } elsif ($delta1 =~ /^\*([0-9\.]+)$/) {
+        } elsif ($delta1 =~ /^\*([0-9\.e+-]+)$/) {
             if ($1 <= 1) { die "don't be stupid."; }
             $SEARCH{$vwArg1}{TIMES} = $1;
         } else { die "usage: --orsearch [argname1] [min1] [max1] [step1] [argname2] [min2] [max2] [step2]"; }
@@ -171,10 +171,10 @@ while (1) {
         $SEARCH{$vwArg1}{ORSEARCH} = $vwArg2;
         $SEARCH{$vwArg1}{MIN2} = $minVal2;
         $SEARCH{$vwArg1}{MAX2} = $maxVal2;
-        if ($delta2 =~ /^\+([0-9\.]+)$/) {
+        if ($delta2 =~ /^\+([0-9\.e+-]+)$/) {
             if ($1 <= 0) { die "don't be stupid."; }
             $SEARCH{$vwArg1}{PLUS2} = $1;
-        } elsif ($delta2 =~ /^\*([0-9\.]+)$/) {
+        } elsif ($delta2 =~ /^\*([0-9\.e+-]+)$/) {
             if ($1 <= 1) { die "don't be stupid."; }
             $SEARCH{$vwArg1}{TIMES2} = $1;
         } else { die "usage: --orsearch [argname1] [min1] [max1] [step1] [argname2] [min2] [max2] [step2]"; }

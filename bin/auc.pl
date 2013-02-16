@@ -38,23 +38,45 @@ while (1) {
         if (not defined $set) { $set = ''; }
         push @S, $set;
     }
-    my $area = compute_auroc(0, \@P, \@Y);
-    my $prfStr = $doPRF ? ("\t" . compute_prf(\@P, \@Y, \@S)) : '';
-    print $area . $prfStr;
+    if ($doPRF) {
+        my $prfStr = compute_prf(\@P, \@Y, \@S);
+        print  $prfStr;
+    } else {
+        my $area = compute_auroc(0, \@P, \@Y);
+        print $area;
+    }
 }
-
 
 sub compute_prf {
     my ($P, $Y, $S) = @_;
+
+    my %thresh = ();
+    foreach my $p (@$P) { $thresh{$p} = 1; }
+    
+    my $bestMac = 0;
+    my $bestStr = '';
+    foreach my $thresh (keys %thresh) {
+        my $str = compute_prf0($P, $Y, $S, $thresh);
+        my ($mac) = split /\s+/, $str;
+        if ($mac >= $bestMac) {
+            $bestMac = $mac;
+            $bestStr = $str;
+        }
+    }
+
+    return $bestStr;
+}
+
+sub compute_prf0 {
+    my ($P, $Y, $S, $threshold) = @_;
 
     my %macro = ();
     my %prf = ();
     for (my $n=0; $n<@$P; $n++) {
         my $y = $Y->[$n]; my $p = $P->[$n];
-        $y = ($y > 0) ? 1 : 0;
-        if ($y) { $prf{$S->[$n]}{Y}++; }
-        if ($p) { $prf{$S->[$n]}{P}++; 
-                  if ($y) { $prf{$S->[$n]}{I}++; }
+        if ($y>0) { $prf{$S->[$n]}{Y}++; }
+        if ($p>$threshold) { $prf{$S->[$n]}{P}++; 
+                             if ($y>0) { $prf{$S->[$n]}{I}++; }
         }
     }
     foreach my $s (keys %prf) {
@@ -80,8 +102,8 @@ sub compute_prf1 {
     $prf->{Y} += 0;
     $prf->{P} += 0;
     $prf->{I} += 0;
-    my $pre = ($prf->{I} <= 0) ? 0 : ($prf->{I} / $prf->{P});
-    my $rec = ($prf->{I} <= 0) ? 0 : ($prf->{I} / $prf->{Y});
+    my $pre = ($prf->{P} <= 0) ? 1 : ($prf->{I} / $prf->{P});
+    my $rec = ($prf->{Y} <= 0) ? 1 : ($prf->{I} / $prf->{Y});
     my $f   = ($pre + $rec > 0) ? (2 * $pre * $rec / ($pre + $rec)) : 0;
     return ($pre,$rec,$f);
 }

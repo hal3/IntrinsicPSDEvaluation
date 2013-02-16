@@ -174,6 +174,7 @@ for (my $n=0; $n<$N; $n++) {
 }
 =cut
 
+my @restScores = ();
 my @aucs = ();
 for (my $fold=0; $fold<$numFolds; $fold++) {
     print STDERR "===== FOLD " . ($fold+1) . " / $numFolds =====\n" if ($numFolds > 1) && (not $quiet);
@@ -230,10 +231,10 @@ for (my $fold=0; $fold<$numFolds; $fold++) {
 
     if ($doBucketing) {
         my %bucketInfo = makeBuckets(@train);
-        @train    = applyBuckets(\%bucketInfo, \@train);
-        @dev      = applyBuckets(\%bucketInfo, \@dev);
-        @traindev = applyBuckets(\%bucketInfo, \@traindev);
-        @test     = applyBuckets(\%bucketInfo, \@test);
+        @train    = applyBuckets(\%bucketInfo, \@train, 1);
+        @dev      = applyBuckets(\%bucketInfo, \@dev, 0);
+        @traindev = applyBuckets(\%bucketInfo, \@traindev, 0);
+        @test     = applyBuckets(\%bucketInfo, \@test, 0);
 
         open O, "> classifiers/$experiment.buckets" or die $!;
         foreach my $f (sort keys %bucketInfo) {
@@ -243,7 +244,7 @@ for (my $fold=0; $fold<$numFolds; $fold++) {
 
     }
 
-    my $auc;
+    my $auc; my $rest = '';
     if ($classifier ne 'oracleType') {
         writeFile("classifiers/$experiment.train", @train);
         writeFile("classifiers/$experiment.traindev", @traindev);
@@ -251,7 +252,7 @@ for (my $fold=0; $fold<$numFolds; $fold++) {
         writeFile("classifiers/$experiment.test" , @test);
 
         if (($classifier eq 'vw') || ($classifier eq 'bfgs')) {
-            $auc = run_vw($fold,
+            ($auc,$rest) = run_vw($fold,
                           "classifiers/$experiment.train",    scalar @train,
                           "classifiers/$experiment.dev",      scalar @dev,
                           "classifiers/$experiment.traindev", scalar @traindev,
@@ -271,6 +272,7 @@ for (my $fold=0; $fold<$numFolds; $fold++) {
         $auc = compute_oracleType(\@traindev, \@test);
     }
     push @aucs, $auc;
+    push @restScores, $rest;
     print STDERR "\n" if not $quiet;
 }
 
@@ -280,6 +282,26 @@ foreach my $auc (@aucs) { $avgAuc += $auc; $stdAuc += $auc*$auc; }
 $avgAuc /= $numFolds;
 $stdAuc = sqrt($stdAuc / $numFolds - $avgAuc*$avgAuc);
 print "Average score $avgAuc (std $stdAuc)\n";
+
+my $avgStr = 'Average FPR:';
+my $stdStr = 'Std.dev FPR:';
+foreach my $i (0,1,2,4,5,6) {
+    my $avg = 0;
+    my $std = 0;
+    foreach my $str (@restScores) {
+        my @strS = split /\s+/, $str;
+        my $v = $strS[$i];
+        $avg += $v;
+        $std += $v*$v;
+    }
+    $avg /= $numFolds;
+    $std = sqrt($std / $numFolds - $avg*$avg);
+    $avgStr .= ' ' . $avg;
+    $stdStr .= ' ' . $std;
+    if ($i == 2) { $avgStr .= ' <-macroFPR-|-microFPR->';
+                   $stdStr .= ' <-macroFPR-|-microFPR->'; }
+}
+print $avgStr . "\n" . $stdStr . "\n";
 
 sub compute_oracleType {
     my ($trainDev, $test) = @_;
@@ -312,7 +334,8 @@ sub run_vw {
     my ($fold, $trF, $trN, $deF, $deN, $trdeF, $trdeN, $teF, $teN) = @_;
 
     my $numPasses = 20;
-    my $VWX = 'bin/vwx --vw /export/ws12/damt/src/vowpal_wabbit/vowpalwabbit/vw';
+    #my $VWX = 'bin/vwx --vw /export/ws12/damt/src/vowpal_wabbit/vowpalwabbit/vw';
+    my $VWX = 'bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw';
     
     my $largeReg = 10 / $trN;
     my $stepReg = $largeReg / 5;
@@ -324,8 +347,9 @@ sub run_vw {
     my $cmd = "$VWX -d $trF --dev $deF --eval auroc --logistic $searchArgs";
     if ($classifier eq 'bfgs') { $cmd .= ' --args --bfgs'; }
     print STDERR "Running: $cmd\n" if not $quiet;
+    my $vwxStr = '';
     open VWX, "$cmd 2>&1 |" or die;
-    while (<VWX>) {
+    while (<VWX>) { $vwxStr .= $_;
         print STDERR "." if (not $showclassifier) && (not $quiet);
         print STDERR "vwx>> $_" if $showclassifier;
         chomp;
@@ -338,12 +362,17 @@ sub run_vw {
         }
     }
     close VWX;
-    if (not defined $bestScore) { die "vwx didn't succeed"; }
+    if (not defined $bestScore) { 
+        print "==============================================================\n";
+        print "$vwxStr\n";
+        print "==============================================================\n";
+        die "vwx didn't succeed: $!"; 
+    }
     print STDERR "\ndev  score = $bestScore on pass $bestPass with config $bestConfig\n" if not $quiet;
 
 
     my $score;
-    $cmd = "$VWX -d $trdeF --dev $teF --eval auroc --logistic --passes $bestPass --noearlystop --readable classifiers/$experiment.fold=$fold.vwmodel --args $bestConfig";
+    $cmd = "$VWX -d $trdeF --dev $teF --eval auroc --logistic --passes $bestPass --noearlystop --readable classifiers/$experiment.fold=$fold.vwmodel --args $bestConfig -p $teF.predictions";
     if ($classifier eq 'bfgs') { $cmd .= ' --bfgs'; }
     print STDERR "Running: $cmd\n"  if not $quiet;
     open VWX, "$cmd 2>&1 |" or die;
@@ -356,12 +385,15 @@ sub run_vw {
         }
     }
     close VWX;
-
     if (not defined $score) { die "vwx didn't succeed"; }
 
     print STDERR " \n"  if not $quiet;
+
+    my $prf = `paste $teF.predictions $teF | perl -ne 'chomp; \@a=split; print "\$a[0] \$a[1] \$a[3]\n";' | bin/auc.pl -prf`;
+    print STDERR "$prf\n" if not $quiet;
+
     print "fold $fold score = $score\n";
-    return $score;
+    return ($score, $prf);
 }
 
 sub run_dt {
@@ -456,6 +488,7 @@ sub writeFile {
 
         if (($classifier eq 'vw') || ($classifier eq 'bfgs'))  { print O ' |'; }
 
+        print O ' phrase_id=' . $data[$n]{'phrase'};
         foreach my $f (keys %{$data[$n]}) {
             if ($f =~ /___/) {
                 if ($data[$n]{$f} == 0) { next; }
@@ -685,7 +718,7 @@ sub readSeenList {
 }
 
 sub applyBuckets {
-    my ($bucketInfo, $data) = @_;
+    my ($bucketInfo, $data, $warnMissingBuckets) = @_;
 
     my @data_new = ();
     for (my $n=0; $n<@$data; $n++) {
@@ -696,7 +729,7 @@ sub applyBuckets {
                 next;
             }
             if (not defined $bucketInfo->{$f}) { 
-                print STDERR "warning: no bucket info for '$f' -- skipping\n";
+                print STDERR "warning: no bucket info for '$f' -- skipping\n" if $warnMissingBuckets;
                 next;
             }
             my $v = $data->[$n]{$f};
