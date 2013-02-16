@@ -10,16 +10,17 @@ my $evensplit = 1;
 my $regularize = 1;
 my $maxBuckets = 10;
 my %ignoreFeatures = ();
-my $maxTokPerType = 10;
+my $maxTokPerType = 100000;
+my $mostFreqSenseEval = 0;
 my $quiet = 0;
 
-my $pruneMaxCount   = 20;   # keep at most 20 en translations for each fr word
-my $pruneMaxProbSum = 0.95; # AND keep at most 95% of the probability mass for p(en|fr)
-my $pruneMinRelProb = 0.01; # AND remove english translations that are more than 100* worse than the best one
+my $pruneMaxCount   = 20;    # keep at most 20 en translations for each fr word
+my $pruneMaxProbSum = 0.95;  # AND keep at most 95% of the probability mass for p(en|fr)
+my $pruneMinRelProb = 0.01;  # AND remove english translations that are more than 100* worse than the best one
 my $doPrune = 0;
 
 my $srandNum = 2780;
-my $seenFName = "source_data/seen.hansard32.gz";
+my $seenFName = "source_data/seen.hansard.gz";
 
 my $USAGE = "usage: run_experiment.pl (dataspec) (options)
 
@@ -37,12 +38,13 @@ where options includes:
   -seen file       read seen pairs from file [$seenFName]
   -ignore str      ignore features named string (multiple allowed)
   -srand #         seed random number generated with # or X for prng [$srandNum]
-  -classifier str  specify classifier to use [$classifier]
+  -classifier str  specify classifier to use [$classifier] (eg: vw, bfgw, dt, oracleType)
   -showclassifier  show output from classifier
   -dontbucket      bucket features (make them all binary)
   -dontevensplit   don't run the (hacky) thing for making even splits
   -dontregularize  turn of (search for) regularization parameters
   -maxtokpertype # only keep at most # tokens for each unique type [$maxTokPerType]
+  -mfs             change eval to 'is this OLD mfs'? [def: is this a new sense?]
   -q               be (sort of) quiet
 
   -pruneMC #       keep at most # en translations for each fr word [$pruneMaxCount]
@@ -78,6 +80,7 @@ while (1) {
     elsif ($arg eq '-showclassifier') { $showclassifier = 1; }
     elsif ($arg eq '-dontevensplit') { $evensplit = 0; }
     elsif ($arg eq '-dontregularize') { $regularize = 0; }
+    elsif ($arg eq '-mfs') { $mostFreqSenseEval = 1; }
     elsif ($arg eq '-q') { $quiet = 1; }
     else { die $USAGE; }
 }
@@ -108,7 +111,13 @@ if (not -d "source_data") { die "cannot find source_data directory"; }
 if (not -d "features")    { die "cannot find features directory"; }
 if (not -d "classifiers") { die "cannot find classifiers directory"; }
 
-my %seen = readSeenList();
+my %seen_or_mfs = ();
+if ($mostFreqSenseEval) {
+    %seen_or_mfs = readMFSList();
+} else {
+    %seen_or_mfs = readSeenList();
+}
+
 my %warnUnseen = ();
 my %numTypes = ();
 
@@ -234,28 +243,32 @@ for (my $fold=0; $fold<$numFolds; $fold++) {
 
     }
 
-    writeFile("classifiers/$experiment.train", @train);
-    writeFile("classifiers/$experiment.traindev", @traindev);
-    writeFile("classifiers/$experiment.dev"  , @dev);
-    writeFile("classifiers/$experiment.test" , @test);
-
     my $auc;
-    if (($classifier eq 'vw') || ($classifier eq 'bfgs')) {
-        $auc = run_vw($fold,
-                      "classifiers/$experiment.train",    scalar @train,
-                      "classifiers/$experiment.dev",      scalar @dev,
-                      "classifiers/$experiment.traindev", scalar @traindev,
-                      "classifiers/$experiment.test",     scalar @test
-                      );
-    } elsif ($classifier eq 'dt') {
-        $auc = run_dt($fold,
-                      "classifiers/$experiment.train",    scalar @train,
-                      "classifiers/$experiment.dev",      scalar @dev,
-                      "classifiers/$experiment.traindev", scalar @traindev,
-                      "classifiers/$experiment.test",     scalar @test
-                      );
+    if ($classifier ne 'oracleType') {
+        writeFile("classifiers/$experiment.train", @train);
+        writeFile("classifiers/$experiment.traindev", @traindev);
+        writeFile("classifiers/$experiment.dev"  , @dev);
+        writeFile("classifiers/$experiment.test" , @test);
+
+        if (($classifier eq 'vw') || ($classifier eq 'bfgs')) {
+            $auc = run_vw($fold,
+                          "classifiers/$experiment.train",    scalar @train,
+                          "classifiers/$experiment.dev",      scalar @dev,
+                          "classifiers/$experiment.traindev", scalar @traindev,
+                          "classifiers/$experiment.test",     scalar @test
+                );
+        } elsif ($classifier eq 'dt') {
+            $auc = run_dt($fold,
+                          "classifiers/$experiment.train",    scalar @train,
+                          "classifiers/$experiment.dev",      scalar @dev,
+                          "classifiers/$experiment.traindev", scalar @traindev,
+                          "classifiers/$experiment.test",     scalar @test
+                );
+        } else {
+            die "unknown classifier '$classifier'";
+        }
     } else {
-        die "unknown classifier '$classifier'";
+        $auc = compute_oracleType(\@traindev, \@test);
     }
     push @aucs, $auc;
     print STDERR "\n" if not $quiet;
@@ -268,12 +281,38 @@ $avgAuc /= $numFolds;
 $stdAuc = sqrt($stdAuc / $numFolds - $avgAuc*$avgAuc);
 print "Average score $avgAuc (std $stdAuc)\n";
 
+sub compute_oracleType {
+    my ($trainDev, $test) = @_;
+
+    my %type = ();
+    for (my $n=0; $n<@$trainDev; $n++) {
+        my $y = $trainDev->[$n]{'label'};
+        my $w = $trainDev->[$n]{'phrase'};
+        $type{$w} += $y;
+    }
+
+    open ORAC, "> classifiers/.tmpforauc" or die;
+    for (my $n=0; $n<@$test; $n++) {
+        my $y = $test->[$n]{'label'};
+        my $w = $test->[$n]{'phrase'};
+        my $yhat = rand() * 2 - 1;
+        if (defined $type{$w}) {
+            $yhat = $type{$w};
+        }
+        print ORAC $yhat . ' ' . $y . "\n";
+    }
+    close ORAC or die;
+    my $auc = `cat classifiers/.tmpforauc | bin/auc.pl`;
+    chomp $auc;
+    return $auc;
+}
+
 
 sub run_vw {
     my ($fold, $trF, $trN, $deF, $deN, $trdeF, $trdeN, $teF, $teN) = @_;
 
     my $numPasses = 20;
-    my $VWX = 'bin/vwx';
+    my $VWX = 'bin/vwx --vw /export/ws12/damt/src/vowpal_wabbit/vowpalwabbit/vw';
     
     my $largeReg = 10 / $trN;
     my $stepReg = $largeReg / 5;
@@ -444,15 +483,20 @@ sub generateData {
         chomp;
         my ($snt_id, $fr_start, $fr_end, $en_start, $en_end, $fr_phrase, $en_phrase) = split /\t/, $_;
         my $Y = '';
-        if (not exists $seen{$fr_phrase}) {
-            $warnUnseen{$fr_phrase} = 1;
+        if ($mostFreqSenseEval) {
+            if (not exists $seen_or_mfs{$fr_phrase}) {
+                $warnUnseen{$fr_phrase} = 1;
+            } else {
+                $Y = (exists $seen_or_mfs{$fr_phrase}{$en_phrase}) ? -1 : 1;
+            }
         } else {
-            $Y = (exists $seen{$fr_phrase}{$en_phrase}) ? -1 : 1;
+            if (not exists $seen_or_mfs{$fr_phrase}) {
+                $warnUnseen{$fr_phrase} = 1;
+            } else {
+                $Y = (exists $seen_or_mfs{$fr_phrase}{$en_phrase}) ? -1 : 1;
+            }
         }
 #        print O $Y . "\t" . $_ . "\n";
-
-        if ((defined $numTypes{$fr_phrase}) && ($numTypes{$fr_phrase} >= $maxTokPerType)) { next; }
-        $numTypes{$fr_phrase}++;
 
         push @W, $fr_phrase;
         push @Y, $Y;
@@ -472,7 +516,6 @@ sub generateData {
             print STDERR "Skipping features from $fname\n" if not $quiet;
             next;
         }
-
         
         print STDERR "Reading features from $fname\n" if not $quiet;
         open F, $fname or die $!;
@@ -507,9 +550,12 @@ sub generateData {
 
     open LS, "find features/ -iname \"$domReal.token.*\" |" or die $!;
     while (my $fname = <LS>) {
-        $fname =~ /^$domReal\.token\.(.+)$/;
-        my $user = $1;
-        if (not defined $user) { print STDERR "skipping file $fname...\n" if not $quiet; next; }
+	chomp $fname;
+        $fname =~ /^(.+)\.token\.(.+)$/;
+        #$fname =~ /\/^$domReal\.token\.(.+)$/;
+        my $user = $2;
+        if (not defined $user) { print STDERR "skipping token file with name $fname ...\n" if not $quiet; next; }
+
         if (exists $ignoreFeatures{$user}) {
             print STDERR "Skipping features from $fname\n" if not $quiet;
             next;
@@ -520,25 +566,40 @@ sub generateData {
         open F, $fname or die $!;
         while (<F>) {
             chomp;
-            if ($n >= @F) { 
-                print STDERR "error: too many lines in file $fname, ignoring the rest but things are wacky and you should harangue someone about this...\n";
-                last;
-            }
             my @feats = split;
-            foreach my $fval (@feats) {
-                my ($f,$val) = split_fval($fval);
-                $F[$n]{$user . '___token_' . $f} = $val;
+            if ($n < @F) {
+                foreach my $fval (@feats) {
+                    my ($f,$val) = split_fval($fval);
+                    $F[$n]{$user . '___token_' . $f} = $val;
+                }
             }
             $n++;
         }
         close F;
+        if ($n > @F) { 
+            print STDERR "error: too many lines in file $fname, ignoring the rest but things are wacky and you should harangue someone about this ($n versus " . (scalar @F) . ")...\n";
+        }
         if ($n < @F) {
-            print STDERR "error: too few lines in file $fname... things are wacky and you should harangue someone about this...\n";
+            print STDERR "error: too few lines in file $fname... things are wacky and you should harangue someone about this ($n versus " . (scalar @F) . ")...\n";
         }
     }
     close LS;
 
-    return (@F);
+    my @Fpruned = ();
+    for (my $n=0; $n<@F; $n++) {
+        my $p = $F[$n]{'phrase'};
+        if (not defined $p) { next; }
+        
+        if ((defined $numTypes{$p}) && ($numTypes{$p} >= $maxTokPerType)) { next; }
+        $numTypes{$p}++;
+
+        my $n0 = scalar @Fpruned;
+        foreach my $k (keys %{$F[$n]}) {
+            $Fpruned[$n0]{$k} = $F[$n]{$k};
+        }
+    }
+
+    return (@Fpruned);
 }
 
 sub split_fval {
@@ -551,6 +612,36 @@ sub split_fval {
     }
     return ($f,$v);
 }
+
+sub readMFSList {
+    open F, "zcat $seenFName|" or die $!;
+    my %seenTmp = ();
+    while (<F>) {
+        chomp;
+        my ($fr_phrase, $en_phrase, $p_e_given_f) = split /\t/, $_;
+        if (defined $p_e_given_f) {
+            $seenTmp{$fr_phrase}{$en_phrase} = $p_e_given_f;
+        }
+    }
+    close F;
+
+    my %mfs = ();
+    foreach my $fr (keys %seenTmp) {
+        my $maxP = -1;
+        foreach my $v (values %{$seenTmp{$fr}}) {
+            if ($v > $maxP) { $maxP = $v; }
+        }
+        if ($maxP < 0) { next; }
+        foreach my $en (keys %{$seenTmp{$fr}}) {
+            if ($seenTmp{$fr}{$en} >= $maxP) {
+                $mfs{$fr}{$en} = 1;
+            }
+        }
+    }
+
+    return (%mfs);
+}
+
 
 sub readSeenList {
     open F, "zcat $seenFName|" or die $!;
