@@ -1,9 +1,11 @@
 #!/usr/bin/perl -w
 use strict;
 
+my $doPRF = 0;
 while (1) {
     my $tmp = shift or last;
-    if ($tmp eq '-rand') { 
+    if ($tmp eq '-prf') { $doPRF = 1; next; }
+    elsif ($tmp eq '-rand') { 
         my $numRep = shift or die;
         my $nP = shift or die;
         my $nN = shift or die;
@@ -27,15 +29,61 @@ while (1) {
 }
 
 {
-    my @P = (); my @Y = ();
+    my @P = (); my @Y = (); my @S = ();
     while (<>) {
         chomp;
-        my ($p,$y) = split;
+        my ($p,$y,$set) = split;   # set is only used for micro PRF
         push @P, $p;
         push @Y, $y;
+        if (not defined $set) { $set = ''; }
+        push @S, $set;
     }
     my $area = compute_auroc(0, \@P, \@Y);
-    print $area . "\n";
+    my $prfStr = $doPRF ? ("\t" . compute_prf(\@P, \@Y, \@S)) : '';
+    print $area . $prfStr;
+}
+
+
+sub compute_prf {
+    my ($P, $Y, $S) = @_;
+
+    my %macro = ();
+    my %prf = ();
+    for (my $n=0; $n<@$P; $n++) {
+        my $y = $Y->[$n]; my $p = $P->[$n];
+        $y = ($y > 0) ? 1 : 0;
+        if ($y) { $prf{$S->[$n]}{Y}++; }
+        if ($p) { $prf{$S->[$n]}{P}++; 
+                  if ($y) { $prf{$S->[$n]}{I}++; }
+        }
+    }
+    foreach my $s (keys %prf) {
+        foreach my $a (keys %{$prf{$s}}) {
+            $macro{$a} += $prf{$s}{$a};
+        }
+    }
+    my ($macP, $macR, $macF) = compute_prf1(\%macro);
+    my $micP = 0; my $micR = 0; my $micF = 0;
+    foreach my $s (keys %prf) {
+        my ($p, $r, $f) = compute_prf1(\%{$prf{$s}});
+        $micP += $p; $micR += $r; $micF += $f;
+    }
+    $micP /= scalar keys %prf;
+    $micR /= scalar keys %prf;
+    $micF /= scalar keys %prf;
+
+    return "$macF $macP $macR <-macroFPR-|-microFPR-> $micF $micP $micR";
+}
+
+sub compute_prf1 {
+    my ($prf) = @_;
+    $prf->{Y} += 0;
+    $prf->{P} += 0;
+    $prf->{I} += 0;
+    my $pre = ($prf->{I} <= 0) ? 0 : ($prf->{I} / $prf->{P});
+    my $rec = ($prf->{I} <= 0) ? 0 : ($prf->{I} / $prf->{Y});
+    my $f   = ($pre + $rec > 0) ? (2 * $pre * $rec / ($pre + $rec)) : 0;
+    return ($pre,$rec,$f);
 }
 
 

@@ -10,7 +10,7 @@ my $evensplit = 1;
 my $regularize = 1;
 my $maxBuckets = 10;
 my %ignoreFeatures = ();
-my $maxTokPerType = 10;
+my $maxTokPerType = 100000;
 my $mostFreqSenseEval = 0;
 my $quiet = 0;
 
@@ -588,6 +588,7 @@ sub generateData {
     my @Fpruned = ();
     for (my $n=0; $n<@F; $n++) {
         my $p = $F[$n]{'phrase'};
+        if (not defined $p) { next; }
         
         if ((defined $numTypes{$p}) && ($numTypes{$p} >= $maxTokPerType)) { next; }
         $numTypes{$p}++;
