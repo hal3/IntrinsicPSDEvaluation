@@ -14,6 +14,8 @@ my $maxTokPerType = 100;
 my $mostFreqSenseEval = 0;
 my $quiet = 0;
 
+my $allowToken = 1;
+
 my $pruneMaxCount   = 20;    # keep at most 20 en translations for each fr word
 my $pruneMaxProbSum = 0.95;  # AND keep at most 95% of the probability mass for p(en|fr)
 my $pruneMinRelProb = 0.01;  # AND remove english translations that are more than 100* worse than the best one
@@ -42,7 +44,8 @@ where options includes:
   -showclassifier  show output from classifier
   -dontbucket      bucket features (make them all binary)
   -dontevensplit   don't run the (hacky) thing for making even splits
-  -dontregularize  turn of (search for) regularization parameters
+  -dontregularize  turn off (search for) regularization parameters
+  -notoken         turn off all token-based features
   -maxtokpertype # only keep at most # tokens for each unique type [$maxTokPerType]
   -mfs             change eval to 'is this OLD mfs'? [def: is this a new sense?]
   -q               be (sort of) quiet
@@ -67,6 +70,7 @@ while (1) {
     elsif ($arg eq '-dontbucket') { $doBucketing = 0; }
     elsif ($arg eq '-maxbuckets') { $maxBuckets = shift or die "-maxbuckets needs an argument"; }
     elsif ($arg eq '-exp') { $experiment = shift or die "-exp needs an argument"; }
+    elsif ($arg eq '-notoken') { $allowToken = 0; }
     elsif ($arg eq '-maxtokpertype') { $maxTokPerType = shift or die "-maxtokpertype needs an argument"; }
     elsif ($arg eq '-pruneMC' ) { $pruneMaxCount = shift or die "-pruneMC needs an argument"; $doPrune = 1; }
     elsif ($arg eq '-pruneMPS') { $pruneMaxProbSum = shift or die "-pruneMPS needs an argument"; $doPrune = 1; }
@@ -89,7 +93,7 @@ if ($srandNum eq 'X') { srand(); }
 else { srand($srandNum); }
 
 my $needFeatures = 1;
-if (($classifier eq 'oracleType') || ($classifier eq 'random')) { $needFeatures = 0; }
+#if (($classifier eq 'oracleType') || ($classifier eq 'random')) { $needFeatures = 0; }
 
 my $isXV = 0;
 if (scalar keys %xvDom == 0) {
@@ -321,6 +325,7 @@ sub compute_oracleType {
     for (my $n=0; $n<@$trainDev; $n++) {
         my $y = $trainDev->[$n]{'label'};
         my $w = $trainDev->[$n]{'phrase'};
+        #print STDERR "+$w / $y\n";
         $type{$w} += $y;
     }
 
@@ -331,7 +336,8 @@ sub compute_oracleType {
         my $yhat = rand() * 2 - 1;
         if (defined $type{$w}) {
             $yhat = $type{$w};
-        }
+            #print STDERR "+";
+        }# else { print STDERR "-$w\n"; }
         $w =~ s/\s/_/g;
         print ORAC $yhat . ' ' . $y . ' ' . $w . "\n";
     }
@@ -628,6 +634,7 @@ sub generateData {
     open LS, "find features/ -iname \"$domReal.token.*\" |" or die $!;
     while (my $fname = <LS>) {
         if (not $needFeatures) { next; }
+        if (not $allowToken) { next; }
 	chomp $fname;
         $fname =~ /^(.+)\.token\.(.+)$/;
         #$fname =~ /\/^$domReal\.token\.(.+)$/;
