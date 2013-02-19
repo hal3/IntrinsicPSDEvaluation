@@ -1,10 +1,12 @@
 #!/usr/bin/perl -w
 use strict;
 
+my $bootstrap = 0;
 my $doPRF = 0;
 while (1) {
     my $tmp = shift or last;
     if ($tmp eq '-prf') { $doPRF = 1; next; }
+    elsif ($tmp eq '-bootstrap') { $bootstrap = shift or die; next; }
     elsif ($tmp eq '-rand') { 
         my $numRep = shift or die;
         my $nP = shift or die;
@@ -38,13 +40,53 @@ while (1) {
         if (not defined $set) { $set = ''; }
         push @S, $set;
     }
-    if ($doPRF) {
-        my $prfStr = compute_prf(\@P, \@Y, \@S);
-        print  $prfStr;
+    if ($bootstrap <= 1) {
+        if ($doPRF) { print compute_prf(\@P, \@Y, \@S); }
+        else {        print compute_auroc(0, \@P, \@Y); }
     } else {
-        my $area = compute_auroc(0, \@P, \@Y);
-        print $area;
+        my @all = ();
+        for (my $bs=0; $bs<$bootstrap; $bs++) {
+            my @P0 = (); my @Y0 = (); my @S0 = ();
+            for (my $n=0; $n<@P; $n++) {
+                my $m = int(rand() * scalar @P);
+                $P0[$n] = $P[$m];
+                $Y0[$n] = $Y[$m];
+                $S0[$n] = $S[$m];
+            }
+            if ($doPRF) { push @all, compute_prf(\@P0, \@Y0, \@S0); }
+            else {        push @all, compute_auroc(0 , \@P0, \@Y0); }
+        }
+        printBootstrap(@all);
     }
+}
+
+sub printBootstrap {
+    my @l = @_;
+    my @x = split /\s+/, $l[0];
+    my @mu = ();
+    my @st = ();
+    my $N = scalar @l;
+    for (my $i=0; $i<@x; $i++) {
+        if (not ($x[$i] =~ /^[0-9\.e+-]*$/)) {
+            push @mu, $x[$i];
+            push @st, $x[$i];
+        } else {
+            my $mu = 0;
+            my $st = 0;
+            for (my $n=0; $n<@l; $n++) {
+                my @y = split /\s+/, $l[$n];
+                $mu += $y[$i];
+                $st += $y[$i]*$y[$i];
+            }
+            $mu /= $N;
+            $st /= $N;
+            $st = sqrt($st - $mu*$mu);
+            push @mu, $mu;
+            push @st, $st;
+        }
+    }
+    print 'bootstrap-mean: ' . (join ' ', @mu) . "\n";
+    print 'bootstrap-stdd: ' . (join ' ', @st) . "\n";
 }
 
 sub compute_prf {
@@ -55,7 +97,7 @@ sub compute_prf {
     
     my $bestMac = 0;
     my $bestStr = '';
-    foreach my $thresh (keys %thresh) {
+    foreach my $thresh (0) { # keys %thresh) {
         my $str = compute_prf0($P, $Y, $S, $thresh);
         my ($mac) = split /\s+/, $str;
         if ($mac >= $bestMac) {

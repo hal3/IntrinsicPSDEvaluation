@@ -10,9 +10,11 @@ my $evensplit = 1;
 my $regularize = 1;
 my $maxBuckets = 10;
 my %ignoreFeatures = ();
-my $maxTokPerType = 100000;
+my $maxTokPerType = 100;
 my $mostFreqSenseEval = 0;
 my $quiet = 0;
+
+my $allowToken = 1;
 
 my $pruneMaxCount   = 20;    # keep at most 20 en translations for each fr word
 my $pruneMaxProbSum = 0.95;  # AND keep at most 95% of the probability mass for p(en|fr)
@@ -38,11 +40,12 @@ where options includes:
   -seen file       read seen pairs from file [$seenFName]
   -ignore str      ignore features named string (multiple allowed)
   -srand #         seed random number generated with # or X for prng [$srandNum]
-  -classifier str  specify classifier to use [$classifier] (eg: vw, bfgw, dt, oracleType)
+  -classifier str  specify classifier to use [$classifier] (eg: vw, bfgs, dt, oracleType, random)
   -showclassifier  show output from classifier
   -dontbucket      bucket features (make them all binary)
   -dontevensplit   don't run the (hacky) thing for making even splits
-  -dontregularize  turn of (search for) regularization parameters
+  -dontregularize  turn off (search for) regularization parameters
+  -notoken         turn off all token-based features
   -maxtokpertype # only keep at most # tokens for each unique type [$maxTokPerType]
   -mfs             change eval to 'is this OLD mfs'? [def: is this a new sense?]
   -q               be (sort of) quiet
@@ -67,6 +70,7 @@ while (1) {
     elsif ($arg eq '-dontbucket') { $doBucketing = 0; }
     elsif ($arg eq '-maxbuckets') { $maxBuckets = shift or die "-maxbuckets needs an argument"; }
     elsif ($arg eq '-exp') { $experiment = shift or die "-exp needs an argument"; }
+    elsif ($arg eq '-notoken') { $allowToken = 0; }
     elsif ($arg eq '-maxtokpertype') { $maxTokPerType = shift or die "-maxtokpertype needs an argument"; }
     elsif ($arg eq '-pruneMC' ) { $pruneMaxCount = shift or die "-pruneMC needs an argument"; $doPrune = 1; }
     elsif ($arg eq '-pruneMPS') { $pruneMaxProbSum = shift or die "-pruneMPS needs an argument"; $doPrune = 1; }
@@ -87,6 +91,9 @@ while (1) {
 
 if ($srandNum eq 'X') { srand(); }
 else { srand($srandNum); }
+
+my $needFeatures = 1;
+#if (($classifier eq 'oracleType') || ($classifier eq 'random')) { $needFeatures = 0; }
 
 my $isXV = 0;
 if (scalar keys %xvDom == 0) {
@@ -245,7 +252,11 @@ for (my $fold=0; $fold<$numFolds; $fold++) {
     }
 
     my $auc; my $rest = '';
-    if ($classifier ne 'oracleType') {
+    if ($classifier eq 'oracleType') {
+        ($auc,$rest) = compute_oracleType(\@traindev, \@test);
+    } elsif ($classifier eq 'random') {
+        ($auc,$rest) = compute_random(\@test);
+    } else {
         writeFile("classifiers/$experiment.train", @train);
         writeFile("classifiers/$experiment.traindev", @traindev);
         writeFile("classifiers/$experiment.dev"  , @dev);
@@ -268,12 +279,16 @@ for (my $fold=0; $fold<$numFolds; $fold++) {
         } else {
             die "unknown classifier '$classifier'";
         }
-    } else {
-        $auc = compute_oracleType(\@traindev, \@test);
     }
-    push @aucs, $auc;
-    push @restScores, $rest;
     print STDERR "\n" if not $quiet;
+    if ($isXV) {
+        push @aucs, $auc;
+        push @restScores, $rest;
+    } else {
+        print $auc . "\n";
+        print $rest . "\n";
+        exit;
+    }
 }
 
 my $avgAuc = 0;
@@ -310,6 +325,7 @@ sub compute_oracleType {
     for (my $n=0; $n<@$trainDev; $n++) {
         my $y = $trainDev->[$n]{'label'};
         my $w = $trainDev->[$n]{'phrase'};
+        #print STDERR "+$w / $y\n";
         $type{$w} += $y;
     }
 
@@ -320,15 +336,41 @@ sub compute_oracleType {
         my $yhat = rand() * 2 - 1;
         if (defined $type{$w}) {
             $yhat = $type{$w};
-        }
-        print ORAC $yhat . ' ' . $y . "\n";
+            #print STDERR "+";
+        }# else { print STDERR "-$w\n"; }
+        $w =~ s/\s/_/g;
+        print ORAC $yhat . ' ' . $y . ' ' . $w . "\n";
     }
     close ORAC or die;
-    my $auc = `cat classifiers/.tmpforauc | bin/auc.pl`;
+    my $bootstrap = '';
+    if (not $isXV) { $bootstrap = ' -bootstrap 100'; }
+    my $auc = `cat classifiers/.tmpforauc | bin/auc.pl $bootstrap`;
+    my $rest = `cat classifiers/.tmpforauc | bin/auc.pl -prf $bootstrap`;
     chomp $auc;
-    return $auc;
+    chomp $rest;
+    return ($auc, $rest);
 }
 
+sub compute_random {
+    my ($test) = @_;
+
+    open RAND, "> classifiers/.tmpforauc" or die;
+    for (my $n=0; $n<@$test; $n++) {
+        my $y = $test->[$n]{'label'};
+        my $w = $test->[$n]{'phrase'};
+        my $yhat = rand() * 2 - 1;
+        $w =~ s/\s/_/g;
+        print RAND $yhat . ' ' . $y . ' ' . $w . "\n";
+    }
+    close RAND or die;
+    my $bootstrap = '';
+    if (not $isXV) { $bootstrap = ' -bootstrap 100'; }
+    my $auc = `cat classifiers/.tmpforauc | bin/auc.pl $bootstrap`;
+    my $rest = `cat classifiers/.tmpforauc | bin/auc.pl -prf $bootstrap`;
+    chomp $auc;
+    chomp $rest;
+    return ($auc, $rest);
+}
 
 sub run_vw {
     my ($fold, $trF, $trN, $deF, $deN, $trdeF, $trdeN, $teF, $teN) = @_;
@@ -389,10 +431,14 @@ sub run_vw {
 
     print STDERR " \n"  if not $quiet;
 
-    my $prf = `paste $teF.predictions $teF | perl -ne 'chomp; \@a=split; print "\$a[0] \$a[1] \$a[3]\n";' | bin/auc.pl -prf`;
+    my $bootstrap = '';
+    if (not $isXV) { $bootstrap = ' -bootstrap 100'; }
+
+    $score = `paste $teF.predictions $teF | perl -ne 'chomp; \@a=split; print "\$a[0] \$a[1] \$a[3]\n";' | bin/auc.pl $bootstrap`;
+    my $prf = `paste $teF.predictions $teF | perl -ne 'chomp; \@a=split; print "\$a[0] \$a[1] \$a[3]\n";' | bin/auc.pl -prf $bootstrap`;
     print STDERR "$prf\n" if not $quiet;
 
-    print "fold $fold score = $score\n";
+    print "fold $fold score = $score\n" if $isXV;
     return ($score, $prf);
 }
 
@@ -461,7 +507,10 @@ sub get_dt_auc {
     }
     close F;
 
-    my $auc = `paste $teF.pred $teF | bin/auc.pl`;
+    my $bootstrap = '';
+    if (not $isXV) { $bootstrap = ' -bootstrap 100'; }
+
+    my $auc = `paste $teF.pred $teF | bin/auc.pl $bootstrap`;
     chomp $auc;
     return $auc;
 }
@@ -541,11 +590,12 @@ sub generateData {
     my $domReal = $dom; $domReal =~ s/-(old|big)//;
     open LS, "find features/ -iname \"$domReal.type.*\" |" or die $!;
     while (my $fname = <LS>) {
+        if (not $needFeatures) { next; }
         chomp $fname;
         $fname =~ /\/$domReal\.type\.(.+)$/;
         my $user = $1;
         if (not defined $user) { print STDERR "skipping file $fname...\n"  if not $quiet;; next; }
-        if (exists $ignoreFeatures{$user}) {
+        if (exists $ignoreFeatures{'type.' . $user}) {
             print STDERR "Skipping features from $fname\n" if not $quiet;
             next;
         }
@@ -583,13 +633,15 @@ sub generateData {
 
     open LS, "find features/ -iname \"$domReal.token.*\" |" or die $!;
     while (my $fname = <LS>) {
+        if (not $needFeatures) { next; }
+        if (not $allowToken) { next; }
 	chomp $fname;
         $fname =~ /^(.+)\.token\.(.+)$/;
         #$fname =~ /\/^$domReal\.token\.(.+)$/;
         my $user = $2;
         if (not defined $user) { print STDERR "skipping token file with name $fname ...\n" if not $quiet; next; }
 
-        if (exists $ignoreFeatures{$user}) {
+        if (exists $ignoreFeatures{'token.' . $user}) {
             print STDERR "Skipping features from $fname\n" if not $quiet;
             next;
         }

@@ -1,0 +1,7 @@
+for d in Science Subs EMEA ; do bin/run_experiment.pl -maxtokpertype 99999 -classifier random -nf 16 -xv $d > paper-results/xv.$d.random; done
+for d in Science Subs EMEA ; do bin/run_experiment.pl -maxtokpertype 99999 -classifier oracleType -nf 16 -xv $d > paper-results/xv.$d.oracleType; done
+
+for c in random oracleType ; do qsh.pl bin/run_experiment.pl -maxtokpertype 99999 -classifier random -nf 16 -tr Science -te EMEA -te Subs \> paper-results/te.Subs.$c ; done
+for c in random oracleType ; do qsh.pl bin/run_experiment.pl -maxtokpertype 99999 -classifier random -nf 16 -te Science -tr EMEA -tr Subs \> paper-results/te.Science.$c ; done
+for c in random oracleType ; do qsh.pl bin/run_experiment.pl -maxtokpertype 99999 -classifier random -nf 16 -tr Science -te EMEA -tr Subs \> paper-results/te.EMEA.$c ; done
+
