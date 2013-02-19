@@ -5,3 +5,41 @@ for c in random oracleType ; do qsh.pl bin/run_experiment.pl -maxtokpertype 9999
 for c in random oracleType ; do qsh.pl bin/run_experiment.pl -maxtokpertype 99999 -classifier random -nf 16 -te Science -tr EMEA -tr Subs \> paper-results/te.Science.$c ; done
 for c in random oracleType ; do qsh.pl bin/run_experiment.pl -maxtokpertype 99999 -classifier random -nf 16 -tr Science -te EMEA -tr Subs \> paper-results/te.EMEA.$c ; done
 
+
+
+for d in Science Subs EMEA ; do
+  qsh.pl bin/run_experiment.pl -exp xv.$d.notoken -maxtokpertype 99999 -nf 16 -notoken -xv $d \> paper-results/xv.$d.notoken
+done
+
+qsh.pl bin/run_experiment.pl -exp te.Subs.notoken    -maxtokpertype 99999 -nf 16 -notoken -tr Science -tr EMEA -te Subs \> paper-results/te.Subs.notoken
+qsh.pl bin/run_experiment.pl -exp te.EMEA.notoken    -maxtokpertype 99999 -nf 16 -notoken -tr Science -te EMEA -tr Subs \> paper-results/te.EMEA.notoken
+qsh.pl bin/run_experiment.pl -exp te.Science.notoken -maxtokpertype 99999 -nf 16 -notoken -te Science -tr EMEA -tr Subs \> paper-results/te.Science.notoken
+
+
+for subset in 0.01 0.02 0.05 0.1 0.2 0.4 0.6 0.8 1.0 ; do
+    for d in Science Subs EMEA ; do
+      qsh.pl bin/run_experiment.pl -exp xv.$d.notoken-subset=$subset -maxtokpertype 99999 -nf 16 -notoken -xv $d -subset $subset \> paper-results/xv.$d.notoken-subset=$subset
+    done
+
+    qsh.pl bin/run_experiment.pl -exp te.Subs.notoken-subset=$subset    -maxtokpertype 99999 -nf 16 -notoken -tr Science -tr EMEA -te Subs -subset $subset \> paper-results/te.Subs.notoken-subset=$subset
+    qsh.pl bin/run_experiment.pl -exp te.EMEA.notoken-subset=$subset    -maxtokpertype 99999 -nf 16 -notoken -tr Science -te EMEA -tr Subs -subset $subset \> paper-results/te.EMEA.notoken-subset=$subset
+    qsh.pl bin/run_experiment.pl -exp te.Science.notoken-subset=$subset -maxtokpertype 99999 -nf 16 -notoken -te Science -tr EMEA -tr Subs -subset $subset \> paper-results/te.Science.notoken-subset=$subset
+done
+
+###################### mfs
+
+for d in Science Subs EMEA ; do qsh.pl bin/run_experiment.pl -exp xv.$d.random -mfs -maxtokpertype 99999 -classifier random -nf 16 -xv $d \> paper-results-mfs/xv.$d.random; done
+for d in Science Subs EMEA ; do qsh.pl bin/run_experiment.pl -exp xv.$d.oracleType -mfs -maxtokpertype 99999 -classifier oracleType -nf 16 -xv $d \> paper-results-mfs/xv.$d.oracleType; done
+
+for c in random oracleType ; do qsh.pl bin/run_experiment.pl -exp te.Subs.$c    -mfs -maxtokpertype 99999 -classifier random -nf 16 -tr Science -te EMEA -te Subs \> paper-results-mfs/te.Subs.$c ; done
+for c in random oracleType ; do qsh.pl bin/run_experiment.pl -exp te.Science.$c -mfs -maxtokpertype 99999 -classifier random -nf 16 -te Science -tr EMEA -tr Subs \> paper-results-mfs/te.Science.$c ; done
+for c in random oracleType ; do qsh.pl bin/run_experiment.pl -exp te.EMEA.$c    -mfs -maxtokpertype 99999 -classifier random -nf 16 -tr Science -te EMEA -tr Subs \> paper-results-mfs/te.EMEA.$c ; done
+
+for d in Science Subs EMEA ; do
+  qsh.pl bin/run_experiment.pl -mfs -exp mfs-xv.$d.notoken -maxtokpertype 99999 -nf 16 -notoken -xv $d \> paper-results-mfs/xv.$d.notoken
+done
+
+qsh.pl bin/run_experiment.pl -mfs -exp mfs-te.Subs.notoken    -maxtokpertype 99999 -nf 16 -notoken -tr Science -tr EMEA -te Subs \> paper-results-mfs/te.Subs.notoken
+qsh.pl bin/run_experiment.pl -mfs -exp mfs-te.EMEA.notoken    -maxtokpertype 99999 -nf 16 -notoken -tr Science -te EMEA -tr Subs \> paper-results-mfs/te.EMEA.notoken
+qsh.pl bin/run_experiment.pl -mfs -exp mfs-te.Science.notoken -maxtokpertype 99999 -nf 16 -notoken -te Science -tr EMEA -tr Subs \> paper-results-mfs/te.Science.notoken
+

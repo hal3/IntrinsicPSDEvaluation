@@ -95,9 +95,19 @@ sub compute_prf {
     my %thresh = ();
     foreach my $p (@$P) { $thresh{$p} = 1; }
     
+    my @thresh0 = keys %thresh;
+    my @thresh = @thresh0;
+    if (@thresh > 10) {
+        @thresh = (0);
+        for (my $i=0; $i<10; $i++) {
+            my $j = int($i / 9 * (@thresh0-1));
+            push @thresh, $thresh0[$j];
+        }
+    }
+
     my $bestMac = 0;
     my $bestStr = '';
-    foreach my $thresh (0) { # keys %thresh) {
+    foreach my $thresh (@thresh) {
         my $str = compute_prf0($P, $Y, $S, $thresh);
         my ($mac) = split /\s+/, $str;
         if ($mac >= $bestMac) {
