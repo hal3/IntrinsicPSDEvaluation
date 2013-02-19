@@ -5,3 +5,13 @@ for c in random oracleType ; do qsh.pl bin/run_experiment.pl -maxtokpertype 9999
 for c in random oracleType ; do qsh.pl bin/run_experiment.pl -maxtokpertype 99999 -classifier random -nf 16 -te Science -tr EMEA -tr Subs \> paper-results/te.Science.$c ; done
 for c in random oracleType ; do qsh.pl bin/run_experiment.pl -maxtokpertype 99999 -classifier random -nf 16 -tr Science -te EMEA -tr Subs \> paper-results/te.EMEA.$c ; done
 
+
+
+for d in Science Subs EMEA ; do
+  qsh.pl bin/run_experiment.pl -maxtokpertype 99999 -nf 16 -notoken -xv $d \> paper-results/xv.$d.notoken
+done
+
+qsh.pl bin/run_experiment.pl -maxtokpertype 99999 -nf 16 -notoken -tr Science -tr EMEA -te Subs \> paper-results/xv.Subs.notoken
+qsh.pl bin/run_experiment.pl -maxtokpertype 99999 -nf 16 -notoken -tr Science -te EMEA -tr Subs \> paper-results/xv.EMEA.notoken
+qsh.pl bin/run_experiment.pl -maxtokpertype 99999 -nf 16 -notoken -te Science -tr EMEA -tr Subs \> paper-results/xv.Science.notoken
+
