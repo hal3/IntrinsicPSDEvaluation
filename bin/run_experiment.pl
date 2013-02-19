@@ -20,6 +20,7 @@ my $pruneMaxCount   = 20;    # keep at most 20 en translations for each fr word
 my $pruneMaxProbSum = 0.95;  # AND keep at most 95% of the probability mass for p(en|fr)
 my $pruneMinRelProb = 0.01;  # AND remove english translations that are more than 100* worse than the best one
 my $doPrune = 0;
+my $subsetPercent = 1.0;
 
 my $srandNum = 2780;
 my $seenFName = "source_data/seen.hansard.gz";
@@ -48,6 +49,7 @@ where options includes:
   -notoken         turn off all token-based features
   -maxtokpertype # only keep at most # tokens for each unique type [$maxTokPerType]
   -mfs             change eval to 'is this OLD mfs'? [def: is this a new sense?]
+  -subset #        keep only #% of the training data [def: $subsetPercent]
   -q               be (sort of) quiet
 
   -pruneMC #       keep at most # en translations for each fr word [$pruneMaxCount]
@@ -81,6 +83,7 @@ while (1) {
     elsif ($arg eq '-seen')     { $seenFName = shift or die "-seen needs an argument"; }
     elsif ($arg eq '-ignore')   { $ignoreFeatures{shift or die "-ignore needs an argument"} = 1; }
     elsif ($arg eq '-classifier')  { $classifier = shift or die "-classifier needs an argument"; }
+    elsif ($arg eq '-subset')  { $subsetPercent = shift or die "-subset needs an argument"; }
     elsif ($arg eq '-showclassifier') { $showclassifier = 1; }
     elsif ($arg eq '-dontevensplit') { $evensplit = 0; }
     elsif ($arg eq '-dontregularize') { $regularize = 0; }
@@ -223,6 +226,7 @@ for (my $fold=0; $fold<$numFolds; $fold++) {
         } elsif ($allData[$n]{'devfold'} == $fold) { 
             %{$dev[@dev]} = %{$allData[$n]};
         } else {
+            if (rand() > $subsetPercent) { next; }
             %{$train[@train]} = %{$allData[$n]};
         }
     }
