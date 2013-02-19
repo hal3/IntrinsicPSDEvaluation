@@ -28,12 +28,12 @@ done
 
 ###################### mfs
 
-for d in Science Subs EMEA ; do qsh.pl bin/run_experiment.pl -exp xv.$d.random -mfs -maxtokpertype 99999 -classifier random -nf 16 -xv $d \> paper-results-mfs/xv.$d.random; done
-for d in Science Subs EMEA ; do qsh.pl bin/run_experiment.pl -exp xv.$d.oracleType -mfs -maxtokpertype 99999 -classifier oracleType -nf 16 -xv $d \> paper-results-mfs/xv.$d.oracleType; done
+for d in Science Subs EMEA ; do qsh.pl bin/run_experiment.pl -exp mfs-xv.$d.random -mfs -maxtokpertype 99999 -classifier random -nf 16 -xv $d \> paper-results-mfs/xv.$d.random; done
+for d in Science Subs EMEA ; do qsh.pl bin/run_experiment.pl -exp mfs-xv.$d.oracleType -mfs -maxtokpertype 99999 -classifier oracleType -nf 16 -xv $d \> paper-results-mfs/xv.$d.oracleType; done
 
-for c in random oracleType ; do qsh.pl bin/run_experiment.pl -exp te.Subs.$c    -mfs -maxtokpertype 99999 -classifier random -nf 16 -tr Science -te EMEA -te Subs \> paper-results-mfs/te.Subs.$c ; done
-for c in random oracleType ; do qsh.pl bin/run_experiment.pl -exp te.Science.$c -mfs -maxtokpertype 99999 -classifier random -nf 16 -te Science -tr EMEA -tr Subs \> paper-results-mfs/te.Science.$c ; done
-for c in random oracleType ; do qsh.pl bin/run_experiment.pl -exp te.EMEA.$c    -mfs -maxtokpertype 99999 -classifier random -nf 16 -tr Science -te EMEA -tr Subs \> paper-results-mfs/te.EMEA.$c ; done
+for c in random oracleType ; do qsh.pl bin/run_experiment.pl -exp mfs-te.Subs.$c    -mfs -maxtokpertype 99999 -classifier random -nf 16 -tr Science -te EMEA -te Subs \> paper-results-mfs/te.Subs.$c ; done
+for c in random oracleType ; do qsh.pl bin/run_experiment.pl -exp mfs-te.Science.$c -mfs -maxtokpertype 99999 -classifier random -nf 16 -te Science -tr EMEA -tr Subs \> paper-results-mfs/te.Science.$c ; done
+for c in random oracleType ; do qsh.pl bin/run_experiment.pl -exp mfs-te.EMEA.$c    -mfs -maxtokpertype 99999 -classifier random -nf 16 -tr Science -te EMEA -tr Subs \> paper-results-mfs/te.EMEA.$c ; done
 
 for d in Science Subs EMEA ; do
   qsh.pl bin/run_experiment.pl -mfs -exp mfs-xv.$d.notoken -maxtokpertype 99999 -nf 16 -notoken -xv $d \> paper-results-mfs/xv.$d.notoken
@@ -42,4 +42,22 @@ done
 qsh.pl bin/run_experiment.pl -mfs -exp mfs-te.Subs.notoken    -maxtokpertype 99999 -nf 16 -notoken -tr Science -tr EMEA -te Subs \> paper-results-mfs/te.Subs.notoken
 qsh.pl bin/run_experiment.pl -mfs -exp mfs-te.EMEA.notoken    -maxtokpertype 99999 -nf 16 -notoken -tr Science -te EMEA -tr Subs \> paper-results-mfs/te.EMEA.notoken
 qsh.pl bin/run_experiment.pl -mfs -exp mfs-te.Science.notoken -maxtokpertype 99999 -nf 16 -notoken -te Science -tr EMEA -tr Subs \> paper-results-mfs/te.Science.notoken
+
+######################### token stuff
+
+for d in Science Subs EMEA ; do
+  qsh.pl bin/run_experiment.pl -exp xv.$d.withtoken -maxtokpertype 99999 -nf 16  -xv $d \> paper-results/xv.$d.withtoken
+done
+
+qsh.pl bin/run_experiment.pl -exp te.Subs.withtoken    -maxtokpertype 99999 -nf 16  -tr Science -tr EMEA -te Subs \> paper-results/te.Subs.withtoken
+qsh.pl bin/run_experiment.pl -exp te.EMEA.withtoken    -maxtokpertype 99999 -nf 16  -tr Science -te EMEA -tr Subs \> paper-results/te.EMEA.withtoken
+qsh.pl bin/run_experiment.pl -exp te.Science.withtoken -maxtokpertype 99999 -nf 16  -te Science -tr EMEA -tr Subs \> paper-results/te.Science.withtoken
+
+for d in Science Subs EMEA ; do
+  qsh.pl bin/run_experiment.pl -mfs -exp mfs-xv.$d.withtoken -maxtokpertype 99999 -nf 16  -xv $d \> paper-results-mfs/xv.$d.withtoken
+done
+
+qsh.pl bin/run_experiment.pl -mfs -exp mfs-te.Subs.withtoken    -maxtokpertype 99999 -nf 16  -tr Science -tr EMEA -te Subs \> paper-results-mfs/te.Subs.withtoken
+qsh.pl bin/run_experiment.pl -mfs -exp mfs-te.EMEA.withtoken    -maxtokpertype 99999 -nf 16  -tr Science -te EMEA -tr Subs \> paper-results-mfs/te.EMEA.withtoken
+qsh.pl bin/run_experiment.pl -mfs -exp mfs-te.Science.withtoken -maxtokpertype 99999 -nf 16  -te Science -tr EMEA -tr Subs \> paper-results-mfs/te.Science.withtoken
 
