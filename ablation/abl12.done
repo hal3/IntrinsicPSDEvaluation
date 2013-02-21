@@ -1,0 +1,3 @@
+ablation/abl12.EMEA.output.remove=token.hal-ppl 49.34 
+ablation/abl12.Science.output.remove=type.hal-ppl 50.00 
+ablation/abl12.Subs.output.remove=type.hal-ppl 50.00 

@@ -1,0 +1,161 @@
+Skipping features from features/EMEA.type.rachel-ngram
+Skipping features from features/EMEA.type.rachel-topic
+Skipping features from features/EMEA.type.hal-rf
+Skipping features from features/EMEA.type.hal-flow
+Skipping features from features/EMEA.type.hal-ppl
+Reading features from features/EMEA.token.hal-ppl
+Skipping features from features/EMEA.token.anni-context-percent
+Skipping features from features/EMEA.token.anni-context-pos
+Skipping features from features/EMEA.token.jags-psd
+Skipping features from features/EMEA.token.jags-psd-real
+Skipping features from features/EMEA.token.jags-local-psd
+Skipping features from features/EMEA.token.jags-local-psd-real
+Skipping features from features/EMEA.token.jags-psd-comp-real
+Read 35266 examples (18362 positive and 16904 negative, which is 52% positive)
+===== FOLD 1 / 16 =====
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl11.EMEA.remove=token.jags-local-psd-real.train --dev classifiers/abl11.EMEA.remove=token.jags-local-psd-real.dev --eval auroc --logistic --passes 15 --search --l2 0.000122503981379395 0.000367511944138185 +0.000122503981379395
+....................................................................................................................
+dev  score = 0.784509538795079 on pass 1 with config --l2 0.00024500796275879
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl11.EMEA.remove=token.jags-local-psd-real.traindev --dev classifiers/abl11.EMEA.remove=token.jags-local-psd-real.test --eval auroc --logistic --passes 1 --noearlystop --readable classifiers/abl11.EMEA.remove=token.jags-local-psd-real.fold=0.vwmodel --args --l2 0.00024500796275879 -p classifiers/abl11.EMEA.remove=token.jags-local-psd-real.test.predictions
+........................................... 
+0.663366336633663 0.740331491712707 0.600896860986547 <-macroFPR-|-microFPR-> 0.22673434856176 0.587121212121212 0.204892966360856
+
+===== FOLD 2 / 16 =====
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl11.EMEA.remove=token.jags-local-psd-real.train --dev classifiers/abl11.EMEA.remove=token.jags-local-psd-real.dev --eval auroc --logistic --passes 15 --search --l2 0.000128412563885251 0.000385237691655752 +0.000128412563885251
+fold 0 score = 0.779653833533851
+....................................................................................................................
+dev  score = 0.665790399995227 on pass 2 with config --l2 0.000256825127770502
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl11.EMEA.remove=token.jags-local-psd-real.traindev --dev classifiers/abl11.EMEA.remove=token.jags-local-psd-real.test --eval auroc --logistic --passes 2 --noearlystop --readable classifiers/abl11.EMEA.remove=token.jags-local-psd-real.fold=1.vwmodel --args --l2 0.000256825127770502 -p classifiers/abl11.EMEA.remove=token.jags-local-psd-real.test.predictions
+............................................. 
+0.75615866388309 0.64805868670603 0.90754196943122 <-macroFPR-|-microFPR-> 0.294847154772374 0.557135532179579 0.437957568823653
+
+===== FOLD 3 / 16 =====
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl11.EMEA.remove=token.jags-local-psd-real.train --dev classifiers/abl11.EMEA.remove=token.jags-local-psd-real.dev --eval auroc --logistic --passes 15 --search --l2 0.00010585707178168 0.000317571215345041 +0.00010585707178168
+fold 1 score = 0.702282623668343
+............................................................................................................................................................................
+dev  score = 0.675767719158007 on pass 14 with config --l2 0.00010585707178168
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl11.EMEA.remove=token.jags-local-psd-real.traindev --dev classifiers/abl11.EMEA.remove=token.jags-local-psd-real.test --eval auroc --logistic --passes 14 --noearlystop --readable classifiers/abl11.EMEA.remove=token.jags-local-psd-real.fold=2.vwmodel --args --l2 0.00010585707178168 -p classifiers/abl11.EMEA.remove=token.jags-local-psd-real.test.predictions
+................................................ 
+0.496321070234114 0.577881619937695 0.434935521688159 <-macroFPR-|-microFPR-> 0.355523317404564 0.773021390374332 0.325980257248315
+
+===== FOLD 4 / 16 =====
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl11.EMEA.remove=token.jags-local-psd-real.train --dev classifiers/abl11.EMEA.remove=token.jags-local-psd-real.dev --eval auroc --logistic --passes 15 --search --l2 0.000103848630236567 0.000311545890709702 +0.000103848630236567
+fold 2 score = 0.595612253116526
+............................................................................................................................................................................
+dev  score = 0.848697428847664 on pass 1 with config --l2 0.000207697260473134
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl11.EMEA.remove=token.jags-local-psd-real.traindev --dev classifiers/abl11.EMEA.remove=token.jags-local-psd-real.test --eval auroc --logistic --passes 1 --noearlystop --readable classifiers/abl11.EMEA.remove=token.jags-local-psd-real.fold=3.vwmodel --args --l2 0.000207697260473134 -p classifiers/abl11.EMEA.remove=token.jags-local-psd-real.test.predictions
+........................................... 
+0.426147077309868 0.707724425887265 0.304856115107914 <-macroFPR-|-microFPR-> 0.241655122878912 0.762898590770931 0.263875002702133
+
+===== FOLD 5 / 16 =====
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl11.EMEA.remove=token.jags-local-psd-real.train --dev classifiers/abl11.EMEA.remove=token.jags-local-psd-real.dev --eval auroc --logistic --passes 15 --search --l2 0.000101890060624586 0.000305670181873758 +0.000101890060624586
+fold 3 score = 0.639458608551755
+....................................................................................................................
+dev  score = 0.66873213252188 on pass 3 with config --l2 0.000203780121249172
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl11.EMEA.remove=token.jags-local-psd-real.traindev --dev classifiers/abl11.EMEA.remove=token.jags-local-psd-real.test --eval auroc --logistic --passes 3 --noearlystop --readable classifiers/abl11.EMEA.remove=token.jags-local-psd-real.fold=4.vwmodel --args --l2 0.000203780121249172 -p classifiers/abl11.EMEA.remove=token.jags-local-psd-real.test.predictions
+.............................................. 
+0.661469933184855 0.820441988950276 0.55410447761194 <-macroFPR-|-microFPR-> 0.4125502046513 0.817533585761349 0.455239097639092
+
+===== FOLD 6 / 16 =====
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl11.EMEA.remove=token.jags-local-psd-real.train --dev classifiers/abl11.EMEA.remove=token.jags-local-psd-real.dev --eval auroc --logistic --passes 15 --search --l2 9.88298545224541e-05 0.000296489563567362 +9.88298545224541e-05
+fold 4 score = 0.841918318327392
+....................................................................................................................
+dev  score = 0.75 on pass 14 with config --l2 9.88298545224541e-05
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl11.EMEA.remove=token.jags-local-psd-real.traindev --dev classifiers/abl11.EMEA.remove=token.jags-local-psd-real.test --eval auroc --logistic --passes 14 --noearlystop --readable classifiers/abl11.EMEA.remove=token.jags-local-psd-real.fold=5.vwmodel --args --l2 9.88298545224541e-05 -p classifiers/abl11.EMEA.remove=token.jags-local-psd-real.test.predictions
+................................................ 
+0.577617328519856 0.559440559440559 0.597014925373134 <-macroFPR-|-microFPR-> 0.33423233335542 0.980887091186253 0.302631905383264
+
+===== FOLD 7 / 16 =====
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl11.EMEA.remove=token.jags-local-psd-real.train --dev classifiers/abl11.EMEA.remove=token.jags-local-psd-real.dev --eval auroc --logistic --passes 15 --search --l2 9.85580950691385e-05 0.000295674285207416 +9.85580950691385e-05
+fold 5 score = 0.647657716119754
+............................................................................................................................................................................
+dev  score = 0.801639213455791 on pass 1 with config --l2 0.000197116190138277
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl11.EMEA.remove=token.jags-local-psd-real.traindev --dev classifiers/abl11.EMEA.remove=token.jags-local-psd-real.test --eval auroc --logistic --passes 1 --noearlystop --readable classifiers/abl11.EMEA.remove=token.jags-local-psd-real.fold=6.vwmodel --args --l2 0.000197116190138277 -p classifiers/abl11.EMEA.remove=token.jags-local-psd-real.test.predictions
+........................................... 
+0.75 0.857142857142857 0.666666666666667 <-macroFPR-|-microFPR-> 0.75 0.857142857142857 0.666666666666667
+
+===== FOLD 8 / 16 =====
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl11.EMEA.remove=token.jags-local-psd-real.train --dev classifiers/abl11.EMEA.remove=token.jags-local-psd-real.dev --eval auroc --logistic --passes 15 --search --l2 9.88972951589774e-05 0.000296691885476932 +9.88972951589774e-05
+fold 6 score = 0.736111111111111
+....................................................................................................................
+dev  score = 0.829935868071461 on pass 1 with config --l2 0.000197794590317955
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl11.EMEA.remove=token.jags-local-psd-real.traindev --dev classifiers/abl11.EMEA.remove=token.jags-local-psd-real.test --eval auroc --logistic --passes 1 --noearlystop --readable classifiers/abl11.EMEA.remove=token.jags-local-psd-real.fold=7.vwmodel --args --l2 0.000197794590317955 -p classifiers/abl11.EMEA.remove=token.jags-local-psd-real.test.predictions
+........................................... 
+0.748834110592938 0.875389408099688 0.654249126891735 <-macroFPR-|-microFPR-> 0.147375376644088 0.69510688863561 0.292004110662767
+
+===== FOLD 9 / 16 =====
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl11.EMEA.remove=token.jags-local-psd-real.train --dev classifiers/abl11.EMEA.remove=token.jags-local-psd-real.dev --eval auroc --logistic --passes 15 --search --l2 0.000120484830959782 0.000361454492879346 +0.000120484830959782
+fold 7 score = 0.796290082676755
+....................................................................................................................
+dev  score = 0.825826573521471 on pass 2 with config --l2 0.000240969661919564
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl11.EMEA.remove=token.jags-local-psd-real.traindev --dev classifiers/abl11.EMEA.remove=token.jags-local-psd-real.test --eval auroc --logistic --passes 2 --noearlystop --readable classifiers/abl11.EMEA.remove=token.jags-local-psd-real.fold=8.vwmodel --args --l2 0.000240969661919564 -p classifiers/abl11.EMEA.remove=token.jags-local-psd-real.test.predictions
+............................................. 
+0.771653543307087 0.924528301886792 0.662162162162162 <-macroFPR-|-microFPR-> 0.771653543307087 0.924528301886792 0.662162162162162
+
+===== FOLD 10 / 16 =====
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl11.EMEA.remove=token.jags-local-psd-real.train --dev classifiers/abl11.EMEA.remove=token.jags-local-psd-real.dev --eval auroc --logistic --passes 15 --search --l2 0.000143049237547564 0.000429147712642692 +0.000143049237547564
+fold 8 score = 0.835318369216674
+..................................................................................................................
+dev  score = 0.610742598092732 on pass 1 with config --l2 0.000286098475095128
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl11.EMEA.remove=token.jags-local-psd-real.traindev --dev classifiers/abl11.EMEA.remove=token.jags-local-psd-real.test --eval auroc --logistic --passes 1 --noearlystop --readable classifiers/abl11.EMEA.remove=token.jags-local-psd-real.fold=9.vwmodel --args --l2 0.000286098475095128 -p classifiers/abl11.EMEA.remove=token.jags-local-psd-real.test.predictions
+........................................... 
+0.761853880058769 0.794207741576163 0.732032854209446 <-macroFPR-|-microFPR-> 0.307988060749258 0.490647492118682 0.372571998807341
+
+===== FOLD 11 / 16 =====
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl11.EMEA.remove=token.jags-local-psd-real.train --dev classifiers/abl11.EMEA.remove=token.jags-local-psd-real.dev --eval auroc --logistic --passes 15 --search --l2 0.000119517150711127 0.000358551452133381 +0.000119517150711127
+fold 9 score = 0.822234905354967
+....................................................................................................................
+dev  score = 0.836443822164034 on pass 1 with config --l2 0.000239034301422254
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl11.EMEA.remove=token.jags-local-psd-real.traindev --dev classifiers/abl11.EMEA.remove=token.jags-local-psd-real.test --eval auroc --logistic --passes 1 --noearlystop --readable classifiers/abl11.EMEA.remove=token.jags-local-psd-real.fold=10.vwmodel --args --l2 0.000239034301422254 -p classifiers/abl11.EMEA.remove=token.jags-local-psd-real.test.predictions
+........................................... 
+0.299191374663073 0.70926517571885 0.189581554227156 <-macroFPR-|-microFPR-> 0.173276156957749 0.499254002031871 0.295889014370787
+
+===== FOLD 12 / 16 =====
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl11.EMEA.remove=token.jags-local-psd-real.train --dev classifiers/abl11.EMEA.remove=token.jags-local-psd-real.dev --eval auroc --logistic --passes 15 --search --l2 0.00010708128540375 0.00032124385621125 +0.00010708128540375
+fold 10 score = 0.658560811252603
+....................................................................................................................
+dev  score = 0.95998886259223 on pass 2 with config --l2 0.0002141625708075
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl11.EMEA.remove=token.jags-local-psd-real.traindev --dev classifiers/abl11.EMEA.remove=token.jags-local-psd-real.test --eval auroc --logistic --passes 2 --noearlystop --readable classifiers/abl11.EMEA.remove=token.jags-local-psd-real.fold=11.vwmodel --args --l2 0.0002141625708075 -p classifiers/abl11.EMEA.remove=token.jags-local-psd-real.test.predictions
+............................................. 
+0.696387394312068 0.822888283378747 0.603597601598934 <-macroFPR-|-microFPR-> 0.347396872722988 0.544246370494688 0.382282811519527
+
+===== FOLD 13 / 16 =====
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl11.EMEA.remove=token.jags-local-psd-real.train --dev classifiers/abl11.EMEA.remove=token.jags-local-psd-real.dev --eval auroc --logistic --passes 15 --search --l2 0.000104588288203487 0.000313764864610461 +0.000104588288203487
+fold 11 score = 0.825983451767521
+....................................................................................................................
+dev  score = 0.388399056194402 on pass 5 with config --l2 0.000209176576406974
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl11.EMEA.remove=token.jags-local-psd-real.traindev --dev classifiers/abl11.EMEA.remove=token.jags-local-psd-real.test --eval auroc --logistic --passes 5 --noearlystop --readable classifiers/abl11.EMEA.remove=token.jags-local-psd-real.fold=12.vwmodel --args --l2 0.000209176576406974 -p classifiers/abl11.EMEA.remove=token.jags-local-psd-real.test.predictions
+.............................................. 
+0.918652423993426 0.99113475177305 0.856049004594181 <-macroFPR-|-microFPR-> 0.347163088521966 0.6 0.313067165392747
+
+===== FOLD 14 / 16 =====
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl11.EMEA.remove=token.jags-local-psd-real.train --dev classifiers/abl11.EMEA.remove=token.jags-local-psd-real.dev --eval auroc --logistic --passes 15 --search --l2 0.000102117925780692 0.000306353777342075 +0.000102117925780692
+fold 12 score = 0.961562021439509
+....................................................................................................................
+dev  score = 0.873726190476191 on pass 4 with config --l2 0.000204235851561384
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl11.EMEA.remove=token.jags-local-psd-real.traindev --dev classifiers/abl11.EMEA.remove=token.jags-local-psd-real.test --eval auroc --logistic --passes 4 --noearlystop --readable classifiers/abl11.EMEA.remove=token.jags-local-psd-real.fold=13.vwmodel --args --l2 0.000204235851561384 -p classifiers/abl11.EMEA.remove=token.jags-local-psd-real.test.predictions
+.............................................. 
+0.774581093898198 0.642707240293809 0.974542561654734 <-macroFPR-|-microFPR-> 0.261584454409567 0.218828152911754 0.65843949044586
+
+===== FOLD 15 / 16 =====
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl11.EMEA.remove=token.jags-local-psd-real.train --dev classifiers/abl11.EMEA.remove=token.jags-local-psd-real.dev --eval auroc --logistic --passes 15 --search --l2 9.74658869395711e-05 0.000292397660818713 +9.74658869395711e-05
+fold 13 score = 0.381971866637738
+....................................................................................................................
+dev  score = 0.73856647122173 on pass 2 with config --l2 9.74658869395711e-05
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl11.EMEA.remove=token.jags-local-psd-real.traindev --dev classifiers/abl11.EMEA.remove=token.jags-local-psd-real.test --eval auroc --logistic --passes 2 --noearlystop --readable classifiers/abl11.EMEA.remove=token.jags-local-psd-real.fold=14.vwmodel --args --l2 9.74658869395711e-05 -p classifiers/abl11.EMEA.remove=token.jags-local-psd-real.test.predictions
+............................................. 
+0.727272727272727 0.837209302325581 0.642857142857143 <-macroFPR-|-microFPR-> 0.326530612244898 0.666666666666667 0.32
+
+===== FOLD 16 / 16 =====
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl11.EMEA.remove=token.jags-local-psd-real.train --dev classifiers/abl11.EMEA.remove=token.jags-local-psd-real.dev --eval auroc --logistic --passes 15 --search --l2 9.71817298347911e-05 0.000291545189504373 +9.71817298347911e-05
+fold 14 score = 0.83572619047619
+....................................................................................................................
+dev  score = 0.733922126216778 on pass 1 with config --l2 0.000194363459669582
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl11.EMEA.remove=token.jags-local-psd-real.traindev --dev classifiers/abl11.EMEA.remove=token.jags-local-psd-real.test --eval auroc --logistic --passes 1 --noearlystop --readable classifiers/abl11.EMEA.remove=token.jags-local-psd-real.fold=15.vwmodel --args --l2 0.000194363459669582 -p classifiers/abl11.EMEA.remove=token.jags-local-psd-real.test.predictions
+........................................... 
+0.713826366559486 0.637931034482759 0.81021897810219 <-macroFPR-|-microFPR-> 0.545174591116029 0.676923076923077 0.528244631185808
+
+fold 15 score = 0.724697858083045
+Average score 0.736565001333358 (std 0.130481313215207)
+Average FPR: 0.671458332776451 0.759142679332052 0.636956720197704 <-macroFPR-|-microFPR-> 0.365230327393623 0.665746325700353 0.405119053085686
+Std.dev FPR: 0.148579967289752 0.122026181934084 0.199720746659748 <-macroFPR-|-microFPR-> 0.174781283426581 0.184232582171791 0.14496391458763

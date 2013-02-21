@@ -1,0 +1,162 @@
+Reading features from features/Subs.type.hal-ppl
+Reading features from features/Subs.type.rachel-ngram
+Reading features from features/Subs.type.rachel-topic
+Skipping features from features/Subs.type.hal-rf
+Reading features from features/Subs.type.hal-flow
+Reading features from features/Subs.token.jags-local-psd
+Reading features from features/Subs.token.jags-psd-comp-real
+Skipping features from features/Subs.token.hal-ppl
+Skipping features from features/Subs.token.anni-context-percent
+Reading features from features/Subs.token.anni-context-pos
+Reading features from features/Subs.token.jags-psd
+Reading features from features/Subs.token.jags-psd-real
+Reading features from features/Subs.token.jags-local-psd-real
+warning: data included 1 unseen french phrases: spectres
+Read 22597 examples (9808 positive and 12789 negative, which is 43.4% positive)
+===== FOLD 1 / 16 =====
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl2.Subs.remove=token.anni-context-percent.train --dev classifiers/abl2.Subs.remove=token.anni-context-percent.dev --eval auroc --logistic --passes 20 --orsearch --l1 0. 0.000598730690935217 +0.000119746138187043 --l2 0.000119746138187043 0.000598730690935217 +0.000119746138187043
+............................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+dev  score = 0.839979111511925 on pass 20 with config --l2 0.000119746138187043
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl2.Subs.remove=token.anni-context-percent.traindev --dev classifiers/abl2.Subs.remove=token.anni-context-percent.test --eval auroc --logistic --passes 20 --noearlystop --readable classifiers/abl2.Subs.remove=token.anni-context-percent.fold=0.vwmodel --args --l2 0.000119746138187043 -p classifiers/abl2.Subs.remove=token.anni-context-percent.test.predictions
+................................................ 
+0.605577689243028 0.440579710144928 0.968152866242038 <-macroFPR-|-microFPR-> 0.571798861695299 0.475152274463809 0.995854063018242
+
+===== FOLD 2 / 16 =====
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl2.Subs.remove=token.anni-context-percent.train --dev classifiers/abl2.Subs.remove=token.anni-context-percent.dev --eval auroc --logistic --passes 20 --orsearch --l1 0. 0.000635808748728383 +0.000127161749745676 --l2 0.000127161749745676 0.000635808748728383 +0.000127161749745676
+fold 0 score = 0.549557247164828
+............................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+dev  score = 0.755951707225053 on pass 14 with config --l2 0.000127161749745676
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl2.Subs.remove=token.anni-context-percent.traindev --dev classifiers/abl2.Subs.remove=token.anni-context-percent.test --eval auroc --logistic --passes 14 --noearlystop --readable classifiers/abl2.Subs.remove=token.anni-context-percent.fold=1.vwmodel --args --l2 0.000127161749745676 -p classifiers/abl2.Subs.remove=token.anni-context-percent.test.predictions
+............................................... 
+0.839753737906772 0.791970802919708 0.893672781729689 <-macroFPR-|-microFPR-> 0.100641514093465 0.635792946815746 0.3671483170652
+
+===== FOLD 3 / 16 =====
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl2.Subs.remove=token.anni-context-percent.train --dev classifiers/abl2.Subs.remove=token.anni-context-percent.dev --eval auroc --logistic --passes 20 --orsearch --l1 0. 0.000519723507094226 +0.000103944701418845 --l2 0.000103944701418845 0.000519723507094226 +0.000103944701418845
+fold 1 score = 0.845844907162128
+.......................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+dev  score = 0.835310566224832 on pass 1 with config --l1 0.
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl2.Subs.remove=token.anni-context-percent.traindev --dev classifiers/abl2.Subs.remove=token.anni-context-percent.test --eval auroc --logistic --passes 1 --noearlystop --readable classifiers/abl2.Subs.remove=token.anni-context-percent.fold=2.vwmodel --args --l1 0. -p classifiers/abl2.Subs.remove=token.anni-context-percent.test.predictions
+......................................... 
+0.51685393258427 0.851851851851852 0.370967741935484 <-macroFPR-|-microFPR-> 0.72066707307349 0.937614237614238 0.730808080808081
+
+===== FOLD 4 / 16 =====
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl2.Subs.remove=token.anni-context-percent.train --dev classifiers/abl2.Subs.remove=token.anni-context-percent.dev --eval auroc --logistic --passes 20 --orsearch --l1 0. 0.000500450405364828 +0.000100090081072966 --l2 0.000100090081072966 0.000500450405364828 +0.000100090081072966
+fold 2 score = 0.748792680626298
+............................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+dev  score = 0.809381685183908 on pass 10 with config --l1 0.
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl2.Subs.remove=token.anni-context-percent.traindev --dev classifiers/abl2.Subs.remove=token.anni-context-percent.test --eval auroc --logistic --passes 10 --noearlystop --readable classifiers/abl2.Subs.remove=token.anni-context-percent.fold=3.vwmodel --args --l1 0. -p classifiers/abl2.Subs.remove=token.anni-context-percent.test.predictions
+.............................................. 
+0.773432650527623 0.848773841961853 0.710376282782212 <-macroFPR-|-microFPR-> 0.599803595258483 0.683705853887552 0.835616024187453
+
+===== FOLD 5 / 16 =====
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl2.Subs.remove=token.anni-context-percent.train --dev classifiers/abl2.Subs.remove=token.anni-context-percent.dev --eval auroc --logistic --passes 20 --orsearch --l1 0. 0.000485554746297645 +9.7110949259529e-05 --l2 9.7110949259529e-05 0.000485554746297645 +9.7110949259529e-05
+fold 3 score = 0.839305434597187
+............................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+dev  score = 0.540151658455946 on pass 5 with config --l1 9.7110949259529e-05
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl2.Subs.remove=token.anni-context-percent.traindev --dev classifiers/abl2.Subs.remove=token.anni-context-percent.test --eval auroc --logistic --passes 5 --noearlystop --readable classifiers/abl2.Subs.remove=token.anni-context-percent.fold=4.vwmodel --args --l1 9.7110949259529e-05 -p classifiers/abl2.Subs.remove=token.anni-context-percent.test.predictions
+.............................................. 
+0.706697459584296 0.874285714285714 0.593023255813954 <-macroFPR-|-microFPR-> 0.509527562995771 0.772638765651188 0.714285714285714
+
+===== FOLD 6 / 16 =====
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl2.Subs.remove=token.anni-context-percent.train --dev classifiers/abl2.Subs.remove=token.anni-context-percent.dev --eval auroc --logistic --passes 20 --orsearch --l1 0. 0.000475443350924737 +9.50886701849475e-05 --l2 9.50886701849475e-05 0.000475443350924737 +9.50886701849475e-05
+fold 4 score = 0.784630690313528
+............................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+dev  score = 0.622438863185724 on pass 7 with config --l1 0.
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl2.Subs.remove=token.anni-context-percent.traindev --dev classifiers/abl2.Subs.remove=token.anni-context-percent.test --eval auroc --logistic --passes 7 --noearlystop --readable classifiers/abl2.Subs.remove=token.anni-context-percent.fold=5.vwmodel --args --l1 0. -p classifiers/abl2.Subs.remove=token.anni-context-percent.test.predictions
+............................................. 
+0.602904356534802 0.434343434343434 0.985270049099836 <-macroFPR-|-microFPR-> 0.541343516530862 0.479571889252916 0.997257514719554
+
+===== FOLD 7 / 16 =====
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl2.Subs.remove=token.anni-context-percent.train --dev classifiers/abl2.Subs.remove=token.anni-context-percent.dev --eval auroc --logistic --passes 20 --orsearch --l1 0. 0.000448510943667025 +8.97021887334051e-05 --l2 8.97021887334051e-05 0.000448510943667025 +8.97021887334051e-05
+fold 5 score = 0.464150745544416
+............................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+dev  score = 0.62077947134864 on pass 2 with config --l2 0.00035880875493362
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl2.Subs.remove=token.anni-context-percent.traindev --dev classifiers/abl2.Subs.remove=token.anni-context-percent.test --eval auroc --logistic --passes 2 --noearlystop --readable classifiers/abl2.Subs.remove=token.anni-context-percent.fold=6.vwmodel --args --l2 0.00035880875493362 -p classifiers/abl2.Subs.remove=token.anni-context-percent.test.predictions
+............................................. 
+0.586046511627907 0.428571428571429 0.926470588235294 <-macroFPR-|-microFPR-> 0.532434466425082 0.461508676021424 0.954166666666667
+
+===== FOLD 8 / 16 =====
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl2.Subs.remove=token.anni-context-percent.train --dev classifiers/abl2.Subs.remove=token.anni-context-percent.dev --eval auroc --logistic --passes 20 --orsearch --l1 0. 0.000447507383871834 +8.95014767743668e-05 --l2 8.95014767743668e-05 0.000447507383871834 +8.95014767743668e-05
+fold 6 score = 0.591705221414408
+............................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+dev  score = 0.648082942097026 on pass 1 with config --l2 8.95014767743668e-05
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl2.Subs.remove=token.anni-context-percent.traindev --dev classifiers/abl2.Subs.remove=token.anni-context-percent.test --eval auroc --logistic --passes 1 --noearlystop --readable classifiers/abl2.Subs.remove=token.anni-context-percent.fold=7.vwmodel --args --l2 8.95014767743668e-05 -p classifiers/abl2.Subs.remove=token.anni-context-percent.test.predictions
+........................................... 
+0.66 0.519685039370079 0.904109589041096 <-macroFPR-|-microFPR-> 0.628979857050032 0.478703703703704 0.943548387096774
+
+===== FOLD 9 / 16 =====
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl2.Subs.remove=token.anni-context-percent.train --dev classifiers/abl2.Subs.remove=token.anni-context-percent.dev --eval auroc --logistic --passes 20 --orsearch --l1 0. 0.000574910888812234 +0.000114982177762447 --l2 0.000114982177762447 0.000574910888812234 +0.000114982177762447
+fold 7 score = 0.58817287285356
+...................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+dev  score = 0.820392738636564 on pass 20 with config --l2 0.000459928711049788
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl2.Subs.remove=token.anni-context-percent.traindev --dev classifiers/abl2.Subs.remove=token.anni-context-percent.test --eval auroc --logistic --passes 20 --noearlystop --readable classifiers/abl2.Subs.remove=token.anni-context-percent.fold=8.vwmodel --args --l2 0.000459928711049788 -p classifiers/abl2.Subs.remove=token.anni-context-percent.test.predictions
+................................................ 
+0.503703703703704 0.343434343434343 0.944444444444444 <-macroFPR-|-microFPR-> 0.541666666666667 0.708333333333333 0.75
+
+===== FOLD 10 / 16 =====
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl2.Subs.remove=token.anni-context-percent.train --dev classifiers/abl2.Subs.remove=token.anni-context-percent.dev --eval auroc --logistic --passes 20 --orsearch --l1 0. 0.00060875388080599 +0.000121750776161198 --l2 0.000121750776161198 0.00060875388080599 +0.000121750776161198
+fold 8 score = 0.548904538341158
+...................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+dev  score = 0.821406638242602 on pass 3 with config --l1 0.000121750776161198
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl2.Subs.remove=token.anni-context-percent.traindev --dev classifiers/abl2.Subs.remove=token.anni-context-percent.test --eval auroc --logistic --passes 3 --noearlystop --readable classifiers/abl2.Subs.remove=token.anni-context-percent.fold=9.vwmodel --args --l1 0.000121750776161198 -p classifiers/abl2.Subs.remove=token.anni-context-percent.test.predictions
+............................................. 
+0.752744839701361 0.731853116994022 0.774864376130199 <-macroFPR-|-microFPR-> 0.39928885965298 0.838171945476047 0.490566037735849
+
+===== FOLD 11 / 16 =====
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl2.Subs.remove=token.anni-context-percent.train --dev classifiers/abl2.Subs.remove=token.anni-context-percent.dev --eval auroc --logistic --passes 20 --orsearch --l1 0. 0.000484472651518822 +9.68945303037643e-05 --l2 9.68945303037643e-05 0.000484472651518822 +9.68945303037643e-05
+fold 9 score = 0.804964739674904
+.......................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+dev  score = 0.874584678495372 on pass 19 with config --l1 0.
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl2.Subs.remove=token.anni-context-percent.traindev --dev classifiers/abl2.Subs.remove=token.anni-context-percent.test --eval auroc --logistic --passes 19 --noearlystop --readable classifiers/abl2.Subs.remove=token.anni-context-percent.fold=10.vwmodel --args --l1 0. -p classifiers/abl2.Subs.remove=token.anni-context-percent.test.predictions
+............................................... 
+0.738124238733252 0.853521126760563 0.650214592274678 <-macroFPR-|-microFPR-> 0.402802807787328 0.717569202281513 0.412108108108108
+
+===== FOLD 12 / 16 =====
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl2.Subs.remove=token.anni-context-percent.train --dev classifiers/abl2.Subs.remove=token.anni-context-percent.dev --eval auroc --logistic --passes 20 --orsearch --l1 0. 0.000466592011944756 +9.33184023889511e-05 --l2 9.33184023889511e-05 0.000466592011944756 +9.33184023889511e-05
+fold 10 score = 0.824482578495595
+.......................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+dev  score = 0.635010162601626 on pass 1 with config --l1 0.
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl2.Subs.remove=token.anni-context-percent.traindev --dev classifiers/abl2.Subs.remove=token.anni-context-percent.test --eval auroc --logistic --passes 1 --noearlystop --readable classifiers/abl2.Subs.remove=token.anni-context-percent.fold=11.vwmodel --args --l1 0. -p classifiers/abl2.Subs.remove=token.anni-context-percent.test.predictions
+......................................... 
+0.79539641943734 0.779448621553885 0.81201044386423 <-macroFPR-|-microFPR-> 0.591808318264014 0.758395663212791 0.76
+
+===== FOLD 13 / 16 =====
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl2.Subs.remove=token.anni-context-percent.train --dev classifiers/abl2.Subs.remove=token.anni-context-percent.dev --eval auroc --logistic --passes 20 --orsearch --l1 0. 0.000479179644448704 +9.58359288897408e-05 --l2 9.58359288897408e-05 0.000479179644448704 +9.58359288897408e-05
+fold 11 score = 0.86624162162445
+............................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+dev  score = 0.731616828154583 on pass 1 with config --l1 9.58359288897408e-05
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl2.Subs.remove=token.anni-context-percent.traindev --dev classifiers/abl2.Subs.remove=token.anni-context-percent.test --eval auroc --logistic --passes 1 --noearlystop --readable classifiers/abl2.Subs.remove=token.anni-context-percent.fold=12.vwmodel --args --l1 9.58359288897408e-05 -p classifiers/abl2.Subs.remove=token.anni-context-percent.test.predictions
+........................................... 
+0.633507853403141 0.467181467181467 0.983739837398374 <-macroFPR-|-microFPR-> 0.677582764056752 0.635200746965453 0.866666666666667
+
+===== FOLD 14 / 16 =====
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl2.Subs.remove=token.anni-context-percent.train --dev classifiers/abl2.Subs.remove=token.anni-context-percent.dev --eval auroc --logistic --passes 20 --orsearch --l1 0. 0.000487733502414281 +9.75467004828562e-05 --l2 9.75467004828562e-05 0.000487733502414281 +9.75467004828562e-05
+fold 12 score = 0.583536585365854
+............................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+dev  score = 0.734506172839506 on pass 1 with config --l1 9.75467004828562e-05
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl2.Subs.remove=token.anni-context-percent.traindev --dev classifiers/abl2.Subs.remove=token.anni-context-percent.test --eval auroc --logistic --passes 1 --noearlystop --readable classifiers/abl2.Subs.remove=token.anni-context-percent.fold=13.vwmodel --args --l1 9.75467004828562e-05 -p classifiers/abl2.Subs.remove=token.anni-context-percent.test.predictions
+.......................................... 
+0.627783669141039 0.824512534818941 0.506849315068493 <-macroFPR-|-microFPR-> 0.824843432775947 0.821249894547165 0.904761904761905
+
+===== FOLD 15 / 16 =====
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl2.Subs.remove=token.anni-context-percent.train --dev classifiers/abl2.Subs.remove=token.anni-context-percent.dev --eval auroc --logistic --passes 20 --orsearch --l1 0. 0.000489212856513869 +9.78425713027738e-05 --l2 9.78425713027738e-05 0.000489212856513869 +9.78425713027738e-05
+fold 13 score = 0.727259438690277
+............................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+dev  score = 0.843303541019104 on pass 1 with config --l1 0.
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl2.Subs.remove=token.anni-context-percent.traindev --dev classifiers/abl2.Subs.remove=token.anni-context-percent.test --eval auroc --logistic --passes 1 --noearlystop --readable classifiers/abl2.Subs.remove=token.anni-context-percent.fold=14.vwmodel --args --l1 0. -p classifiers/abl2.Subs.remove=token.anni-context-percent.test.predictions
+......................................... 
+0.69170579029734 0.703821656050955 0.68 <-macroFPR-|-microFPR-> 0.15017281730142 0.47472073164621 0.508432953387082
+
+===== FOLD 16 / 16 =====
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl2.Subs.remove=token.anni-context-percent.train --dev classifiers/abl2.Subs.remove=token.anni-context-percent.dev --eval auroc --logistic --passes 20 --orsearch --l1 0. 0.000482439212659205 +9.6487842531841e-05 --l2 9.6487842531841e-05 0.000482439212659205 +9.6487842531841e-05
+fold 14 score = 0.714482431149098
+............................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+dev  score = 0.546217181917042 on pass 9 with config --l1 0.
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl2.Subs.remove=token.anni-context-percent.traindev --dev classifiers/abl2.Subs.remove=token.anni-context-percent.test --eval auroc --logistic --passes 9 --noearlystop --readable classifiers/abl2.Subs.remove=token.anni-context-percent.fold=15.vwmodel --args --l1 0. -p classifiers/abl2.Subs.remove=token.anni-context-percent.test.predictions
+.............................................. 
+0.740740740740741 0.718390804597701 0.764525993883792 <-macroFPR-|-microFPR-> 0.425311332792003 0.552492056344945 0.745327700972862
+
+fold 15 score = 0.83229454596298
+Average score 0.707145392436292 (std 0.127693942779269)
+Average FPR: 0.673435849572913 0.663264093427555 0.779293259871488 <-macroFPR-|-microFPR-> 0.513667090401225 0.651926370076127 0.74853425871751
+Std.dev FPR: 0.094664559960102 0.182788945604227 0.1777851078987 <-macroFPR-|-microFPR-> 0.182785303671618 0.147570423112625 0.19902201875512

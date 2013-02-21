@@ -1,9 +1,9 @@
-for d in Science Subs EMEA ; do bin/run_experiment.pl -maxtokpertype 99999 -classifier random -nf 16 -xv $d > paper-results/xv.$d.random; done
-for d in Science Subs EMEA ; do bin/run_experiment.pl -maxtokpertype 99999 -classifier oracleType -nf 16 -xv $d > paper-results/xv.$d.oracleType; done
+for d in Science Subs EMEA ; do qsh.pl bin/run_experiment.pl -exp xv.$d.random -maxtokpertype 99999 -classifier random -nf 16 -xv $d \> paper-results/xv.$d.random; done
+for d in Science Subs EMEA ; do qsh.pl bin/run_experiment.pl -exp xv.$d.oracleType -maxtokpertype 99999 -classifier oracleType -nf 16 -xv $d \> paper-results/xv.$d.oracleType; done
 
-for c in random oracleType ; do qsh.pl bin/run_experiment.pl -maxtokpertype 99999 -classifier random -nf 16 -tr Science -te EMEA -te Subs \> paper-results/te.Subs.$c ; done
-for c in random oracleType ; do qsh.pl bin/run_experiment.pl -maxtokpertype 99999 -classifier random -nf 16 -te Science -tr EMEA -tr Subs \> paper-results/te.Science.$c ; done
-for c in random oracleType ; do qsh.pl bin/run_experiment.pl -maxtokpertype 99999 -classifier random -nf 16 -tr Science -te EMEA -tr Subs \> paper-results/te.EMEA.$c ; done
+for c in random oracleType ; do qsh.pl bin/run_experiment.pl -exp te.Subs.$c    -maxtokpertype 99999 -classifier $c -nf 16 -tr Science -te EMEA -te Subs \> paper-results/te.Subs.$c ; done
+for c in random oracleType ; do qsh.pl bin/run_experiment.pl -exp te.Science.$c -maxtokpertype 99999 -classifier $c -nf 16 -te Science -tr EMEA -tr Subs \> paper-results/te.Science.$c ; done
+for c in random oracleType ; do qsh.pl bin/run_experiment.pl -exp te.EMEA.$c    -maxtokpertype 99999 -classifier $c -nf 16 -tr Science -te EMEA -tr Subs \> paper-results/te.EMEA.$c ; done
 
 
 
@@ -31,9 +31,9 @@ done
 for d in Science Subs EMEA ; do qsh.pl bin/run_experiment.pl -exp mfs-xv.$d.random -mfs -maxtokpertype 99999 -classifier random -nf 16 -xv $d \> paper-results-mfs/xv.$d.random; done
 for d in Science Subs EMEA ; do qsh.pl bin/run_experiment.pl -exp mfs-xv.$d.oracleType -mfs -maxtokpertype 99999 -classifier oracleType -nf 16 -xv $d \> paper-results-mfs/xv.$d.oracleType; done
 
-for c in random oracleType ; do qsh.pl bin/run_experiment.pl -exp mfs-te.Subs.$c    -mfs -maxtokpertype 99999 -classifier random -nf 16 -tr Science -te EMEA -te Subs \> paper-results-mfs/te.Subs.$c ; done
-for c in random oracleType ; do qsh.pl bin/run_experiment.pl -exp mfs-te.Science.$c -mfs -maxtokpertype 99999 -classifier random -nf 16 -te Science -tr EMEA -tr Subs \> paper-results-mfs/te.Science.$c ; done
-for c in random oracleType ; do qsh.pl bin/run_experiment.pl -exp mfs-te.EMEA.$c    -mfs -maxtokpertype 99999 -classifier random -nf 16 -tr Science -te EMEA -tr Subs \> paper-results-mfs/te.EMEA.$c ; done
+for c in random oracleType ; do qsh.pl bin/run_experiment.pl -exp mfs-te.Subs.$c    -mfs -maxtokpertype 99999 -classifier $c -nf 16 -tr Science -te EMEA -te Subs \> paper-results-mfs/te.Subs.$c ; done
+for c in random oracleType ; do qsh.pl bin/run_experiment.pl -exp mfs-te.Science.$c -mfs -maxtokpertype 99999 -classifier $c -nf 16 -te Science -tr EMEA -tr Subs \> paper-results-mfs/te.Science.$c ; done
+for c in random oracleType ; do qsh.pl bin/run_experiment.pl -exp mfs-te.EMEA.$c    -mfs -maxtokpertype 99999 -classifier $c -nf 16 -tr Science -te EMEA -tr Subs \> paper-results-mfs/te.EMEA.$c ; done
 
 for d in Science Subs EMEA ; do
   qsh.pl bin/run_experiment.pl -mfs -exp mfs-xv.$d.notoken -maxtokpertype 99999 -nf 16 -notoken -xv $d \> paper-results-mfs/xv.$d.notoken
@@ -61,3 +61,74 @@ qsh.pl bin/run_experiment.pl -mfs -exp mfs-te.Subs.withtoken    -maxtokpertype 9
 qsh.pl bin/run_experiment.pl -mfs -exp mfs-te.EMEA.withtoken    -maxtokpertype 99999 -nf 16  -tr Science -te EMEA -tr Subs \> paper-results-mfs/te.EMEA.withtoken
 qsh.pl bin/run_experiment.pl -mfs -exp mfs-te.Science.withtoken -maxtokpertype 99999 -nf 16  -te Science -tr EMEA -tr Subs \> paper-results-mfs/te.Science.withtoken
 
+######################### ablation stuff
+
+for d in Science Subs EMEA ; do
+  bin/run_ablation.pl abl0.$d -- -maxtokpertype 99999 -nf 16 -xv $d
+done
+
+for d in EMEA Science Subs ; do for f in ablation/abl0.$d.output* ; do  echo -n "$f{ " ; bin/result_to_table.pl < $f | grep AUC ; done | cut -d'{' -f1,4 | tr '{}' '  ' | sort -k2,2gr | head -n1; done > ablation/abl0.done
+
+n=1
+for d in Science Subs EMEA ; do
+  bin/run_ablation.pl abl1.$d `cat ablation/abl0.done | grep $d | cut -d= -f2 | cut -d' ' -f1` -- -maxtokpertype 99999 -nf 16 -xv $d
+done > ablation/abl1.sh
+
+for d in EMEA Science Subs ; do for f in ablation/abl$n.$d.output* ; do  echo -n "$f{ " ; bin/result_to_table.pl < $f | grep AUC ; done | cut -d'{' -f1,4 | tr '{}' '  ' | sort -k2,2gr | head -n1; done > ablation/abl$n.done
+
+n=2
+for d in Science Subs EMEA ; do
+  bin/run_ablation.pl abl$n.$d `cat ablation/abl*.done | grep $d | cut -d= -f2 | cut -d' ' -f1` -- -maxtokpertype 99999 -nf 16 -xv $d
+done > ablation/abl$n.sh
+
+
+############################ constant predictions
+
+for c in constant random oracleType ; do
+  for d in Science Subs EMEA ; do 
+    qsh.pl bin/run_experiment.pl -exp xv.$d.$c -maxtokpertype 99999 -classifier $c -nf 16 -xv $d \> paper-results/xv.$d.$c
+  done
+  qsh.pl bin/run_experiment.pl -exp te.Subs.$c     -maxtokpertype 99999 -classifier $c -nf 16 -tr Science -te EMEA -te Subs \> paper-results/te.Subs.$c
+  qsh.pl bin/run_experiment.pl -exp te.Science.$c  -maxtokpertype 99999 -classifier $c -nf 16 -te Science -tr EMEA -tr Subs \> paper-results/te.Science.$c
+  qsh.pl bin/run_experiment.pl -exp te.EMEA.$c     -maxtokpertype 99999 -classifier $c -nf 16 -tr Science -te EMEA -tr Subs \> paper-results/te.EMEA.$c
+
+  for d in Science Subs EMEA ; do 
+    qsh.pl bin/run_experiment.pl -mfs -exp mfs-xv.$d.$c -maxtokpertype 99999 -classifier $c -nf 16 -xv $d \> paper-results-mfs/xv.$d.$c
+  done
+  qsh.pl bin/run_experiment.pl -mfs -exp mfs-te.Subs.$c     -maxtokpertype 99999 -classifier $c -nf 16 -tr Science -te EMEA -te Subs \> paper-results-mfs/te.Subs.$c
+  qsh.pl bin/run_experiment.pl -mfs -exp mfs-te.Science.$c  -maxtokpertype 99999 -classifier $c -nf 16 -te Science -tr EMEA -tr Subs \> paper-results-mfs/te.Science.$c
+  qsh.pl bin/run_experiment.pl -mfs -exp mfs-te.EMEA.$c     -maxtokpertype 99999 -classifier $c -nf 16 -tr Science -te EMEA -tr Subs \> paper-results-mfs/te.EMEA.$c
+done
+
+################################# notype features
+
+for d in Science Subs EMEA ; do
+  qsh.pl bin/run_experiment.pl -notype -exp xv.$d.notype -maxtokpertype 99999 -nf 16  -xv $d \> paper-results/xv.$d.notype
+done
+
+qsh.pl bin/run_experiment.pl -notype -exp te.Subs.notype    -maxtokpertype 99999 -nf 16  -tr Science -tr EMEA -te Subs \> paper-results/te.Subs.notype
+qsh.pl bin/run_experiment.pl -notype -exp te.EMEA.notype    -maxtokpertype 99999 -nf 16  -tr Science -te EMEA -tr Subs \> paper-results/te.EMEA.notype
+qsh.pl bin/run_experiment.pl -notype -exp te.Science.notype -maxtokpertype 99999 -nf 16  -te Science -tr EMEA -tr Subs \> paper-results/te.Science.notype
+
+for d in Science Subs EMEA ; do
+  qsh.pl bin/run_experiment.pl -mfs -notype -exp mfs-xv.$d.notype -maxtokpertype 99999 -nf 16  -xv $d \> paper-results-mfs/xv.$d.notype
+done
+
+qsh.pl bin/run_experiment.pl -mfs -notype -exp mfs-te.Subs.notype    -maxtokpertype 99999 -nf 16  -tr Science -tr EMEA -te Subs \> paper-results-mfs/te.Subs.notype
+qsh.pl bin/run_experiment.pl -mfs -notype -exp mfs-te.EMEA.notype    -maxtokpertype 99999 -nf 16  -tr Science -te EMEA -tr Subs \> paper-results-mfs/te.EMEA.notype
+qsh.pl bin/run_experiment.pl -mfs -notype -exp mfs-te.Science.notype -maxtokpertype 99999 -nf 16  -te Science -tr EMEA -tr Subs \> paper-results-mfs/te.Science.notype
+
+#############
+while [[ $n -lt 13 ]] ; do
+  while [[ `/home/hal/bin/qme | wc -l` -gt 0 ]] ; do
+    echo "waiting for $n (`/home/hal/bin/qme | wc -l` processes remain)"
+    sleep 1m
+  done
+  for d in EMEA Science Subs ; do for f in ablation/abl$n.$d.output* ; do  echo -n "$f{ " ; bin/result_to_table.pl < $f | grep AUC ; done | cut -d'{' -f1,4 | tr '{}' '  ' | sort -k2,2gr | head -n1; done > ablation/abl$n.done
+  let n=n+1
+  for d in Science Subs EMEA ; do
+    bin/run_ablation.pl abl$n.$d `cat ablation/abl*.done | grep $d | cut -d= -f2 | cut -d' ' -f1` -- -maxtokpertype 99999 -nf 16 -xv $d
+  done > ablation/abl$n.sh
+  source ablation/abl$n.sh
+  sleep 10m
+done

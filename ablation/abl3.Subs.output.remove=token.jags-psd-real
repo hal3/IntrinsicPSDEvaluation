@@ -1,0 +1,162 @@
+Reading features from features/Subs.type.hal-ppl
+Reading features from features/Subs.type.rachel-ngram
+Reading features from features/Subs.type.rachel-topic
+Skipping features from features/Subs.type.hal-rf
+Reading features from features/Subs.type.hal-flow
+Reading features from features/Subs.token.jags-local-psd
+Skipping features from features/Subs.token.jags-psd-comp-real
+Skipping features from features/Subs.token.hal-ppl
+Reading features from features/Subs.token.anni-context-percent
+Reading features from features/Subs.token.anni-context-pos
+Reading features from features/Subs.token.jags-psd
+Skipping features from features/Subs.token.jags-psd-real
+Reading features from features/Subs.token.jags-local-psd-real
+warning: data included 1 unseen french phrases: spectres
+Read 22597 examples (9808 positive and 12789 negative, which is 43.4% positive)
+===== FOLD 1 / 16 =====
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl3.Subs.remove=token.jags-psd-real.train --dev classifiers/abl3.Subs.remove=token.jags-psd-real.dev --eval auroc --logistic --passes 20 --orsearch --l1 0. 0.000598730690935217 +0.000119746138187043 --l2 0.000119746138187043 0.000598730690935217 +0.000119746138187043
+............................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+dev  score = 0.849228690484883 on pass 20 with config --l2 0.000119746138187043
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl3.Subs.remove=token.jags-psd-real.traindev --dev classifiers/abl3.Subs.remove=token.jags-psd-real.test --eval auroc --logistic --passes 20 --noearlystop --readable classifiers/abl3.Subs.remove=token.jags-psd-real.fold=0.vwmodel --args --l2 0.000119746138187043 -p classifiers/abl3.Subs.remove=token.jags-psd-real.test.predictions
+................................................ 
+0.611439842209073 0.442857142857143 0.987261146496815 <-macroFPR-|-microFPR-> 0.572586120073978 0.475474832347829 0.998341625207297
+
+===== FOLD 2 / 16 =====
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl3.Subs.remove=token.jags-psd-real.train --dev classifiers/abl3.Subs.remove=token.jags-psd-real.dev --eval auroc --logistic --passes 20 --orsearch --l1 0. 0.000635808748728383 +0.000127161749745676 --l2 0.000127161749745676 0.000635808748728383 +0.000127161749745676
+fold 0 score = 0.547382320956967
+............................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+dev  score = 0.755332327233855 on pass 8 with config --l2 0.000127161749745676
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl3.Subs.remove=token.jags-psd-real.traindev --dev classifiers/abl3.Subs.remove=token.jags-psd-real.test --eval auroc --logistic --passes 8 --noearlystop --readable classifiers/abl3.Subs.remove=token.jags-psd-real.fold=1.vwmodel --args --l2 0.000127161749745676 -p classifiers/abl3.Subs.remove=token.jags-psd-real.test.predictions
+.............................................. 
+0.839230504981106 0.775309425579181 0.914638712092849 <-macroFPR-|-microFPR-> 0.0924309716391122 0.53240263830859 0.436666666666667
+
+===== FOLD 3 / 16 =====
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl3.Subs.remove=token.jags-psd-real.train --dev classifiers/abl3.Subs.remove=token.jags-psd-real.dev --eval auroc --logistic --passes 20 --orsearch --l1 0. 0.000519723507094226 +0.000103944701418845 --l2 0.000103944701418845 0.000519723507094226 +0.000103944701418845
+fold 1 score = 0.853686789365604
+.......................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+dev  score = 0.830634839402201 on pass 1 with config --l1 0.
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl3.Subs.remove=token.jags-psd-real.traindev --dev classifiers/abl3.Subs.remove=token.jags-psd-real.test --eval auroc --logistic --passes 1 --noearlystop --readable classifiers/abl3.Subs.remove=token.jags-psd-real.fold=2.vwmodel --args --l1 0. -p classifiers/abl3.Subs.remove=token.jags-psd-real.test.predictions
+......................................... 
+0.509803921568628 0.785234899328859 0.37741935483871 <-macroFPR-|-microFPR-> 0.713753666160083 0.853577441077441 0.739033189033189
+
+===== FOLD 4 / 16 =====
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl3.Subs.remove=token.jags-psd-real.train --dev classifiers/abl3.Subs.remove=token.jags-psd-real.dev --eval auroc --logistic --passes 20 --orsearch --l1 0. 0.000500450405364828 +0.000100090081072966 --l2 0.000100090081072966 0.000500450405364828 +0.000100090081072966
+fold 2 score = 0.752524680877822
+............................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+dev  score = 0.805494214799991 on pass 20 with config --l1 0.
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl3.Subs.remove=token.jags-psd-real.traindev --dev classifiers/abl3.Subs.remove=token.jags-psd-real.test --eval auroc --logistic --passes 20 --noearlystop --readable classifiers/abl3.Subs.remove=token.jags-psd-real.fold=3.vwmodel --args --l1 0. -p classifiers/abl3.Subs.remove=token.jags-psd-real.test.predictions
+............................................... 
+0.76913803496082 0.815856777493606 0.727480045610034 <-macroFPR-|-microFPR-> 0.58725770638297 0.656180772313982 0.814773533344962
+
+===== FOLD 5 / 16 =====
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl3.Subs.remove=token.jags-psd-real.train --dev classifiers/abl3.Subs.remove=token.jags-psd-real.dev --eval auroc --logistic --passes 20 --orsearch --l1 0. 0.000485554746297645 +9.7110949259529e-05 --l2 9.7110949259529e-05 0.000485554746297645 +9.7110949259529e-05
+fold 3 score = 0.828464073119709
+............................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+dev  score = 0.540045768942914 on pass 7 with config --l1 9.7110949259529e-05
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl3.Subs.remove=token.jags-psd-real.traindev --dev classifiers/abl3.Subs.remove=token.jags-psd-real.test --eval auroc --logistic --passes 7 --noearlystop --readable classifiers/abl3.Subs.remove=token.jags-psd-real.fold=4.vwmodel --args --l1 9.7110949259529e-05 -p classifiers/abl3.Subs.remove=token.jags-psd-real.test.predictions
+.............................................. 
+0.706697459584296 0.874285714285714 0.593023255813954 <-macroFPR-|-microFPR-> 0.509527562995771 0.772638765651188 0.714285714285714
+
+===== FOLD 6 / 16 =====
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl3.Subs.remove=token.jags-psd-real.train --dev classifiers/abl3.Subs.remove=token.jags-psd-real.dev --eval auroc --logistic --passes 20 --orsearch --l1 0. 0.000475443350924737 +9.50886701849475e-05 --l2 9.50886701849475e-05 0.000475443350924737 +9.50886701849475e-05
+fold 4 score = 0.78804660363904
+............................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+dev  score = 0.578486450760079 on pass 4 with config --l2 9.50886701849475e-05
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl3.Subs.remove=token.jags-psd-real.traindev --dev classifiers/abl3.Subs.remove=token.jags-psd-real.test --eval auroc --logistic --passes 4 --noearlystop --readable classifiers/abl3.Subs.remove=token.jags-psd-real.fold=5.vwmodel --args --l2 9.50886701849475e-05 -p classifiers/abl3.Subs.remove=token.jags-psd-real.test.predictions
+............................................. 
+0.555616438356164 0.417627677100494 0.829787234042553 <-macroFPR-|-microFPR-> 0.512932850574719 0.483016229996272 0.957487604586303
+
+===== FOLD 7 / 16 =====
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl3.Subs.remove=token.jags-psd-real.train --dev classifiers/abl3.Subs.remove=token.jags-psd-real.dev --eval auroc --logistic --passes 20 --orsearch --l1 0. 0.000448510943667025 +8.97021887334051e-05 --l2 8.97021887334051e-05 0.000448510943667025 +8.97021887334051e-05
+fold 5 score = 0.44476576828496
+............................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+dev  score = 0.597626857032607 on pass 1 with config --l2 0.000269106566200215
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl3.Subs.remove=token.jags-psd-real.traindev --dev classifiers/abl3.Subs.remove=token.jags-psd-real.test --eval auroc --logistic --passes 1 --noearlystop --readable classifiers/abl3.Subs.remove=token.jags-psd-real.fold=6.vwmodel --args --l2 0.000269106566200215 -p classifiers/abl3.Subs.remove=token.jags-psd-real.test.predictions
+........................................... 
+0.570048309178744 0.424460431654676 0.867647058823529 <-macroFPR-|-microFPR-> 0.517818689636057 0.456673149705635 0.925
+
+===== FOLD 8 / 16 =====
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl3.Subs.remove=token.jags-psd-real.train --dev classifiers/abl3.Subs.remove=token.jags-psd-real.dev --eval auroc --logistic --passes 20 --orsearch --l1 0. 0.000447507383871834 +8.95014767743668e-05 --l2 8.95014767743668e-05 0.000447507383871834 +8.95014767743668e-05
+fold 6 score = 0.575512227362855
+............................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+dev  score = 0.564162754303599 on pass 5 with config --l2 0.000358005907097467
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl3.Subs.remove=token.jags-psd-real.traindev --dev classifiers/abl3.Subs.remove=token.jags-psd-real.test --eval auroc --logistic --passes 5 --noearlystop --readable classifiers/abl3.Subs.remove=token.jags-psd-real.fold=7.vwmodel --args --l2 0.000358005907097467 -p classifiers/abl3.Subs.remove=token.jags-psd-real.test.predictions
+.............................................. 
+0.681318681318681 0.568807339449541 0.849315068493151 <-macroFPR-|-microFPR-> 0.643640350877193 0.514679313459801 0.911290322580645
+
+===== FOLD 9 / 16 =====
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl3.Subs.remove=token.jags-psd-real.train --dev classifiers/abl3.Subs.remove=token.jags-psd-real.dev --eval auroc --logistic --passes 20 --orsearch --l1 0. 0.000574910888812234 +0.000114982177762447 --l2 0.000114982177762447 0.000574910888812234 +0.000114982177762447
+fold 7 score = 0.608334941153772
+...................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+dev  score = 0.825389675656424 on pass 20 with config --l2 0.000229964355524894
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl3.Subs.remove=token.jags-psd-real.traindev --dev classifiers/abl3.Subs.remove=token.jags-psd-real.test --eval auroc --logistic --passes 20 --noearlystop --readable classifiers/abl3.Subs.remove=token.jags-psd-real.fold=8.vwmodel --args --l2 0.000229964355524894 -p classifiers/abl3.Subs.remove=token.jags-psd-real.test.predictions
+................................................ 
+0.545454545454546 0.405405405405405 0.833333333333333 <-macroFPR-|-microFPR-> 0.552588996763754 0.723591549295775 0.71875
+
+===== FOLD 10 / 16 =====
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl3.Subs.remove=token.jags-psd-real.train --dev classifiers/abl3.Subs.remove=token.jags-psd-real.dev --eval auroc --logistic --passes 20 --orsearch --l1 0. 0.00060875388080599 +0.000121750776161198 --l2 0.000121750776161198 0.00060875388080599 +0.000121750776161198
+fold 8 score = 0.52660406885759
+...................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+dev  score = 0.836181033995934 on pass 1 with config --l1 0.000121750776161198
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl3.Subs.remove=token.jags-psd-real.traindev --dev classifiers/abl3.Subs.remove=token.jags-psd-real.test --eval auroc --logistic --passes 1 --noearlystop --readable classifiers/abl3.Subs.remove=token.jags-psd-real.fold=9.vwmodel --args --l1 0.000121750776161198 -p classifiers/abl3.Subs.remove=token.jags-psd-real.test.predictions
+.......................................... 
+0.774344569288389 0.802912621359223 0.747739602169982 <-macroFPR-|-microFPR-> 0.324171751690027 0.889530288151324 0.365384615384615
+
+===== FOLD 11 / 16 =====
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl3.Subs.remove=token.jags-psd-real.train --dev classifiers/abl3.Subs.remove=token.jags-psd-real.dev --eval auroc --logistic --passes 20 --orsearch --l1 0. 0.000484472651518822 +9.68945303037643e-05 --l2 9.68945303037643e-05 0.000484472651518822 +9.68945303037643e-05
+fold 9 score = 0.815509918788703
+.......................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+dev  score = 0.86968192259192 on pass 17 with config --l1 0.
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl3.Subs.remove=token.jags-psd-real.traindev --dev classifiers/abl3.Subs.remove=token.jags-psd-real.test --eval auroc --logistic --passes 17 --noearlystop --readable classifiers/abl3.Subs.remove=token.jags-psd-real.fold=10.vwmodel --args --l1 0. -p classifiers/abl3.Subs.remove=token.jags-psd-real.test.predictions
+............................................... 
+0.761467889908257 0.817733990147783 0.71244635193133 <-macroFPR-|-microFPR-> 0.525520348934042 0.749219033931344 0.52405148005148
+
+===== FOLD 12 / 16 =====
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl3.Subs.remove=token.jags-psd-real.train --dev classifiers/abl3.Subs.remove=token.jags-psd-real.dev --eval auroc --logistic --passes 20 --orsearch --l1 0. 0.000466592011944756 +9.33184023889511e-05 --l2 9.33184023889511e-05 0.000466592011944756 +9.33184023889511e-05
+fold 10 score = 0.829326787327762
+.......................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+dev  score = 0.632215447154472 on pass 14 with config --l1 0.
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl3.Subs.remove=token.jags-psd-real.traindev --dev classifiers/abl3.Subs.remove=token.jags-psd-real.test --eval auroc --logistic --passes 14 --noearlystop --readable classifiers/abl3.Subs.remove=token.jags-psd-real.fold=11.vwmodel --args --l1 0. -p classifiers/abl3.Subs.remove=token.jags-psd-real.test.predictions
+.............................................. 
+0.827109266943292 0.879411764705882 0.780678851174935 <-macroFPR-|-microFPR-> 0.561428571428571 0.838056680161943 0.7
+
+===== FOLD 13 / 16 =====
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl3.Subs.remove=token.jags-psd-real.train --dev classifiers/abl3.Subs.remove=token.jags-psd-real.dev --eval auroc --logistic --passes 20 --orsearch --l1 0. 0.000479179644448704 +9.58359288897408e-05 --l2 9.58359288897408e-05 0.000479179644448704 +9.58359288897408e-05
+fold 11 score = 0.864384120721863
+............................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+dev  score = 0.731508440329022 on pass 1 with config --l1 9.58359288897408e-05
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl3.Subs.remove=token.jags-psd-real.traindev --dev classifiers/abl3.Subs.remove=token.jags-psd-real.test --eval auroc --logistic --passes 1 --noearlystop --readable classifiers/abl3.Subs.remove=token.jags-psd-real.fold=12.vwmodel --args --l1 9.58359288897408e-05 -p classifiers/abl3.Subs.remove=token.jags-psd-real.test.predictions
+........................................... 
+0.631853785900783 0.465384615384615 0.983739837398374 <-macroFPR-|-microFPR-> 0.664249430723419 0.601867413632119 0.866666666666667
+
+===== FOLD 14 / 16 =====
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl3.Subs.remove=token.jags-psd-real.train --dev classifiers/abl3.Subs.remove=token.jags-psd-real.dev --eval auroc --logistic --passes 20 --orsearch --l1 0. 0.000487733502414281 +9.75467004828562e-05 --l2 9.75467004828562e-05 0.000487733502414281 +9.75467004828562e-05
+fold 12 score = 0.580208333333333
+............................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+dev  score = 0.734164292497626 on pass 2 with config --l1 9.75467004828562e-05
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl3.Subs.remove=token.jags-psd-real.traindev --dev classifiers/abl3.Subs.remove=token.jags-psd-real.test --eval auroc --logistic --passes 2 --noearlystop --readable classifiers/abl3.Subs.remove=token.jags-psd-real.fold=13.vwmodel --args --l1 9.75467004828562e-05 -p classifiers/abl3.Subs.remove=token.jags-psd-real.test.predictions
+............................................ 
+0.604236343366778 0.865814696485623 0.464041095890411 <-macroFPR-|-microFPR-> 0.753414861347375 0.906719980017251 0.80952380952381
+
+===== FOLD 15 / 16 =====
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl3.Subs.remove=token.jags-psd-real.train --dev classifiers/abl3.Subs.remove=token.jags-psd-real.dev --eval auroc --logistic --passes 20 --orsearch --l1 0. 0.000489212856513869 +9.78425713027738e-05 --l2 9.78425713027738e-05 0.000489212856513869 +9.78425713027738e-05
+fold 13 score = 0.727206736353078
+............................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+dev  score = 0.844820941379769 on pass 1 with config --l1 0.
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl3.Subs.remove=token.jags-psd-real.traindev --dev classifiers/abl3.Subs.remove=token.jags-psd-real.test --eval auroc --logistic --passes 1 --noearlystop --readable classifiers/abl3.Subs.remove=token.jags-psd-real.fold=14.vwmodel --args --l1 0. -p classifiers/abl3.Subs.remove=token.jags-psd-real.test.predictions
+......................................... 
+0.705882352941177 0.676056338028169 0.738461538461539 <-macroFPR-|-microFPR-> 0.233907742805228 0.433946812680439 0.65007215007215
+
+===== FOLD 16 / 16 =====
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl3.Subs.remove=token.jags-psd-real.train --dev classifiers/abl3.Subs.remove=token.jags-psd-real.dev --eval auroc --logistic --passes 20 --orsearch --l1 0. 0.000482439212659205 +9.6487842531841e-05 --l2 9.6487842531841e-05 0.000482439212659205 +9.6487842531841e-05
+fold 14 score = 0.722592592592592
+............................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+dev  score = 0.54702501165139 on pass 15 with config --l2 9.6487842531841e-05
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl3.Subs.remove=token.jags-psd-real.traindev --dev classifiers/abl3.Subs.remove=token.jags-psd-real.test --eval auroc --logistic --passes 15 --noearlystop --readable classifiers/abl3.Subs.remove=token.jags-psd-real.fold=15.vwmodel --args --l2 9.6487842531841e-05 -p classifiers/abl3.Subs.remove=token.jags-psd-real.test.predictions
+............................................... 
+0.72544080604534 0.804469273743017 0.660550458715596 <-macroFPR-|-microFPR-> 0.363003603782541 0.6363419780466 0.633691540106365
+
+fold 15 score = 0.842455661077473
+Average score 0.70668785148832 (std 0.133534862373672)
+Average FPR: 0.67619267200038 0.676351757063058 0.754222684080443 <-macroFPR-|-microFPR-> 0.508014576613428 0.657744804923596 0.735313682344367
+Std.dev FPR: 0.10033843749887 0.181009321753329 0.164124789619317 <-macroFPR-|-microFPR-> 0.170246540243304 0.159395119437529 0.177624624919904

@@ -1,0 +1,162 @@
+Reading features from features/Subs.type.hal-ppl
+Skipping features from features/Subs.type.rachel-ngram
+Skipping features from features/Subs.type.rachel-topic
+Skipping features from features/Subs.type.hal-rf
+Skipping features from features/Subs.type.hal-flow
+Reading features from features/Subs.token.jags-local-psd
+Skipping features from features/Subs.token.jags-psd-comp-real
+Skipping features from features/Subs.token.hal-ppl
+Skipping features from features/Subs.token.anni-context-percent
+Reading features from features/Subs.token.anni-context-pos
+Skipping features from features/Subs.token.jags-psd
+Reading features from features/Subs.token.jags-psd-real
+Skipping features from features/Subs.token.jags-local-psd-real
+warning: data included 1 unseen french phrases: spectres
+Read 22597 examples (9808 positive and 12789 negative, which is 43.4% positive)
+===== FOLD 1 / 16 =====
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl8.Subs.remove=type.rachel-ngram.train --dev classifiers/abl8.Subs.remove=type.rachel-ngram.dev --eval auroc --logistic --passes 15 --search --l2 0.000199576896978406 0.000598730690935217 +0.000199576896978406
+..................................................................................................................
+dev  score = 0.828626621153623 on pass 15 with config --l2 0.000199576896978406
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl8.Subs.remove=type.rachel-ngram.traindev --dev classifiers/abl8.Subs.remove=type.rachel-ngram.test --eval auroc --logistic --passes 15 --noearlystop --readable classifiers/abl8.Subs.remove=type.rachel-ngram.fold=0.vwmodel --args --l2 0.000199576896978406 -p classifiers/abl8.Subs.remove=type.rachel-ngram.test.predictions
+............................................... 
+0.240740740740741 0.440677966101695 0.165605095541401 <-macroFPR-|-microFPR-> 0.193428722840488 0.761822376009227 0.411764705882353
+
+===== FOLD 2 / 16 =====
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl8.Subs.remove=type.rachel-ngram.train --dev classifiers/abl8.Subs.remove=type.rachel-ngram.dev --eval auroc --logistic --passes 15 --search --l2 0.000211936249576128 0.000635808748728383 +0.000211936249576128
+fold 0 score = 0.537424265962405
+..................................................................................................................
+dev  score = 0.742985600201221 on pass 14 with config --l2 0.000423872499152256
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl8.Subs.remove=type.rachel-ngram.traindev --dev classifiers/abl8.Subs.remove=type.rachel-ngram.test --eval auroc --logistic --passes 14 --noearlystop --readable classifiers/abl8.Subs.remove=type.rachel-ngram.fold=1.vwmodel --args --l2 0.000423872499152256 -p classifiers/abl8.Subs.remove=type.rachel-ngram.test.predictions
+............................................... 
+0.329561937917029 0.731958762886598 0.212654436540621 <-macroFPR-|-microFPR-> 0.0345018880461627 0.730031873347227 0.249406816987057
+
+===== FOLD 3 / 16 =====
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl8.Subs.remove=type.rachel-ngram.train --dev classifiers/abl8.Subs.remove=type.rachel-ngram.dev --eval auroc --logistic --passes 15 --search --l2 0.000173241169031409 0.000519723507094226 +0.000173241169031409
+fold 1 score = 0.835984031190406
+..................................................................................................................
+dev  score = 0.802043273667189 on pass 3 with config --l2 0.000173241169031409
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl8.Subs.remove=type.rachel-ngram.traindev --dev classifiers/abl8.Subs.remove=type.rachel-ngram.test --eval auroc --logistic --passes 3 --noearlystop --readable classifiers/abl8.Subs.remove=type.rachel-ngram.fold=2.vwmodel --args --l2 0.000173241169031409 -p classifiers/abl8.Subs.remove=type.rachel-ngram.test.predictions
+............................................. 
+0.469733656174334 0.941747572815534 0.312903225806452 <-macroFPR-|-microFPR-> 0.643669574402737 0.933501683501683 0.64018759018759
+
+===== FOLD 4 / 16 =====
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl8.Subs.remove=type.rachel-ngram.train --dev classifiers/abl8.Subs.remove=type.rachel-ngram.dev --eval auroc --logistic --passes 15 --search --l2 0.000166816801788276 0.000500450405364828 +0.000166816801788276
+fold 2 score = 0.746389046091932
+..................................................................................................................
+dev  score = 0.794257355139973 on pass 14 with config --l2 0.000166816801788276
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl8.Subs.remove=type.rachel-ngram.traindev --dev classifiers/abl8.Subs.remove=type.rachel-ngram.test --eval auroc --logistic --passes 14 --noearlystop --readable classifiers/abl8.Subs.remove=type.rachel-ngram.fold=3.vwmodel --args --l2 0.000166816801788276 -p classifiers/abl8.Subs.remove=type.rachel-ngram.test.predictions
+............................................... 
+0.738651994497937 0.930675909878683 0.612314709236032 <-macroFPR-|-microFPR-> 0.510787111058518 0.868727093153205 0.614467408585056
+
+===== FOLD 5 / 16 =====
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl8.Subs.remove=type.rachel-ngram.train --dev classifiers/abl8.Subs.remove=type.rachel-ngram.dev --eval auroc --logistic --passes 15 --search --l2 0.000161851582099215 0.000485554746297645 +0.000161851582099215
+fold 3 score = 0.80597579236461
+..................................................................................................................
+dev  score = 0.503878845948235 on pass 1 with config --l2 0.00032370316419843
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl8.Subs.remove=type.rachel-ngram.traindev --dev classifiers/abl8.Subs.remove=type.rachel-ngram.test --eval auroc --logistic --passes 1 --noearlystop --readable classifiers/abl8.Subs.remove=type.rachel-ngram.fold=4.vwmodel --args --l2 0.00032370316419843 -p classifiers/abl8.Subs.remove=type.rachel-ngram.test.predictions
+.......................................... 
+0.0794223826714801 0.578947368421053 0.0426356589147287 <-macroFPR-|-microFPR-> 0.104895104895105 0.863247863247863 0.230769230769231
+
+===== FOLD 6 / 16 =====
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl8.Subs.remove=type.rachel-ngram.train --dev classifiers/abl8.Subs.remove=type.rachel-ngram.dev --eval auroc --logistic --passes 15 --search --l2 0.000158481116974912 0.000475443350924737 +0.000158481116974912
+fold 4 score = 0.750678582108436
+.........................................................................................................................................................................
+dev  score = 0.610707204230007 on pass 13 with config --l2 0.000158481116974912
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl8.Subs.remove=type.rachel-ngram.traindev --dev classifiers/abl8.Subs.remove=type.rachel-ngram.test --eval auroc --logistic --passes 13 --noearlystop --readable classifiers/abl8.Subs.remove=type.rachel-ngram.fold=5.vwmodel --args --l2 0.000158481116974912 -p classifiers/abl8.Subs.remove=type.rachel-ngram.test.predictions
+............................................... 
+0.119777158774373 0.401869158878505 0.0703764320785597 <-macroFPR-|-microFPR-> 0.34768050879162 0.720115995115995 0.584722222222222
+
+===== FOLD 7 / 16 =====
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl8.Subs.remove=type.rachel-ngram.train --dev classifiers/abl8.Subs.remove=type.rachel-ngram.dev --eval auroc --logistic --passes 15 --search --l2 0.000149503647889008 0.000448510943667025 +0.000149503647889008
+fold 5 score = 0.431823602464039
+.........................................................................................................................................................................
+dev  score = 0.667374107659657 on pass 1 with config --l2 0.000149503647889008
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl8.Subs.remove=type.rachel-ngram.traindev --dev classifiers/abl8.Subs.remove=type.rachel-ngram.test --eval auroc --logistic --passes 1 --noearlystop --readable classifiers/abl8.Subs.remove=type.rachel-ngram.fold=6.vwmodel --args --l2 0.000149503647889008 -p classifiers/abl8.Subs.remove=type.rachel-ngram.test.predictions
+........................................... 
+0.515625 0.55 0.485294117647059 <-macroFPR-|-microFPR-> 0.449438202247191 0.922413793103448 0.5
+
+===== FOLD 8 / 16 =====
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl8.Subs.remove=type.rachel-ngram.train --dev classifiers/abl8.Subs.remove=type.rachel-ngram.dev --eval auroc --logistic --passes 15 --search --l2 0.000149169127957278 0.000447507383871834 +0.000149169127957278
+fold 6 score = 0.606576338400529
+.........................................................................................................................................................................
+dev  score = 0.616392801251956 on pass 1 with config --l2 0.000149169127957278
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl8.Subs.remove=type.rachel-ngram.traindev --dev classifiers/abl8.Subs.remove=type.rachel-ngram.test --eval auroc --logistic --passes 1 --noearlystop --readable classifiers/abl8.Subs.remove=type.rachel-ngram.fold=7.vwmodel --args --l2 0.000149169127957278 -p classifiers/abl8.Subs.remove=type.rachel-ngram.test.predictions
+........................................... 
+0 1 0 <-macroFPR-|-microFPR-> 0 1 0
+
+===== FOLD 9 / 16 =====
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl8.Subs.remove=type.rachel-ngram.train --dev classifiers/abl8.Subs.remove=type.rachel-ngram.dev --eval auroc --logistic --passes 15 --search --l2 0.000191636962937411 0.000574910888812234 +0.000191636962937411
+fold 7 score = 0.676152807254486
+.........................................................................................................................................................................
+dev  score = 0.837106201703984 on pass 15 with config --l2 0.000383273925874822
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl8.Subs.remove=type.rachel-ngram.traindev --dev classifiers/abl8.Subs.remove=type.rachel-ngram.test --eval auroc --logistic --passes 15 --noearlystop --readable classifiers/abl8.Subs.remove=type.rachel-ngram.fold=8.vwmodel --args --l2 0.000383273925874822 -p classifiers/abl8.Subs.remove=type.rachel-ngram.test.predictions
+............................................... 
+0.0526315789473684 0.5 0.0277777777777778 <-macroFPR-|-microFPR-> 0.166666666666667 0.875 0.25
+
+===== FOLD 10 / 16 =====
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl8.Subs.remove=type.rachel-ngram.train --dev classifiers/abl8.Subs.remove=type.rachel-ngram.dev --eval auroc --logistic --passes 15 --search --l2 0.000202917960268663 0.00060875388080599 +0.000202917960268663
+fold 8 score = 0.600352112676056
+.........................................................................................................................................................................
+dev  score = 0.794676135080191 on pass 1 with config --l2 0.000202917960268663
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl8.Subs.remove=type.rachel-ngram.traindev --dev classifiers/abl8.Subs.remove=type.rachel-ngram.test --eval auroc --logistic --passes 1 --noearlystop --readable classifiers/abl8.Subs.remove=type.rachel-ngram.fold=9.vwmodel --args --l2 0.000202917960268663 -p classifiers/abl8.Subs.remove=type.rachel-ngram.test.predictions
+.......................................... 
+0.78021978021978 0.82725430597771 0.738245931283906 <-macroFPR-|-microFPR-> 0.304358231876507 0.951300845180502 0.326923076923077
+
+===== FOLD 11 / 16 =====
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl8.Subs.remove=type.rachel-ngram.train --dev classifiers/abl8.Subs.remove=type.rachel-ngram.dev --eval auroc --logistic --passes 15 --search --l2 0.000161490883839607 0.000484472651518822 +0.000161490883839607
+fold 9 score = 0.837211070368913
+.........................................................................................................................................................................
+dev  score = 0.862505690231638 on pass 3 with config --l2 0.000484472651518821
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl8.Subs.remove=type.rachel-ngram.traindev --dev classifiers/abl8.Subs.remove=type.rachel-ngram.test --eval auroc --logistic --passes 3 --noearlystop --readable classifiers/abl8.Subs.remove=type.rachel-ngram.fold=10.vwmodel --args --l2 0.000484472651518821 -p classifiers/abl8.Subs.remove=type.rachel-ngram.test.predictions
+............................................. 
+0.748435544430538 0.897897897897898 0.641630901287554 <-macroFPR-|-microFPR-> 0.383913918898439 0.970978293190604 0.4
+
+===== FOLD 12 / 16 =====
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl8.Subs.remove=type.rachel-ngram.train --dev classifiers/abl8.Subs.remove=type.rachel-ngram.dev --eval auroc --logistic --passes 15 --search --l2 0.000155530670648252 0.000466592011944756 +0.000155530670648252
+fold 10 score = 0.783185918793766
+..................................................................................................................
+dev  score = 0.504065040650406 on pass 7 with config --l2 0.000155530670648252
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl8.Subs.remove=type.rachel-ngram.traindev --dev classifiers/abl8.Subs.remove=type.rachel-ngram.test --eval auroc --logistic --passes 7 --noearlystop --readable classifiers/abl8.Subs.remove=type.rachel-ngram.fold=11.vwmodel --args --l2 0.000155530670648252 -p classifiers/abl8.Subs.remove=type.rachel-ngram.test.predictions
+.............................................. 
+0.829403606102635 0.884615384615385 0.780678851174935 <-macroFPR-|-microFPR-> 0.623809523809524 0.931174089068826 0.666666666666667
+
+===== FOLD 13 / 16 =====
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl8.Subs.remove=type.rachel-ngram.train --dev classifiers/abl8.Subs.remove=type.rachel-ngram.dev --eval auroc --logistic --passes 15 --search --l2 0.000159726548149568 0.000479179644448704 +0.000159726548149568
+fold 11 score = 0.851682477225992
+..................................................................................................................
+dev  score = 0.577513205415812 on pass 15 with config --l2 0.000159726548149568
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl8.Subs.remove=type.rachel-ngram.traindev --dev classifiers/abl8.Subs.remove=type.rachel-ngram.test --eval auroc --logistic --passes 15 --noearlystop --readable classifiers/abl8.Subs.remove=type.rachel-ngram.fold=12.vwmodel --args --l2 0.000159726548149568 -p classifiers/abl8.Subs.remove=type.rachel-ngram.test.predictions
+............................................... 
+0.150375939849624 1 0.0813008130081301 <-macroFPR-|-microFPR-> 0.4 1 0.4
+
+===== FOLD 14 / 16 =====
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl8.Subs.remove=type.rachel-ngram.train --dev classifiers/abl8.Subs.remove=type.rachel-ngram.dev --eval auroc --logistic --passes 15 --search --l2 0.000162577834138094 0.000487733502414281 +0.000162577834138094
+fold 12 score = 0.533231707317073
+..................................................................................................................
+dev  score = 0.686528964862299 on pass 2 with config --l2 0.000162577834138094
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl8.Subs.remove=type.rachel-ngram.traindev --dev classifiers/abl8.Subs.remove=type.rachel-ngram.test --eval auroc --logistic --passes 2 --noearlystop --readable classifiers/abl8.Subs.remove=type.rachel-ngram.fold=13.vwmodel --args --l2 0.000162577834138094 -p classifiers/abl8.Subs.remove=type.rachel-ngram.test.predictions
+............................................ 
+0.498812351543943 0.813953488372093 0.35958904109589 <-macroFPR-|-microFPR-> 0.508083452043416 0.930464716006885 0.525553811268097
+
+===== FOLD 15 / 16 =====
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl8.Subs.remove=type.rachel-ngram.train --dev classifiers/abl8.Subs.remove=type.rachel-ngram.dev --eval auroc --logistic --passes 15 --search --l2 0.00016307095217129 0.000489212856513869 +0.00016307095217129
+fold 13 score = 0.60039397483016
+..................................................................................................................
+dev  score = 0.848008109532467 on pass 15 with config --l2 0.00016307095217129
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl8.Subs.remove=type.rachel-ngram.traindev --dev classifiers/abl8.Subs.remove=type.rachel-ngram.test --eval auroc --logistic --passes 15 --noearlystop --readable classifiers/abl8.Subs.remove=type.rachel-ngram.fold=14.vwmodel --args --l2 0.00016307095217129 -p classifiers/abl8.Subs.remove=type.rachel-ngram.test.predictions
+............................................... 
+0.0174418604651163 0.157894736842105 0.00923076923076923 <-macroFPR-|-microFPR-> 0.0272683972374375 0.789473684210526 0.158377595364558
+
+===== FOLD 16 / 16 =====
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl8.Subs.remove=type.rachel-ngram.train --dev classifiers/abl8.Subs.remove=type.rachel-ngram.dev --eval auroc --logistic --passes 15 --search --l2 0.000160813070886402 0.000482439212659205 +0.000160813070886402
+fold 14 score = 0.700379867046534
+..................................................................................................................
+dev  score = 0.54109057014137 on pass 8 with config --l2 0.000160813070886402
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl8.Subs.remove=type.rachel-ngram.traindev --dev classifiers/abl8.Subs.remove=type.rachel-ngram.test --eval auroc --logistic --passes 8 --noearlystop --readable classifiers/abl8.Subs.remove=type.rachel-ngram.fold=15.vwmodel --args --l2 0.000160813070886402 -p classifiers/abl8.Subs.remove=type.rachel-ngram.test.predictions
+.............................................. 
+0.71804170444243 0.88195991091314 0.605504587155963 <-macroFPR-|-microFPR-> 0.297603310802939 0.731418394162297 0.522391304347826
+
+fold 15 score = 0.84783512768391
+Average score 0.696579795111203 (std 0.127518181213418)
+Average FPR: 0.393054702298583 0.721215778975025 0.321608896736236 <-macroFPR-|-microFPR-> 0.312256538351047 0.873729418706143 0.405076901825233
+Std.dev FPR: 0.295208525754875 0.24343499304291 0.274136444902236 <-macroFPR-|-microFPR-> 0.201871269384594 0.0948953624576829 0.184886475598181

@@ -12,7 +12,10 @@ use strict;
 
 while (<>) {
     chomp;
-    if (/Average score ([^ ]+) \(std (.+?)\)/) {
+    if (/^\s*$/) { print "\n"; }
+    elsif (/^==> (.+) <==$/) {
+        print "% $1\n";
+    } elsif (/Average score ([^ ]+) \(std (.+?)\)/) {
         printResult($1, $2, '    % AUC');
     } elsif (/^Average FPR:\s*([^\s]+)\s([^\s]+)\s([^\s]+)\s<-macroFPR-\|-microFPR->\s*([^\s]+)\s([^\s]+)\s([^\s]+)$/) {
         my $mu_maF = $1; my $mu_maP = $2; my $mu_maR = $3;
@@ -27,9 +30,9 @@ while (<>) {
             printResult($mu_maR, $st_maR, '    % Macro-R');
             printResult($mu_maF, $st_maF, '    % Macro-F');
 
-            printResult($mu_miP, $st_miP, '    % Macro-P');
-            printResult($mu_miR, $st_miR, '    % Macro-R');
-            printResult($mu_miF, $st_miF, ' \\\\ % Macro-F');
+            printResult($mu_miP, $st_miP, '    % Micro-P');
+            printResult($mu_miR, $st_miR, '    % Micro-R');
+            printResult($mu_miF, $st_miF, ' \\\\ % Micro-F');
         } else { die "oops: '$_'"; }
     } elsif (/^bootstrap-mean: ([^\s]+)$/) {
         my $mu_AUC = $1;
@@ -50,9 +53,9 @@ while (<>) {
             printResult($mu_maR, $st_maR, '    % Macro-R');
             printResult($mu_maF, $st_maF, '    % Macro-F');
 
-            printResult($mu_miP, $st_miP, '    % Macro-P');
-            printResult($mu_miR, $st_miR, '    % Macro-R');
-            printResult($mu_miF, $st_miF, ' \\\\ % Macro-F');
+            printResult($mu_miP, $st_miP, '    % Micro-P');
+            printResult($mu_miR, $st_miR, '    % Micro-R');
+            printResult($mu_miF, $st_miF, ' \\\\ % Micro-F');
         } else { die "oops: '$_'"; }
     }
 }

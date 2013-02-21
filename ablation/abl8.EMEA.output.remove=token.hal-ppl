@@ -1,0 +1,161 @@
+Skipping features from features/EMEA.type.rachel-ngram
+Skipping features from features/EMEA.type.rachel-topic
+Reading features from features/EMEA.type.hal-rf
+Skipping features from features/EMEA.type.hal-flow
+Skipping features from features/EMEA.type.hal-ppl
+Skipping features from features/EMEA.token.hal-ppl
+Skipping features from features/EMEA.token.anni-context-percent
+Reading features from features/EMEA.token.anni-context-pos
+Reading features from features/EMEA.token.jags-psd
+Skipping features from features/EMEA.token.jags-psd-real
+Skipping features from features/EMEA.token.jags-local-psd
+Reading features from features/EMEA.token.jags-local-psd-real
+Skipping features from features/EMEA.token.jags-psd-comp-real
+Read 35266 examples (18362 positive and 16904 negative, which is 52% positive)
+===== FOLD 1 / 16 =====
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl8.EMEA.remove=token.hal-ppl.train --dev classifiers/abl8.EMEA.remove=token.hal-ppl.dev --eval auroc --logistic --passes 15 --search --l2 0.000122503981379395 0.000367511944138185 +0.000122503981379395
+....................................................................................................................
+dev  score = 0.696318449790984 on pass 1 with config --l2 0.00024500796275879
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl8.EMEA.remove=token.hal-ppl.traindev --dev classifiers/abl8.EMEA.remove=token.hal-ppl.test --eval auroc --logistic --passes 1 --noearlystop --readable classifiers/abl8.EMEA.remove=token.hal-ppl.fold=0.vwmodel --args --l2 0.00024500796275879 -p classifiers/abl8.EMEA.remove=token.hal-ppl.test.predictions
+........................................... 
+0.809792843691149 0.698051948051948 0.964125560538117 <-macroFPR-|-microFPR-> 0.347140191726179 0.30414115580356 0.655963302752294
+
+===== FOLD 2 / 16 =====
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl8.EMEA.remove=token.hal-ppl.train --dev classifiers/abl8.EMEA.remove=token.hal-ppl.dev --eval auroc --logistic --passes 15 --search --l2 0.000128412563885251 0.000385237691655752 +0.000128412563885251
+fold 0 score = 0.942784097123483
+....................................................................................................................
+dev  score = 0.817462838835542 on pass 6 with config --l2 0.000128412563885251
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl8.EMEA.remove=token.hal-ppl.traindev --dev classifiers/abl8.EMEA.remove=token.hal-ppl.test --eval auroc --logistic --passes 6 --noearlystop --readable classifiers/abl8.EMEA.remove=token.hal-ppl.fold=1.vwmodel --args --l2 0.000128412563885251 -p classifiers/abl8.EMEA.remove=token.hal-ppl.test.predictions
+.............................................. 
+0.207570641549671 0.356968215158924 0.146329240791782 <-macroFPR-|-microFPR-> 0.420698742456495 0.478011378741235 0.719584579840563
+
+===== FOLD 3 / 16 =====
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl8.EMEA.remove=token.hal-ppl.train --dev classifiers/abl8.EMEA.remove=token.hal-ppl.dev --eval auroc --logistic --passes 15 --search --l2 0.00010585707178168 0.000317571215345041 +0.00010585707178168
+fold 1 score = 0.622977215319569
+............................................................................................................................................................................
+dev  score = 0.702951235502825 on pass 13 with config --l2 0.00010585707178168
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl8.EMEA.remove=token.hal-ppl.traindev --dev classifiers/abl8.EMEA.remove=token.hal-ppl.test --eval auroc --logistic --passes 13 --noearlystop --readable classifiers/abl8.EMEA.remove=token.hal-ppl.fold=2.vwmodel --args --l2 0.00010585707178168 -p classifiers/abl8.EMEA.remove=token.hal-ppl.test.predictions
+................................................ 
+0.739656269891789 0.809192200557103 0.681125439624854 <-macroFPR-|-microFPR-> 0.511390780997417 0.723630288751256 0.622628606009858
+
+===== FOLD 4 / 16 =====
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl8.EMEA.remove=token.hal-ppl.train --dev classifiers/abl8.EMEA.remove=token.hal-ppl.dev --eval auroc --logistic --passes 15 --search --l2 0.000103848630236567 0.000311545890709702 +0.000103848630236567
+fold 2 score = 0.817245823004573
+............................................................................................................................................................................
+dev  score = 0.832425675267388 on pass 1 with config --l2 0.000207697260473134
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl8.EMEA.remove=token.hal-ppl.traindev --dev classifiers/abl8.EMEA.remove=token.hal-ppl.test --eval auroc --logistic --passes 1 --noearlystop --readable classifiers/abl8.EMEA.remove=token.hal-ppl.fold=3.vwmodel --args --l2 0.000207697260473134 -p classifiers/abl8.EMEA.remove=token.hal-ppl.test.predictions
+........................................... 
+0.649350649350649 0.670498084291188 0.629496402877698 <-macroFPR-|-microFPR-> 0.458657088976272 0.531986257507235 0.676336059314612
+
+===== FOLD 5 / 16 =====
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl8.EMEA.remove=token.hal-ppl.train --dev classifiers/abl8.EMEA.remove=token.hal-ppl.dev --eval auroc --logistic --passes 15 --search --l2 0.000101890060624586 0.000305670181873758 +0.000101890060624586
+fold 3 score = 0.686195341972036
+....................................................................................................................
+dev  score = 0.654757353070139 on pass 3 with config --l2 0.000101890060624586
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl8.EMEA.remove=token.hal-ppl.traindev --dev classifiers/abl8.EMEA.remove=token.hal-ppl.test --eval auroc --logistic --passes 3 --noearlystop --readable classifiers/abl8.EMEA.remove=token.hal-ppl.fold=4.vwmodel --args --l2 0.000101890060624586 -p classifiers/abl8.EMEA.remove=token.hal-ppl.test.predictions
+.............................................. 
+0.749232343909928 0.829931972789116 0.682835820895522 <-macroFPR-|-microFPR-> 0.44723592697679 0.681943333883858 0.622884423949832
+
+===== FOLD 6 / 16 =====
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl8.EMEA.remove=token.hal-ppl.train --dev classifiers/abl8.EMEA.remove=token.hal-ppl.dev --eval auroc --logistic --passes 15 --search --l2 9.88298545224541e-05 0.000296489563567362 +9.88298545224541e-05
+fold 4 score = 0.828545153785727
+....................................................................................................................
+dev  score = 0.729166666666667 on pass 1 with config --l2 9.88298545224541e-05
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl8.EMEA.remove=token.hal-ppl.traindev --dev classifiers/abl8.EMEA.remove=token.hal-ppl.test --eval auroc --logistic --passes 1 --noearlystop --readable classifiers/abl8.EMEA.remove=token.hal-ppl.fold=5.vwmodel --args --l2 9.88298545224541e-05 -p classifiers/abl8.EMEA.remove=token.hal-ppl.test.predictions
+........................................... 
+0.680426098535286 0.614182692307692 0.762686567164179 <-macroFPR-|-microFPR-> 0.743500448593308 0.920675856529291 0.76390864193174
+
+===== FOLD 7 / 16 =====
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl8.EMEA.remove=token.hal-ppl.train --dev classifiers/abl8.EMEA.remove=token.hal-ppl.dev --eval auroc --logistic --passes 15 --search --l2 9.85580950691385e-05 0.000295674285207416 +9.85580950691385e-05
+fold 5 score = 0.642934563375835
+............................................................................................................................................................................
+dev  score = 0.745393036820925 on pass 3 with config --l2 9.85580950691385e-05
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl8.EMEA.remove=token.hal-ppl.traindev --dev classifiers/abl8.EMEA.remove=token.hal-ppl.test --eval auroc --logistic --passes 3 --noearlystop --readable classifiers/abl8.EMEA.remove=token.hal-ppl.fold=6.vwmodel --args --l2 9.85580950691385e-05 -p classifiers/abl8.EMEA.remove=token.hal-ppl.test.predictions
+.............................................. 
+0.692307692307692 0.529411764705882 1 <-macroFPR-|-microFPR-> 0.692307692307692 0.529411764705882 1
+
+===== FOLD 8 / 16 =====
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl8.EMEA.remove=token.hal-ppl.train --dev classifiers/abl8.EMEA.remove=token.hal-ppl.dev --eval auroc --logistic --passes 15 --search --l2 9.88972951589774e-05 0.000296691885476932 +9.88972951589774e-05
+fold 6 score = 0.805555555555556
+....................................................................................................................
+dev  score = 0.75343563902886 on pass 1 with config --l2 9.88972951589774e-05
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl8.EMEA.remove=token.hal-ppl.traindev --dev classifiers/abl8.EMEA.remove=token.hal-ppl.test --eval auroc --logistic --passes 1 --noearlystop --readable classifiers/abl8.EMEA.remove=token.hal-ppl.fold=7.vwmodel --args --l2 9.88972951589774e-05 -p classifiers/abl8.EMEA.remove=token.hal-ppl.test.predictions
+........................................... 
+0.735461801596351 0.720670391061452 0.750873108265425 <-macroFPR-|-microFPR-> 0.229329983640726 0.367215143115462 0.754253308128545
+
+===== FOLD 9 / 16 =====
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl8.EMEA.remove=token.hal-ppl.train --dev classifiers/abl8.EMEA.remove=token.hal-ppl.dev --eval auroc --logistic --passes 15 --search --l2 0.000120484830959782 0.000361454492879346 +0.000120484830959782
+fold 7 score = 0.751027577331716
+....................................................................................................................
+dev  score = 0.810052041973987 on pass 2 with config --l2 0.000240969661919564
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl8.EMEA.remove=token.hal-ppl.traindev --dev classifiers/abl8.EMEA.remove=token.hal-ppl.test --eval auroc --logistic --passes 2 --noearlystop --readable classifiers/abl8.EMEA.remove=token.hal-ppl.fold=8.vwmodel --args --l2 0.000240969661919564 -p classifiers/abl8.EMEA.remove=token.hal-ppl.test.predictions
+............................................. 
+0.710382513661202 0.596330275229358 0.878378378378378 <-macroFPR-|-microFPR-> 0.710382513661202 0.596330275229358 0.878378378378378
+
+===== FOLD 10 / 16 =====
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl8.EMEA.remove=token.hal-ppl.train --dev classifiers/abl8.EMEA.remove=token.hal-ppl.dev --eval auroc --logistic --passes 15 --search --l2 0.000143049237547564 0.000429147712642692 +0.000143049237547564
+fold 8 score = 0.726523133302794
+..................................................................................................................
+dev  score = 0.763216736245816 on pass 1 with config --l2 0.000286098475095128
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl8.EMEA.remove=token.hal-ppl.traindev --dev classifiers/abl8.EMEA.remove=token.hal-ppl.test --eval auroc --logistic --passes 1 --noearlystop --readable classifiers/abl8.EMEA.remove=token.hal-ppl.fold=9.vwmodel --args --l2 0.000286098475095128 -p classifiers/abl8.EMEA.remove=token.hal-ppl.test.predictions
+........................................... 
+0.686652022225094 0.691386937288577 0.681981519507187 <-macroFPR-|-microFPR-> 0.394319798741343 0.647482484476858 0.429797714049845
+
+===== FOLD 11 / 16 =====
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl8.EMEA.remove=token.hal-ppl.train --dev classifiers/abl8.EMEA.remove=token.hal-ppl.dev --eval auroc --logistic --passes 15 --search --l2 0.000119517150711127 0.000358551452133381 +0.000119517150711127
+fold 9 score = 0.822782178419935
+....................................................................................................................
+dev  score = 0.81136281666117 on pass 1 with config --l2 0.000239034301422254
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl8.EMEA.remove=token.hal-ppl.traindev --dev classifiers/abl8.EMEA.remove=token.hal-ppl.test --eval auroc --logistic --passes 1 --noearlystop --readable classifiers/abl8.EMEA.remove=token.hal-ppl.fold=10.vwmodel --args --l2 0.000239034301422254 -p classifiers/abl8.EMEA.remove=token.hal-ppl.test.predictions
+........................................... 
+0.639496717724289 0.889649923896499 0.499146029035013 <-macroFPR-|-microFPR-> 0.244626575425936 0.747183120571803 0.33799335272123
+
+===== FOLD 12 / 16 =====
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl8.EMEA.remove=token.hal-ppl.train --dev classifiers/abl8.EMEA.remove=token.hal-ppl.dev --eval auroc --logistic --passes 15 --search --l2 0.00010708128540375 0.00032124385621125 +0.00010708128540375
+fold 10 score = 0.775332325475876
+....................................................................................................................
+dev  score = 0.676884816422614 on pass 1 with config --l2 0.00010708128540375
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl8.EMEA.remove=token.hal-ppl.traindev --dev classifiers/abl8.EMEA.remove=token.hal-ppl.test --eval auroc --logistic --passes 1 --noearlystop --readable classifiers/abl8.EMEA.remove=token.hal-ppl.fold=11.vwmodel --args --l2 0.00010708128540375 -p classifiers/abl8.EMEA.remove=token.hal-ppl.test.predictions
+........................................... 
+0.717048710601719 0.775367931835786 0.66688874083944 <-macroFPR-|-microFPR-> 0.265251788562818 0.631640153603337 0.52172567549677
+
+===== FOLD 13 / 16 =====
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl8.EMEA.remove=token.hal-ppl.train --dev classifiers/abl8.EMEA.remove=token.hal-ppl.dev --eval auroc --logistic --passes 15 --search --l2 0.000104588288203487 0.000313764864610461 +0.000104588288203487
+fold 11 score = 0.820154004732212
+....................................................................................................................
+dev  score = 0.339659271714761 on pass 1 with config --l2 0.000104588288203487
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl8.EMEA.remove=token.hal-ppl.traindev --dev classifiers/abl8.EMEA.remove=token.hal-ppl.test --eval auroc --logistic --passes 1 --noearlystop --readable classifiers/abl8.EMEA.remove=token.hal-ppl.fold=12.vwmodel --args --l2 0.000104588288203487 -p classifiers/abl8.EMEA.remove=token.hal-ppl.test.predictions
+........................................... 
+0.897637795275591 0.923824959481361 0.872894333843798 <-macroFPR-|-microFPR-> 0.412343582343582 0.614261069580219 0.411404293381038
+
+===== FOLD 14 / 16 =====
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl8.EMEA.remove=token.hal-ppl.train --dev classifiers/abl8.EMEA.remove=token.hal-ppl.dev --eval auroc --logistic --passes 15 --search --l2 0.000102117925780692 0.000306353777342075 +0.000102117925780692
+fold 12 score = 0.937817827446115
+....................................................................................................................
+dev  score = 0.866142857142857 on pass 4 with config --l2 0.000102117925780692
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl8.EMEA.remove=token.hal-ppl.traindev --dev classifiers/abl8.EMEA.remove=token.hal-ppl.test --eval auroc --logistic --passes 4 --noearlystop --readable classifiers/abl8.EMEA.remove=token.hal-ppl.fold=13.vwmodel --args --l2 0.000102117925780692 -p classifiers/abl8.EMEA.remove=token.hal-ppl.test.predictions
+.............................................. 
+0.775497316071992 0.642931937172775 0.976929196499602 <-macroFPR-|-microFPR-> 0.260804927259212 0.21738360771818 0.659235668789809
+
+===== FOLD 15 / 16 =====
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl8.EMEA.remove=token.hal-ppl.train --dev classifiers/abl8.EMEA.remove=token.hal-ppl.dev --eval auroc --logistic --passes 15 --search --l2 9.74658869395711e-05 0.000292397660818713 +9.74658869395711e-05
+fold 13 score = 0.38340746365806
+....................................................................................................................
+dev  score = 0.91839176738064 on pass 1 with config --l2 0.000194931773879142
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl8.EMEA.remove=token.hal-ppl.traindev --dev classifiers/abl8.EMEA.remove=token.hal-ppl.test --eval auroc --logistic --passes 1 --noearlystop --readable classifiers/abl8.EMEA.remove=token.hal-ppl.fold=14.vwmodel --args --l2 0.000194931773879142 -p classifiers/abl8.EMEA.remove=token.hal-ppl.test.predictions
+........................................... 
+0.513994910941476 0.359430604982206 0.901785714285714 <-macroFPR-|-microFPR-> 0.474382340154152 0.418400499843799 0.794727398205659
+
+===== FOLD 16 / 16 =====
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl8.EMEA.remove=token.hal-ppl.train --dev classifiers/abl8.EMEA.remove=token.hal-ppl.dev --eval auroc --logistic --passes 15 --search --l2 9.71817298347911e-05 0.000291545189504373 +9.71817298347911e-05
+fold 14 score = 0.883595238095236
+....................................................................................................................
+dev  score = 0.943002843705566 on pass 1 with config --l2 9.71817298347911e-05
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl8.EMEA.remove=token.hal-ppl.traindev --dev classifiers/abl8.EMEA.remove=token.hal-ppl.test --eval auroc --logistic --passes 1 --noearlystop --readable classifiers/abl8.EMEA.remove=token.hal-ppl.fold=15.vwmodel --args --l2 9.71817298347911e-05 -p classifiers/abl8.EMEA.remove=token.hal-ppl.test.predictions
+........................................... 
+0.760655737704918 0.69047619047619 0.846715328467153 <-macroFPR-|-microFPR-> 0.564489077653846 0.646252479498962 0.560090702947846
+
+fold 15 score = 0.901178652626542
+Average score 0.771753509451579 (std 0.13620341619805)
+Average FPR: 0.685322754064925 0.674894126830379 0.746386961313366 <-macroFPR-|-microFPR-> 0.448553841217311 0.565996804347518 0.650557006618626
+Std.dev FPR: 0.147188414728326 0.157333079918741 0.207128008408426 <-macroFPR-|-microFPR-> 0.159478045993325 0.173059256271705 0.168427593547203

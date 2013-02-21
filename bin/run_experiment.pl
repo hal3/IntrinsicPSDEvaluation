@@ -15,6 +15,7 @@ my $mostFreqSenseEval = 0;
 my $quiet = 0;
 
 my $allowToken = 1;
+my $allowType  = 1;
 
 my $pruneMaxCount   = 20;    # keep at most 20 en translations for each fr word
 my $pruneMaxProbSum = 0.95;  # AND keep at most 95% of the probability mass for p(en|fr)
@@ -41,12 +42,13 @@ where options includes:
   -seen file       read seen pairs from file [$seenFName]
   -ignore str      ignore features named string (multiple allowed)
   -srand #         seed random number generated with # or X for prng [$srandNum]
-  -classifier str  specify classifier to use [$classifier] (eg: vw, bfgs, dt, oracleType, random)
+  -classifier str  specify classifier to use [$classifier] (eg: vw, bfgs, dt, oracleType, random, constant)
   -showclassifier  show output from classifier
   -dontbucket      bucket features (make them all binary)
   -dontevensplit   don't run the (hacky) thing for making even splits
   -dontregularize  turn off (search for) regularization parameters
   -notoken         turn off all token-based features
+  -notype          turn off all type-based features
   -maxtokpertype # only keep at most # tokens for each unique type [$maxTokPerType]
   -mfs             change eval to 'is this OLD mfs'? [def: is this a new sense?]
   -subset #        keep only #% of the training data [def: $subsetPercent]
@@ -73,6 +75,7 @@ while (1) {
     elsif ($arg eq '-maxbuckets') { $maxBuckets = shift or die "-maxbuckets needs an argument"; }
     elsif ($arg eq '-exp') { $experiment = shift or die "-exp needs an argument"; }
     elsif ($arg eq '-notoken') { $allowToken = 0; }
+    elsif ($arg eq '-notype') { $allowType = 0; }
     elsif ($arg eq '-maxtokpertype') { $maxTokPerType = shift or die "-maxtokpertype needs an argument"; }
     elsif ($arg eq '-pruneMC' ) { $pruneMaxCount = shift or die "-pruneMC needs an argument"; $doPrune = 1; }
     elsif ($arg eq '-pruneMPS') { $pruneMaxProbSum = shift or die "-pruneMPS needs an argument"; $doPrune = 1; }
@@ -94,9 +97,6 @@ while (1) {
 
 if ($srandNum eq 'X') { srand(); }
 else { srand($srandNum); }
-
-my $needFeatures = 1;
-#if (($classifier eq 'oracleType') || ($classifier eq 'random')) { $needFeatures = 0; }
 
 my $isXV = 0;
 if (scalar keys %xvDom == 0) {
@@ -259,7 +259,9 @@ for (my $fold=0; $fold<$numFolds; $fold++) {
     if ($classifier eq 'oracleType') {
         ($auc,$rest) = compute_oracleType(\@traindev, \@test);
     } elsif ($classifier eq 'random') {
-        ($auc,$rest) = compute_random(\@test);
+        ($auc,$rest) = compute_random(\@test, 0);
+    } elsif ($classifier eq 'constant') {
+        ($auc,$rest) = compute_random(\@test, 1);
     } else {
         writeFile("classifiers/$experiment.train", @train);
         writeFile("classifiers/$experiment.traindev", @traindev);
@@ -333,11 +335,11 @@ sub compute_oracleType {
         $type{$w} += $y;
     }
 
-    open ORAC, "> classifiers/.tmpforauc" or die;
+    open ORAC, "> classifiers/.tmpforauc.$experiment" or die;
     for (my $n=0; $n<@$test; $n++) {
         my $y = $test->[$n]{'label'};
         my $w = $test->[$n]{'phrase'};
-        my $yhat = rand() * 2 - 1;
+        my $yhat = 1; # rand() * 2 - 1;
         if (defined $type{$w}) {
             $yhat = $type{$w};
             #print STDERR "+";
@@ -348,29 +350,30 @@ sub compute_oracleType {
     close ORAC or die;
     my $bootstrap = '';
     if (not $isXV) { $bootstrap = ' -bootstrap 100'; }
-    my $auc = `cat classifiers/.tmpforauc | bin/auc.pl $bootstrap`;
-    my $rest = `cat classifiers/.tmpforauc | bin/auc.pl -prf $bootstrap`;
+    my $auc = `cat classifiers/.tmpforauc.$experiment | bin/auc.pl $bootstrap`;
+    my $rest = `cat classifiers/.tmpforauc.$experiment | bin/auc.pl -prf $bootstrap`;
     chomp $auc;
     chomp $rest;
     return ($auc, $rest);
 }
 
 sub compute_random {
-    my ($test) = @_;
+    my ($test, $beConstant) = @_;
 
-    open RAND, "> classifiers/.tmpforauc" or die;
+    open RAND, "> classifiers/.tmpforauc.$experiment" or die;
     for (my $n=0; $n<@$test; $n++) {
         my $y = $test->[$n]{'label'};
         my $w = $test->[$n]{'phrase'};
         my $yhat = rand() * 2 - 1;
+        if ($beConstant) { $yhat = 1; }
         $w =~ s/\s/_/g;
         print RAND $yhat . ' ' . $y . ' ' . $w . "\n";
     }
     close RAND or die;
     my $bootstrap = '';
     if (not $isXV) { $bootstrap = ' -bootstrap 100'; }
-    my $auc = `cat classifiers/.tmpforauc | bin/auc.pl $bootstrap`;
-    my $rest = `cat classifiers/.tmpforauc | bin/auc.pl -prf $bootstrap`;
+    my $auc = `cat classifiers/.tmpforauc.$experiment | bin/auc.pl $bootstrap`;
+    my $rest = `cat classifiers/.tmpforauc.$experiment | bin/auc.pl -prf $bootstrap`;
     chomp $auc;
     chomp $rest;
     return ($auc, $rest);
@@ -387,6 +390,7 @@ sub run_vw {
     my $stepReg = $largeReg / 5;
 
     my $searchArgs = "--passes 20 --orsearch --l1 0. $largeReg +$stepReg --l2 $stepReg $largeReg +$stepReg";
+    #my $searchArgs = "--passes 15 --search --l2 $stepReg $largeReg +$stepReg";
     if (! $regularize) { $searchArgs = "--passes 20"; }
 
     my $bestScore; my $bestPass; my $bestConfig;
@@ -594,7 +598,7 @@ sub generateData {
     my $domReal = $dom; $domReal =~ s/-(old|big)//;
     open LS, "find features/ -iname \"$domReal.type.*\" |" or die $!;
     while (my $fname = <LS>) {
-        if (not $needFeatures) { next; }
+        if (not $allowType) { next; }
         chomp $fname;
         $fname =~ /\/$domReal\.type\.(.+)$/;
         my $user = $1;
@@ -637,7 +641,6 @@ sub generateData {
 
     open LS, "find features/ -iname \"$domReal.token.*\" |" or die $!;
     while (my $fname = <LS>) {
-        if (not $needFeatures) { next; }
         if (not $allowToken) { next; }
 	chomp $fname;
         $fname =~ /^(.+)\.token\.(.+)$/;
@@ -875,6 +878,11 @@ sub doEvenSplit {
         my $type = $allData[$n]{'phrase'};
         if (not defined $typeToFold{$type}) { die "type $type did not get a fold!"; }
         my $f = $typeToFold{$type};
+
+        if ($classifier eq 'oracleType') {
+            $f = int(rand() * $numFolds);
+        }
+
         $allData[$n]{'devfold'}  = $f;
         $allData[$n]{'testfold'} = ($f+1) % $numFolds;
 #        $allData[$n]{'testfold'}  = $f;

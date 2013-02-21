@@ -1,0 +1,162 @@
+Reading features from features/Subs.type.hal-ppl
+Reading features from features/Subs.type.rachel-ngram
+Reading features from features/Subs.type.rachel-topic
+Skipping features from features/Subs.type.hal-rf
+Skipping features from features/Subs.type.hal-flow
+Reading features from features/Subs.token.jags-local-psd
+Skipping features from features/Subs.token.jags-psd-comp-real
+Skipping features from features/Subs.token.hal-ppl
+Reading features from features/Subs.token.anni-context-percent
+Reading features from features/Subs.token.anni-context-pos
+Skipping features from features/Subs.token.jags-psd
+Reading features from features/Subs.token.jags-psd-real
+Skipping features from features/Subs.token.jags-local-psd-real
+warning: data included 1 unseen french phrases: spectres
+Read 22597 examples (9808 positive and 12789 negative, which is 43.4% positive)
+===== FOLD 1 / 16 =====
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl5.Subs.remove=type.hal-flow.train --dev classifiers/abl5.Subs.remove=type.hal-flow.dev --eval auroc --logistic --passes 15 --search --l2 0.000199576896978406 0.000598730690935217 +0.000199576896978406
+..................................................................................................................
+dev  score = 0.842398856051787 on pass 15 with config --l2 0.000199576896978406
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl5.Subs.remove=type.hal-flow.traindev --dev classifiers/abl5.Subs.remove=type.hal-flow.test --eval auroc --logistic --passes 15 --noearlystop --readable classifiers/abl5.Subs.remove=type.hal-flow.fold=0.vwmodel --args --l2 0.000199576896978406 -p classifiers/abl5.Subs.remove=type.hal-flow.test.predictions
+............................................... 
+0.241860465116279 0.448275862068966 0.165605095541401 <-macroFPR-|-microFPR-> 0.205518018018018 0.809436274509804 0.375
+
+===== FOLD 2 / 16 =====
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl5.Subs.remove=type.hal-flow.train --dev classifiers/abl5.Subs.remove=type.hal-flow.dev --eval auroc --logistic --passes 15 --search --l2 0.000211936249576128 0.000635808748728383 +0.000211936249576128
+fold 0 score = 0.530713065092434
+..................................................................................................................
+dev  score = 0.75020908004779 on pass 13 with config --l2 0.000423872499152256
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl5.Subs.remove=type.hal-flow.traindev --dev classifiers/abl5.Subs.remove=type.hal-flow.test --eval auroc --logistic --passes 13 --noearlystop --readable classifiers/abl5.Subs.remove=type.hal-flow.fold=1.vwmodel --args --l2 0.000423872499152256 -p classifiers/abl5.Subs.remove=type.hal-flow.test.predictions
+............................................... 
+0.531708530216364 0.791851851851852 0.400224634968177 <-macroFPR-|-microFPR-> 0.0418352077522492 0.731118946090675 0.256525013142378
+
+===== FOLD 3 / 16 =====
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl5.Subs.remove=type.hal-flow.train --dev classifiers/abl5.Subs.remove=type.hal-flow.dev --eval auroc --logistic --passes 15 --search --l2 0.000173241169031409 0.000519723507094226 +0.000173241169031409
+fold 1 score = 0.844274149894263
+..................................................................................................................
+dev  score = 0.800152332725799 on pass 3 with config --l2 0.000173241169031409
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl5.Subs.remove=type.hal-flow.traindev --dev classifiers/abl5.Subs.remove=type.hal-flow.test --eval auroc --logistic --passes 3 --noearlystop --readable classifiers/abl5.Subs.remove=type.hal-flow.fold=2.vwmodel --args --l2 0.000173241169031409 -p classifiers/abl5.Subs.remove=type.hal-flow.test.predictions
+............................................. 
+0.464114832535885 0.898148148148148 0.312903225806452 <-macroFPR-|-microFPR-> 0.638004225259127 0.937542087542088 0.644805194805195
+
+===== FOLD 4 / 16 =====
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl5.Subs.remove=type.hal-flow.train --dev classifiers/abl5.Subs.remove=type.hal-flow.dev --eval auroc --logistic --passes 15 --search --l2 0.000166816801788276 0.000500450405364828 +0.000166816801788276
+fold 2 score = 0.753769728981954
+..................................................................................................................
+dev  score = 0.797799783773837 on pass 11 with config --l2 0.000166816801788276
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl5.Subs.remove=type.hal-flow.traindev --dev classifiers/abl5.Subs.remove=type.hal-flow.test --eval auroc --logistic --passes 11 --noearlystop --readable classifiers/abl5.Subs.remove=type.hal-flow.fold=3.vwmodel --args --l2 0.000166816801788276 -p classifiers/abl5.Subs.remove=type.hal-flow.test.predictions
+............................................... 
+0.736842105263158 0.919795221843003 0.614595210946408 <-macroFPR-|-microFPR-> 0.545017101695831 0.858014843835739 0.650087644205291
+
+===== FOLD 5 / 16 =====
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl5.Subs.remove=type.hal-flow.train --dev classifiers/abl5.Subs.remove=type.hal-flow.dev --eval auroc --logistic --passes 15 --search --l2 0.000161851582099215 0.000485554746297645 +0.000161851582099215
+fold 3 score = 0.803536673081201
+..................................................................................................................
+dev  score = 0.49215492355394 on pass 1 with config --l2 0.00032370316419843
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl5.Subs.remove=type.hal-flow.traindev --dev classifiers/abl5.Subs.remove=type.hal-flow.test --eval auroc --logistic --passes 1 --noearlystop --readable classifiers/abl5.Subs.remove=type.hal-flow.fold=4.vwmodel --args --l2 0.00032370316419843 -p classifiers/abl5.Subs.remove=type.hal-flow.test.predictions
+.......................................... 
+0.642335766423358 0.862745098039216 0.511627906976744 <-macroFPR-|-microFPR-> 0.317952760149292 0.832072516855126 0.461538461538462
+
+===== FOLD 6 / 16 =====
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl5.Subs.remove=type.hal-flow.train --dev classifiers/abl5.Subs.remove=type.hal-flow.dev --eval auroc --logistic --passes 15 --search --l2 0.000158481116974912 0.000475443350924737 +0.000158481116974912
+fold 4 score = 0.761760172980931
+.........................................................................................................................................................................
+dev  score = 0.589474553866491 on pass 13 with config --l2 0.000158481116974912
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl5.Subs.remove=type.hal-flow.traindev --dev classifiers/abl5.Subs.remove=type.hal-flow.test --eval auroc --logistic --passes 13 --noearlystop --readable classifiers/abl5.Subs.remove=type.hal-flow.fold=5.vwmodel --args --l2 0.000158481116974912 -p classifiers/abl5.Subs.remove=type.hal-flow.test.predictions
+............................................... 
+0.119777158774373 0.401869158878505 0.0703764320785597 <-macroFPR-|-microFPR-> 0.345516623294401 0.714869081535748 0.584722222222222
+
+===== FOLD 7 / 16 =====
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl5.Subs.remove=type.hal-flow.train --dev classifiers/abl5.Subs.remove=type.hal-flow.dev --eval auroc --logistic --passes 15 --search --l2 0.000149503647889008 0.000448510943667025 +0.000149503647889008
+fold 5 score = 0.438856516625682
+.........................................................................................................................................................................
+dev  score = 0.699401890796836 on pass 2 with config --l2 0.000448510943667024
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl5.Subs.remove=type.hal-flow.traindev --dev classifiers/abl5.Subs.remove=type.hal-flow.test --eval auroc --logistic --passes 2 --noearlystop --readable classifiers/abl5.Subs.remove=type.hal-flow.fold=6.vwmodel --args --l2 0.000448510943667024 -p classifiers/abl5.Subs.remove=type.hal-flow.test.predictions
+............................................. 
+0.515625 0.55 0.485294117647059 <-macroFPR-|-microFPR-> 0.449438202247191 0.922413793103448 0.5
+
+===== FOLD 8 / 16 =====
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl5.Subs.remove=type.hal-flow.train --dev classifiers/abl5.Subs.remove=type.hal-flow.dev --eval auroc --logistic --passes 15 --search --l2 0.000149169127957278 0.000447507383871834 +0.000149169127957278
+fold 6 score = 0.595505617977528
+.........................................................................................................................................................................
+dev  score = 0.629107981220657 on pass 1 with config --l2 0.000149169127957278
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl5.Subs.remove=type.hal-flow.traindev --dev classifiers/abl5.Subs.remove=type.hal-flow.test --eval auroc --logistic --passes 1 --noearlystop --readable classifiers/abl5.Subs.remove=type.hal-flow.fold=7.vwmodel --args --l2 0.000149169127957278 -p classifiers/abl5.Subs.remove=type.hal-flow.test.predictions
+........................................... 
+0 1 0 <-macroFPR-|-microFPR-> 0 1 0
+
+===== FOLD 9 / 16 =====
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl5.Subs.remove=type.hal-flow.train --dev classifiers/abl5.Subs.remove=type.hal-flow.dev --eval auroc --logistic --passes 15 --search --l2 0.000191636962937411 0.000574910888812234 +0.000191636962937411
+fold 7 score = 0.687922052865136
+.........................................................................................................................................................................
+dev  score = 0.835296394273577 on pass 15 with config --l2 0.000383273925874822
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl5.Subs.remove=type.hal-flow.traindev --dev classifiers/abl5.Subs.remove=type.hal-flow.test --eval auroc --logistic --passes 15 --noearlystop --readable classifiers/abl5.Subs.remove=type.hal-flow.fold=8.vwmodel --args --l2 0.000383273925874822 -p classifiers/abl5.Subs.remove=type.hal-flow.test.predictions
+............................................... 
+0.0526315789473684 0.5 0.0277777777777778 <-macroFPR-|-microFPR-> 0.166666666666667 0.875 0.25
+
+===== FOLD 10 / 16 =====
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl5.Subs.remove=type.hal-flow.train --dev classifiers/abl5.Subs.remove=type.hal-flow.dev --eval auroc --logistic --passes 15 --search --l2 0.000202917960268663 0.00060875388080599 +0.000202917960268663
+fold 8 score = 0.597026604068858
+.........................................................................................................................................................................
+dev  score = 0.793788471312401 on pass 1 with config --l2 0.000608753880805989
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl5.Subs.remove=type.hal-flow.traindev --dev classifiers/abl5.Subs.remove=type.hal-flow.test --eval auroc --logistic --passes 1 --noearlystop --readable classifiers/abl5.Subs.remove=type.hal-flow.fold=9.vwmodel --args --l2 0.000608753880805989 -p classifiers/abl5.Subs.remove=type.hal-flow.test.predictions
+.......................................... 
+0.779351740696278 0.831029185867896 0.73372513562387 <-macroFPR-|-microFPR-> 0.284481164401418 0.971279122716919 0.304945054945055
+
+===== FOLD 11 / 16 =====
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl5.Subs.remove=type.hal-flow.train --dev classifiers/abl5.Subs.remove=type.hal-flow.dev --eval auroc --logistic --passes 15 --search --l2 0.000161490883839607 0.000484472651518822 +0.000161490883839607
+fold 9 score = 0.82965308066203
+.........................................................................................................................................................................
+dev  score = 0.862272848569201 on pass 5 with config --l2 0.000161490883839607
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl5.Subs.remove=type.hal-flow.traindev --dev classifiers/abl5.Subs.remove=type.hal-flow.test --eval auroc --logistic --passes 5 --noearlystop --readable classifiers/abl5.Subs.remove=type.hal-flow.fold=10.vwmodel --args --l2 0.000161490883839607 -p classifiers/abl5.Subs.remove=type.hal-flow.test.predictions
+.............................................. 
+0.748435544430538 0.897897897897898 0.641630901287554 <-macroFPR-|-microFPR-> 0.383913918898439 0.970978293190604 0.4
+
+===== FOLD 12 / 16 =====
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl5.Subs.remove=type.hal-flow.train --dev classifiers/abl5.Subs.remove=type.hal-flow.dev --eval auroc --logistic --passes 15 --search --l2 0.000155530670648252 0.000466592011944756 +0.000155530670648252
+fold 10 score = 0.81371766997967
+..................................................................................................................
+dev  score = 0.513567073170732 on pass 13 with config --l2 0.000155530670648252
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl5.Subs.remove=type.hal-flow.traindev --dev classifiers/abl5.Subs.remove=type.hal-flow.test --eval auroc --logistic --passes 13 --noearlystop --readable classifiers/abl5.Subs.remove=type.hal-flow.fold=11.vwmodel --args --l2 0.000155530670648252 -p classifiers/abl5.Subs.remove=type.hal-flow.test.predictions
+............................................... 
+0.828729281767956 0.879765395894428 0.783289817232376 <-macroFPR-|-microFPR-> 0.570519480519481 0.788056680161943 0.705
+
+===== FOLD 13 / 16 =====
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl5.Subs.remove=type.hal-flow.train --dev classifiers/abl5.Subs.remove=type.hal-flow.dev --eval auroc --logistic --passes 15 --search --l2 0.000159726548149568 0.000479179644448704 +0.000159726548149568
+fold 11 score = 0.857029986866683
+..................................................................................................................
+dev  score = 0.602216680190285 on pass 15 with config --l2 0.000159726548149568
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl5.Subs.remove=type.hal-flow.traindev --dev classifiers/abl5.Subs.remove=type.hal-flow.test --eval auroc --logistic --passes 15 --noearlystop --readable classifiers/abl5.Subs.remove=type.hal-flow.fold=12.vwmodel --args --l2 0.000159726548149568 -p classifiers/abl5.Subs.remove=type.hal-flow.test.predictions
+............................................... 
+0.150375939849624 1 0.0813008130081301 <-macroFPR-|-microFPR-> 0.4 1 0.4
+
+===== FOLD 14 / 16 =====
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl5.Subs.remove=type.hal-flow.train --dev classifiers/abl5.Subs.remove=type.hal-flow.dev --eval auroc --logistic --passes 15 --search --l2 0.000162577834138094 0.000487733502414281 +0.000162577834138094
+fold 12 score = 0.536636178861789
+..................................................................................................................
+dev  score = 0.701880341880342 on pass 1 with config --l2 0.000162577834138094
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl5.Subs.remove=type.hal-flow.traindev --dev classifiers/abl5.Subs.remove=type.hal-flow.test --eval auroc --logistic --passes 1 --noearlystop --readable classifiers/abl5.Subs.remove=type.hal-flow.fold=13.vwmodel --args --l2 0.000162577834138094 -p classifiers/abl5.Subs.remove=type.hal-flow.test.predictions
+.......................................... 
+0.543478260869565 0.744047619047619 0.428082191780822 <-macroFPR-|-microFPR-> 0.543869033846448 0.917877692893546 0.56123902552474
+
+===== FOLD 15 / 16 =====
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl5.Subs.remove=type.hal-flow.train --dev classifiers/abl5.Subs.remove=type.hal-flow.dev --eval auroc --logistic --passes 15 --search --l2 0.00016307095217129 0.000489212856513869 +0.00016307095217129
+fold 13 score = 0.612113781362862
+..................................................................................................................
+dev  score = 0.84291634848762 on pass 11 with config --l2 0.00016307095217129
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl5.Subs.remove=type.hal-flow.traindev --dev classifiers/abl5.Subs.remove=type.hal-flow.test --eval auroc --logistic --passes 11 --noearlystop --readable classifiers/abl5.Subs.remove=type.hal-flow.fold=14.vwmodel --args --l2 0.00016307095217129 -p classifiers/abl5.Subs.remove=type.hal-flow.test.predictions
+............................................... 
+0.148936170212766 0.549019607843137 0.0861538461538462 <-macroFPR-|-microFPR-> 0.0375494071146245 0.794987468671679 0.16441332689522
+
+===== FOLD 16 / 16 =====
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl5.Subs.remove=type.hal-flow.train --dev classifiers/abl5.Subs.remove=type.hal-flow.dev --eval auroc --logistic --passes 15 --search --l2 0.000160813070886402 0.000482439212659205 +0.000160813070886402
+fold 14 score = 0.71948717948718
+..................................................................................................................
+dev  score = 0.536259126922479 on pass 13 with config --l2 0.000321626141772804
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl5.Subs.remove=type.hal-flow.traindev --dev classifiers/abl5.Subs.remove=type.hal-flow.test --eval auroc --logistic --passes 13 --noearlystop --readable classifiers/abl5.Subs.remove=type.hal-flow.fold=15.vwmodel --args --l2 0.000321626141772804 -p classifiers/abl5.Subs.remove=type.hal-flow.test.predictions
+............................................... 
+0.72 0.887892376681614 0.605504587155963 <-macroFPR-|-microFPR-> 0.300462787927122 0.734524454768357 0.525
+
+fold 15 score = 0.838459152980487
+Average score 0.701278850735543 (std 0.128719444389357)
+Average FPR: 0.451512648443969 0.760146089003893 0.371755730874071 <-macroFPR-|-microFPR-> 0.326921537361894 0.86613570349223 0.42395474645491
+Std.dev FPR: 0.279084691567105 0.194943614499621 0.260109289217191 <-macroFPR-|-microFPR-> 0.191960161248114 0.0945186579582921 0.18776581742716

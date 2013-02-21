@@ -1,0 +1,162 @@
+Skipping features from features/Science.type.rachel-ngram
+Reading features from features/Science.type.rachel-topic
+Reading features from features/Science.type.hal-rf
+Reading features from features/Science.type.hal-flow
+Reading features from features/Science.type.hal-ppl
+Skipping features from features/Science.token.jags-psd-comp-real
+Skipping features from features/Science.token.hal-ppl
+Reading features from features/Science.token.anni-context-percent
+Reading features from features/Science.token.anni-context-pos
+Reading features from features/Science.token.jags-psd
+Reading features from features/Science.token.jags-psd-real
+Reading features from features/Science.token.jags-local-psd
+Reading features from features/Science.token.jags-local-psd-real
+warning: data included 4 unseen french phrases: frottement galaxies scalaire spectres
+Read 8293 examples (2018 positive and 6275 negative, which is 24.3% positive)
+===== FOLD 1 / 16 =====
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl2.Science.remove=type.rachel-ngram.train --dev classifiers/abl2.Science.remove=type.rachel-ngram.dev --eval auroc --logistic --passes 20 --orsearch --l1 0. 0.00138580931263858 +0.000277161862527716 --l2 0.000277161862527716 0.00138580931263858 +0.000277161862527716
+..........................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+dev  score = 0.844859550561798 on pass 1 with config --l1 0.000277161862527716
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl2.Science.remove=type.rachel-ngram.traindev --dev classifiers/abl2.Science.remove=type.rachel-ngram.test --eval auroc --logistic --passes 1 --noearlystop --readable classifiers/abl2.Science.remove=type.rachel-ngram.fold=0.vwmodel --args --l1 0.000277161862527716 -p classifiers/abl2.Science.remove=type.rachel-ngram.test.predictions
+......................................... 
+0.532710280373832 0.375 0.919354838709677 <-macroFPR-|-microFPR-> 0.381585698252365 0.38612299980721 0.933333333333333
+
+===== FOLD 2 / 16 =====
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl2.Science.remove=type.rachel-ngram.train --dev classifiers/abl2.Science.remove=type.rachel-ngram.dev --eval auroc --logistic --passes 20 --orsearch --l1 0. 0.00146756677428823 +0.000293513354857646 --l2 0.000293513354857646 0.00146756677428823 +0.000293513354857646
+fold 0 score = 0.727234543010753
+..........................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+dev  score = 0.845860635080645 on pass 18 with config --l1 0.000293513354857646
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl2.Science.remove=type.rachel-ngram.traindev --dev classifiers/abl2.Science.remove=type.rachel-ngram.test --eval auroc --logistic --passes 18 --noearlystop --readable classifiers/abl2.Science.remove=type.rachel-ngram.fold=1.vwmodel --args --l1 0.000293513354857646 -p classifiers/abl2.Science.remove=type.rachel-ngram.test.predictions
+.............................................. 
+0.4149377593361 0.261780104712042 1 <-macroFPR-|-microFPR-> 0.722728337564608 0.657959467313986 1
+
+===== FOLD 3 / 16 =====
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl2.Science.remove=type.rachel-ngram.train --dev classifiers/abl2.Science.remove=type.rachel-ngram.dev --eval auroc --logistic --passes 20 --orsearch --l1 0. 0.00141803743618832 +0.000283607487237663 --l2 0.000283607487237663 0.00141803743618832 +0.000283607487237663
+fold 1 score = 0.547351524879615
+.................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+dev  score = 0.958493625409341 on pass 2 with config --l2 0.000567214974475326
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl2.Science.remove=type.rachel-ngram.traindev --dev classifiers/abl2.Science.remove=type.rachel-ngram.test --eval auroc --logistic --passes 2 --noearlystop --readable classifiers/abl2.Science.remove=type.rachel-ngram.fold=2.vwmodel --args --l2 0.000567214974475326 -p classifiers/abl2.Science.remove=type.rachel-ngram.test.predictions
+........................................... 
+0.642706131078224 0.485623003194888 0.95 <-macroFPR-|-microFPR-> 0.543926173767282 0.575958665747398 0.923076923076923
+
+===== FOLD 4 / 16 =====
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl2.Science.remove=type.rachel-ngram.train --dev classifiers/abl2.Science.remove=type.rachel-ngram.dev --eval auroc --logistic --passes 20 --orsearch --l1 0. 0.00153444836581249 +0.000306889673162498 --l2 0.000306889673162498 0.00153444836581249 +0.000306889673162498
+fold 2 score = 0.824968497983875
+..........................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+dev  score = 0.934444486968497 on pass 6 with config --l1 0.
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl2.Science.remove=type.rachel-ngram.traindev --dev classifiers/abl2.Science.remove=type.rachel-ngram.test --eval auroc --logistic --passes 6 --noearlystop --readable classifiers/abl2.Science.remove=type.rachel-ngram.fold=3.vwmodel --args --l1 0. -p classifiers/abl2.Science.remove=type.rachel-ngram.test.predictions
+............................................ 
+0.804195804195804 0.798611111111111 0.809859154929577 <-macroFPR-|-microFPR-> 0.518386243386243 0.788109161793372 0.615740740740741
+
+===== FOLD 5 / 16 =====
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl2.Science.remove=type.rachel-ngram.train --dev classifiers/abl2.Science.remove=type.rachel-ngram.dev --eval auroc --logistic --passes 20 --orsearch --l1 0. 0.0015785319652723 +0.000315706393054459 --l2 0.000315706393054459 0.0015785319652723 +0.000315706393054459
+fold 3 score = 0.962332686866119
+.................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+dev  score = 0.844886458275495 on pass 17 with config --l2 0.000315706393054459
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl2.Science.remove=type.rachel-ngram.traindev --dev classifiers/abl2.Science.remove=type.rachel-ngram.test --eval auroc --logistic --passes 17 --noearlystop --readable classifiers/abl2.Science.remove=type.rachel-ngram.fold=4.vwmodel --args --l2 0.000315706393054459 -p classifiers/abl2.Science.remove=type.rachel-ngram.test.predictions
+.............................................. 
+0.810126582278481 0.748538011695906 0.882758620689655 <-macroFPR-|-microFPR-> 0.64622496243865 0.81733070928821 0.741969128076763
+
+===== FOLD 6 / 16 =====
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl2.Science.remove=type.rachel-ngram.train --dev classifiers/abl2.Science.remove=type.rachel-ngram.dev --eval auroc --logistic --passes 20 --orsearch --l1 0. 0.00137513751375138 +0.000275027502750275 --l2 0.000275027502750275 0.00137513751375138 +0.000275027502750275
+fold 4 score = 0.935296031229671
+.................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+dev  score = 0.881090389784946 on pass 4 with config --l1 0.000275027502750275
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl2.Science.remove=type.rachel-ngram.traindev --dev classifiers/abl2.Science.remove=type.rachel-ngram.test --eval auroc --logistic --passes 4 --noearlystop --readable classifiers/abl2.Science.remove=type.rachel-ngram.fold=5.vwmodel --args --l1 0.000275027502750275 -p classifiers/abl2.Science.remove=type.rachel-ngram.test.predictions
+............................................ 
+0.670422535211268 0.70414201183432 0.639784946236559 <-macroFPR-|-microFPR-> 0.573213854676055 0.737404609279609 0.791666666666667
+
+===== FOLD 7 / 16 =====
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl2.Science.remove=type.rachel-ngram.train --dev classifiers/abl2.Science.remove=type.rachel-ngram.dev --eval auroc --logistic --passes 20 --orsearch --l1 0. 0.00131804402267036 +0.000263608804534071 --l2 0.000263608804534071 0.00131804402267036 +0.000263608804534071
+fold 5 score = 0.737840763977569
+.................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+dev  score = 0.699614566719829 on pass 13 with config --l2 0.00131804402267036
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl2.Science.remove=type.rachel-ngram.traindev --dev classifiers/abl2.Science.remove=type.rachel-ngram.test --eval auroc --logistic --passes 13 --noearlystop --readable classifiers/abl2.Science.remove=type.rachel-ngram.fold=6.vwmodel --args --l2 0.00131804402267036 -p classifiers/abl2.Science.remove=type.rachel-ngram.test.predictions
+.............................................. 
+0.780952380952381 0.953488372093023 0.661290322580645 <-macroFPR-|-microFPR-> 0.435897435897436 0.888888888888889 0.428571428571429
+
+===== FOLD 8 / 16 =====
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl2.Science.remove=type.rachel-ngram.train --dev classifiers/abl2.Science.remove=type.rachel-ngram.dev --eval auroc --logistic --passes 20 --orsearch --l1 0. 0.00131388779398239 +0.000262777558796479 --l2 0.000262777558796479 0.00131388779398239 +0.000262777558796479
+fold 6 score = 0.870127688172042
+..........................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+dev  score = 0.754105090311987 on pass 20 with config --l1 0.
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl2.Science.remove=type.rachel-ngram.traindev --dev classifiers/abl2.Science.remove=type.rachel-ngram.test --eval auroc --logistic --passes 20 --noearlystop --readable classifiers/abl2.Science.remove=type.rachel-ngram.fold=7.vwmodel --args --l1 0. -p classifiers/abl2.Science.remove=type.rachel-ngram.test.predictions
+............................................. 
+0.455026455026455 0.544303797468354 0.390909090909091 <-macroFPR-|-microFPR-> 0.24795189330793 0.827471548059783 0.381838749485808
+
+===== FOLD 9 / 16 =====
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl2.Science.remove=type.rachel-ngram.train --dev classifiers/abl2.Science.remove=type.rachel-ngram.dev --eval auroc --logistic --passes 20 --orsearch --l1 0. 0.00141984949595343 +0.000283969899190686 --l2 0.000283969899190686 0.00141984949595343 +0.000283969899190686
+fold 7 score = 0.602525252525252
+..........................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+dev  score = 0.877306012869794 on pass 4 with config --l2 0.000283969899190686
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl2.Science.remove=type.rachel-ngram.traindev --dev classifiers/abl2.Science.remove=type.rachel-ngram.test --eval auroc --logistic --passes 4 --noearlystop --readable classifiers/abl2.Science.remove=type.rachel-ngram.fold=8.vwmodel --args --l2 0.000283969899190686 -p classifiers/abl2.Science.remove=type.rachel-ngram.test.predictions
+............................................ 
+0.558139534883721 0.493150684931507 0.642857142857143 <-macroFPR-|-microFPR-> 0.445435610141492 0.605405347340831 0.692307692307692
+
+===== FOLD 10 / 16 =====
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl2.Science.remove=type.rachel-ngram.train --dev classifiers/abl2.Science.remove=type.rachel-ngram.dev --eval auroc --logistic --passes 20 --orsearch --l1 0. 0.00143926309729419 +0.000287852619458837 --l2 0.000287852619458837 0.00143926309729419 +0.000287852619458837
+fold 8 score = 0.707666256157635
+.................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+dev  score = 0.904857466296183 on pass 1 with config --l1 0.
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl2.Science.remove=type.rachel-ngram.traindev --dev classifiers/abl2.Science.remove=type.rachel-ngram.test --eval auroc --logistic --passes 1 --noearlystop --readable classifiers/abl2.Science.remove=type.rachel-ngram.fold=9.vwmodel --args --l1 0. -p classifiers/abl2.Science.remove=type.rachel-ngram.test.predictions
+........................................ 
+0.678294573643411 0.652985074626866 0.705645161290323 <-macroFPR-|-microFPR-> 0.450594669721652 0.663822397295925 0.741619887730553
+
+===== FOLD 11 / 16 =====
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl2.Science.remove=type.rachel-ngram.train --dev classifiers/abl2.Science.remove=type.rachel-ngram.dev --eval auroc --logistic --passes 20 --orsearch --l1 0. 0.00130599451482304 +0.000261198902964608 --l2 0.000261198902964608 0.00130599451482304 +0.000261198902964608
+fold 9 score = 0.867288045295003
+..........................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+dev  score = 0.817441209406495 on pass 2 with config --l1 0.000261198902964608
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl2.Science.remove=type.rachel-ngram.traindev --dev classifiers/abl2.Science.remove=type.rachel-ngram.test --eval auroc --logistic --passes 2 --noearlystop --readable classifiers/abl2.Science.remove=type.rachel-ngram.fold=10.vwmodel --args --l1 0.000261198902964608 -p classifiers/abl2.Science.remove=type.rachel-ngram.test.predictions
+........................................... 
+0.792682926829268 0.764705882352941 0.822784810126582 <-macroFPR-|-microFPR-> 0.526102292768959 0.760793650793651 0.733333333333333
+
+===== FOLD 12 / 16 =====
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl2.Science.remove=type.rachel-ngram.train --dev classifiers/abl2.Science.remove=type.rachel-ngram.dev --eval auroc --logistic --passes 20 --orsearch --l1 0. 0.00128518185323223 +0.000257036370646446 --l2 0.000257036370646446 0.00128518185323223 +0.000257036370646446
+fold 10 score = 0.888057013481527
+..........................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+dev  score = 0.746307733619763 on pass 2 with config --l2 0.000514072741292892
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl2.Science.remove=type.rachel-ngram.traindev --dev classifiers/abl2.Science.remove=type.rachel-ngram.test --eval auroc --logistic --passes 2 --noearlystop --readable classifiers/abl2.Science.remove=type.rachel-ngram.fold=11.vwmodel --args --l2 0.000514072741292892 -p classifiers/abl2.Science.remove=type.rachel-ngram.test.predictions
+........................................... 
+0.571428571428571 0.419753086419753 0.894736842105263 <-macroFPR-|-microFPR-> 0.474494181780784 0.402260614272809 0.95
+
+===== FOLD 13 / 16 =====
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl2.Science.remove=type.rachel-ngram.train --dev classifiers/abl2.Science.remove=type.rachel-ngram.dev --eval auroc --logistic --passes 20 --orsearch --l1 0. 0.00136314067611778 +0.000272628135223555 --l2 0.000272628135223555 0.00136314067611778 +0.000272628135223555
+fold 11 score = 0.7760078387458
+.................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+dev  score = 0.780679917908178 on pass 5 with config --l2 0.00054525627044711
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl2.Science.remove=type.rachel-ngram.traindev --dev classifiers/abl2.Science.remove=type.rachel-ngram.test --eval auroc --logistic --passes 5 --noearlystop --readable classifiers/abl2.Science.remove=type.rachel-ngram.fold=12.vwmodel --args --l2 0.00054525627044711 -p classifiers/abl2.Science.remove=type.rachel-ngram.test.predictions
+............................................ 
+0.554455445544554 0.538461538461538 0.571428571428571 <-macroFPR-|-microFPR-> 0.380901960784314 0.667619047619048 0.659259259259259
+
+===== FOLD 14 / 16 =====
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl2.Science.remove=type.rachel-ngram.train --dev classifiers/abl2.Science.remove=type.rachel-ngram.dev --eval auroc --logistic --passes 20 --orsearch --l1 0. 0.00136332651670075 +0.00027266530334015 --l2 0.00027266530334015 0.00136332651670075 +0.00027266530334015
+fold 12 score = 0.739325993555317
+.................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+dev  score = 0.694611177804455 on pass 20 with config --l1 0.
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl2.Science.remove=type.rachel-ngram.traindev --dev classifiers/abl2.Science.remove=type.rachel-ngram.test --eval auroc --logistic --passes 20 --noearlystop --readable classifiers/abl2.Science.remove=type.rachel-ngram.fold=13.vwmodel --args --l1 0. -p classifiers/abl2.Science.remove=type.rachel-ngram.test.predictions
+............................................. 
+0.544827586206897 0.745283018867924 0.429347826086957 <-macroFPR-|-microFPR-> 0.256792398777693 0.886736111111111 0.327424242424242
+
+===== FOLD 15 / 16 =====
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl2.Science.remove=type.rachel-ngram.train --dev classifiers/abl2.Science.remove=type.rachel-ngram.dev --eval auroc --logistic --passes 20 --orsearch --l1 0. 0.0012779552715655 +0.000255591054313099 --l2 0.000255591054313099 0.0012779552715655 +0.000255591054313099
+fold 13 score = 0.779074186682884
+.................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+dev  score = 0.693187906620743 on pass 12 with config --l2 0.000255591054313099
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl2.Science.remove=type.rachel-ngram.traindev --dev classifiers/abl2.Science.remove=type.rachel-ngram.test --eval auroc --logistic --passes 12 --noearlystop --readable classifiers/abl2.Science.remove=type.rachel-ngram.fold=14.vwmodel --args --l2 0.000255591054313099 -p classifiers/abl2.Science.remove=type.rachel-ngram.test.predictions
+.............................................. 
+0.403508771929825 0.256983240223464 0.938775510204082 <-macroFPR-|-microFPR-> 0.374471500770546 0.421053418228559 0.888888888888889
+
+===== FOLD 16 / 16 =====
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl2.Science.remove=type.rachel-ngram.train --dev classifiers/abl2.Science.remove=type.rachel-ngram.dev --eval auroc --logistic --passes 20 --orsearch --l1 0. 0.00128650456709121 +0.000257300913418243 --l2 0.000257300913418243 0.00128650456709121 +0.000257300913418243
+fold 14 score = 0.481926103774843
+..........................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+dev  score = 0.734290994623656 on pass 2 with config --l1 0.000257300913418243
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl2.Science.remove=type.rachel-ngram.traindev --dev classifiers/abl2.Science.remove=type.rachel-ngram.test --eval auroc --logistic --passes 2 --noearlystop --readable classifiers/abl2.Science.remove=type.rachel-ngram.fold=15.vwmodel --args --l1 0.000257300913418243 -p classifiers/abl2.Science.remove=type.rachel-ngram.test.predictions
+........................................... 
+0.532608695652174 0.411764705882353 0.753846153846154 <-macroFPR-|-microFPR-> 0.38518036483875 0.56965071965072 0.761904761904762
+
+fold 15 score = 0.710562571756602
+Average score 0.759849062380907 (std 0.130159259624824)
+Average FPR: 0.609189002160685 0.572160852742249 0.750836187000018 <-macroFPR-|-microFPR-> 0.460242973679672 0.666036709780695 0.723183439737525
+Std.dev FPR: 0.131793481932185 0.19652280517976 0.178778978993274 <-macroFPR-|-microFPR-> 0.123493964256699 0.159176747288956 0.19735093737529

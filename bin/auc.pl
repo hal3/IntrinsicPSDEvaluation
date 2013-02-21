@@ -97,6 +97,7 @@ sub compute_prf {
     
     my @thresh0 = keys %thresh;
     my @thresh = @thresh0;
+    push @thresh, 0;
     if (@thresh > 10) {
         @thresh = (0);
         for (my $i=0; $i<10; $i++) {
@@ -105,6 +106,7 @@ sub compute_prf {
         }
     }
 
+    @thresh = (0.0001);
     my $bestMac = 0;
     my $bestStr = '';
     foreach my $thresh (@thresh) {

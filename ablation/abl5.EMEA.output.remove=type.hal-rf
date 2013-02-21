@@ -1,0 +1,161 @@
+Skipping features from features/EMEA.type.rachel-ngram
+Skipping features from features/EMEA.type.rachel-topic
+Skipping features from features/EMEA.type.hal-rf
+Reading features from features/EMEA.type.hal-flow
+Skipping features from features/EMEA.type.hal-ppl
+Reading features from features/EMEA.token.hal-ppl
+Skipping features from features/EMEA.token.anni-context-percent
+Reading features from features/EMEA.token.anni-context-pos
+Reading features from features/EMEA.token.jags-psd
+Skipping features from features/EMEA.token.jags-psd-real
+Reading features from features/EMEA.token.jags-local-psd
+Reading features from features/EMEA.token.jags-local-psd-real
+Reading features from features/EMEA.token.jags-psd-comp-real
+Read 35266 examples (18362 positive and 16904 negative, which is 52% positive)
+===== FOLD 1 / 16 =====
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl5.EMEA.remove=type.hal-rf.train --dev classifiers/abl5.EMEA.remove=type.hal-rf.dev --eval auroc --logistic --passes 15 --search --l2 0.000122503981379395 0.000367511944138185 +0.000122503981379395
+....................................................................................................................
+dev  score = 0.812611886805127 on pass 1 with config --l2 0.000122503981379395
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl5.EMEA.remove=type.hal-rf.traindev --dev classifiers/abl5.EMEA.remove=type.hal-rf.test --eval auroc --logistic --passes 1 --noearlystop --readable classifiers/abl5.EMEA.remove=type.hal-rf.fold=0.vwmodel --args --l2 0.000122503981379395 -p classifiers/abl5.EMEA.remove=type.hal-rf.test.predictions
+........................................... 
+0.816161616161616 0.742647058823529 0.905829596412556 <-macroFPR-|-microFPR-> 0.310922222996354 0.619148400100781 0.390672782874618
+
+===== FOLD 2 / 16 =====
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl5.EMEA.remove=type.hal-rf.train --dev classifiers/abl5.EMEA.remove=type.hal-rf.dev --eval auroc --logistic --passes 15 --search --l2 0.000128412563885251 0.000385237691655752 +0.000128412563885251
+fold 0 score = 0.927745269605162
+....................................................................................................................
+dev  score = 0.849327623803429 on pass 9 with config --l2 0.000256825127770502
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl5.EMEA.remove=type.hal-rf.traindev --dev classifiers/abl5.EMEA.remove=type.hal-rf.test --eval auroc --logistic --passes 9 --noearlystop --readable classifiers/abl5.EMEA.remove=type.hal-rf.fold=1.vwmodel --args --l2 0.000256825127770502 -p classifiers/abl5.EMEA.remove=type.hal-rf.test.predictions
+............................................... 
+0.183657884688813 0.385725741780273 0.120521172638436 <-macroFPR-|-microFPR-> 0.399242981491214 0.565249987288392 0.647569791073869
+
+===== FOLD 3 / 16 =====
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl5.EMEA.remove=type.hal-rf.train --dev classifiers/abl5.EMEA.remove=type.hal-rf.dev --eval auroc --logistic --passes 15 --search --l2 0.00010585707178168 0.000317571215345041 +0.00010585707178168
+fold 1 score = 0.771720738164407
+............................................................................................................................................................................
+dev  score = 0.737779074985625 on pass 15 with config --l2 0.00010585707178168
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl5.EMEA.remove=type.hal-rf.traindev --dev classifiers/abl5.EMEA.remove=type.hal-rf.test --eval auroc --logistic --passes 15 --noearlystop --readable classifiers/abl5.EMEA.remove=type.hal-rf.fold=2.vwmodel --args --l2 0.00010585707178168 -p classifiers/abl5.EMEA.remove=type.hal-rf.test.predictions
+................................................ 
+0.791796146674953 0.842592592592593 0.746776084407972 <-macroFPR-|-microFPR-> 0.558078258104146 0.712476319923129 0.650651165735439
+
+===== FOLD 4 / 16 =====
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl5.EMEA.remove=type.hal-rf.train --dev classifiers/abl5.EMEA.remove=type.hal-rf.dev --eval auroc --logistic --passes 15 --search --l2 0.000103848630236567 0.000311545890709702 +0.000103848630236567
+fold 2 score = 0.844438428656232
+............................................................................................................................................................................
+dev  score = 0.855091319717205 on pass 13 with config --l2 0.000207697260473134
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl5.EMEA.remove=type.hal-rf.traindev --dev classifiers/abl5.EMEA.remove=type.hal-rf.test --eval auroc --logistic --passes 13 --noearlystop --readable classifiers/abl5.EMEA.remove=type.hal-rf.fold=3.vwmodel --args --l2 0.000207697260473134 -p classifiers/abl5.EMEA.remove=type.hal-rf.test.predictions
+................................................ 
+0.656281407035176 0.74373576309795 0.587230215827338 <-macroFPR-|-microFPR-> 0.449028330600965 0.712707538865385 0.588507000464442
+
+===== FOLD 5 / 16 =====
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl5.EMEA.remove=type.hal-rf.train --dev classifiers/abl5.EMEA.remove=type.hal-rf.dev --eval auroc --logistic --passes 15 --search --l2 0.000101890060624586 0.000305670181873758 +0.000101890060624586
+fold 3 score = 0.730424870629812
+....................................................................................................................
+dev  score = 0.681432730589122 on pass 12 with config --l2 0.000101890060624586
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl5.EMEA.remove=type.hal-rf.traindev --dev classifiers/abl5.EMEA.remove=type.hal-rf.test --eval auroc --logistic --passes 12 --noearlystop --readable classifiers/abl5.EMEA.remove=type.hal-rf.fold=4.vwmodel --args --l2 0.000101890060624586 -p classifiers/abl5.EMEA.remove=type.hal-rf.test.predictions
+................................................ 
+0.754262788365095 0.815618221258134 0.701492537313433 <-macroFPR-|-microFPR-> 0.466273306277569 0.749690835601187 0.594961778776977
+
+===== FOLD 6 / 16 =====
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl5.EMEA.remove=type.hal-rf.train --dev classifiers/abl5.EMEA.remove=type.hal-rf.dev --eval auroc --logistic --passes 15 --search --l2 9.88298545224541e-05 0.000296489563567362 +9.88298545224541e-05
+fold 4 score = 0.846346455979214
+....................................................................................................................
+dev  score = 0.756944444444444 on pass 11 with config --l2 9.88298545224541e-05
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl5.EMEA.remove=type.hal-rf.traindev --dev classifiers/abl5.EMEA.remove=type.hal-rf.test --eval auroc --logistic --passes 11 --noearlystop --readable classifiers/abl5.EMEA.remove=type.hal-rf.fold=5.vwmodel --args --l2 9.88298545224541e-05 -p classifiers/abl5.EMEA.remove=type.hal-rf.test.predictions
+................................................ 
+0.469011725293132 0.534351145038168 0.417910447761194 <-macroFPR-|-microFPR-> 0.622531470082271 0.936640209959614 0.616015476069824
+
+===== FOLD 7 / 16 =====
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl5.EMEA.remove=type.hal-rf.train --dev classifiers/abl5.EMEA.remove=type.hal-rf.dev --eval auroc --logistic --passes 15 --search --l2 9.85580950691385e-05 0.000295674285207416 +9.85580950691385e-05
+fold 5 score = 0.688591998877527
+............................................................................................................................................................................
+dev  score = 0.790025390213414 on pass 4 with config --l2 0.000295674285207416
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl5.EMEA.remove=type.hal-rf.traindev --dev classifiers/abl5.EMEA.remove=type.hal-rf.test --eval auroc --logistic --passes 4 --noearlystop --readable classifiers/abl5.EMEA.remove=type.hal-rf.fold=6.vwmodel --args --l2 0.000295674285207416 -p classifiers/abl5.EMEA.remove=type.hal-rf.test.predictions
+.............................................. 
+0.64 0.5 0.888888888888889 <-macroFPR-|-microFPR-> 0.64 0.5 0.888888888888889
+
+===== FOLD 8 / 16 =====
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl5.EMEA.remove=type.hal-rf.train --dev classifiers/abl5.EMEA.remove=type.hal-rf.dev --eval auroc --logistic --passes 15 --search --l2 9.88972951589774e-05 0.000296691885476932 +9.88972951589774e-05
+fold 6 score = 0.708333333333333
+....................................................................................................................
+dev  score = 0.802908841044434 on pass 1 with config --l2 0.000197794590317955
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl5.EMEA.remove=type.hal-rf.traindev --dev classifiers/abl5.EMEA.remove=type.hal-rf.test --eval auroc --logistic --passes 1 --noearlystop --readable classifiers/abl5.EMEA.remove=type.hal-rf.fold=7.vwmodel --args --l2 0.000197794590317955 -p classifiers/abl5.EMEA.remove=type.hal-rf.test.predictions
+........................................... 
+0.739856801909308 0.758873929008568 0.721769499417928 <-macroFPR-|-microFPR-> 0.21687046920552 0.479795755050284 0.611951629987338
+
+===== FOLD 9 / 16 =====
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl5.EMEA.remove=type.hal-rf.train --dev classifiers/abl5.EMEA.remove=type.hal-rf.dev --eval auroc --logistic --passes 15 --search --l2 0.000120484830959782 0.000361454492879346 +0.000120484830959782
+fold 7 score = 0.776317539297544
+....................................................................................................................
+dev  score = 0.916467363147233 on pass 2 with config --l2 0.000240969661919564
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl5.EMEA.remove=type.hal-rf.traindev --dev classifiers/abl5.EMEA.remove=type.hal-rf.test --eval auroc --logistic --passes 2 --noearlystop --readable classifiers/abl5.EMEA.remove=type.hal-rf.fold=8.vwmodel --args --l2 0.000240969661919564 -p classifiers/abl5.EMEA.remove=type.hal-rf.test.predictions
+............................................. 
+0.753086419753086 0.693181818181818 0.824324324324324 <-macroFPR-|-microFPR-> 0.753086419753086 0.693181818181818 0.824324324324324
+
+===== FOLD 10 / 16 =====
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl5.EMEA.remove=type.hal-rf.train --dev classifiers/abl5.EMEA.remove=type.hal-rf.dev --eval auroc --logistic --passes 15 --search --l2 0.000143049237547564 0.000429147712642692 +0.000143049237547564
+fold 8 score = 0.782753092075126
+..................................................................................................................
+dev  score = 0.778331328846188 on pass 1 with config --l2 0.000143049237547564
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl5.EMEA.remove=type.hal-rf.traindev --dev classifiers/abl5.EMEA.remove=type.hal-rf.test --eval auroc --logistic --passes 1 --noearlystop --readable classifiers/abl5.EMEA.remove=type.hal-rf.fold=9.vwmodel --args --l2 0.000143049237547564 -p classifiers/abl5.EMEA.remove=type.hal-rf.test.predictions
+........................................... 
+0.87379421221865 0.913957399103139 0.837012320328542 <-macroFPR-|-microFPR-> 0.420969817338459 0.734658181398767 0.469683842084183
+
+===== FOLD 11 / 16 =====
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl5.EMEA.remove=type.hal-rf.train --dev classifiers/abl5.EMEA.remove=type.hal-rf.dev --eval auroc --logistic --passes 15 --search --l2 0.000119517150711127 0.000358551452133381 +0.000119517150711127
+fold 9 score = 0.912941462626441
+....................................................................................................................
+dev  score = 0.887745131692564 on pass 2 with config --l2 0.000239034301422254
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl5.EMEA.remove=type.hal-rf.traindev --dev classifiers/abl5.EMEA.remove=type.hal-rf.test --eval auroc --logistic --passes 2 --noearlystop --readable classifiers/abl5.EMEA.remove=type.hal-rf.fold=10.vwmodel --args --l2 0.000239034301422254 -p classifiers/abl5.EMEA.remove=type.hal-rf.test.predictions
+............................................. 
+0.64550833781603 0.872093023255814 0.512382578992314 <-macroFPR-|-microFPR-> 0.25944734300661 0.667376850237583 0.382282505545911
+
+===== FOLD 12 / 16 =====
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl5.EMEA.remove=type.hal-rf.train --dev classifiers/abl5.EMEA.remove=type.hal-rf.dev --eval auroc --logistic --passes 15 --search --l2 0.00010708128540375 0.00032124385621125 +0.00010708128540375
+fold 10 score = 0.777792098688136
+....................................................................................................................
+dev  score = 0.927590396517026 on pass 2 with config --l2 0.0002141625708075
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl5.EMEA.remove=type.hal-rf.traindev --dev classifiers/abl5.EMEA.remove=type.hal-rf.test --eval auroc --logistic --passes 2 --noearlystop --readable classifiers/abl5.EMEA.remove=type.hal-rf.fold=11.vwmodel --args --l2 0.0002141625708075 -p classifiers/abl5.EMEA.remove=type.hal-rf.test.predictions
+............................................. 
+0.761659933896438 0.84860883797054 0.690872751499001 <-macroFPR-|-microFPR-> 0.287534916192122 0.613872614778744 0.520533046319448
+
+===== FOLD 13 / 16 =====
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl5.EMEA.remove=type.hal-rf.train --dev classifiers/abl5.EMEA.remove=type.hal-rf.dev --eval auroc --logistic --passes 15 --search --l2 0.000104588288203487 0.000313764864610461 +0.000104588288203487
+fold 11 score = 0.857909917819663
+....................................................................................................................
+dev  score = 0.901180661025531 on pass 2 with config --l2 0.000209176576406974
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl5.EMEA.remove=type.hal-rf.traindev --dev classifiers/abl5.EMEA.remove=type.hal-rf.test --eval auroc --logistic --passes 2 --noearlystop --readable classifiers/abl5.EMEA.remove=type.hal-rf.fold=12.vwmodel --args --l2 0.000209176576406974 -p classifiers/abl5.EMEA.remove=type.hal-rf.test.predictions
+............................................. 
+0.905179282868526 0.943521594684385 0.869831546707504 <-macroFPR-|-microFPR-> 0.397989651421659 0.600567375886525 0.396762075134168
+
+===== FOLD 14 / 16 =====
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl5.EMEA.remove=type.hal-rf.train --dev classifiers/abl5.EMEA.remove=type.hal-rf.dev --eval auroc --logistic --passes 15 --search --l2 0.000102117925780692 0.000306353777342075 +0.000102117925780692
+fold 12 score = 0.935233442598051
+....................................................................................................................
+dev  score = 0.907511904761903 on pass 2 with config --l2 0.000102117925780692
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl5.EMEA.remove=type.hal-rf.traindev --dev classifiers/abl5.EMEA.remove=type.hal-rf.test --eval auroc --logistic --passes 2 --noearlystop --readable classifiers/abl5.EMEA.remove=type.hal-rf.fold=13.vwmodel --args --l2 0.000102117925780692 -p classifiers/abl5.EMEA.remove=type.hal-rf.test.predictions
+............................................. 
+0.774515927545284 0.637532133676093 0.986475735879077 <-macroFPR-|-microFPR-> 0.259061945053797 0.213608957795004 0.662420382165605
+
+===== FOLD 15 / 16 =====
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl5.EMEA.remove=type.hal-rf.train --dev classifiers/abl5.EMEA.remove=type.hal-rf.dev --eval auroc --logistic --passes 15 --search --l2 9.74658869395711e-05 0.000292397660818713 +9.74658869395711e-05
+fold 13 score = 0.884962844434803
+....................................................................................................................
+dev  score = 0.889810936939093 on pass 1 with config --l2 0.000194931773879142
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl5.EMEA.remove=type.hal-rf.traindev --dev classifiers/abl5.EMEA.remove=type.hal-rf.test --eval auroc --logistic --passes 1 --noearlystop --readable classifiers/abl5.EMEA.remove=type.hal-rf.fold=14.vwmodel --args --l2 0.000194931773879142 -p classifiers/abl5.EMEA.remove=type.hal-rf.test.predictions
+........................................... 
+0.636986301369863 0.516666666666667 0.830357142857143 <-macroFPR-|-microFPR-> 0.434173669467787 0.395833333333333 0.594202898550725
+
+===== FOLD 16 / 16 =====
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl5.EMEA.remove=type.hal-rf.train --dev classifiers/abl5.EMEA.remove=type.hal-rf.dev --eval auroc --logistic --passes 15 --search --l2 9.71817298347911e-05 0.000291545189504373 +9.71817298347911e-05
+fold 14 score = 0.899499999999999
+....................................................................................................................
+dev  score = 0.930124138685333 on pass 9 with config --l2 0.000194363459669582
+Running: bin/vwx --vw /home/hal/projects/vowpal_wabbit/vowpalwabbit/vw -d classifiers/abl5.EMEA.remove=type.hal-rf.traindev --dev classifiers/abl5.EMEA.remove=type.hal-rf.test --eval auroc --logistic --passes 9 --noearlystop --readable classifiers/abl5.EMEA.remove=type.hal-rf.fold=15.vwmodel --args --l2 0.000194363459669582 -p classifiers/abl5.EMEA.remove=type.hal-rf.test.predictions
+............................................... 
+0.729813664596273 0.635135135135135 0.857664233576642 <-macroFPR-|-microFPR-> 0.579405919028561 0.654934437543133 0.589569160997732
+
+fold 15 score = 0.876241474213235
+Average score 0.826328310437418 (std 0.0768465590693949)
+Average FPR: 0.695723278137015 0.711515066267051 0.718708692302018 <-macroFPR-|-microFPR-> 0.440913545001258 0.61560891349648 0.589312296812093
+Std.dev FPR: 0.166572268210477 0.158810553017189 0.212936404524869 <-macroFPR-|-microFPR-> 0.150899216129383 0.159836031093974 0.136289272284355
